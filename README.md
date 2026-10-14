@@ -120,3 +120,5 @@ D-104: [Shared top-down visual reference](specs/001-single-level-vertical-slice/
 [Benchmark production](specs/001-single-level-vertical-slice/benchmark-production.md) defines the shared runtime sample, exact locomotion scope, Camera state delivery and evidence required for D-104 reconciliation.
 
 [Animation timing migration](specs/001-single-level-vertical-slice/animation-timing-migration.md) records the proposed exact-duration presentation metadata design.
+
+[Exact-duration clip migration target schema](contracts/clip-metadata-002.schema.json) defines v2 structure; active clip delivery remains v1 pending runtime migration.

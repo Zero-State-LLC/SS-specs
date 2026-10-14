@@ -260,3 +260,5 @@ Implement [BP-001–BP-006](benchmark-production.md) in order. Begin by adopting
 BP-005/BP-007 building repair: use the [registration investigation](../../docs/review/building-registration/review.md) before changing placement. Obtain explicit ground-plan landmarks and separate walkable apron from wall art. Compare consistent projection alternatives through the shared renderer; keep arena geometry unchanged until an explicitly versioned gameplay decision.
 
 BP-009: compare depth and opacity treatments with projected ground cues before selecting the runtime occlusion policy. Keep solver authority untouched; then validate an eligibility classifier and clear/restore lifecycle.
+
+BP-003 timing migration: use the versioned clip-metadata-002 target schema and in-memory mechanical conversion checker first. Keep active v1 until strict decoding, frame/duration pairing, exporters, resource/version/parity migration and playback gates pass together.

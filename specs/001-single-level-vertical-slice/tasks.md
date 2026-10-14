@@ -291,3 +291,5 @@ Production detail: [BP-001–BP-006](benchmark-production.md). T1042 owns exact 
 T1046 next evidence: ground-plan source and matching elevated render with wall base, steps, planters and walkable apron separated. Current building registration fails; see [measured review](../../docs/review/building-registration/review.md). Hidden rear vertices and art admission remain open.
 
 T1042 / T1046 remain open for BP-009: current isolated contacts expose false roof elevation. Complete ground-cue comparison and continuous rear/front/corner transitions before implementing/admitting a general occlusion treatment.
+
+T1044 / T1045 timing prerequisite: implement against clip-metadata-002.schema.json; run scripts/validate_clip_timing_migration.py and the runtime exact-vector/malformed-record tests. Target schema publication does not close either task or switch active delivery.

@@ -179,3 +179,5 @@ See [visual-reference.md](visual-reference.md). D-022–D-024 and E-021 require 
 BP-005/BP-007 building admission requires separate labeled wall-contact and walkable-apron geometry in the source master, registered to runtime world geometry. An alpha silhouette or roof-derived hidden corner is insufficient. The current [building sample](../../docs/review/building-registration/review.md) remains FAILED_REGISTRATION_NOT_ADMITTED.
 
 BP-009: occluded Player ground position and solid boundary remain understandable without false roof elevation or invisible actors. Require continuous transitions, Reduced Motion and legal hazard/encounter evidence; static endpoint comparisons alone do not pass.
+
+BP-003 v2 admission requires the structural target schema plus runtime semantic validation, exact mechanical-conversion parity and the playback checks in animation-timing-migration.md. Schema validation alone is insufficient; active v1 remains until the coordinated migration passes.

@@ -1,6 +1,6 @@
 # Exact frame timing migration for BP-003
 
-Status: implementation design; no v2 delivery or production art admitted.
+Status: implementation design with a versioned target schema; no v2 delivery or production art admitted.
 
 ## Research and decision
 
@@ -8,7 +8,7 @@ SpriteKit's [texture animation action](https://developer.apple.com/documentation
 
 SS design choice: the next clip-metadata schema uses positive integer duration units and a positive integer timebase, rather than a floating fps or rounded milliseconds. Keep the current v1 delivery unchanged until v2 decoder, playback, duration consumers, exporters and parity tests are ready. Version the contract before admitting v2 records; no v2 key may be silently ignored by a v1 decoder.
 
-## Proposed v2 representation
+## V2 target representation
 
 Replace each clip's `framesPerSecond` with `timing: { unitsPerSecond: Int, frameUnits: [Int] }`. `frameUnits` is parallel to the COMPLETE `frameIds` array, including all facings, not an implicit per-direction template. Direction filtering must select frame ID and its duration together, preserving order. Non-directional camera clips use the same representation. Both representations in one record are invalid. Missing timing, unknown keys, booleans, fractions, zero/negative integers, count mismatches and integer arithmetic overflow fail closed; do not coerce NSNumber fractions into integers.
 
@@ -35,3 +35,11 @@ Inspection of runtime d772842 found independent fps consumers in ClipCatalogLoad
 Before migration, prove every existing clip's duration, frame order, directional membership, anchor, looping flag, event marker and cancellation rules are unchanged by a mechanical v1-to-v2 conversion. Update schema filename/version registry, catalog owner references, resource bundling, specification pin, exports and reachability together. Preserve ruleset/content/arena identities and replay digests; report any unexpected changes rather than replacing golden values. Do not duplicate current poses to manufacture 16-frame deliveries.
 
 Required evidence: strict malformed-record rejection; exact vectors above; different durations by facing; equal and unequal SKAction timing; final texture retention; pause/resume; 3→2→1→0 camera interruption; reaction lifetime tick boundaries; exported frame-order/timing round-trip; full contract parity; core replay suite; iOS playback tests. Then visually review actual new source cycles at normal and quarter speed with contact phases and world travel. No production schema switch occurs solely because this design document exists.
+
+## Versioned target and staged adoption
+
+[clip-metadata-002.schema.json](../../contracts/clip-metadata-002.schema.json) is the structural migration target. Active `versions.json.componentContracts.clipMetadata` remains `clip-metadata-001`; the target schema is not a new active delivery. A mechanical conversion preserves `animation-civic-seam-001`, since it changes representation without changing frame identity, timing, events or state semantics. A later artistic change still follows its own coordinated admission.
+
+Target integer fields must fit signed 64-bit integers, matching supported runtime platforms. JSON Schema checks structure, scalar types, positive duration units, closed objects and version identity. It cannot prove equal array lengths, checked sums/products, role/facing membership, cancellation/event rules or asset reachability. Runtime semantic validation must enforce those separately; schema success alone never admits a clip.
+
+`scripts/validate_clip_timing_migration.py` converts the current v1 delivery in memory and verifies the target schema, complete frame-order/field preservation, exact per-facing rational durations and 60 Hz lifetimes. It also checks malformed timing rejection. This is migration evidence, not an accepted replacement delivery. Run it alongside `scripts/validate_specs.py` while implementing the runtime decoder.
