@@ -87,3 +87,7 @@ Default is left virtual stick, right dodge button, top-corner pause; handedness 
 | PC-006 | dodge into wall | no penetration; shortened distance |
 | PC-007 | dodge press during cooldown | no dodge and one rejection record |
 | PC-008 | suspend for ten seconds | zero added ticks/displacement |
+
+## Build-configuration conformance (D-102)
+
+PC-009: In both Debug and Release, a stick touch must produce movement through the scene's next simulation tick; Dodge is delivered once. Pause/resume clears held input and a buffered Dodge without advancing while paused, and restart clears input and returns to the same seed's initial state. Tests must traverse the scene-to-session boundary, not only the controller in isolation.

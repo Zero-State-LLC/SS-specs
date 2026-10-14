@@ -1,7 +1,7 @@
 # Technical Plan: San Francisco Vertical Slice
 
 Status: BASELINE  
-Depends on: `spec.md`, constitution 1.1.0
+Depends on: `spec.md`, constitution 1.2.0
 
 ## 1. Platform baseline
 
@@ -233,3 +233,9 @@ Recommended migration order: seeded randomness, simulation clock, movement/colli
 12. Performance, accessibility, playtest, and release evidence
 
 Each slice remains executable and testable.
+
+## D-102 correction plan
+
+1. Share the real point-space touch routing with integration tests and consume it outside debug-only autopilot code. Exercise the existing app target in Debug and Release through the existing CI workflow.
+2. Finalize contact/recovery, Tamper, and eligible named Exposure pulses in one resolver before publishing Detection State and quiet-approach effects. Retain the terminal and forced-Lockdown rules in exposure.md.
+3. Advance only the ruleset identity, review and regenerate affected goldens, and update the runtime spec pin plus bundles atomically after the specification commit exists. Run spec validation, core tests, and parity; record simulator evidence separately from physical-device acceptance.

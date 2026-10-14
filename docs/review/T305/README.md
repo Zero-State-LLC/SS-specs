@@ -1,5 +1,7 @@
 # T305 evidence — scripted pacing probes (partial)
 
+Historical evidence: this report predates D-079. Its 8–12-minute comparisons are retained as measured context; current T305/E-011/G-005 acceptance uses 5–8 minutes.
+
 **Status asked:** record as **PARTIAL**. T305 stays open. These are bot probes, not a person playing. The reconciliation row requires "recorded pacing probes compared against the `E-011` 8–12-minute target" run by a designer or player, and nobody has played yet.
 
 **Runtime:** SS-runtime `evidence/t305-t901-pacing-replay-probes` (`06561a9`), on `main` `59e5e4b`, spec pin `cd77770`. Tooling is test-target only. No file under `Sources/` or `App/` changed.

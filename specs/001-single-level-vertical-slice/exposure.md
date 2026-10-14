@@ -71,15 +71,17 @@ Overlapping fields add pressure; multiple samples from one Camera never do. Occl
 3. Contacts from Cameras destroyed this tick are removed.
 4. Surviving-contact delta or no-contact recovery is calculated.
 5. Ordered Tamper Spikes are added by Camera stable ID.
-6. Clamp to 0–1000.
-7. Project Detection State and emit upward transition events.
-8. If 1000 is first reached, emit `LockdownEntered` once and latch.
+6. Apply eligible Fog Analytics Cloud pulses in source entity-ID order, then Algorithmic Moderate Observation pulses. Apply their existing Signal Jammer modifiers exactly once (upgrades.md). Clamp each stage to 0–1000. Once 1000 is reached, later positive pulses do not change the value. A previously latched or forced Lockdown stays at 1000.
+7. Project Detection State once from the final value; emit one `DetectionStateChanged` from the tick's starting state to its final state if different, including downward changes. Then resolve the quiet-approach latch from that final state.
+8. If 1000 is first reached, emit `LockdownEntered` once in phase 14 with the reason that reached the cap. Forced Lockdown takes precedence as the reason.
+
+D-102: named pulses are eligible only if the Player survived phase 12. On a lethal tick, surviving Camera contact/recovery and Tamper still resolve, but fog and Observation pulses do not apply; failure remains terminal. M-C activation exempts that tick and later ticks from quiet-approach loss as in D-101. Exposure changes retain phase-13 before/after/reason records for each changed stage, but intermediate thresholds never publish extra Detection State transitions.
 
 Tamper and continuous contact may cross several thresholds in one tick. Emit one `DetectionStateChanged` event containing old and final state, not an event for every skipped state.
 
 ## Upgrade hook
 
-`Signal Jammer` may reduce only continuous contact delta. Its modifier is applied after aggregation and before Tamper, using integer arithmetic. It cannot reduce a positive contact delta below 1 and never changes Tamper, recovery, thresholds, or Lockdown latching. Its exact value belongs to the upgrade contract.
+`Signal Jammer` reduces the continuous contact delta as described here; its separate 25% Fog/Observation pulse reduction is defined in upgrades.md. Its modifier is applied after aggregation and before Tamper, using integer arithmetic. It cannot reduce a positive contact delta below 1 and never changes Tamper, recovery, thresholds, or Lockdown latching. Its exact value belongs to the upgrade contract.
 
 ## Quiet approach (D-101)
 
@@ -125,6 +127,10 @@ Court threshold (bosses.md).
 | EX-014 | after EX-013, Exposure recovers to `hidden` | `quietApproach` stays `false` |
 | EX-015 | peak Detection State `observed` until M-C activates, then the forced Lockdown on the activation tick | `quietApproach` stays `true` |
 | EX-016 | Detection State reaches `tracked` on the tick before M-C activates | `quietApproach` becomes `false` |
+| EX-017 | pre-recovery Exposure 432, no-contact clock >60, one +20 Fog pulse before M-C | final 450/tracked; one observed→tracked event; quietApproach false; next tick 448/observed cannot restore it |
+| EX-018 | multiple contact/Tamper/named deltas cross several thresholds | one starting→final DetectionStateChanged; at most one phase-14 LockdownEntered |
+| EX-019 | lethal Player damage plus a due Fog pulse | no named pulse applied; contact/recovery and Tamper still resolve; failure wins |
+| EX-020 | M-C activation with due named pulses | final 1000/lockdown; one forced Lockdown event; quiet approach preserved if previously true |
 
 ## Failure rules
 
