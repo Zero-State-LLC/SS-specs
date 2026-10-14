@@ -181,3 +181,5 @@ BP-005/BP-007 building admission requires separate labeled wall-contact and walk
 BP-009: occluded Player ground position and solid boundary remain understandable without false roof elevation or invisible actors. Require continuous transitions, Reduced Motion and legal hazard/encounter evidence; static endpoint comparisons alone do not pass.
 
 BP-003 v2 admission requires the structural target schema plus runtime semantic validation, exact mechanical-conversion parity and the playback checks in animation-timing-migration.md. Schema validation alone is insufficient; active v1 remains until the coordinated migration passes.
+
+BP-003 one-shot gate: selected event-facing controls both texture frames and exact lifetime; turning does not restart it, a new qualifying event does, and late visibility does not extend it. Fallback retains live facing. Require the event-facing/phase test matrix and native-scale readability comparison in animation-timing-migration.md before active v2 admission.

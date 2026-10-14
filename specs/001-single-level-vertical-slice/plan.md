@@ -262,3 +262,5 @@ BP-005/BP-007 building repair: use the [registration investigation](../../docs/r
 BP-009: compare depth and opacity treatments with projected ground cues before selecting the runtime occlusion policy. Keep solver authority untouched; then validate an eligibility classifier and clear/restore lifecycle.
 
 BP-003 timing migration: use the versioned clip-metadata-002 target schema and in-memory mechanical conversion checker first. Keep active v1 until strict decoding, frame/duration pairing, exporters, resource/version/parity migration and playback gates pass together.
+
+BP-003 one-shot integration: carry event-facing and start tick separately from live facing through tracker, snapshot and renderer. Select the same facing for lifetime and texture sequence; distinguish repeated events from repeated renders, and enter late-visible responses at elapsed phase. Preserve live-facing fallback and existing cancellation/defeat precedence. Validate normal and Reduced Motion before migrating active clips.
