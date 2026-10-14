@@ -67,3 +67,5 @@ The 46-image environment inventory is reviewed by ID: retain, repair, replace or
 ## Phase-4 acceptance before the camera renderer fix
 
 The specifications, decision, plan, tasks and acceptance below must agree on the midpoint reference, 16-frame movement goal and one visible municipal standard-camera family while preserving logical placement identity. Deliver the reference scene and visual comparisons to the user. This visual review can settle projection direction; it does not certify animation, runtime art, collision or device performance. Camera production and renderer changes follow as the next phase.
+
+The [phase-4 research ledger](../../docs/review/phase4/researched-open-questions.md) names the questions that the concept cannot answer, cites primary production/runtime sources, and states the evidence needed before values or asset admission can be decided. In particular, clip timing, 64×64 fidelity, depth behavior and D-020/D-021 device/budget decisions remain open.
