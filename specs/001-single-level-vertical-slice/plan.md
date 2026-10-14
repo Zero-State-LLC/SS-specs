@@ -258,3 +258,5 @@ Implement [BP-001–BP-006](benchmark-production.md) in order. Begin by adopting
 5. Validate exact candidate through spec validator, byte parity where bundles change, core and Debug/Release app checks. Keep visual/physical acceptance open until review plates, device measures and human evidence exist.
 
 BP-005/BP-007 building repair: use the [registration investigation](../../docs/review/building-registration/review.md) before changing placement. Obtain explicit ground-plan landmarks and separate walkable apron from wall art. Compare consistent projection alternatives through the shared renderer; keep arena geometry unchanged until an explicitly versioned gameplay decision.
+
+BP-009: compare depth and opacity treatments with projected ground cues before selecting the runtime occlusion policy. Keep solver authority untouched; then validate an eligibility classifier and clear/restore lifecycle.
