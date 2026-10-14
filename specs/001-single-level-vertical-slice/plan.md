@@ -239,3 +239,7 @@ Each slice remains executable and testable.
 1. Share the real point-space touch routing with integration tests and consume it outside debug-only autopilot code. Exercise the existing app target in Debug and Release through the existing CI workflow.
 2. Finalize contact/recovery, Tamper, and eligible named Exposure pulses in one resolver before publishing Detection State and quiet-approach effects. Retain the terminal and forced-Lockdown rules in exposure.md.
 3. Advance only the ruleset identity, review and regenerate affected goldens, and update the runtime spec pin plus bundles atomically after the specification commit exists. Run spec validation, core tests, and parity; record simulator evidence separately from physical-device acceptance.
+
+## D-103 — combat causality
+
+See [combat-causality.md](combat-causality.md) for collision, damage evidence, weapon anchor, upgrade clarity and bounded history. CC-001–CC-007 cover phases 1–2; CC-008 remains phase 3.

@@ -2,7 +2,7 @@
 
 Status: BASELINE
 Feature ID: SS-001
-Ruleset version: `ss-rules-007`
+Ruleset version: `ss-rules-008`
 Arena version: `civic-seam-arena-004`
 
 ## 1. Product intent
@@ -168,3 +168,7 @@ Contributor Workflows — named Grok Bot skills, the owner specialist, and CI re
 ## Audit corrections (D-102)
 
 Movement and Dodge must work in both Debug and Release builds. Every eligible Exposure source contributes to the tick's final Detection State and the D-101 quiet-approach latch, with one final state-transition event. The detailed resolution and lethal-tick exception are in exposure.md. Contributor Workflows remain bound from AGENTS.md.
+
+## D-103 — combat causality
+
+See [combat-causality.md](combat-causality.md) for collision, damage evidence, weapon anchor, upgrade clarity and bounded history. CC-001–CC-007 cover phases 1–2; CC-008 remains phase 3.

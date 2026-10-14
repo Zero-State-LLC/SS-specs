@@ -374,3 +374,7 @@ The field-off presentation begins from the authoritative destruction event and c
 
 
 After seeded socket selection, each standard Camera's position, heading, range, and field angle are immutable for the run. Any housing animation is texture/emissive-only. The renderer must never rotate a Camera field from animation state.
+
+## D-103 — combat causality
+
+See [combat-causality.md](combat-causality.md) for collision, damage evidence, weapon anchor, upgrade clarity and bounded history. CC-001–CC-007 cover phases 1–2; CC-008 remains phase 3.

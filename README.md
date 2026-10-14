@@ -112,3 +112,5 @@ additional_cities: deferred
 ## Change rule
 
 A change to product behavior must update the specification before or with runtime implementation. A proposal that introduces another city, generalized campaign infrastructure, or speculative content before the acceptance gates pass is non-conforming.
+
+D-103: [Combat causality clarification](specs/001-single-level-vertical-slice/combat-causality.md).

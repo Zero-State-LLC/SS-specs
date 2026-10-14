@@ -259,3 +259,14 @@ Implementation and automated evidence: [SS-runtime PR #116](https://github.com/Z
 - T410 / EX-017–EX-020: verify final Exposure transitions, quiet latching after named pulses, Signal Jammer, lethal precedence, and M-C exemption.
 - T705: verify the corrected transition reaches audio/VFX projection.
 - T900/T901: review ruleset-007 golden differences, reject ruleset-006, run core tests and byte parity. Physical-device matrix evidence remains open.
+
+## D-103 — combat causality
+
+See [combat-causality.md](combat-causality.md) for collision, damage evidence, weapon anchor, upgrade clarity and bounded history. CC-001–CC-007 cover phases 1–2; CC-008 remains phase 3.
+
+- T1030: D-103 contract and identity/fixture review.
+- T1031: wall/actor integration regressions and repair (CC-001).
+- T1032: damage evidence and honest impact rendering (CC-002/003).
+- T1033: related ricochet traces and bounded history (CC-004/005).
+- T1034: copy, replay rejection and full core/app validation (CC-006/007).
+- T1035: deferred phase-3 presentation/accessibility (CC-008).

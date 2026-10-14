@@ -70,3 +70,7 @@ Object pooling is presentation/runtime storage only. Every checkout resets all f
 | CB-010 | target dies before later ordered hit | later hit cannot damage/retarget it |
 | CB-011 | first hit on an unaware 30-Integrity enemy | 30 damage (10 × 3 ambush); it dies |
 | CB-012 | two hits in one tick on an unaware 60-Integrity enemy | first 30 (ambush), second 10 |
+
+## D-103 — combat causality
+
+See [combat-causality.md](combat-causality.md) for collision, damage evidence, weapon anchor, upgrade clarity and bounded history. CC-001–CC-007 cover phases 1–2; CC-008 remains phase 3.

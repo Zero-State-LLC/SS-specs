@@ -159,3 +159,7 @@ Possible decisions:
 - `EXPANSION_GATE_NOT_COMPUTABLE`
 
 Failure does not authorize undocumented exceptions. Correct the slice, update the specification through governance, or record why evidence is insufficient.
+
+## D-103 — combat causality
+
+See [combat-causality.md](combat-causality.md) for collision, damage evidence, weapon anchor, upgrade clarity and bounded history. CC-001–CC-007 cover phases 1–2; CC-008 remains phase 3.

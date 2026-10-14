@@ -50,7 +50,7 @@ Left-handed mode reflects movement stick and Dodge across x=422. Pause and infor
 | First contact | `BREAK LINE OF SIGHT TO RECOVER` |
 | First damageable Camera | `MOVE TOWARD A CAMERA TO SHOOT IT • DESTRUCTION ADDS EXPOSURE` |
 | Wave with heat reinforcements | `REINFORCEMENTS +<n> • <STATE>`, e.g. `REINFORCEMENTS +2 • HUNTED` |
-| First unaware enemy on screen | `UNSEEN ENEMIES HOLD • STRIKE FIRST FOR DOUBLE DAMAGE` |
+| First unaware enemy on screen | `UNSEEN ENEMIES HOLD • STRIKE FIRST FOR TRIPLE DAMAGE` |
 | First patrol cone on screen (D-098) | `PATROL • STAY OUT OF THE CONES • WALK PAST OR STRIKE` |
 | Camera destruction | `+150 TAMPER` |
 | M-A complete | `CHOOSE ONE COUNTERMEASURE` |
@@ -141,3 +141,7 @@ Render `ceil(remainingTicks / 60)` as 5, 4, 3, 2, 1. The ring uses exact tick pr
 | UI-009 | run start | `QUIET` tag shown |
 | UI-010 | Detection State reaches `tracked` before M-C | tag removed; `QUIET APPROACH LOST` caption |
 | UI-011 | boss activates with `quietApproach` true at 40 Integrity | `QUIET APPROACH • INTEGRITY 90` caption; tag removed |
+
+## D-103 — combat causality
+
+See [combat-causality.md](combat-causality.md) for collision, damage evidence, weapon anchor, upgrade clarity and bounded history. CC-001–CC-007 cover phases 1–2; CC-008 remains phase 3.

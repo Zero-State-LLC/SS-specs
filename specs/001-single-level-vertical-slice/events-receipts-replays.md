@@ -101,3 +101,7 @@ Required visible fields:
 | ER-006 | 51st stored receipt | oldest receipt deleted only after new atomic write |
 | ER-007 | audio/tutorial/settings change | authoritative receipt/digest unchanged except declared presentation metadata |
 | ER-008 | canonical JSON round-trip | byte-identical canonical form |
+
+## D-103 — combat causality
+
+See [combat-causality.md](combat-causality.md) for collision, damage evidence, weapon anchor, upgrade clarity and bounded history. CC-001–CC-007 cover phases 1–2; CC-008 remains phase 3.
