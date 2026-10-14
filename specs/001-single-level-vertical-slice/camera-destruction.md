@@ -229,6 +229,11 @@ Visual bounds never define any authoritative shape.
 
 Damage state must remain distinguishable in grayscale and without rapid blinking.
 
+The persistent world-space damage marker counts damage stages, not remaining hits: Integrity 2 has one ivory notch on a dark backing; Integrity 1 has two separated notches; Integrity 3 and 0 have no such marker. This is distinct from the targeted HUD's three remaining-Integrity slots below. It sits beside the standard Camera's pole, follows its ground anchor, and remains static under Reduced Motion. It is independent of transient hit/destruction art and clears on destruction or entity removal. Captain emitters never receive this standard damage marker. Review its size and placement in native-size and grayscale captures; the first renderer implementation is a sizing candidate, not proof of accessibility acceptance.
+
+Design basis: [Game Accessibility Guidelines](https://gameaccessibilityguidelines.com/ensure-no-essential-information-is-conveyed-by-a-fixed-colour-alone/) recommends redundant shape/pattern cues rather than essential state conveyed only by color. The one/two notch mapping is SS's existing damage-state contract, clarified here to avoid confusing damage stages with remaining hits. Source checked 2026-10-14.
+
+
 ### Valid impact
 
 - compact directional spark;
