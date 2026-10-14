@@ -264,3 +264,5 @@ BP-009: compare depth and opacity treatments with projected ground cues before s
 BP-003 timing migration: use the versioned clip-metadata-002 target schema and in-memory mechanical conversion checker first. Keep active v1 until strict decoding, frame/duration pairing, exporters, resource/version/parity migration and playback gates pass together.
 
 BP-003 one-shot integration: carry event-facing and start tick separately from live facing through tracker, snapshot and renderer. Select the same facing for lifetime and texture sequence; distinguish repeated events from repeated renders, and enter late-visible responses at elapsed phase. Preserve live-facing fallback and existing cancellation/defeat precedence. Validate normal and Reduced Motion before migrating active clips.
+
+T1045 source-production next step: run the [controlled character source pilot](controlled-character-source.md), starting with editable anatomy/foot-target measurements, then benchmark costume and four-facing renders. Keep runtime on reviewed raster delivery; no skeletal runtime migration is proposed.

@@ -1,0 +1,30 @@
+# Controlled character source pilot — BP-002/BP-008
+
+Status: production-method pilot; no artwork or new runtime admitted. Scope remains D-104 / T1045.
+
+## Evidence motivating the pilot
+
+Runtime 987c32a captured the existing three-frame hurt response with the real renderer: event timing passed, but silhouette and facing readability did not. Runtime 4cc9a62 records a higher-detail generated replacement study: costume coherence improved, but manually annotated boot landmarks drifted up to 5.60 pixels at 384px export (about 0.93 logical units). These approximate annotations are diagnostic, not a numerical acceptance threshold. Repeated independent image generation has not supplied the editable source master already required by BP-002.
+
+## Research and choice
+
+DOCUMENTED: Spine's [weights](https://esotericsoftware.com/spine-weights) bind image-mesh vertices to bones; [IK constraints](https://esotericsoftware.com/spine-ik-constraints) control limb endpoints and expose stretch behavior. Its [export guide](https://esotericsoftware.com/spine-export#PNG) supports transparent PNG sequences and omission of a duplicate closing frame. These mechanisms permit offline source animation without adopting a skeletal runtime.
+
+DOCUMENTED: Blender's [IK constraint](https://docs.blender.org/manual/en/5.0/animation/constraints/tracking/ik_solver.html) controls a bone chain using a target and exposes chain length and stretch. The versioned official page was retrieved through search on 2026-10-14; current manual/API direct fetches failed. Confirm properties in the installed 5.2 API before use. Local Blender 5.2.0 LTS build fbe6228777e7 was observed on 2026-10-14.
+
+PROPOSED implementation pilot: use a single editable 3D body/rig as a source for exported sprites. This is selected for a bounded experiment because one source can be viewed from distinct directions and can expose measurable limb/contact constraints. It does not prove a superior aesthetic. A layered painted rig remains an alternative if it better preserves the benchmark; it must author hidden surfaces and facings explicitly. Neither workflow may stretch one side-facing bitmap and call it a different view. No new runtime engine, dependency, physics or player mechanic is authorized by this pilot.
+
+## Pilot sequence and evidence
+
+1. Create a small editable rig with pelvis, torso, head, paired thighs/shins, separate foot targets and explicit joint names. Keep targets independent of the moving pelvis. Disable automatic limb stretch for this anatomical continuity experiment. Save the project and generation recipe, tool version, source hash and coordinate convention.
+2. Block a restrained three-key hurt response using one rig. Measure evaluated thigh/shin lengths and ankle-target residual at each key and intermediate sample. Solver correctness is technical evidence only; no benchmark acceptance follows from zero residual. Record values without inventing a visual slip threshold. Include target reachability and joint direction review.
+3. Produce a hooded body/costume master matching the selected reference, preserving strap/patch side, hands, boots and hood volume. Validate skin deformation and garment intersections. A stick rig, mannequin or plain low-poly proxy does not meet the art target. Pose/mesh controls must remain editable; a raster embedded in a project is insufficient.
+4. Render four neutral facings with one saved camera, scale, illumination and consistent ground root. Record the actual world-to-view mapping and compare against the shared renderer scene; no exact angle is assumed from the concept. Hidden sides need authored geometry/materials. Do not mirror asymmetric equipment.
+5. Follow BP-002's south movement-cycle gate, BP-008 world-travel contact checks and the event-facing hurt-to-live-state comparison before expanding other facings. A planted source foot during a stationary hurt does not prove no sliding while the runtime actor travels. Record that distinction explicitly.
+6. Export only reviewed poses with fixed canvas/anchor and BP-007 resolution records. Retain exact durations and do not include a redundant closing pose as a distinct frame. Admit a complete family through BP-006 after visual and runtime gates; the source prototype does not switch active metadata.
+
+## Stop conditions and comparison
+
+Reject the pilot as a production solution if it cannot preserve the selected urban hooded character's material treatment, silhouette, distinct elevated facings, foot contact and cloth/hand readability at native size. Correct the master or compare the layered painted alternative; do not lower the benchmark to match a convenient rig. Camera and environment source work remain required and are not replaced by this character experiment.
+
+The existing animation timing, controller speed, damage authority, v1 active delivery, gameplay identities and physical-device review gate remain unchanged. All full-source, art, world-travel, encounter and device acceptance remains open.

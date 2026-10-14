@@ -183,3 +183,5 @@ BP-009: occluded Player ground position and solid boundary remain understandable
 BP-003 v2 admission requires the structural target schema plus runtime semantic validation, exact mechanical-conversion parity and the playback checks in animation-timing-migration.md. Schema validation alone is insufficient; active v1 remains until the coordinated migration passes.
 
 BP-003 one-shot gate: selected event-facing controls both texture frames and exact lifetime; turning does not restart it, a new qualifying event does, and late visibility does not extend it. Fallback retains live facing. Require the event-facing/phase test matrix and native-scale readability comparison in animation-timing-migration.md before active v2 admission.
+
+BP-002/BP-008 controlled-source evidence must distinguish rig/solver correctness from art and world-travel acceptance. Require the editable costume master, four coherent facings and native renderer comparison in [controlled-character-source.md](controlled-character-source.md); a skeleton-only proof cannot close D-023.

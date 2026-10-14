@@ -111,3 +111,5 @@ Compare opaque depth, faded architecture, and faded architecture with a ground-b
 Required evidence: front/rear/corner movement including entry and exit, direction reversal, stationary contact, overlapping occluders and scene edges; natural and geometry-overlay captures; normal and Reduced Motion; enemies, projectiles and Camera fields in a legal encounter. Compare representative building and upright prop. State explicitly which of these remain untested. A static contact probe does not close traversal, combat or animation acceptance.
 
 Research basis: Apple's [node drawing order](https://developer.apple.com/documentation/spritekit/about-node-drawing-order) and [node alpha](https://developer.apple.com/documentation/spritekit/sknode/alpha) describe ordering and opacity mechanisms (accessed2026-10-14). SS-specific cue and opacity selection comes from the comparison, not those API references.
+
+BP-002 source-control implementation: follow the [controlled character source pilot](controlled-character-source.md). A rig scaffold is technical evidence only; it cannot substitute for the hooded costume master, four-facing review or world-travel animation acceptance.
