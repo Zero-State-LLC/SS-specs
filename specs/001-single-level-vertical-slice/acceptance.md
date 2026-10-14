@@ -163,3 +163,5 @@ Failure does not authorize undocumented exceptions. Correct the slice, update th
 ## D-103 — combat causality
 
 See [combat-causality.md](combat-causality.md) for collision, damage evidence, weapon anchor, upgrade clarity and bounded history. CC-001–CC-007 cover phases 1–2; CC-008 remains phase 3.
+
+T1035 automated coverage must include no-target/no-shot, opposite movement and aim, retired-shot evidence, Jammer inactive/clamped/Tamper cases, Ghost Step expiry and ordinary Dodge, reduced presentation, selection order/activation and input reset. Device VoiceOver and 200% text usability remain unproven until the later physical pass.

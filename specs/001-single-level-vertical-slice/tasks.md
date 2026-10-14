@@ -269,4 +269,4 @@ See [combat-causality.md](combat-causality.md) for collision, damage evidence, w
 - T1032: damage evidence and honest impact rendering (CC-002/003).
 - T1033: related ricochet traces and bounded history (CC-004/005).
 - T1034: copy, replay rejection and full core/app validation (CC-006/007).
-- T1035: deferred phase-3 presentation/accessibility (CC-008).
+- T1035: accepted phase-3 presentation/accessibility (CC-008): event-backed discharge and independent aim, conditional Jammer contour, actual Ghost Step boundary, protected SwiftUI cards with VoiceOver activation and Dynamic Type scrolling. Verify automated tests before art/device testing; physical acceptance remains open.

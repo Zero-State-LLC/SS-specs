@@ -1,7 +1,7 @@
 # Combat causality clarification
 
 Status: CANONICAL (D-103 implementation candidate)
-Contributor workflows: AGENTS.md. Scope: accepted phases 1–2.
+Contributor workflows: AGENTS.md. Scope: accepted phases 1–3; art and device acceptance deferred.
 
 ## Collision and identity
 Ruleset ss-rules-008 replaces ss-rules-007; older replays fail closed before tick 1. Content, arena and envelope schema identities remain unchanged. Preserve the existing world-wall convention: projectile center segment versus solid rectangles; projectile radius expands circular actor targets only. Wall entry time uses the same Q8 interval [0,256] and half-away rounding as actor sweep time. Earliest entry wins, walls win equal quantized times. Starting inside/on an actor hit circle is entry at zero, not exit time. Stationary overlap hits at zero. Other LOS and ordering conventions remain unchanged. Tests must exercise simulation intersection generation, not only sorting supplied times.

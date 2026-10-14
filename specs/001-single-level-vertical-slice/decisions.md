@@ -121,3 +121,6 @@ A pending decision may block an implementation task or final gate, but it MUST N
 ## D-103 — combat correctness and evidence (2026-10-13)
 
 ACCEPTED by owner instruction to implement phases 1 and 2. See combat-causality.md and accepted combat-causality intent. Ruleset-008 versions wall entry ordering, start-inside actor collision and enriched event evidence. Old replay identities fail closed; fixtures require canonical comparison. No content magnitudes or art change. Phase 3 remains deferred.
+
+### D-103 phase-3 continuation — accepted
+The user authorized T1035 implementation after phases 1–2 passed. Implement existing CC-008 presentation and accessible selection requirements. No rule, magnitude, content, event schema or replay identity changes; art and physical-device acceptance remain deferred.

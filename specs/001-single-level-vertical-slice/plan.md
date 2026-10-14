@@ -243,3 +243,6 @@ Each slice remains executable and testable.
 ## D-103 — combat causality
 
 See [combat-causality.md](combat-causality.md) for collision, damage evidence, weapon anchor, upgrade clarity and bounded history. CC-001–CC-007 cover phases 1–2; CC-008 remains phase 3.
+
+### T1035 implementation
+Project shot origin/direction and actual Jammer reduction as transient presentation evidence, outside authoritative state and replay identity. Read Ghost Step directly from its authoritative inclusive interval. Reuse stable nodes for aim and upgrade contours; reduced settings use static shapes. SwiftUI owns protected choice buttons and scrolling, through a single validated scene choice boundary that clears held input. Add core evidence and app renderer/selection tests; preserve golden digests.
