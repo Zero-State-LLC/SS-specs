@@ -1,0 +1,95 @@
+{
+  "status": "FAILED_REGISTRATION_NOT_ADMITTED",
+  "runtimeCommit": "9501261",
+  "sourceSHA256": "6f0d74055f2f3b785c7b74af35f37198a3df08851bf0e156f579339d3d3e6780",
+  "texturePixels": [
+    673,
+    768
+  ],
+  "textureCoordinateConvention": "top-left origin; x right; y down",
+  "drawSize": [
+    190,
+    217
+  ],
+  "spriteAnchorNormalized": [
+    0.5,
+    0.0
+  ],
+  "spriteWorldPosition": [
+    576,
+    640
+  ],
+  "authoritativeSolid": {
+    "id": "solid-03-transit-kiosk",
+    "center": [
+      576,
+      704
+    ],
+    "halfSize": [
+      64,
+      64
+    ],
+    "corners": [
+      [
+        512,
+        640
+      ],
+      [
+        640,
+        640
+      ],
+      [
+        640,
+        768
+      ],
+      [
+        512,
+        768
+      ]
+    ]
+  },
+  "observedOuterPavingPoints": [
+    {
+      "label": "outer paving left",
+      "texturePixels": [
+        6,
+        580
+      ],
+      "worldAtCurrentPlacement": [
+        482.69390787518574,
+        693.1197916666666
+      ],
+      "precision": "approximate visual annotation, not surveyed geometry"
+    },
+    {
+      "label": "outer paving front",
+      "texturePixels": [
+        367,
+        755
+      ],
+      "worldAtCurrentPlacement": [
+        584.6106983655275,
+        643.6731770833334
+      ],
+      "precision": "approximate visual annotation, not surveyed geometry"
+    },
+    {
+      "label": "outer paving right",
+      "texturePixels": [
+        665,
+        552
+      ],
+      "worldAtCurrentPlacement": [
+        668.7414561664191,
+        701.03125
+      ],
+      "precision": "approximate visual annotation, not surveyed geometry"
+    }
+  ],
+  "unresolved": [
+    "Rear ground boundary is occluded; not inferred from roof.",
+    "Outer paving is not necessarily building collision boundary.",
+    "Wall, stairs, planters and walkable pavement are baked into one texture.",
+    "Source lacks an explicit top-view footprint and ground-plane master."
+  ]
+}

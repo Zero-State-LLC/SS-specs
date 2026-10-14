@@ -118,3 +118,5 @@ D-103: [Combat causality clarification](specs/001-single-level-vertical-slice/co
 D-104: [Shared top-down visual reference](specs/001-single-level-vertical-slice/visual-reference.md) and [visual intent](intent/2026-10-13-visual-coherence.md). Concept images are kept under `docs/review/phase4/`; production clips and camera integration follow their own admission gates.
 
 [Benchmark production](specs/001-single-level-vertical-slice/benchmark-production.md) defines the shared runtime sample, exact locomotion scope, Camera state delivery and evidence required for D-104 reconciliation.
+
+[Animation timing migration](specs/001-single-level-vertical-slice/animation-timing-migration.md) records the proposed exact-duration presentation metadata design.
