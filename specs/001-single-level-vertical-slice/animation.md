@@ -127,8 +127,8 @@ Missing required metadata fails intake.
 | Clip | Target frames | Target duration |
 |---|---:|---:|
 | Idle | 4 | 600–1000 ms loop |
-| Standard move | 6 | 400–650 ms loop |
-| Fast enemy move | 6 | 280–450 ms loop |
+| Standard move | 16 distinct frames per authored facing | Preserve the approved movement-cycle cadence; playback rate follows the chosen cycle duration |
+| Fast enemy move | 16 distinct frames per authored facing when the role has a locomotion clip | Preserve the role's established fast cycle and authoritative speed |
 | Dodge/Ghost Step | 4 | 180–300 ms |
 | Hurt | 2–3 | 100–220 ms |
 | Standard attack anticipation | 2–4 | ≥ 250 ms |
@@ -140,6 +140,8 @@ Missing required metadata fails intake.
 | Extraction | 6–10 | countdown-aligned |
 
 These are production ranges, not simulation rules. Playtest evidence may tune them while preserving required warning windows.
+
+D-104 supersedes the previous six-frame movement target. Sixteen is a motion-quality target for applicable locomotion, not a mandate to lengthen a cycle, invent extra combat states or add walk clips to stationary roles. Produce distinct contacts, compression, passing, lift and extension, alternate limbs, and a smooth seam. The four facings must share the elevated viewpoint in [visual-reference.md](visual-reference.md); east/west are not eye-level profile views. Validate source poses, frame registration, playback at game scale and the corresponding catalog/clip metadata before runtime admission.
 
 ## 6. Direction and mirroring
 

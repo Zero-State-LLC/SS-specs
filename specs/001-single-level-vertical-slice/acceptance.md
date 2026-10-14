@@ -92,6 +92,9 @@ Run three consecutive complete runs on a physical iPhone 12 or approved no-bette
 - [ ] D-019 Camera field presentation clears on the authoritative destruction update.
 - [ ] D-020 Impact/destruction VFX remain bounded and reduced presentation preserves all state information.
 - [ ] D-021 No Camera idle, hit, or ambient animation translates or rotates its authoritative housing or field.
+- [ ] D-022 The user-selected street-corner look and intermediate elevated view resolve to one consistent projection across Player, Camera, representative solid, upright prop and ground at native and 50% gameplay scale. Four player facings show distinct body orientation with visible upper surfaces; east/west do not become eye-level profiles.
+- [ ] D-023 Applicable locomotion clips have 16 distinct chronological frames per authored facing, with stable ground contact, coherent equipment/anatomy, clean loop seam and unchanged authoritative timing. Stationary and attack-only states follow their actual clip contracts.
+- [ ] D-024 Every standard Camera displays exactly one complete municipal device frame at a stable mount. Seeded logical `housingFamily` identity, placement/fairness results and replay digest remain unchanged. Captain emitters are visibly boss-owned and never imply standard three-hit Integrity.
 
 ## Gate E — Arena design and fairness
 
@@ -115,6 +118,7 @@ Run three consecutive complete runs on a physical iPhone 12 or approved no-bette
 - [ ] E-018 Manifest contains exactly 7 zones, 14 permanent solids, 5 gates, and 18 valid Camera sockets.
 - [ ] E-019 Extraction requires 300 consecutive in-zone ticks and resets immediately on exit.
 - [ ] E-020 Every coordinate, socket, trigger, and solid is in bounds and schema-valid.
+- [ ] E-021 The shared reference scene and each repaired solid/prop show contact/base/footprint agreement during traversal; no alpha padding, wall art or upright-prop scale creates a false opening or invisible blocked region.
 
 ## Gate F — Accessibility and comprehension
 
@@ -165,3 +169,7 @@ Failure does not authorize undocumented exceptions. Correct the slice, update th
 See [combat-causality.md](combat-causality.md) for collision, damage evidence, weapon anchor, upgrade clarity and bounded history. CC-001–CC-007 cover phases 1–2; CC-008 remains phase 3.
 
 T1035 automated coverage must include no-target/no-shot, opposite movement and aim, retired-shot evidence, Jammer inactive/clamped/Tamper cases, Ghost Step expiry and ordinary Dodge, reduced presentation, selection order/activation and input reset. Device VoiceOver and 200% text usability remain unproven until the later physical pass.
+
+## D-104 — visual reference and production gate
+
+See [visual-reference.md](visual-reference.md). D-022–D-024 and E-021 require actual game-scale review plates and runtime evidence; the phase-4 concept images alone do not pass those gates. Preserve B-001/B-007/B-008/B-012 placement/replay results when mapping logical Camera families to one visual family. Produce the complete character and Camera playback review before the next physical device installation.

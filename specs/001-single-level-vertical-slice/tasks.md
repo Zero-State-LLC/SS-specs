@@ -246,6 +246,11 @@ A harness is a collector of evidence, not evidence. SS-runtime #34–#41 ship th
 | T906 | STANDING_GATE | Severity-one and -two defects are not fixed; the defect list must be found through device / playtest evidence first | Developer fixes; evidence discovers the defects | A defect registry with no open severity-one or -two defects |
 | T907 | NOT_RECORDED | Release-candidate evidence is not recorded; `ReleaseEvidenceStore` is a harness, not evidence | The release owner records the evidence | A recorded release-candidate evidence bundle |
 | T908 | NOT_DECIDED | The expansion-gate decision is a human judgment, gated on D-020, D-021, and Gates A–G | The owner specialist (Danny) decides | A recorded expansion-gate decision referencing D-020/D-021 and the gate evidence |
+| T1042 | PARTIAL | Concept images exist; controlled four-facing model and actual game-scale geometry overlay do not | Artist and runtime renderer | Four-facing source, native-scale scene, grayscale and authoritative anchor/footprint review plate |
+| T1043 | NOT_PRODUCED | Six camera state keys are a concept, not complete registered clips; Captain identity remains to be mapped | Artist and runtime renderer | Complete-device frames, metadata, provenance, state playback and single-device renderer verification |
+| T1044 | NOT_RUN | Production frames are not accepted, so clip/catalog/manifest migration cannot be finalized | Spec and asset intake owner after accepted delivery | Validated frame IDs, metadata, hashes, parity and bundle exclusion receipt |
+| T1045 | NOT_PRODUCED | Earlier side-on and low-motion studies are rejected; complete state coverage is absent | Artist and animation reviewer | Four-facing 16-frame locomotion proof where applicable plus all required action clips and timed playback review |
+| T1046 | PARTIAL | Family-level inventory found defects; per-ID disposition and in-scene base/footprint proof remain | Environment artist and runtime reviewer | 46-item disposition, repaired sources, native-scale traversal and collision review plates |
 
 ## Traceability rule
 
@@ -270,3 +275,13 @@ See [combat-causality.md](combat-causality.md) for collision, damage evidence, w
 - T1033: related ricochet traces and bounded history (CC-004/005).
 - T1034: copy, replay rejection and full core/app validation (CC-006/007).
 - T1035: accepted phase-3 presentation/accessibility (CC-008): event-backed discharge and independent aim, conditional Jammer contour, actual Ghost Step boundary, protected SwiftUI cards with VoiceOver activation and Dynamic Type scrolling. Verify automated tests before art/device testing; physical acceptance remains open.
+
+## D-104 — phase-4 visual contract and staged art work
+
+- [x] T1040 Record accepted visual intent, user-selected street-corner reference, midpoint projection study and visual decision; link both concept images as references, not runtime admission.
+- [x] T1041 Define shared projection, player identity, role/equipment language, one visible municipal standard-camera family, logical-family replay preservation and 16 distinct locomotion frames per applicable facing in spec/plan/acceptance.
+- [ ] T1042 Validate a four-facing hooded-player model and one representative player/building/camera/prop/ground scene at actual game scale, including collision/base overlay and no-color view. The generated concept is direction evidence only.
+- [ ] T1043 Produce registered municipal complete-device clips with persistent Integrity states, reduced presentation, exact mount and provenance. Reconcile Captain emitter appearance and asset IDs. Camera renderer integration belongs to the next implementation phase.
+- [ ] T1044 Revise affected clip metadata, frame IDs, presentation manifest and asset catalog when accepted production assets are ready; validate source/delivery hashes and bundle exclusions.
+- [ ] T1045 Complete actor state/facing coverage with controlled 16-frame locomotion where applicable; run timing, identity, anchor and gameplay-scale review before device testing.
+- [ ] T1046 Audit each of the 46 environment PNGs for retain/repair/replace/exclude and validate visible base against collision geometry in the shared scene.

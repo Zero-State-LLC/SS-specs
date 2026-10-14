@@ -81,6 +81,8 @@ Generated assets may accelerate exploration but do not bypass production contrac
 - Rebuild tile edges manually when seamlessness is required.
 - Validate each output at actual gameplay scale.
 
+D-104 uses [the shared visual reference](visual-reference.md) for projection, scale and civic material checks. The user-selected street corner establishes the look; the midpoint study informs the production angle. Neither image is a runtime sprite or a substitute for four-facing model, 16-frame motion, exact camera mount, base/footprint and provenance review. The earlier side-on generated turnarounds remain rejected studies. Do not generate a grid whose cells are claimed as aligned animation frames.
+
 ## 6. Intake automation
 
 The runtime repository MUST provide checks for:

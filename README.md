@@ -114,3 +114,5 @@ additional_cities: deferred
 A change to product behavior must update the specification before or with runtime implementation. A proposal that introduces another city, generalized campaign infrastructure, or speculative content before the acceptance gates pass is non-conforming.
 
 D-103: [Combat causality clarification](specs/001-single-level-vertical-slice/combat-causality.md).
+
+D-104: [Shared top-down visual reference](specs/001-single-level-vertical-slice/visual-reference.md) and [visual intent](intent/2026-10-13-visual-coherence.md). Concept images are kept under `docs/review/phase4/`; production clips and camera integration follow their own admission gates.

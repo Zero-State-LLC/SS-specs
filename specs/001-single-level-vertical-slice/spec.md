@@ -172,3 +172,7 @@ Movement and Dodge must work in both Debug and Release builds. Every eligible Ex
 ## D-103 — combat causality
 
 See [combat-causality.md](combat-causality.md) for collision, damage evidence, weapon anchor, upgrade clarity and bounded history. CC-001–CC-007 cover phases 1–2; CC-008 remains phase 3.
+
+## D-104 — shared visual reference
+
+The first release uses the user-selected street-corner look with a slightly higher, intermediate top-down viewpoint. [Visual reference](visual-reference.md) defines a coherent player, Camera, building, prop and ground scene. The hooded player, existing roster, Civic Pulse and three upgrades remain. Applicable locomotion uses 16 distinct chronological frames per authored N/E/S/W facing; attack and stationary clips follow their own state timing. All standard Cameras in this level display one complete municipal-dome device per entity while deterministic logical housing-family selection and receipts remain unchanged. Art does not own collision, Camera fields, damage or replay outcomes. Contributor Workflows remain bound from AGENTS.md.

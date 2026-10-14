@@ -63,6 +63,12 @@ The search order, not dictionary/set iteration, is authoritative. A rejected can
 
 After selection, sort the eight sockets by `socketId`. Assign Camera entity IDs from the normal monotonic allocator in that order. Socket identity and Camera entity identity are both recorded. Housing family is the first allowed family after a per-socket Fisher–Yates shuffle using the same placement stream after all zone shuffles.
 
+### Release-one presentation mapping (D-104)
+
+The selected `housingFamily` remains an authoritative, seeded logical value in the selected Camera and receipt. The four-family result requirement, allowed-family checks, shuffle and RNG consumption stay in force. On the single first-release level, all five logical families render as the same complete municipal-dome device family. This presentation mapping must not perturb placement, collision, hit shape, Camera field, replay identity, or the receipt. Four logical families in CP-003 do **not** require four visibly different housings in this release. A later level may introduce distinct visible housings only through a separate scope and asset decision.
+
+Captain Camera emitters do not participate in this standard-family selection. They remain fixed, boss-owned and indestructible, with a visibly distinct non-color boss marker under D-104.
+
 ## Runtime immutability
 
 Once initialized:

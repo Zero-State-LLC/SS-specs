@@ -246,3 +246,11 @@ See [combat-causality.md](combat-causality.md) for collision, damage evidence, w
 
 ### T1035 implementation
 Project shot origin/direction and actual Jammer reduction as transient presentation evidence, outside authoritative state and replay identity. Read Ghost Step directly from its authoritative inclusive interval. Reuse stable nodes for aim and upgrade contours; reduced settings use static shapes. SwiftUI owns protected choice buttons and scrolling, through a single validated scene choice boundary that clears held input. Add core evidence and app renderer/selection tests; preserve golden digests.
+
+## D-104 — visual coherence and production sequence
+
+1. Lock the selected street-corner mood and midpoint projection in a shared reference scene. Review actual gameplay scale, four-player-facing identity, building/prop base, Camera mount and authoritative footprint overlays before multiplying art.
+2. Reconcile visual contracts: 16 distinct frames for each applicable locomotion facing; one municipal complete-device presentation for all seeded standard Camera families; Captain retains boss-owned mechanical distinction and a non-color visible marker. Preserve placement RNG/receipt and ruleset-008 replay identity.
+3. Revise clip metadata, frame IDs, catalog, manifest and provenance together as each complete production asset family is admitted. Existing six-frame records and five delivered housings remain historical baseline until that migration. Reject partial aligned-sheet claims and unreachable replacement art.
+4. Next implementation slice: finish municipal Camera state clips, remove housing-plus-head composition, verify one device per entity, stable anchor, persistent Integrity states and immediate field-off. Only after this checkpoint expand controlled character loops and environment repairs.
+5. Validate exact candidate through spec validator, byte parity where bundles change, core and Debug/Release app checks. Keep visual/physical acceptance open until review plates, device measures and human evidence exist.

@@ -8,6 +8,8 @@ Direction version: `civic-seam-001`
 
 **A rebuilt civic city whose historic layers remain visible beneath an expanding machine of observation.**
 
+D-104's [shared reference scene](visual-reference.md) is the release-one projection and material benchmark: a hooded participant, civic corner building, upright street prop, municipal dome, curb and diagonal rail in one elevated view. The user-selected first image establishes look and mood; the midpoint study guides final elevation. All production assets must agree in the actual game scene and remain subordinate to gameplay readability.
+
 Level 1 is a compressed, fictionalized district where the visual grammar of Market Street, Civic Center, and eastern SoMa collide. It is not a literal map and MUST NOT claim geographic fidelity. It uses real urban patterns to create a legible authored arena.
 
 The central contrast is:

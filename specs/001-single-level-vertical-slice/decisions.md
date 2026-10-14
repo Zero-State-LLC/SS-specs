@@ -124,3 +124,15 @@ ACCEPTED by owner instruction to implement phases 1 and 2. See combat-causality.
 
 ### D-103 phase-3 continuation — accepted
 The user authorized T1035 implementation after phases 1–2 passed. Implement existing CC-008 presentation and accessible selection requirements. No rule, magnitude, content, event schema or replay identity changes; art and physical-device acceptance remain deferred.
+
+## D-104 — coherent release-one projection and camera presentation (2026-10-13)
+
+**ACCEPTED direction:** The user selected the first generated street-corner scene as the desired game look, requested an intermediate viewing angle, and authorized phase 4 specification work before the camera renderer fix. [Visual reference](visual-reference.md) holds the selected scene, midpoint study and the production checks. The current generated images are concept references, not admitted runtime assets.
+
+1. Use a coherent elevated three-quarter top-down projection across the hooded player, all enemies, municipal dome, buildings, props and ground. Preserve the urban street theater setting and useful existing art. Do not copy the rejected side-on sheets into production.
+2. Applicable N/E/S/W locomotion moves to 16 **distinct** chronological frames per facing. Keep authoritative movement, Dodge, attack windows and existing cycle cadence. State-specific clips retain their own durations and event markers. Current six-frame metadata/catalog records remain a previous delivery baseline until a coordinated production migration; they are not silently relabeled as complete.
+3. The first release presents every standard Camera as one complete municipal-dome device. Keep the existing five logical `housingFamily` values, deterministic four-family selection requirement, placement RNG consumption, receipt, arena version and replay identity unchanged. D-073's five admitted housing assets remain historical evidence; their shipping reachability and replacements require explicit manifest/catalog review during integration.
+4. Captain emitters share municipal construction language but retain a persistent non-color boss-owned marker, distinct active cue, fixed positions and indestructibility. This supersedes D-078's *visual* uniqueness direction for release one while preserving its mechanical and field obligations. Reconcile the two Captain asset IDs and admission records before runtime use.
+5. The source canvas, visible base, anchor and authoritative footprint are separately reviewed. No art pixel establishes collision. Approval requires actual-scale, no-color, anchor/collision and animation playback evidence under Gates D/E; concept-image preference alone does not close them.
+
+**Affected:** visual-reference, visual-assets, animation, camera-placement, visual-production, civic-seam visual direction, spec, plan/tasks, acceptance, and later clip/catalog/manifest revisions. This decision changes presentation requirements but no simulation rule, content magnitude, placement algorithm, receipt schema or replay digest. No ruleset bump is justified by this phase-4 spec change. The camera renderer fix and physical acceptance are subsequent phases.
