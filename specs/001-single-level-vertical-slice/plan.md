@@ -249,6 +249,8 @@ Project shot origin/direction and actual Jammer reduction as transient presentat
 
 ## D-104 — visual coherence and production sequence
 
+Implement [BP-001–BP-006](benchmark-production.md) in order. Begin by adopting the exact D-104 spec pin and recording existing runtime gaps; this does not admit old art as conforming. The production sample uses real runtime rendering and geometry, with separate source resolution, logical draw size and display-scale records. Preserve each named movement cycle when moving to 16 frames; the elite's 3/7-second cycle cannot be preserved by rounding to integer fps. Resolve presentation timing representation before that asset family migrates. Review Informant pursuit playback explicitly. Camera responses must settle into the newest Integrity state, including interruption and Reduced Motion.
+
 1. Lock the selected street-corner mood and midpoint projection in a shared reference scene. Review actual gameplay scale, four-player-facing identity, building/prop base, Camera mount and authoritative footprint overlays before multiplying art.
 2. Reconcile visual contracts: 16 distinct frames for each applicable locomotion facing; one municipal complete-device presentation for all seeded standard Camera families; Captain retains boss-owned mechanical distinction and a non-color visible marker. Preserve placement RNG/receipt and ruleset-008 replay identity.
 3. Revise clip metadata, frame IDs, catalog, manifest and provenance together as each complete production asset family is admitted. Existing six-frame records and five delivered housings remain historical baseline until that migration. Reject partial aligned-sheet claims and unreachable replacement art.

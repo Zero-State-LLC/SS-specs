@@ -6,6 +6,8 @@ Authority: user-selected street-corner direction and intermediate-angle refineme
 
 This document specifies what the first-release art must communicate. The linked images are concept references. They are not production sprites, source masters, registered animation, collision data or evidence that the game already renders this way.
 
+[Benchmark production](benchmark-production.md) defines BP-001–BP-006: shared sample, source delivery, exact locomotion scope, Camera settling states, environment mapping and evidence/adoption sequence.
+
 ## Reference scene and projection
 
 - [User-selected street corner](../../docs/review/phase4/street-corner-approved-concept.png) sets mood, palette, character scale and architectural detail.

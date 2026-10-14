@@ -24,7 +24,7 @@ This contract applies to standard Level 1 Camera entities:
 - Ornamental Civic Camera
 - Temporary Sensor Mast
 
-Housing family changes appearance only. All five use the same destruction rules.
+These five logical housing families retain their placement and receipt identity. D-104 maps them to one complete municipal-dome appearance for release one. All five use the same destruction rules.
 
 The **Captain Camera** is an attack emitter owned by the Algorithmic Moderate. It is not a standard Camera entity and is not independently destructible in SS-001.
 
@@ -36,7 +36,7 @@ integrity_damage_per_valid_impact: 1
 exposure_scale:
   min: 0
   max: 1000
-tamper_spike_per_destroyed_camera: 100
+tamper_spike_per_destroyed_camera: 150 # D-086 supersedes D-029's original amount
 destroyed_camera_respawns_during_run: false
 camera_drops_loot: false
 camera_destruction_creates_area_effect: false
@@ -341,7 +341,7 @@ Run receipt summary:
       "wasDetectingPlayer": false,
       "source": "baseProjectile|ricochet",
       "exposureBefore": 0,
-      "exposureAfter": 100,
+      "exposureAfter": 150,
       "triggeredLockdown": false
     }
   ]

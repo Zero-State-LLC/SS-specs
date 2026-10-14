@@ -143,6 +143,8 @@ These are production ranges, not simulation rules. Playtest evidence may tune th
 
 D-104 supersedes the previous six-frame movement target. Sixteen is a motion-quality target for applicable locomotion, not a mandate to lengthen a cycle, invent extra combat states or add walk clips to stationary roles. Produce distinct contacts, compression, passing, lift and extension, alternate limbs, and a smooth seam. The four facings must share the elevated viewpoint in [visual-reference.md](visual-reference.md); east/west are not eye-level profile views. Validate source poses, frame registration, playback at game scale and the corresponding catalog/clip metadata before runtime admission.
 
+[BP-003](benchmark-production.md#bp-003--exact-locomotion-scope-and-timing) names the six looping clips, their exact baseline cadence, the integer-fps limitation and the unresolved Informant pursuit case. BP-004 specifies complete Camera clips and persistent state after transient playback. Neither a generic frame-count increase nor a generated state grid satisfies these requirements.
+
 ## 6. Direction and mirroring
 
 - Player and all five standard enemy archetypes require four-direction readability.
