@@ -36,6 +36,8 @@ Preserve those cycle durations for the first comparison. Sixteen equal holds ove
 
 The Informant's `autonomousInformant_anticipate` presents continuous `PURSUE` but is currently a three-frame, non-looping attack-family record (D-071). It needs an explicit pursuit playback decision after a movement sample; do not declare it a completed walk or add a new gameplay state. Its contact commit remains tied to its own damage event. The Captain has attack/state clips, not an invented walk. Elite dash and all attack/reaction clips retain their state/event windows. No 16-frame requirement is imposed on non-locomotion clips merely to inflate frame counts.
 
+The [exact timing migration design](animation-timing-migration.md) defines the proposed versioned representation, affected runtime consumers and validation vectors. It does not itself migrate the delivered metadata.
+
 ## BP-004 — complete Camera sheet and persistent states
 
 The Camera sheet is a complete device, including permanent pole/base and head, with one fixed mount anchor. The runtime must eventually render one complete-device node per standard Camera. The five logical family values remain placement/receipt data and map to that one visible family. Do not draw the legacy head or housing over it.
