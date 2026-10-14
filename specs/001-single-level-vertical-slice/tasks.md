@@ -226,7 +226,7 @@ A harness is a collector of evidence, not evidence. SS-runtime #34–#41 ship th
 |---|---|---|---|---|
 | T101 | NOT_RUN | Legacy test suite and build environment at the frozen SHA `3b20d88` are NOT_COMPUTABLE; deterministic-kernel tests are unrecovered | Developer with legacy-repo access performs the recovery; owner specialist approves | A recovered, runnable deterministic-kernel test suite with recorded results at the frozen SHA |
 | T105 | STANDING_GATE | Legacy migration is not complete; the gate is active until every copied source is approved | Every copied source carries an approved record before migration closes (owner specialist Danny) | An approved record per copied source (asset-record / admission decision) plus a migration-close note |
-| T305 | PARTIAL | Scripted probes only ([`docs/review/T305`](../../docs/review/T305/README.md), SS-runtime `06561a9`): 240 headless bot runs, seeds 1–20. Completed runs last 3:02–6:40 (median 3:43 for the 7 legal `competent` successes) against the 8–12-minute target. No person has played a probe, so first-run learning time and competent human pace are unmeasured; the `T303-T404` range citation is not accepted | Designer / player runs the probes on a device (owner specialist Danny) | Recorded human pacing probes compared against the `E-011` 8–12-minute target |
+| T305 | PARTIAL | Scripted probes only ([`docs/review/T305`](../../docs/review/T305/README.md), SS-runtime `06561a9`): 240 headless bot runs, seeds 1–20. Completed runs last 3:02–6:40 (median 3:43 for the 7 legal `competent` successes) against the then-current 8–12-minute target (superseded by D-079). No person has played a probe, so first-run learning time and competent human pace are unmeasured; the `T303-T404` range citation is not accepted | Designer / player runs the probes on a device (owner specialist Danny) | Recorded human pacing probes compared against the current `E-011` 5–8-minute target (D-079, later pacing refinements D-090/D-093/D-101) |
 | T306 | NOT_DECIDED | The blockout freeze is a human judgment, pending pacing (T305) and density ceilings (T406) | Designer accepts the freeze (owner specialist Danny) | A recorded freeze decision referencing the pacing and density evidence |
 | T406 | NOT_RUN | Peak-density profiling on an iPhone 12 (performance floor, D-011) is not run; D-021 ceilings are DECISION_PENDING | iPhone 12 device plus a human owner who settles D-021 | A device profile (resident memory, atlas memory, frame time) and a D-021 decision record |
 | T503 | NOT_PRODUCED | The silhouette sheets are not produced | Artist delivers the sheets; intake records `asset-record-001` provenance | Delivered Player, standard-enemy, Improper Search Daemon, Algorithmic Moderate, Camera, objective, and upgrade silhouette sheets with provenance |
@@ -250,3 +250,10 @@ A harness is a collector of evidence, not evidence. SS-runtime #34–#41 ship th
 ## Traceability rule
 
 Every runtime pull request MUST cite task IDs and affected requirement or gate IDs. A task closes only when its verification evidence is linked.
+
+## D-102 correction verification
+
+- Pending — T301 / PC-009: verify normalized touch movement, one-shot Dodge, pause/resume, and restart through the app scene in Debug and Release.
+- Pending — T410 / EX-017–EX-020: verify final Exposure transitions, quiet latching after named pulses, Signal Jammer, lethal precedence, and M-C exemption.
+- Pending — T705: verify the corrected transition reaches audio/VFX projection.
+- Pending — T900/T901: review ruleset-007 golden differences, reject ruleset-006, run core tests and byte parity. Physical-device matrix evidence remains open.

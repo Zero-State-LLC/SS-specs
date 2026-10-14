@@ -19,7 +19,7 @@ Every authoritative tick executes these phases exactly once and in this order:
 | 10 | Resolve destruction/deaths and invalidate dead targets |
 | 11 | Remove contacts from Cameras destroyed this tick |
 | 12 | Resolve threat contact damage; resolve Player death |
-| 13 | Resolve continuous Exposure/recovery, then ordered Tamper Spikes |
+| 13 | Resolve continuous Exposure/recovery, ordered Tamper Spikes, then eligible Fog and Observation pulses (D-102; exposure.md) |
 | 14 | Resolve Detection State and one-time Lockdown entry; clear `quietApproach` if `tracked` or higher before M-C activates (D-101) |
 | 15 | Resolve encounter completion, director decisions, and spawns |
 | 16 | Resolve boss phase/defeat and arm Extraction if eligible |

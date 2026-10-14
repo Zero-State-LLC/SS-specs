@@ -9,11 +9,11 @@ Each criterion requires a linked test, replay fixture, measurement, review plate
 
 ## Gate A — Functional completion
 
-- [ ] A-001 A clean install can start, complete, restart, and complete another run.
+- [ ] A-001 A clean install can start, complete, restart, and complete another run; Release movement and Dodge pass PC-009 (D-102).
 - [ ] A-002 All seven journey spaces are present and connected.
 - [ ] A-003 Camera regions match authoritative detection.
 - [ ] A-004 Blocking geometry reliably interrupts Camera detection.
-- [ ] A-005 Exposure and every Detection State transition are communicated.
+- [ ] A-005 Exposure and every Detection State transition are communicated, including named-pulse transitions EX-017–EX-020 (D-102).
 - [ ] A-006 Standard enemies never spawn inside blocking geometry or protected Spawn Alley.
 - [ ] A-007 Damage always has a visible or communicated source.
 - [ ] A-008 All three upgrades materially change play and complete the level.
