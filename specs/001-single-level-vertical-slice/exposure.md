@@ -127,7 +127,6 @@ Court threshold (bosses.md).
 | EX-014 | after EX-013, Exposure recovers to `hidden` | `quietApproach` stays `false` |
 | EX-015 | peak Detection State `observed` until M-C activates, then the forced Lockdown on the activation tick | `quietApproach` stays `true` |
 | EX-016 | Detection State reaches `tracked` on the tick before M-C activates | `quietApproach` becomes `false` |
-
 | EX-017 | pre-recovery Exposure 432, no-contact clock >60, one +20 Fog pulse before M-C | final 450/tracked; one observed→tracked event; quietApproach false; next tick 448/observed cannot restore it |
 | EX-018 | multiple contact/Tamper/named deltas cross several thresholds | one starting→final DetectionStateChanged; at most one phase-14 LockdownEntered |
 | EX-019 | lethal Player damage plus a due Fog pulse | no named pulse applied; contact/recovery and Tamper still resolve; failure wins |

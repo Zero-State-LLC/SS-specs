@@ -253,7 +253,9 @@ Every runtime pull request MUST cite task IDs and affected requirement or gate I
 
 ## D-102 correction verification
 
-- Pending — T301 / PC-009: verify normalized touch movement, one-shot Dodge, pause/resume, and restart through the app scene in Debug and Release.
-- Pending — T410 / EX-017–EX-020: verify final Exposure transitions, quiet latching after named pulses, Signal Jammer, lethal precedence, and M-C exemption.
-- Pending — T705: verify the corrected transition reaches audio/VFX projection.
-- Pending — T900/T901: review ruleset-007 golden differences, reject ruleset-006, run core tests and byte parity. Physical-device matrix evidence remains open.
+Implementation and automated evidence: [SS-runtime PR #116](https://github.com/Zero-State-LLC/SS-runtime/pull/116). The requirements below do not close physical-device or playtest gates.
+
+- T301 / PC-009: verify normalized touch movement, one-shot Dodge, pause/resume, and restart through the app scene in Debug and Release.
+- T410 / EX-017–EX-020: verify final Exposure transitions, quiet latching after named pulses, Signal Jammer, lethal precedence, and M-C exemption.
+- T705: verify the corrected transition reaches audio/VFX projection.
+- T900/T901: review ruleset-007 golden differences, reject ruleset-006, run core tests and byte parity. Physical-device matrix evidence remains open.
