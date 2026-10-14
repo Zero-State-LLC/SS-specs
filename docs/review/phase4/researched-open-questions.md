@@ -2,6 +2,8 @@
 
 2026-10-14. Scope: visual and technical questions exposed by the phase-4 reference. **OBSERVED** records local contracts or images. **DOCUMENTED** records an external primary source. **OPEN** requires a prototype, measurement, source asset or owner decision. No numeric answer is assigned without that evidence.
 
+The companion [design-choice research](design-choice-research.md) separates the user-selected benchmark from researched production methods and the remaining costume, projection and Camera proposals.
+
 ## 1. Sixteen frames and cycle timing
 
 **OBSERVED:** `clip-metadata-001` currently lists `player_move` as 24 frames across four facings at 12 fps: six per facing, a 0.5-second cycle. D-104 asks for 16 distinct frames per applicable facing. `animation.md` now says to preserve movement-cycle cadence but does not specify the new playback rate or frame holds.

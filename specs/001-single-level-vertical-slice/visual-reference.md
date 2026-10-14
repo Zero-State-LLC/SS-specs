@@ -1,6 +1,6 @@
 # Shared top-down visual reference — release one
 
-Status: phase-4 reference candidate
+Status: phase-4 reference candidate; native-size art proof pending
 Feature: SS-001
 Authority: user-selected street-corner direction and intermediate-angle refinement, 2026-10-13
 
@@ -22,7 +22,7 @@ Check the scene at native phone size and at 50% gameplay scale, in grayscale, wi
 
 ## Player design and four facings
 
-The player is one hooded urban participant: weathered street jacket, practical boots and gloves, satchel/utility strap and a compact Civic Pulse device. The hood remains a functional silhouette, not a fantasy cowl. Small warm equipment light may reinforce the Pulse; it cannot replace the weapon's non-color form or shot cue.
+The player is one hooded urban participant. Weathered street jacket, practical boots and gloves, satchel/utility strap and a compact Civic Pulse device are the current costume proposal, pending a four-facing native-size review. The hood remains a functional silhouette, not a fantasy cowl. Small warm equipment light may reinforce the Pulse; it cannot replace the weapon's non-color form or shot cue.
 
 N, E, S and W are four distinct authored body orientations from the same elevated view. South shows hood crown and shadowed opening; north shows back of hood and rear equipment; east/west show hood top, shoulder top and foreshortened torso, not full-height side profiles. Equipment position must rotate consistently with the body. Mirroring is allowed only if strap, device, asymmetrical clothing and lighting stay physically credible. The player retains the agreed 64×64 logical canvas and (32,56) ground anchor until a separately reviewed mapping change.
 
@@ -30,7 +30,7 @@ An identity sheet requires four neutral poses at matched scale before animation.
 
 ## Role identity in the same world
 
-All characters share the same street-theater civic setting and projection, while each role communicates its attack before impact.
+All characters share the same street-theater civic setting and projection, while each role communicates its attack before impact. The following physical readings are **candidates to test**, not researched costume facts or admitted sprites. The [design-choice research](../../docs/review/phase4/design-choice-research.md) defines the silhouette, rotation and phone-scale comparison that selects or revises them.
 
 | Role | Physical reading and motion | Avoid |
 |---|---|---|
@@ -68,4 +68,4 @@ The 46-image environment inventory is reviewed by ID: retain, repair, replace or
 
 The specifications, decision, plan, tasks and acceptance below must agree on the midpoint reference, 16-frame movement goal and one visible municipal standard-camera family while preserving logical placement identity. Deliver the reference scene and visual comparisons to the user. This visual review can settle projection direction; it does not certify animation, runtime art, collision or device performance. Camera production and renderer changes follow as the next phase.
 
-The [phase-4 research ledger](../../docs/review/phase4/researched-open-questions.md) names the questions that the concept cannot answer, cites primary production/runtime sources, and states the evidence needed before values or asset admission can be decided. In particular, clip timing, 64×64 fidelity, depth behavior and D-020/D-021 device/budget decisions remain open.
+The [phase-4 research ledger](../../docs/review/phase4/researched-open-questions.md) names the technical questions that the concept cannot answer. The [design-choice research](../../docs/review/phase4/design-choice-research.md) records why the viewpoint, world language, character and Camera choices are proposed and what must be observed before they become production decisions. In particular, clip timing, 64×64 fidelity, depth behavior and D-020/D-021 device/budget decisions remain open.
