@@ -271,4 +271,4 @@ T1044 / BP-007 outline admission prerequisite (#124): separate source pixel dime
 
 T1042 / BP-010: add isolated DEBUG comparison controls for Player outline opacity/removal while preserving the existing ground shadow, enemy treatment and normal-render defaults. Capture equal-state controls, then the backdrop/motion/combat matrix. Separate source repainting from runtime compositing; record the chosen treatment before changing production readability policy. BP-007 mask/cache profiling remains required for candidates using outlines.
 
-T1045 layered alternative: refine part ownership, author hidden overlaps and review the setup pose and joint range under controlled-character-source.md before the south movement cycle. Exact neutral reconstruction alone is insufficient.
+T1045 layered alternative: refine part ownership, author hidden overlaps and review the setup pose and joint range under controlled-character-source.md before the south movement cycle. Exact neutral reconstruction alone is insufficient. Before cycle in-betweening, follow the elevated-motion depth/contact prerequisite and distinguish projected lengths from source/anatomical lengths.

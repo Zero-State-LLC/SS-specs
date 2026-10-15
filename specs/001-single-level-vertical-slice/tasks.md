@@ -302,4 +302,4 @@ T1044 / T1042 high-resolution outline prerequisite: resolve runtime #124 under B
 
 T1042 / BP-010 remains open: compare opaque, reduced-opacity and no-added-outline Player treatments in the real renderer; evaluate the specified native/grayscale, backdrop, motion, dense encounter, damage, occlusion and Reduced Motion matrix. Record the visual decision and non-colour faction proof before coordinating production contract/runtime changes. The user questioning the glow is evidence of a design concern, not approval of a particular replacement.
 
-T1045 layered-source prerequisite: complete the setup-pose/part-ownership and joint-range checks in controlled-character-source.md; keep NOT_PRODUCED until the existing full animation and renderer evidence is satisfied.
+T1045 layered-source prerequisite: complete the setup-pose/part-ownership and joint-range checks in controlled-character-source.md; include the elevated-motion keys and authored foot-contact model; keep NOT_PRODUCED until the existing full animation and renderer evidence is satisfied.
