@@ -278,3 +278,7 @@ BP-008 displayed-playback evidence: extend the moving benchmark separately from 
 BP-001/BP-010 Camera field contrast follow-through: use the researched comparison in benchmark-production.md. Reuse the existing solid-clipped path for control, dark contour and paired contour; validate removal/reset/clipping and normal/Reduced Motion, then compare the required backdrops and legal/dense encounters before selecting production parameters. No simulation or new-setting work is implied.
 
 BP-001 street-surface follow-through: use the researched shared-sample surface clarification in benchmark-production.md. Keep review patches/details editable and separate from arena data; preserve texture density through cropped edge tiles and apply the same projection as fields. Compare the existing plain fixture before legal-encounter integration.
+
+## Current execution order — 2026-10-15
+
+Use the [evidence-backed next-step plan](../../docs/review/benchmark-status-2026-10-15.md) and [kanban](../../docs/kanban.md): preferred south-source detail polish → unobstructed live-cycle measurements → shared scene/visibility → facing/cast/action completion → complete-family migration → integrated QA and physical acceptance. This updates sequencing and evidence, not gameplay or production acceptance.

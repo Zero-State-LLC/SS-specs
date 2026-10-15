@@ -124,3 +124,5 @@ D-104: [Shared top-down visual reference](specs/001-single-level-vertical-slice/
 [Exact-duration clip migration target schema](contracts/clip-metadata-002.schema.json) defines v2 structure; active clip delivery remains v1 pending runtime migration.
 
 [Controlled character source pilot](specs/001-single-level-vertical-slice/controlled-character-source.md) records the researched editable-source experiment and its visual acceptance limits.
+
+Project tracking: [benchmark kanban](docs/kanban.md) and [current evidence / next steps](docs/review/benchmark-status-2026-10-15.md).
