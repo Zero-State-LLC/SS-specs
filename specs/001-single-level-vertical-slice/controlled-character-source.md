@@ -28,3 +28,19 @@ PROPOSED implementation pilot: use a single editable 3D body/rig as a source for
 Reject the pilot as a production solution if it cannot preserve the selected urban hooded character's material treatment, silhouette, distinct elevated facings, foot contact and cloth/hand readability at native size. Correct the master or compare the layered painted alternative; do not lower the benchmark to match a convenient rig. Camera and environment source work remain required and are not replaced by this character experiment.
 
 The existing animation timing, controller speed, damage authority, v1 active delivery, gameplay identities and physical-device review gate remain unchanged. All full-source, art, world-travel, encounter and device acceptance remains open.
+
+## Layered painted source: setup-pose prerequisite
+
+DOCUMENTED: Spine's [image preparation](https://esotericsoftware.com/spine-images) uses separate images for independently moving parts and preserves placement through layered imports. Its [mesh guide](https://esotericsoftware.com/spine-meshes) describes image polygons, deformation and weighted bones. These are authoring mechanisms, not evidence that a particular cut or generated replacement preserves the benchmark.
+
+OBSERVED (2026-10-14): the south layered study reconstructed the original composite exactly, yet its rough thigh masks included coat pixels. A generated replacement leg aligned at two manually marked points but had a narrower silhouette, different boot proportions and incompatible texture. It is rejected. Exact reconstruction and landmark residuals alone therefore cannot admit this source.
+
+For the already-authorized layered alternative, complete these source checks before the first movement cycle:
+
+- Preserve the approved neutral image as the comparison baseline. Record anatomical side, canvas, root and source hashes. Review each isolated part and the assembly; a mask must not assign coat, straps or equipment to a limb merely because those pixels lie inside a rectangle or polygon.
+- Separate visible-pixel extraction from authored hidden surfaces. Save the original masks and each underpaint separately. Keep the costume's visible contour and material treatment in the assembled neutral unless an explicit reviewed revision replaces it. Do not use nonuniform registration to conceal a mismatched replacement limb.
+- Establish joints from the retained source and record manual annotations as approximate. Compare the whole limb contour, knee placement, boot width and sole, not just two fitted points. Numerical fitting does not establish anatomy or visual acceptance.
+- Author overlap behind shoulders, elbows, hips and knees; separate boots and coat controls where they must move independently. Exercise the intended pose range with the layers visible individually and assembled. Reject exposed cut gaps, detached joints, coat tearing and equipment attached to the wrong moving part. A static neutral reconstruction does not satisfy this check.
+- Save editable controls and the source project. Only after setup-pose and joint-range review proceed to the existing south 16-frame cycle and runtime world-travel checks. Retain the four-facing, exact-duration, complete-family and device gates already specified; this clarification does not replace them.
+
+These checks implement BP-002's existing editable-source requirement. They introduce no gameplay behavior, automatic silhouette threshold, new production dependency or runtime skeletal system.
