@@ -241,6 +241,7 @@ Lockdown looked like every other minute. The following are presentation only:
   for the Player, warm red-orange for enemies. Outlines carry faction by both
   colour and shape (the Player's is unbroken, an enemy's dashed), never by
   colour alone.
+  D-104 painted-art review: this remains the shipping baseline. Its opaque Player border is not accepted benchmark finish; compare alternatives under [BP-010](benchmark-production.md#bp-010--painted-character-separation-without-an-implied-status-effect) before changing the production treatment. Review-only suppression or attenuation does not waive faction readability or current-frame correctness.
 - **Fog thins in a fight.** While any aware enemy is within the viewport, both
   fog layers render at 50% of their authored opacity, easing over 0.5 s. Fog
   still never conceals collision, lethal telegraphs, or Camera boundaries
