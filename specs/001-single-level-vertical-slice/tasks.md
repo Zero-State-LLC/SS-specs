@@ -311,3 +311,7 @@ T1045/T1046 remaining evidence includes the BP-001/BP-010 Camera field contrast 
 T1042/T1046 remain open for the BP-001 street-surface comparison: separate asphalt/pedestrian paving and continuous curb/embedded rails, record authored parameters, verify reset and unchanged authority, then integrate with the legal arena rail spine before admission.
 
 2026-10-15 reconciliation: [status and ordered plan](../../docs/review/benchmark-status-2026-10-15.md), [repository kanban](../../docs/kanban.md). User prefers narrowed stance plus alternating arms; dimensions/amplitudes and hidden surfaces remain proposed. All T1042–T1046 checkboxes remain open.
+
+T1045 / BP-008 continuation (2026-10-15): reconcile the new costume-volume candidate only after fresh renderer/source identity evidence; preserve prior candidate controls. Snapshot-reuse and preparation fixes have repeated south-cycle coverage evidence, not completion of the full contact/interaction matrix. Source volume, shared scene, facing/role/action coverage, admission and device gates remain open. See updated benchmark status.
+
+T1045 recovery correction: owner identified excessive knee rise. Lower-recovery source is proposed and now staged with matching pose metadata in the test-only renderer fixture. Record fresh all-frame, support-phase and seam evidence; keep prior volume-only results separate. No art or production admission follows from fixture replacement.

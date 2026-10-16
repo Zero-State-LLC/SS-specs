@@ -282,3 +282,6 @@ BP-001 street-surface follow-through: use the researched shared-sample surface c
 ## Current execution order — 2026-10-15
 
 Use the [evidence-backed next-step plan](../../docs/review/benchmark-status-2026-10-15.md) and [kanban](../../docs/kanban.md): preferred south-source detail polish → unobstructed live-cycle measurements → shared scene/visibility → facing/cast/action completion → complete-family migration → integrated QA and physical acceptance. This updates sequencing and evidence, not gameplay or production acceptance.
+
+### T1045 evidence continuation — 2026-10-15
+Follow BP-008's costume-volume and startup/playback boundaries. Preserve the previous south candidate, export the fuller-leg study with unchanged pose samples, and compare normal/quarter speed. Reconcile only the test asset family first, with exact hashes and source provenance; rerun registration, contact, normal and Reduced Motion coverage before shared composition. Build/preload initial scene resources before measured playback and reuse the rendered snapshot for diagnostic fields. Report preparation and post-action diagnostic costs separately. Run app timing measurements serially, then repeat with recording enabled; core validation is a separate run. These are fixture techniques, not new production startup or animation policies.
