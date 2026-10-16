@@ -246,6 +246,11 @@ A harness is a collector of evidence, not evidence. SS-runtime #34–#41 ship th
 | T906 | STANDING_GATE | Severity-one and -two defects are not fixed; the defect list must be found through device / playtest evidence first | Developer fixes; evidence discovers the defects | A defect registry with no open severity-one or -two defects |
 | T907 | NOT_RECORDED | Release-candidate evidence is not recorded; `ReleaseEvidenceStore` is a harness, not evidence | The release owner records the evidence | A recorded release-candidate evidence bundle |
 | T908 | NOT_DECIDED | The expansion-gate decision is a human judgment, gated on D-020, D-021, and Gates A–G | The owner specialist (Danny) decides | A recorded expansion-gate decision referencing D-020/D-021 and the gate evidence |
+| T1042 | PARTIAL | Shared composition/projection/geometry fixtures and south source evidence exist; controlled four-facing master and full HUD/encounter acceptance remain incomplete | Artist and runtime renderer | Four-facing source, native-scale 704×326 scene with HUD and encounter, grayscale/50% views, and authoritative anchor/footprint review plate |
+| T1043 | PARTIAL | Complete municipal candidate clips and state playback tests exist; production admission, full visual matrix and Captain identity remain open | Artist and runtime renderer | Complete-device frames, metadata, provenance, state playback and single-device renderer verification |
+| T1044 | NOT_RUN | Production frames are not accepted, so clip/catalog/manifest migration cannot be finalized | Spec and asset intake owner after accepted delivery | Validated frame IDs, metadata, hashes, parity and bundle exclusion receipt |
+| T1045 | PARTIAL | Preferred narrow-stance south source, 16 poses and initial live capture exist; detail defects, full-cycle contact, facings and complete state coverage remain open | Artist and animation reviewer | Four-facing 16-frame locomotion proof where applicable plus all required action clips and timed playback review |
+| T1046 | PARTIAL | Family-level inventory found defects; per-ID disposition and in-scene base/footprint proof remain | Environment artist and runtime reviewer | 46-item disposition, repaired sources, native-scale traversal and collision review plates |
 
 ## Traceability rule
 
@@ -259,3 +264,54 @@ Implementation and automated evidence: [SS-runtime PR #116](https://github.com/Z
 - T410 / EX-017–EX-020: verify final Exposure transitions, quiet latching after named pulses, Signal Jammer, lethal precedence, and M-C exemption.
 - T705: verify the corrected transition reaches audio/VFX projection.
 - T900/T901: review ruleset-007 golden differences, reject ruleset-006, run core tests and byte parity. Physical-device matrix evidence remains open.
+
+## D-103 — combat causality
+
+See [combat-causality.md](combat-causality.md) for collision, damage evidence, weapon anchor, upgrade clarity and bounded history. CC-001–CC-007 cover phases 1–2; CC-008 remains phase 3.
+
+- T1030: D-103 contract and identity/fixture review.
+- T1031: wall/actor integration regressions and repair (CC-001).
+- T1032: damage evidence and honest impact rendering (CC-002/003).
+- T1033: related ricochet traces and bounded history (CC-004/005).
+- T1034: copy, replay rejection and full core/app validation (CC-006/007).
+- T1035: accepted phase-3 presentation/accessibility (CC-008): event-backed discharge and independent aim, conditional Jammer contour, actual Ghost Step boundary, protected SwiftUI cards with VoiceOver activation and Dynamic Type scrolling. Verify automated tests before art/device testing; physical acceptance remains open.
+
+## D-104 — phase-4 visual contract and staged art work
+
+- [x] T1040 Record accepted visual intent, user-selected street-corner reference, midpoint projection study and visual decision; link both concept images as references, not runtime admission.
+- [x] T1041 Define shared projection, player identity, role/equipment language, one visible municipal standard-camera family, logical-family replay preservation and 16 distinct locomotion frames per applicable facing in spec/plan/acceptance.
+- [ ] T1042 Validate a four-facing hooded-player model and one representative player/building/camera/prop/ground scene in the actual 704×326 game view with HUD and encounter sample, including collision/base overlay, native/50% scale and no-color views. Compare costume and projection candidates against the selected image using the [design-choice research](../../docs/review/phase4/design-choice-research.md). The generated concept is direction evidence only.
+- [ ] T1043 Produce registered municipal complete-device clips with persistent Integrity states, reduced presentation, exact mount and provenance. Reconcile Captain emitter appearance and asset IDs. Camera renderer integration belongs to the next implementation phase.
+- [ ] T1044 Revise affected clip metadata, frame IDs, presentation manifest and asset catalog when accepted production assets are ready; validate source/delivery hashes and bundle exclusions.
+- [ ] T1045 Complete actor state/facing coverage with controlled 16-frame locomotion where applicable; run timing, identity, anchor and gameplay-scale review before device testing.
+- [ ] T1046 Audit each of the 46 environment PNGs for retain/repair/replace/exclude and validate visible base against collision geometry in the shared scene.
+
+Production detail: [BP-001–BP-006](benchmark-production.md). T1042 owns exact viewport/HUD/encounter captures and projection comparison. T1043 owns complete-device state settling, interruptions and Reduced Motion. T1044 begins with exact spec-pin adoption and records deferred art admission honestly, then migrates complete accepted families. T1045 owns the named locomotion matrix, rational cadence/hold representation and Informant pursuit decision. T1046 records all 46 per-ID dispositions and geometry evidence. Do not close any task on the strength of pin alignment alone.
+
+T1046 next evidence: ground-plan source and matching elevated render with wall base, steps, planters and walkable apron separated. Current building registration fails; see [measured review](../../docs/review/building-registration/review.md). Hidden rear vertices and art admission remain open.
+
+T1042 / T1046 remain open for BP-009: current isolated contacts expose false roof elevation. Complete ground-cue comparison and continuous rear/front/corner transitions before implementing/admitting a general occlusion treatment.
+
+T1044 / T1045 timing prerequisite: implement against clip-metadata-002.schema.json; run scripts/validate_clip_timing_migration.py and the runtime exact-vector/malformed-record tests. Target schema publication does not close either task or switch active delivery.
+
+T1044 / T1045 one-shot prerequisite: implement the event-facing/occurrence/elapsed-phase policy in animation-timing-migration.md. Cover unequal direction durations, repeat events, late visibility, cancellation, fallback, pause and reset. No active v2 migration until this integration and renderer tests pass.
+
+T1045 source prerequisite: record the controlled-source pilot project, evaluated limb/contact measurements and explicit visual limitations; complete the benchmark costume and four-neutral-facing gate before expanding locomotion. See [pilot](controlled-character-source.md). Accepted production coverage remains NOT_PRODUCED; source progress is PARTIAL.
+
+T1044 / T1042 high-resolution outline prerequisite: resolve runtime #124 under BP-007 before admitting the painted 384px Player. Capture equivalent 64/256/384 source silhouettes at identical logical size/anchor; verify Player and enemy stroke/dash consistency, noncentral anchors, alpha margins, normal and Reduced Motion frame changes, unsupported-source cleanup and bounded cache churn. Include native/zoom comparison and measured allocation/residency evidence. These requirements do not mark the candidate artwork, animation or shared scene accepted.
+
+T1042 / BP-010 remains open: compare opaque, reduced-opacity and no-added-outline Player treatments in the real renderer; evaluate the specified native/grayscale, backdrop, motion, dense encounter, damage, occlusion and Reduced Motion matrix. Record the visual decision and non-colour faction proof before coordinating production contract/runtime changes. The user questioning the glow is evidence of a design concern, not approval of a particular replacement.
+
+T1045 layered-source prerequisite: complete the setup-pose/part-ownership and joint-range checks in controlled-character-source.md; include the elevated-motion keys and authored foot-contact model; keep production acceptance open until the existing full animation and renderer evidence is satisfied.
+
+T1045 / BP-008 evidence clarification: the moving comparison must record post-action displayed frames with simulation and rendered positions, retain playback without per-sample fixture resets, and demonstrate that textures actually change. Static review-art injection and continuous source contact alone do not close gait acceptance. Include stop/start, reversal and interruptions without treating any proposed phase policy as accepted.
+
+T1045/T1046 remaining evidence includes the BP-001/BP-010 Camera field contrast comparison in benchmark-production.md: exact-path control/dark/paired contours; backdrop, overlap, occlusion, Captain, state and motion-mode matrix; lifecycle checks; native/50%/grayscale and legal/dense encounter review. Runtime ecac1ef exposes the pale-ground grayscale defect; it does not close field readability.
+
+T1042/T1046 remain open for the BP-001 street-surface comparison: separate asphalt/pedestrian paving and continuous curb/embedded rails, record authored parameters, verify reset and unchanged authority, then integrate with the legal arena rail spine before admission.
+
+2026-10-15 reconciliation: [status and ordered plan](../../docs/review/benchmark-status-2026-10-15.md), [repository kanban](../../docs/kanban.md). User prefers narrowed stance plus alternating arms; dimensions/amplitudes and hidden surfaces remain proposed. All T1042–T1046 checkboxes remain open.
+
+T1045 / BP-008 continuation (2026-10-15): reconcile the new costume-volume candidate only after fresh renderer/source identity evidence; preserve prior candidate controls. Snapshot-reuse and preparation fixes have repeated south-cycle coverage evidence, not completion of the full contact/interaction matrix. Source volume, shared scene, facing/role/action coverage, admission and device gates remain open. See updated benchmark status.
+
+T1045 recovery correction: owner identified excessive knee rise. Lower-recovery source is proposed and now staged with matching pose metadata in the test-only renderer fixture. Record fresh all-frame, support-phase and seam evidence; keep prior volume-only results separate. No art or production admission follows from fixture replacement.

@@ -91,6 +91,7 @@ partial art is a legibility hazard, not a partial improvement.
 ## 4. Perspective and world scale
 
 - Projection: top-down 2.5D, approximately 3/4 presentation, with collision defined separately.
+- The first-release projection reference is [visual-reference.md](visual-reference.md): the user-selected street-corner scene, refined to an intermediate elevated angle. Player, roof, municipal dome, upright prop and ground must agree in one actual-scale scene.
 - Authoring grid: 64 logical world units.
 - One traversal cell: 64 × 64 units.
 - Canonical actor footprint: 28–36 units in diameter.
@@ -110,7 +111,7 @@ Sprites may exceed their collision footprint for hats, coats, weapons, or antenn
 | Asset group | Minimum |
 |---|---:|
 | Idle | 4 frames × 4 directions |
-| Move | 6 frames × 4 directions |
+| Move | 16 distinct frames × 4 directions (D-104 production target) |
 | Dodge/Ghost Step | 4 frames × 4 directions |
 | Hurt | 3 frames × 4 directions |
 | Defeat | 6 frames |
@@ -125,13 +126,15 @@ Each standard enemy requires idle, move, attack/commit, hurt, and defeat present
 | Asset group (each standard enemy) | Minimum |
 |---|---:|
 | Idle | 4 frames × 4 directions |
-| Move (not the Autonomous Informant, whose pursuit clip is its locomotion) | 6 frames × 4 directions |
+| Move (not the Autonomous Informant, whose pursuit clip is its locomotion) | 16 distinct frames × 4 directions (D-104 production target) |
 | Attack anticipate / commit | delivered (`clip-metadata-001`) |
 | Hurt | 3 frames × 4 directions |
 | Defeat | 6 frames × 4 directions |
 | Recover (Cable-Car Correlator only) | 3 frames × 4 directions, 45 ticks |
 
 Frames are 64 × 64 in the `playerAndStandardEnemy` box, anchored at (32, 56). The exact frame IDs are the `plannedOriginal` records in `asset-catalog-001` (D-071).
+
+The D-071 six-frame planned records and current `clip-metadata-001` describe the previous delivery baseline. Before a 16-frame clip is admitted or bundled, amend the catalog, clip metadata, manifest and frame IDs together and validate parity against the runtime pin. Six existing frames do not become sixteen by interpolation or repeated IDs. Do not add locomotion clips to stationary/attack-only roles just to match the player count.
 
 | Role | Visual identity |
 |---|---|
@@ -385,6 +388,8 @@ Housing damage art MUST NOT imply reduced detection before destruction. Destroye
 
 
 All eight standard Cameras use stationary housings. No Camera animation may imply panning, tracking rotation, patrol, relocation, or changing field geometry. Housing families distinguish institutional provenance, not mechanics.
+
+For release one, the five logical seeded housing-family values share a single visible municipal-dome presentation family (D-104). The earlier five-family asset inventory and D-073 admission are historical production facts, not a requirement to layer or ship all five visible housings now. Asset manifest/catalog reachability must be reconciled when the complete municipal sheet is admitted. Each standard Camera draws one complete device frame; the legacy head and old family housing must not be stacked. Captain emitters retain distinct boss-owned cues and no standard Integrity treatment; see [visual-reference.md](visual-reference.md).
 
 
 ## Runtime presentation identity

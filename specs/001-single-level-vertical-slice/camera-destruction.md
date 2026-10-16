@@ -24,7 +24,7 @@ This contract applies to standard Level 1 Camera entities:
 - Ornamental Civic Camera
 - Temporary Sensor Mast
 
-Housing family changes appearance only. All five use the same destruction rules.
+These five logical housing families retain their placement and receipt identity. D-104 maps them to one complete municipal-dome appearance for release one. All five use the same destruction rules.
 
 The **Captain Camera** is an attack emitter owned by the Algorithmic Moderate. It is not a standard Camera entity and is not independently destructible in SS-001.
 
@@ -36,7 +36,7 @@ integrity_damage_per_valid_impact: 1
 exposure_scale:
   min: 0
   max: 1000
-tamper_spike_per_destroyed_camera: 100
+tamper_spike_per_destroyed_camera: 150 # D-086 supersedes D-029's original amount
 destroyed_camera_respawns_during_run: false
 camera_drops_loot: false
 camera_destruction_creates_area_effect: false
@@ -229,6 +229,11 @@ Visual bounds never define any authoritative shape.
 
 Damage state must remain distinguishable in grayscale and without rapid blinking.
 
+The persistent world-space damage marker counts damage stages, not remaining hits: Integrity 2 has one ivory notch on a dark backing; Integrity 1 has two separated notches; Integrity 3 and 0 have no such marker. This is distinct from the targeted HUD's three remaining-Integrity slots below. It sits beside the standard Camera's pole, follows its ground anchor, and remains static under Reduced Motion. It is independent of transient hit/destruction art and clears on destruction or entity removal. Captain emitters never receive this standard damage marker. Review its size and placement in native-size and grayscale captures; the first renderer implementation is a sizing candidate, not proof of accessibility acceptance.
+
+Design basis: [Game Accessibility Guidelines](https://gameaccessibilityguidelines.com/ensure-no-essential-information-is-conveyed-by-a-fixed-colour-alone/) recommends redundant shape/pattern cues rather than essential state conveyed only by color. The one/two notch mapping is SS's existing damage-state contract, clarified here to avoid confusing damage stages with remaining hits. Source checked 2026-10-14.
+
+
 ### Valid impact
 
 - compact directional spark;
@@ -341,7 +346,7 @@ Run receipt summary:
       "wasDetectingPlayer": false,
       "source": "baseProjectile|ricochet",
       "exposureBefore": 0,
-      "exposureAfter": 100,
+      "exposureAfter": 150,
       "triggeredLockdown": false
     }
   ]

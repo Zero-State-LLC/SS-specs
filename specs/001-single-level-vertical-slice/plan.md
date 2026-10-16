@@ -239,3 +239,49 @@ Each slice remains executable and testable.
 1. Share the real point-space touch routing with integration tests and consume it outside debug-only autopilot code. Exercise the existing app target in Debug and Release through the existing CI workflow.
 2. Finalize contact/recovery, Tamper, and eligible named Exposure pulses in one resolver before publishing Detection State and quiet-approach effects. Retain the terminal and forced-Lockdown rules in exposure.md.
 3. Advance only the ruleset identity, review and regenerate affected goldens, and update the runtime spec pin plus bundles atomically after the specification commit exists. Run spec validation, core tests, and parity; record simulator evidence separately from physical-device acceptance.
+
+## D-103 — combat causality
+
+See [combat-causality.md](combat-causality.md) for collision, damage evidence, weapon anchor, upgrade clarity and bounded history. CC-001–CC-007 cover phases 1–2; CC-008 remains phase 3.
+
+### T1035 implementation
+Project shot origin/direction and actual Jammer reduction as transient presentation evidence, outside authoritative state and replay identity. Read Ghost Step directly from its authoritative inclusive interval. Reuse stable nodes for aim and upgrade contours; reduced settings use static shapes. SwiftUI owns protected choice buttons and scrolling, through a single validated scene choice boundary that clears held input. Add core evidence and app renderer/selection tests; preserve golden digests.
+
+## D-104 — visual coherence and production sequence
+
+Implement [BP-001–BP-006](benchmark-production.md) in order. Begin by adopting the exact D-104 spec pin and recording existing runtime gaps; this does not admit old art as conforming. The production sample uses real runtime rendering and geometry, with separate source resolution, logical draw size and display-scale records. Preserve each named movement cycle when moving to 16 frames; the elite's 3/7-second cycle cannot be preserved by rounding to integer fps. Resolve presentation timing representation before that asset family migrates. Review Informant pursuit playback explicitly. Camera responses must settle into the newest Integrity state, including interruption and Reduced Motion.
+
+1. Lock the selected street-corner mood and midpoint projection in a shared reference scene. Review actual gameplay scale, four-player-facing identity, building/prop base, Camera mount and authoritative footprint overlays before multiplying art.
+2. Reconcile visual contracts: 16 distinct frames for each applicable locomotion facing; one municipal complete-device presentation for all seeded standard Camera families; Captain retains boss-owned mechanical distinction and a non-color visible marker. Preserve placement RNG/receipt and ruleset-008 replay identity.
+3. Revise clip metadata, frame IDs, catalog, manifest and provenance together as each complete production asset family is admitted. Existing six-frame records and five delivered housings remain historical baseline until that migration. Reject partial aligned-sheet claims and unreachable replacement art.
+4. Next implementation slice: finish municipal Camera state clips, remove housing-plus-head composition, verify one device per entity, stable anchor, persistent Integrity states and immediate field-off. Only after this checkpoint expand controlled character loops and environment repairs.
+5. Validate exact candidate through spec validator, byte parity where bundles change, core and Debug/Release app checks. Keep visual/physical acceptance open until review plates, device measures and human evidence exist.
+
+BP-005/BP-007 building repair: use the [registration investigation](../../docs/review/building-registration/review.md) before changing placement. Obtain explicit ground-plan landmarks and separate walkable apron from wall art. Compare consistent projection alternatives through the shared renderer; keep arena geometry unchanged until an explicitly versioned gameplay decision.
+
+BP-009: compare depth and opacity treatments with projected ground cues before selecting the runtime occlusion policy. Keep solver authority untouched; then validate an eligibility classifier and clear/restore lifecycle.
+
+BP-003 timing migration: use the versioned clip-metadata-002 target schema and in-memory mechanical conversion checker first. Keep active v1 until strict decoding, frame/duration pairing, exporters, resource/version/parity migration and playback gates pass together.
+
+BP-003 one-shot integration: carry event-facing and start tick separately from live facing through tracker, snapshot and renderer. Select the same facing for lifetime and texture sequence; distinguish repeated events from repeated renders, and enter late-visible responses at elapsed phase. Preserve live-facing fallback and existing cancellation/defeat precedence. Validate normal and Reduced Motion before migrating active clips.
+
+T1045 source-production next step: run the [controlled character source pilot](controlled-character-source.md), starting with editable anatomy/foot-target measurements, then benchmark costume and four-facing renders. Keep runtime on reviewed raster delivery; no skeletal runtime migration is proposed.
+
+T1044 / BP-007 outline admission prerequisite (#124): separate source pixel dimensions, logical actor canvas and padded outline mask dimensions. Compare bounded logical-mask generation with density-aware source masks at equal framing; retain the approach that preserves thin silhouettes and the existing faction stroke/dash treatment. Key cached results by all silhouette-affecting inputs (including mask geometry and faction), keep source identities alive only while their keys require them, and bound retained masks. Preserve actor anchor/position while padding the outline. Clear stale outlines on unsupported sources and test the normal post-action refresh after texture replacement. Measure cache churn and temporary/retained bytes before setting production limits; do not claim device performance from simulator captures.
+
+T1042 / BP-010: add isolated DEBUG comparison controls for Player outline opacity/removal while preserving the existing ground shadow, enemy treatment and normal-render defaults. Capture equal-state controls, then the backdrop/motion/combat matrix. Separate source repainting from runtime compositing; record the chosen treatment before changing production readability policy. BP-007 mask/cache profiling remains required for candidates using outlines.
+
+T1045 layered alternative: refine part ownership, author hidden overlaps and review the setup pose and joint range under controlled-character-source.md before the south movement cycle. Exact neutral reconstruction alone is insufficient. Before cycle in-betweening, follow the elevated-motion depth/contact prerequisite and distinguish projected lengths from source/anatomical lengths.
+
+BP-008 displayed-playback evidence: extend the moving benchmark separately from the static composition fixture. Install candidate art once, retain the ordinary texture-duration/action path across observations, and record actual displayed frame identity after actions alongside authoritative and rendered positions. Follow benchmark-production.md's source/export/display distinction; include changing-texture sanity evidence and reversal/interruption phase behavior before choosing a playback policy.
+
+BP-001/BP-010 Camera field contrast follow-through: use the researched comparison in benchmark-production.md. Reuse the existing solid-clipped path for control, dark contour and paired contour; validate removal/reset/clipping and normal/Reduced Motion, then compare the required backdrops and legal/dense encounters before selecting production parameters. No simulation or new-setting work is implied.
+
+BP-001 street-surface follow-through: use the researched shared-sample surface clarification in benchmark-production.md. Keep review patches/details editable and separate from arena data; preserve texture density through cropped edge tiles and apply the same projection as fields. Compare the existing plain fixture before legal-encounter integration.
+
+## Current execution order — 2026-10-15
+
+Use the [evidence-backed next-step plan](../../docs/review/benchmark-status-2026-10-15.md) and [kanban](../../docs/kanban.md): preferred south-source detail polish → unobstructed live-cycle measurements → shared scene/visibility → facing/cast/action completion → complete-family migration → integrated QA and physical acceptance. This updates sequencing and evidence, not gameplay or production acceptance.
+
+### T1045 evidence continuation — 2026-10-15
+Follow BP-008's costume-volume and startup/playback boundaries. Preserve the previous south candidate, export the fuller-leg study with unchanged pose samples, and compare normal/quarter speed. Reconcile only the test asset family first, with exact hashes and source provenance; rerun registration, contact, normal and Reduced Motion coverage before shared composition. Build/preload initial scene resources before measured playback and reuse the rendered snapshot for diagnostic fields. Report preparation and post-action diagnostic costs separately. Run app timing measurements serially, then repeat with recording enabled; core validation is a separate run. These are fixture techniques, not new production startup or animation policies.

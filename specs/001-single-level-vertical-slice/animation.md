@@ -127,8 +127,8 @@ Missing required metadata fails intake.
 | Clip | Target frames | Target duration |
 |---|---:|---:|
 | Idle | 4 | 600–1000 ms loop |
-| Standard move | 6 | 400–650 ms loop |
-| Fast enemy move | 6 | 280–450 ms loop |
+| Standard move | 16 distinct frames per authored facing | Preserve the approved movement-cycle cadence; playback rate follows the chosen cycle duration |
+| Fast enemy move | 16 distinct frames per authored facing when the role has a locomotion clip | Preserve the role's established fast cycle and authoritative speed |
 | Dodge/Ghost Step | 4 | 180–300 ms |
 | Hurt | 2–3 | 100–220 ms |
 | Standard attack anticipation | 2–4 | ≥ 250 ms |
@@ -140,6 +140,10 @@ Missing required metadata fails intake.
 | Extraction | 6–10 | countdown-aligned |
 
 These are production ranges, not simulation rules. Playtest evidence may tune them while preserving required warning windows.
+
+D-104 supersedes the previous six-frame movement target. Sixteen is a motion-quality target for applicable locomotion, not a mandate to lengthen a cycle, invent extra combat states or add walk clips to stationary roles. Produce distinct contacts, compression, passing, lift and extension, alternate limbs, and a smooth seam. The four facings must share the elevated viewpoint in [visual-reference.md](visual-reference.md); east/west are not eye-level profile views. Validate source poses, frame registration, playback at game scale and the corresponding catalog/clip metadata before runtime admission.
+
+[BP-003](benchmark-production.md#bp-003--exact-locomotion-scope-and-timing) names the six looping clips, their exact baseline cadence, the integer-fps limitation and the unresolved Informant pursuit case. BP-004 specifies complete Camera clips and persistent state after transient playback. Neither a generic frame-count increase nor a generated state grid satisfies these requirements.
 
 ## 6. Direction and mirroring
 
@@ -237,6 +241,7 @@ Lockdown looked like every other minute. The following are presentation only:
   for the Player, warm red-orange for enemies. Outlines carry faction by both
   colour and shape (the Player's is unbroken, an enemy's dashed), never by
   colour alone.
+  D-104 painted-art review: this remains the shipping baseline. Its opaque Player border is not accepted benchmark finish; compare alternatives under [BP-010](benchmark-production.md#bp-010--painted-character-separation-without-an-implied-status-effect) before changing the production treatment. Review-only suppression or attenuation does not waive faction readability or current-frame correctness.
 - **Fog thins in a fight.** While any aware enemy is within the viewport, both
   fog layers render at 50% of their authored opacity, easing over 0.5 s. Fog
   still never conceals collision, lethal telegraphs, or Camera boundaries
@@ -374,3 +379,7 @@ The field-off presentation begins from the authoritative destruction event and c
 
 
 After seeded socket selection, each standard Camera's position, heading, range, and field angle are immutable for the run. Any housing animation is texture/emissive-only. The renderer must never rotate a Camera field from animation state.
+
+## D-103 — combat causality
+
+See [combat-causality.md](combat-causality.md) for collision, damage evidence, weapon anchor, upgrade clarity and bounded history. CC-001–CC-007 cover phases 1–2; CC-008 remains phase 3.

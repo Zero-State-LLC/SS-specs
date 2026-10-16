@@ -77,3 +77,7 @@ On accepted dodge start, set `cameraInvisibleUntilTick = startTick + 29`, inclus
 | UP-008 | Ghost Step starts tick 100 | Camera immune through tick 129 |
 | UP-009 | Ghost Step during hostile projectile hit | projectile still damages |
 | UP-010 | restart | no selected upgrade before M-A completion |
+
+## D-103 — combat causality
+
+See [combat-causality.md](combat-causality.md) for collision, damage evidence, weapon anchor, upgrade clarity and bounded history. CC-001–CC-007 cover phases 1–2; CC-008 remains phase 3.

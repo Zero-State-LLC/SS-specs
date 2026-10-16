@@ -92,6 +92,9 @@ Run three consecutive complete runs on a physical iPhone 12 or approved no-bette
 - [ ] D-019 Camera field presentation clears on the authoritative destruction update.
 - [ ] D-020 Impact/destruction VFX remain bounded and reduced presentation preserves all state information.
 - [ ] D-021 No Camera idle, hit, or ambient animation translates or rotates its authoritative housing or field.
+- [ ] D-022 The user-selected street-corner look and intermediate elevated view resolve to one consistent projection across Player, Camera, representative solid, upright prop and ground at native and 50% gameplay scale. Four player facings show distinct body orientation with visible upper surfaces; east/west do not become eye-level profiles.
+- [ ] D-023 Applicable locomotion clips have 16 distinct chronological frames per authored facing, with stable ground contact, coherent equipment/anatomy, clean loop seam and unchanged authoritative timing. Stationary and attack-only states follow their actual clip contracts.
+- [ ] D-024 Every standard Camera displays exactly one complete municipal device frame at a stable mount. Seeded logical `housingFamily` identity, placement/fairness results and replay digest remain unchanged. Captain emitters are visibly boss-owned and never imply standard three-hit Integrity.
 
 ## Gate E — Arena design and fairness
 
@@ -115,6 +118,7 @@ Run three consecutive complete runs on a physical iPhone 12 or approved no-bette
 - [ ] E-018 Manifest contains exactly 7 zones, 14 permanent solids, 5 gates, and 18 valid Camera sockets.
 - [ ] E-019 Extraction requires 300 consecutive in-zone ticks and resets immediately on exit.
 - [ ] E-020 Every coordinate, socket, trigger, and solid is in bounds and schema-valid.
+- [ ] E-021 The shared reference scene and each repaired solid/prop show contact/base/footprint agreement during traversal; no alpha padding, wall art or upright-prop scale creates a false opening or invisible blocked region.
 
 ## Gate F — Accessibility and comprehension
 
@@ -159,3 +163,39 @@ Possible decisions:
 - `EXPANSION_GATE_NOT_COMPUTABLE`
 
 Failure does not authorize undocumented exceptions. Correct the slice, update the specification through governance, or record why evidence is insufficient.
+
+## D-103 — combat causality
+
+See [combat-causality.md](combat-causality.md) for collision, damage evidence, weapon anchor, upgrade clarity and bounded history. CC-001–CC-007 cover phases 1–2; CC-008 remains phase 3.
+
+T1035 automated coverage must include no-target/no-shot, opposite movement and aim, retired-shot evidence, Jammer inactive/clamped/Tamper cases, Ghost Step expiry and ordinary Dodge, reduced presentation, selection order/activation and input reset. Device VoiceOver and 200% text usability remain unproven until the later physical pass.
+
+## D-104 — visual reference and production gate
+
+See [visual-reference.md](visual-reference.md). D-022–D-024 and E-021 require actual game-scale review plates and runtime evidence; the phase-4 concept images alone do not pass those gates. Preserve B-001/B-007/B-008/B-012 placement/replay results when mapping logical Camera families to one visual family. Produce the complete character and Camera playback review before the next physical device installation.
+
+[BP-001–BP-006](benchmark-production.md) define the evidence recipe for those gates. D-022 requires the actual 704×326 renderer with HUD and quiet/dense encounter samples, not a flattened concept background. D-023 requires the exact clip-scope/cadence matrix, source pose review and normal/slow/frame-step playback. D-024 requires 3→2→1→0 settled states, interruption and Reduced Motion, with no duplicate field-off housing. E-021 requires authoritative overlay plus front/rear/corner traversal and projectile contact. Record exact build, asset hashes, viewport/display scale and settings. Keep each gate open until both automated invariants and visual evidence pass.
+
+BP-005/BP-007 building admission requires separate labeled wall-contact and walkable-apron geometry in the source master, registered to runtime world geometry. An alpha silhouette or roof-derived hidden corner is insufficient. The current [building sample](../../docs/review/building-registration/review.md) remains FAILED_REGISTRATION_NOT_ADMITTED.
+
+BP-009: occluded Player ground position and solid boundary remain understandable without false roof elevation or invisible actors. Require continuous transitions, Reduced Motion and legal hazard/encounter evidence; static endpoint comparisons alone do not pass.
+
+BP-003 v2 admission requires the structural target schema plus runtime semantic validation, exact mechanical-conversion parity and the playback checks in animation-timing-migration.md. Schema validation alone is insufficient; active v1 remains until the coordinated migration passes.
+
+BP-003 one-shot gate: selected event-facing controls both texture frames and exact lifetime; turning does not restart it, a new qualifying event does, and late visibility does not extend it. Fallback retains live facing. Require the event-facing/phase test matrix and native-scale readability comparison in animation-timing-migration.md before active v2 admission.
+
+BP-002/BP-008 controlled-source evidence must distinguish rig/solver correctness from art and world-travel acceptance. Require the editable costume master, four coherent facings and native renderer comparison in [controlled-character-source.md](controlled-character-source.md); a skeleton-only proof cannot close D-023.
+
+BP-007 high-resolution outline acceptance requires equal-framing captures and mask/placement tests using equivalent 64×64, 256×256 and 384×384 sources at the same logical actor canvas. Preserve the specified Player stroke and enemy dash treatment, including asymmetric transparent margins and noncentral anchors. Show an actual texture change through normal post-action refresh and Reduced Motion, with no previous-frame outline left behind; invalid/unsupported sources must clear stale output. Record source limits, mask/output sizes, peak scratch allocation, retained mask bytes, cache-key distinctions and bounded churn. Reject missing outlines, source-density-dependent thinning, clipped padding and displaced anchors. Native/zoom visual review and later device memory/frame-time evidence remain required; a higher input-size cap alone does not pass.
+
+BP-010 painted-character acceptance requires the controlled treatment comparison and full backdrop/motion/combat/readability matrix. Reject constant cues that imply a transient gameplay state, loss of non-colour faction identity, ungrounded placement or changes to attack/field truth. A static no-outline portrait cannot pass. Production contract and runtime must name the same selected treatment; until then, review-only suppression is permitted solely in the benchmark fixture and normal play retains D-094.
+
+BP-002 layered-source admission also requires the setup-pose and joint-range evidence in controlled-character-source.md: independent part ownership, retained costume proportions, authored overlaps and editable controls. Pixel-exact reconstruction or fitted landmarks alone cannot close the source gate. Require explicit measurement spaces, reviewed depth treatment and authored foot-contact landmarks before accepting projected gait or contact claims.
+
+BP-008 displayed-contact acceptance requires actual post-action frame identity and authoritative/rendered position records with video, following benchmark-production.md. Reject a claim based only on a continuous source solver, expected tick-derived frame index, or static/Reduced Motion composition fixture. The moving harness must demonstrate changing textures and uninterrupted playback across observations. Existing cardinal/diagonal, analog, collision, reversal and interruption cases remain required; no numerical slip tolerance is introduced by this clarification.
+
+D-104 field-readability evidence must include the Camera field contrast comparison in benchmark-production.md. Record the selected treatment and its parameters only after the required geometry/lifecycle and backdrop/encounter comparisons. The current pale-ground grayscale failure remains open; isolated device texture tests and quiet composition captures cannot establish field readability or overall benchmark acceptance.
+
+BP-001 street-surface evidence must distinguish the placed composition from the legal arena. Reject tiled curbs/rails, stretched edge tiles, infrastructure through solids, or presentation details that change simulation. Require plain/furnished native and grayscale comparisons with the registered building, actor/field cues and unchanged digest; this does not replace live traversal and encounter acceptance.
+
+T1045 / BP-008 evidence revisions: a source-volume candidate cannot inherit prior-asset visual acceptance. Require source/export identity, preserved pose/registration evidence, separate normal/quarter-speed visual review, and fresh real-renderer coverage/contact/motion-mode results. Distinguish loading duration, callback timing and physical presentation. A repeated all-frame result closes only its named capture scope; shared scene, other facings, interactions, production admission and device gates stay open.
