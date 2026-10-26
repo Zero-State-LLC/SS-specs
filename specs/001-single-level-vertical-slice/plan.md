@@ -1,5 +1,10 @@
 # Technical Plan: San Francisco Vertical Slice
 
+## Current handoff — 2026-10-25
+
+Aaron continues from the [continuation brief](../../docs/review/aaron-continuation-2026-10-25.md). Stop recorder/OBS troubleshooting; retain the0.375-second Player candidate and bounded visual approval. Prioritize remaining Player releases/facings/actions, then shared-scene integration and direct iPhone validation. Live cadence/performance remain unverified and required before production admission; they do not block further source work. Historical recorder-dependent next-step notes below are superseded for sequencing only. No parent production task is Done.
+
+
 Status: BASELINE  
 Depends on: `spec.md`, constitution 1.2.0
 
@@ -285,3 +290,15 @@ Use the [evidence-backed next-step plan](../../docs/review/benchmark-status-2026
 
 ### T1045 evidence continuation — 2026-10-15
 Follow BP-008's costume-volume and startup/playback boundaries. Preserve the previous south candidate, export the fuller-leg study with unchanged pose samples, and compare normal/quarter speed. Reconcile only the test asset family first, with exact hashes and source provenance; rerun registration, contact, normal and Reduced Motion coverage before shared composition. Build/preload initial scene resources before measured playback and reuse the rendered snapshot for diagnostic fields. Report preparation and post-action diagnostic costs separately. Run app timing measurements serially, then repeat with recording enabled; core validation is a separate run. These are fixture techniques, not new production startup or animation policies.
+
+Implement the BP-007/BP-009 Camera-post/exterior repair as reusable review presentation: projected-ground depth, restored occlusion opacity/contact cue, inverse-view asphalt coverage and outward curb. Record per-frame evidence and compare both speeds.
+
+
+### Owner sequencing clarification — 2026-10-16
+
+Finish the Player correctly before beginning enemy production. Keep the enemy pipeline as a deferred T1045 dependency under SS-specs #65; see the [current kanban priority](../../docs/kanban.md#current-priority--player-first-2026-10-16). This changes work order, not cast scope or admission requirements. The accepted Player package should demonstrate editable source, genuine directional/action coverage, registration/export provenance and real-renderer validation before serving as the enemy template. Do not mistake the paused-action Camera-post/exterior review for Player animation evidence.
+
+Next Player evidence must use the actual selected clip and continuously displayed frames, with separate normal/quarter-speed review of contacts and the 16→1 seam. Reuse existing capture and source work before adding another harness. Review the exact candidate revision; retain unresolved facing/action coverage and proposed art parameters explicitly. Device testing still follows the visual checkpoint.
+
+
+BP-008 transition reconciliation order (2026-10-19): retain missing-sprite and warm-up records in the renderer diagnostic first; verify neutral/source correspondence before adding idle delivery to the isolated library; then capture entry/exit across observed phases and both motion modes. Preserve the existing missing-art policy and simulation timing. Only introduce additional transition animation after direct-switch footage identifies the defect. Current evidence inventory is runtime docs/review/player-material-renderer-review/transition-coverage-audit.json. Enemy production remains deferred.
