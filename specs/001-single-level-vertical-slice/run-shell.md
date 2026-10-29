@@ -270,6 +270,22 @@ Under the outcome, the terminal surface shows:
 Share opens the system share sheet with a plain-text summary of the same rows
 and the game's name. It shares nothing else: no seed, no receipt, no identifier.
 
+**Incident report (D-112).** The summary is written as the authority's own
+paperwork. It has one line per item, in this order:
+
+```text
+Surveillance Survivor
+INCIDENT REPORT · DATE <YYYY-MM-DD>        (`INCIDENT REPORT` alone without a date)
+OUTCOME: SUBJECT EXTRACTED                 (failure: SUBJECT DETAINED; invalid: REPORT VOID)
+TIME UNDER OBSERVATION <m:ss>
+CAMERAS TAMPERED WITH <destroyed/8>[ NETWORK BLACKOUT]
+PEAK DETECTION <STATE>
+GHOST <value>                              (only when the card has the row)
+MEDALS <NAMES>                             (§ 12, only when earned; always last)
+```
+
+The on-screen card is unchanged. RS-016 still holds.
+
 ## 12. Medals (D-095)
 
 One level needs more than one way to win. A successful run can earn any of
@@ -436,3 +452,5 @@ Proposed, pending acceptance of this document.
 | RS-038 | Restart from a rehearsal | the Daily Run starts at its first tick on the same seed |
 | RS-039 | the same snapshot and rehearsal commands twice | identical digests |
 | RS-040 | a later run on the same seed reaches the Court | its snapshot replaces the earlier one |
+| RS-041 | Share after a success / a failure / an invalid run | the second line is `INCIDENT REPORT · DATE <date>`; the third is `OUTCOME: SUBJECT EXTRACTED` / `SUBJECT DETAINED` / `REPORT VOID` |
+| RS-042 | Share | the rows read `TIME UNDER OBSERVATION`, `CAMERAS TAMPERED WITH`, `PEAK DETECTION`; medals stay last |
