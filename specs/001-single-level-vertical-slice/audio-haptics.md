@@ -121,6 +121,26 @@ equivalent (HUD state change, telegraph, VFX), so this rule still holds.
 Routine captions (weapon fired, impact, civic pulse) appear only under All.
 The history above is unchanged.
 
+### Captain and Daemon captions (D-111)
+
+Every attack caption names the attack's **form** first, because that is the safety information, and then the authority's justification. Phase and defeat captions carry the satire. Captions are at most 40 characters, so they fit the caption column uppercased. VoiceOver reads them in sentence case.
+
+| Event | Caption |
+|---|---|
+| Safety Rationale telegraph | `Cone: for your safety` |
+| Narrow Tailoring telegraph | `3 bolts: narrowly tailored` |
+| Temporary Order telegraph | `Field: temporary, indefinitely` |
+| Independent Review telegraph | `Ring, 1 gap: independently reviewed` |
+| Daemon query telegraph | `Query: just a quick search` |
+| Daemon dash telegraph | `Dash: reasonable suspicion` |
+| Phase → Public Safety | `Public Safety: nothing to hide?` |
+| Phase → Civil Liberties | `Civil Liberties: duly balanced` |
+| Phase → Temporary Safeguard | `Safeguard: until further notice` |
+| Phase → Independent Review | `Review: the Authority finds no fault` |
+| Captain defeated | `Authority defeated: no further questions` |
+
+Cue IDs, priorities, haptics and caption classes are unchanged.
+
 ## Acceptance vectors
 
 | ID | Scenario | Expected |
@@ -131,3 +151,5 @@ The history above is unchanged.
 | AH-004 | audio/haptics disabled | gameplay digest unchanged |
 | AH-005 | offscreen major telegraph | directional caption present |
 | AH-006 | Reduced Flash/Motion | cue meaning unchanged |
+| AH-007 | each Captain and Daemon telegraph | caption starts with its form (`Cone`, `3 bolts`, `Field`, `Ring, 1 gap`, `Query`, `Dash`) |
+| AH-008 | every D-111 caption | at most 40 characters |

@@ -211,3 +211,12 @@ Intent: [`2026-10-29-live-exposure-in-court`](../../intent/2026-10-29-live-expos
 
 Intent: [`2026-10-30-tamper-floor-on-the-meter`](../../intent/2026-10-30-tamper-floor-on-the-meter.md).
 
+## D-111 — the Captain's voice in the captions (2026-10-30)
+
+**ACCEPTED (SS-specs pull request merged 2026-10-30 at the owner's direction):** [audio-haptics.md § Captain and Daemon captions](audio-haptics.md) replaces the runtime's generic copy (`Boss telegraph`, `Policy phase`, `Query telegraph`, `Dash telegraph`, `Authority defeated`) with specified captions.
+- **Telegraphs:** form first (cone, 3 bolts, field, ring with one gap, query, dash), then the authority's justification.
+- **Phases and defeat:** the satire, legible.
+- **Limits:** at most 40 characters. Cue IDs, priorities, haptics and caption classes are unchanged. No ruleset, content, digest or receipt change. AH-007, AH-008.
+
+Intent: [`2026-10-30-captain-voice`](../../intent/2026-10-30-captain-voice.md).
+
