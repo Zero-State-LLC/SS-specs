@@ -223,7 +223,7 @@ Total: 17 enemies.
 
 Zone Z-05. Purpose: mastery under full escalation.
 
-On activation, set Exposure to 1000, enter and latch Lockdown if not already latched, then begin C1 after 60 ticks. This is the only encounter-forced Exposure assignment.
+On activation, set Exposure to 1000, enter and latch Lockdown if not already latched, then begin C1 after 60 ticks. This is the only encounter-forced Exposure assignment. The latch is released when the Daemon is defeated (exposure.md § Court release, D-109).
 
 | Wave | Composition | Spawn interval | Next-wave delay |
 |---:|---|---:|---:|
