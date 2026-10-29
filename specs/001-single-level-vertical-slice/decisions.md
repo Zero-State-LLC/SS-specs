@@ -187,7 +187,7 @@ Intent: [`2026-10-29-lock-projection-and-palette`](../../intent/2026-10-29-lock-
 
 ## D-109 — live Exposure in the Captain Court (2026-10-29)
 
-**PROPOSED (merging this decision's pull request accepts it):** this specifies the accepted intent `2026-10-29-live-exposure-in-court` (SS-specs #69), with the owner's choice of option (b).
+**ACCEPTED (SS-specs #76, merged 2026-10-29 at the owner's direction):** this specifies the accepted intent `2026-10-29-live-exposure-in-court` (SS-specs #69), with the owner's choice of option (b).
 
 - **Court release:** [exposure.md § Court release](exposure.md) releases the Lockdown latch when the Daemon is defeated and sets Exposure to 700. The next tick resolves `lockdown`→`hunted`.
 - **Court Lockdown:** Exposure is then live in the Court. Reaching 1000 there latches Lockdown for the rest of the run. While it holds, the Captain's attack cooldown counts down twice as fast ([bosses.md § Court Lockdown](bosses.md)). Telegraphs, damage and every other rule are unchanged.
