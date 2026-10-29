@@ -26,7 +26,11 @@ This section describes the current candidate; dated observations below retain th
 
 Current evidence: runtime `docs/review/player-settle-timing/live-clock-diagnosis.md`, `fractional-clock-*`, `full-window-*`; review `outputs/SS-player-fractional-clock-review`. Historical observations below remain scoped to their original runs. Host trace labels do not attribute display timing to the game; they do not clear the live gate.
 
-Next production order: finish the current south/front contact and transition review, complete four neutral facings using the same editable master, then expand movement/actions and reconcile a complete family. Enemy production remains deferred until Player completion. Review captures demonstrate only the states and facings they actually contain. A test pass or source geometry check must not replace normal-speed visual review.
+Next production order (D-108, intent `2026-10-29-lock-projection-and-palette`):
+1. Record the BP-001 projection choice.
+2. Then work breadth-first at the BP-012 fidelity bar: four Player facings, then the municipal Camera family, then the enemy roles, then the environment kit.
+
+Within each family: finish the current south/front contact and transition review, complete four neutral facings from the same editable master, then expand movement and actions and reconcile the family. The Player is still the first family, but enemy production no longer waits for every Player action to be complete. Review captures demonstrate only the states and facings they actually contain. A test pass or source geometry check must not replace normal-speed visual review.
 
 ## BP-001 — one shared production sample
 
@@ -116,6 +120,43 @@ At every displayed frame, the outline must derive from that frame's silhouette. 
 DOCUMENTED research, accessed 2026-10-14: Apple's [SKTexture.size](https://developer.apple.com/documentation/spritekit/sktexture/size()) returns dimensions in points; [SKTexture](https://developer.apple.com/documentation/spritekit/sktexture) exposes cgImage and filtering separately, shares immutable texture resources, and retains GPU texture data while referenced. These mechanisms support explicit separation of pixel storage from drawing dimensions. They do not prescribe SS's outline algorithm, cache budget or visual quality.
 
 PROPOSED implementation comparison: generate the alpha outline in a bounded logical-mask coordinate system, independent of the source image's storage dimensions, then map padded-mask dimensions and anchor explicitly back to the actor. Preserve the original colour texture. Compare this with a density-aware source-resolution mask if logical resampling visibly damages thin silhouettes; select from native/zoom captures and measured cost. Do not simply lift the 256px cap while retaining a one-source-pixel stroke. Record source-read limits, mask/output dimensions, peak temporary allocation, retained outline bytes and cache lifecycle. No final memory/performance claim follows from a theoretical byte estimate or simulator alone.
+
+## BP-011 — palette conformance report
+
+Every BP review plate reports its palette against the approved concept, so drift from the Civic Seam palette (`civic-seam-visual-direction.md` § 10) is visible before admission. The report is evidence for review: a plate outside the band is **flagged for owner review, not rejected**. The approved concept stays the reference.
+
+Method, exact so any runtime script reproduces it:
+
+1. Load the plate as 8-bit sRGB. Exclude HUD rows or rectangles named in the plate's review note.
+2. Downsample to 300 px wide, keeping the aspect ratio rounded to the nearest pixel, with a box filter.
+3. Over all remaining pixels, compute three values:
+   - **mean luminance:** `0.2126 R + 0.7152 G + 0.0722 B` on the 8-bit values, without linearising;
+   - **mean chroma:** `max(R, G, B) − min(R, G, B)`;
+   - **palette shares:** each pixel assigned to the nearest § 10 colour by squared RGB distance, reported as percentages.
+4. Report the same three values for `docs/review/phase4/street-corner-approved-concept.png`, computed by the same method.
+
+Reference values (approved concept, measured 2026-10-29):
+
+| Value | Reference |
+|---|---|
+| Mean luminance | 85 |
+| Mean chroma | 11 |
+| Largest palette shares | asphalt 38%, brick shadow 27%, stucco 15% |
+
+**PROPOSED band**, which the owner may change by decision:
+
+| Value | Flag when |
+|---|---|
+| Mean luminance | outside 64–106 (±25% of the reference) |
+| Mean chroma | above 17 (1.5× the reference) |
+
+A plate that shows mainly the Civic Plaza may sit up to 15% lighter, because its massing is limestone. The report names the zone.
+
+## BP-012 — breadth-first fidelity bar and projection record
+
+- **Projection record.** No further source detail is produced for any family until the BP-001 projection choice is recorded, with its comparison images, in `decisions.md`. Facing/travel mapping and the input inverse follow from it. The choice itself is the owner's.
+- **Fidelity bar.** A family is admitted when its review passes at native size, 50% scale and grayscale in the actual 704×326 renderer (BP-001, BP-007), with its BP-011 report. Detail that is not visible at that bar does not block admission. It may be improved later, without blocking other families.
+- **Order.** Four Player facings, then the municipal Camera family, then the enemy roles, then the environment kit (`visual-reference.md`). Each family meets the bar before the next family's detail work, not before its first sample.
 
 ## BP-008 — gait and displacement comparison
 

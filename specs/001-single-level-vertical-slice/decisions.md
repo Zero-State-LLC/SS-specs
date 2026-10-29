@@ -164,3 +164,24 @@ Evidence:
 
 Intent: [`2026-10-29-court-rehearsal`](../../intent/2026-10-29-court-rehearsal.md). Task: T1051.
 
+## D-108 — projection record, palette report and breadth-first production (2026-10-29)
+
+**PROPOSED (merging this decision's pull request accepts it):** [benchmark-production.md](benchmark-production.md) adds three things.
+
+- **BP-011:** every review plate reports mean luminance, mean chroma and § 10 palette shares, by an exact method, next to the approved concept (85 / 11 / asphalt 38%).
+  - An owner-adjustable band (luminance 64–106, chroma ≤ 17) flags plates for review; it never rejects them.
+- **BP-012:**
+  - No further source detail until the BP-001 projection choice is recorded.
+  - A family is admitted at the native / 50% / grayscale bar in the real renderer.
+  - Families proceed breadth-first: Player facings, municipal Camera, enemy roles, environment kit.
+- **Production order:** changed to match. Enemy production no longer waits for every Player action.
+
+What does not change:
+- the Civic Seam direction, the approved concepts and every D-104 gate;
+- the projection choice itself, which stays the owner's;
+- no gameplay, collision, ruleset or replay identity.
+
+Evidence: the latest shared-scene capture measures 135 / 30 (stucco 73%) against the concept's 85 / 11 (asphalt 38%).
+
+Intent: [`2026-10-29-lock-projection-and-palette`](../../intent/2026-10-29-lock-projection-and-palette.md).
+
