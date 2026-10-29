@@ -122,6 +122,14 @@ LOST` shows. When M-C starts with it intact, the tag stays, unchanged, until
 boss activation, where the restore caption replaces it. The tag is drawn from
 authoritative state, so it never disagrees with the rule.
 
+**Tamper floor (D-110).** Once at least one Camera has been destroyed, the bar
+shows the Tamper floor (exposure.md, D-084): a heavy vertical marker across the
+bar at `min(1000, 150 × destroyed Cameras)`, with a small upward cap under the
+bar. It is thicker than the threshold notches, so it reads by weight and shape
+as well as colour. It moves up with each destruction and never moves down. The
+marker is drawn from the number of destroyed Cameras in the presentation
+snapshot, so it never disagrees with the rule. `+150 TAMPER` is unchanged.
+
 ## Extraction display
 
 Render `ceil(remainingTicks / 60)` as 5, 4, 3, 2, 1. The ring uses exact tick progress. Leaving the zone immediately hides the active ring and shows `RESET` for 45 presented ticks. Presentation does not drive completion.
@@ -141,6 +149,9 @@ Render `ceil(remainingTicks / 60)` as 5, 4, 3, 2, 1. The ring uses exact tick pr
 | UI-009 | run start | `QUIET` tag shown |
 | UI-010 | Detection State reaches `tracked` before M-C | tag removed; `QUIET APPROACH LOST` caption |
 | UI-011 | boss activates with `quietApproach` true at 40 Integrity | `QUIET APPROACH • INTEGRITY 90` caption; tag removed |
+| UI-012 | no Camera destroyed | no floor marker |
+| UI-013 | 3 Cameras destroyed | floor marker at 450 on the bar |
+| UI-014 | 7 or more Cameras destroyed | floor marker at the right end (1000) |
 
 ## D-103 — combat causality
 
