@@ -293,6 +293,46 @@ authoritative state, and none changes rules, the digest, or the receipt.
 - `GHOST` and `BLACKOUT` pull in opposite directions by design: stealth and
   loud each have a medal of their own.
 
+## 13. Interruptions (D-106)
+
+A phone run is interrupted by calls, notifications, Control Center and app
+switches. PC-008 already guarantees that none of these adds a tick. This section
+specifies what the player sees when they return.
+
+### 13.1 Leaving the foreground
+
+When the app leaves the foreground while a run is in progress (`playing`), the
+run enters Pause exactly as if the player had pressed the Pause control. The
+Pause surface is presented, held input and a buffered Dodge are cleared
+(PC-009), and no tick occurs. Returning to the foreground does **not** resume
+the run; the player resumes it from the Pause surface.
+
+- "Leaving the foreground" is the first moment the app stops being active,
+  including a transient interruption that never reaches the background
+  (an incoming call banner or Control Center).
+- If Pause is already presented, nothing changes.
+- The title surface, the terminal surface, the 2-second intro and the upgrade
+  selection need no change: none of them advances a tick. If the intro was
+  running, it continues from where it stopped.
+- This is presentation only: no authoritative state, digest or receipt
+  changes. A run interrupted and resumed is tick-for-tick identical to the same
+  commands without the interruption (`B-004`).
+
+### 13.2 Audio interruptions
+
+When the system interrupts the game's audio session (a call, an alarm, Siri),
+every game sound stops. When the interruption ends, the music state is restored
+from the current authoritative state; one-shot sound effects that were cut off
+are not replayed. This is the same whether or not the run is paused: Pause does
+not silence music today, and this section does not change that.
+
+### 13.3 Reduced Motion follows the system on first launch
+
+Until the player changes Reduced Motion in Settings, its value is the iOS
+Reduce Motion accessibility setting, read at launch. Once the player sets it in
+Settings, the stored choice is kept and the system setting is no longer
+consulted. Every other setting keeps its current default.
+
 ## 9. Acceptance vectors
 
 Proposed, pending acceptance of this document.
@@ -323,3 +363,11 @@ Proposed, pending acceptance of this document.
 | RS-022 | a replay of a medal run | the same medals |
 | RS-023 | a second run today earns `GHOST` again | `GHOST` shown, not marked `NEW` |
 | RS-024 | any success | `GHOST` is earned exactly when the authoritative `quietApproach` (exposure.md, D-101) is still `true` at the end of the run |
+| RS-025 | run in progress; the app becomes inactive (call banner, Control Center) | Pause surface presented; held input and buffered Dodge cleared; no tick while inactive |
+| RS-026 | run in progress; app backgrounded for 10 s, then foregrounded | Pause surface still presented; the run does not resume until the player resumes it; zero added ticks |
+| RS-027 | Pause already presented when the app becomes inactive | no change |
+| RS-028 | title, terminal or upgrade-selection surface when the app becomes inactive | that surface is unchanged on return |
+| RS-029 | the same commands with and without an interruption and resume | identical digest and receipt |
+| RS-030 | audio interruption begins and ends during a run | all game audio stops at the start; the music state for the current authoritative state is restored at the end |
+| RS-031 | first launch with iOS Reduce Motion on / off and no stored setting | Reduced Motion on / off |
+| RS-032 | the player has set Reduced Motion in Settings, then iOS Reduce Motion changes | the stored choice is kept |
