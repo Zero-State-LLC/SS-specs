@@ -151,7 +151,7 @@ The user authorized T1035 implementation after phases 1–2 passed. Implement ex
 
 ## D-107 — Court rehearsal (2026-10-29)
 
-**PROPOSED (merging this decision's pull request accepts it):** [run-shell.md § 14](run-shell.md) adds Rehearse Court, a secondary terminal control offered after any death in the Captain Court.
+**ACCEPTED (SS-specs #73, merged 2026-10-29 at the owner's direction):** [run-shell.md § 14](run-shell.md) adds Rehearse Court, a secondary terminal control offered after any death in the Captain Court.
 - It resumes from an in-memory copy of the authoritative state taken after the `bossActivated` tick, including the D-096 restore, with no intro, tutorial or ghost.
 - A rehearsal earns no medals, never becomes the best or the ghost, is not archived, cannot be shared, and shows a `REHEARSAL` card.
 - Restart still begins the Daily Run from its first tick.
@@ -166,7 +166,7 @@ Intent: [`2026-10-29-court-rehearsal`](../../intent/2026-10-29-court-rehearsal.m
 
 ## D-108 — projection record, palette report and breadth-first production (2026-10-29)
 
-**PROPOSED (merging this decision's pull request accepts it):** [benchmark-production.md](benchmark-production.md) adds three things.
+**ACCEPTED (SS-specs #74, merged 2026-10-29 by the owner):** [benchmark-production.md](benchmark-production.md) adds three things.
 
 - **BP-011:** every review plate reports mean luminance, mean chroma and § 10 palette shares, by an exact method, next to the approved concept (85 / 11 / asphalt 38%).
   - An owner-adjustable band (luminance 64–106, chroma ≤ 17) flags plates for review; it never rejects them.
