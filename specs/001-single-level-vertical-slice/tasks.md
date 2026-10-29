@@ -257,6 +257,7 @@ A harness is a collector of evidence, not evidence. SS-runtime #34–#41 ship th
 | T1045 | PARTIAL | Bounded south cycle and matching held neutral are integrated in test fixtures; all-phase direct-stop and two-phase proposed settle have native evidence. Visual contact/timing acceptance, other facings and complete state coverage remain open | Artist and animation reviewer | Four-facing 16-frame locomotion proof where applicable plus all required action clips and timed playback review |
 | T1046 | PARTIAL | Family-level inventory found defects; per-ID disposition and in-scene base/footprint proof remain | Environment artist and runtime reviewer | 46-item disposition, repaired sources, native-scale traversal and collision review plates |
 | T1050 | NOT_RUN | Runtime implementation follows acceptance of D-106; the iOS interruption sequence needs a physical device | Runtime implementer, then device operator | RS-025–RS-032 automated coverage plus one device session: call or Control Center mid-run, background/foreground, audio interruption |
+| T1051 | NOT_RUN | Runtime implementation follows acceptance of D-107 | Runtime implementer | RS-033–RS-040 automated coverage, including snapshot digest equality and the non-legal record rules |
 
 ## Traceability rule
 
@@ -292,6 +293,7 @@ See [combat-causality.md](combat-causality.md) for collision, damage evidence, w
 - [ ] T1045 Complete actor state/facing coverage with controlled 16-frame locomotion where applicable; run timing, identity, anchor and gameplay-scale review before device testing.
 - [ ] T1046 Audit each of the 46 environment PNGs for retain/repair/replace/exclude and validate visible base against collision geometry in the shared scene.
 - [ ] T1050 Interruptions (D-106, [run-shell.md § 13](run-shell.md)): pause a run that leaves the foreground, stop and restore audio around audio-session interruptions, and seed Reduced Motion from iOS on first launch. Cover RS-025–RS-032; presentation only, no ruleset or replay change. Device confirmation of the iOS interruption sequence remains a physical-device check.
+- [ ] T1051 Court rehearsal (D-107, [run-shell.md § 14](run-shell.md)): snapshot authoritative state at `bossActivated`, offer Rehearse Court after a Court death, run the rehearsal outside the Daily Run's record. Cover RS-033–RS-040; no ruleset or replay change.
 
 Production detail: [BP-001–BP-006](benchmark-production.md). T1042 owns exact viewport/HUD/encounter captures and projection comparison. T1043 owns complete-device state settling, interruptions and Reduced Motion. T1044 begins with exact spec-pin adoption and records deferred art admission honestly, then migrates complete accepted families. T1045 owns the named locomotion matrix, rational cadence/hold representation and Informant pursuit decision. T1046 records all 46 per-ID dispositions and geometry evidence. Do not close any task on the strength of pin alignment alone.
 

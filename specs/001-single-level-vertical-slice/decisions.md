@@ -148,3 +148,19 @@ The user authorized T1035 implementation after phases 1–2 passed. Implement ex
 ## D-106 — interruptions pause the run (2026-10-29)
 
 **ACCEPTED (SS-specs #68, merged 2026-10-29 at the owner's direction):** [run-shell.md § 13](run-shell.md) adds three phone-lifecycle rules. A run in progress that leaves the foreground enters Pause and stays paused until the player resumes it. An audio-session interruption stops game audio, and the music state is restored from authoritative state when it ends. On first launch Reduced Motion follows the iOS Reduce Motion setting until the player sets it in Settings. All presentation only; PC-008, PC-009 and B-004 are unchanged, and no ruleset, content, arena or replay identity changes. Rationale: the runtime had no lifecycle handling, so an incoming call returned the player straight into live combat. Intent: [`2026-10-29-interruptions`](../../intent/2026-10-29-interruptions.md). Task: T1050.
+
+## D-107 — Court rehearsal (2026-10-29)
+
+**PROPOSED (merging this decision's pull request accepts it):** [run-shell.md § 14](run-shell.md) adds Rehearse Court, a secondary terminal control offered after any death in the Captain Court.
+- It resumes from an in-memory copy of the authoritative state taken after the `bossActivated` tick, including the D-096 restore, with no intro, tutorial or ghost.
+- A rehearsal earns no medals, never becomes the best or the ghost, is not archived, cannot be shared, and shows a `REHEARSAL` card.
+- Restart still begins the Daily Run from its first tick.
+- This answers the intent's open questions: snapshot rather than re-simulation, offered after every Court death, not receipted, and one secondary control.
+- No ruleset, content, arena, digest or receipt change.
+
+Evidence:
+- In 540 legal probe runs, 89% of failures die in the Court, after a median 3:55 to reach it and 0:54 survived there.
+- A snapshot copy takes about 0.03 ms, against about 3 s to re-simulate (SS-specs #71 comments).
+
+Intent: [`2026-10-29-court-rehearsal`](../../intent/2026-10-29-court-rehearsal.md). Task: T1051.
+
