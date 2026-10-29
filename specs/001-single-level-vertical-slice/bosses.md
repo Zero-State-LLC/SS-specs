@@ -90,6 +90,17 @@ The boss has exactly four attacks.
 - Exact angular ties omit the lower numbered lane.
 - Cooldown contribution: 105 ticks.
 
+### Court Lockdown (D-109)
+
+After the Court release (exposure.md § Court release), Exposure is live in the Court. If it reaches 1000 there, Lockdown latches for the rest of the run, and while it holds the Captain presses harder:
+- The attack **cooldown** counts down by 2 per tick instead of 1. The contributions above are effectively halved: 45, 38, 60 and 53 ticks, rounding up.
+- Telegraph durations, transition recovery, damage, projectiles, fields and phase rules are unchanged, so every attack stays exactly as readable and avoidable.
+- Before the Court release, Lockdown cannot coincide with an active Captain, so this applies only to Lockdown entered in the Court.
+
+Measured (scratch probe, 270 legal runs, runtime `5b36566` plus the rule; SS-specs #69):
+- Runs that re-entered Lockdown in the Court won 41% (stealth) and 50% (competent), against 61% for those that did not.
+- Overall win rate was 52.6%, against 57.0% unchanged.
+
 ### Captain Court threshold (D-096)
 
 On the tick the boss activates (`bossActivated`), the Player's Integrity is
@@ -158,4 +169,7 @@ Boss defeat retires all boss projectiles and Captain Camera fields immediately. 
 | BO-007 | Independent Review lane tie | lower numbered lane omitted |
 | BO-008 | boss defeat with active field/projectiles | all retire immediately |
 | BO-009 | boss and Player die same tick | terminal failure; boss death recorded |
+| BO-010 | Lockdown holds in the Court and the Captain has 90 cooldown ticks left | the cooldown elapses in 45 ticks and the next telegraph starts on the tick after (46th), not the 91st |
+| BO-011 | Lockdown entered in the Court during a telegraph | telegraph length unchanged; only later cooldowns count down by 2 |
+| BO-012 | Court released and Exposure never reaches 1000 | cooldowns count down by 1, as before (120 cooldown ticks, telegraph on the 121st) |
 | BO-010 | zero Cameras destroyed | boss remains defeatable and Extraction can arm |

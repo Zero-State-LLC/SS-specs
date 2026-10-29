@@ -120,7 +120,7 @@ The tuning artifact MUST define integer thresholds and rates. State ordering is 
 
 `hidden → observed → tracked → hunted → lockdown`
 
-Exposure may fall and reverse among hidden, observed, tracked, and hunted. Lockdown is latched for the remainder of the run. Threshold comparisons MUST define inclusive/exclusive behavior and occur on deterministic simulation ticks.
+Exposure may fall and reverse among hidden, observed, tracked, and hunted. Lockdown is latched until the Improper Search Daemon is defeated. Then Exposure is set to 700 (`hunted`), and Lockdown can be entered again in the Captain Court, where it latches for the rest of the run (D-109, [exposure.md](exposure.md) § Court release). Threshold comparisons MUST define inclusive/exclusive behavior and occur on deterministic simulation ticks.
 
 ## 7. User stories
 

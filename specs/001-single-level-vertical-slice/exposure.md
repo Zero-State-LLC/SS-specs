@@ -44,7 +44,7 @@ At 60 ticks/second, one Camera adds 120 points/second. Recovery begins only afte
 | `hunted` | 700–999 |
 | `lockdown` | 1000 |
 
-There is no threshold hysteresis. State is a pure projection of Exposure after all deltas for the tick. `lockdown` is entered once, latched for the run, and fixes Exposure at 1000 thereafter. Recovery never exits Lockdown.
+There is no threshold hysteresis. State is a pure projection of Exposure after all deltas for the tick. `lockdown` latches and fixes Exposure at 1000 while it holds. Recovery never exits Lockdown. The latch is released once, when the Improper Search Daemon is defeated (§ Court release, D-109). Lockdown entered again after that latches for the rest of the run.
 
 ## Contact aggregation
 
@@ -82,6 +82,20 @@ Tamper and continuous contact may cross several thresholds in one tick. Emit one
 ## Upgrade hook
 
 `Signal Jammer` reduces the continuous contact delta as described here; its separate 25% Fog/Observation pulse reduction is defined in upgrades.md. Its modifier is applied after aggregation and before Tamper, using integer arithmetic. It cannot reduce a positive contact delta below 1 and never changes Tamper, recovery, thresholds, or Lockdown latching. Its exact value belongs to the upgrade contract.
+
+## Court release (D-109)
+
+Lockdown is the climax of M-C. The Captain Court is a new surveillance regime, not a continuation of it, so the latch is released when the Daemon falls:
+
+1. On the tick `EliteDefeated(improperSearchDaemon)` is emitted (phase 16), clear the Lockdown latch and set Exposure to 700. Do not change the Detection State on that tick.
+2. The next tick's Exposure resolution (phase 14) runs normally from 700. It projects the Detection State and emits one `DetectionStateChanged` from `lockdown` to its final state, normally `hunted`.
+3. From then on, contact, Tamper, recovery, the Tamper floor and named pulses apply as everywhere else. The Captain's Temporary Order Observation pulses and the Z-06 Camera can raise Exposure; cover lets it recover.
+4. Reaching 1000 in the Court enters Lockdown again: one `LockdownEntered` with the reason that reached the cap. That Lockdown latches for the rest of the run. Its cost is the Captain's faster attack cadence (bosses.md § Court Lockdown).
+
+Notes:
+- Setting Exposure to 700 is an assignment. The Tamper floor only limits recovery, so a floor above 700 does not raise it.
+- The quiet-approach latch and the `GHOST` medal are decided before M-C and are unaffected.
+- M-C's forced Lockdown and its heat rules are unchanged.
 
 ## Quiet approach (D-101)
 
@@ -131,6 +145,10 @@ Court threshold (bosses.md).
 | EX-018 | multiple contact/Tamper/named deltas cross several thresholds | one starting→final DetectionStateChanged; at most one phase-14 LockdownEntered |
 | EX-019 | lethal Player damage plus a due Fog pulse | no named pulse applied; contact/recovery and Tamper still resolve; failure wins |
 | EX-020 | M-C activation with due named pulses | final 1000/lockdown; one forced Lockdown event; quiet approach preserved if previously true |
+| EX-021 | `EliteDefeated(improperSearchDaemon)` while Lockdown is latched | that tick ends at 1000/`lockdown`; the next tick resolves from 700 with one `lockdown`→`hunted` event and no `LockdownEntered` |
+| EX-022 | after the Court release, contact raises Exposure to 1000 | one `LockdownEntered`; Exposure stays 1000/`lockdown` for the rest of the run |
+| EX-023 | after the Court release, 61 no-contact ticks from 700 with no Cameras destroyed | 698, `tracked` |
+| EX-024 | Court release with 6 Cameras destroyed (floor 900) | Exposure is set to 700; the floor does not raise it, and recovery does not apply while Exposure is below the floor (as EX-012) |
 
 ## Failure rules
 
