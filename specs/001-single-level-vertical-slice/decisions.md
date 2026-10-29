@@ -201,3 +201,13 @@ Evidence (scratch probes, 270 legal runs each, posted on #69):
 
 Intent: [`2026-10-29-live-exposure-in-court`](../../intent/2026-10-29-live-exposure-in-court.md). Task: T1052.
 
+## D-110 — Tamper floor on the Exposure meter (2026-10-30)
+
+**ACCEPTED (SS-specs #77, merged 2026-10-30 at the owner's direction):** [hud-tutorial.md § Exposure presentation](hud-tutorial.md) adds a Tamper floor marker.
+- **Where:** a heavy marker at `min(1000, 150 × destroyed Cameras)`, with an upward cap, shown once a Camera is down.
+- **Why:** D-084's permanent floor has had no visible form, so players could not tell why Exposure stopped draining.
+- **Scope:** presentation only, drawn from the snapshot's destroyed-Camera count. `+150 TAMPER` and the threshold notches are unchanged. UI-012–UI-014.
+- No ruleset, content, digest or receipt change.
+
+Intent: [`2026-10-30-tamper-floor-on-the-meter`](../../intent/2026-10-30-tamper-floor-on-the-meter.md).
+
