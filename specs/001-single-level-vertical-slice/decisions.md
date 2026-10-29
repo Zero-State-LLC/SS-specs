@@ -220,3 +220,15 @@ Intent: [`2026-10-30-tamper-floor-on-the-meter`](../../intent/2026-10-30-tamper-
 
 Intent: [`2026-10-30-captain-voice`](../../intent/2026-10-30-captain-voice.md).
 
+## D-112 — Share as an incident report (2026-10-30)
+
+**ACCEPTED (SS-specs pull request merged 2026-10-30 at the owner's direction):** [run-shell.md § 11](run-shell.md) writes the Share summary as an incident report:
+- a header with the date;
+- `OUTCOME: SUBJECT EXTRACTED` / `SUBJECT DETAINED` / `REPORT VOID`;
+- the rows phrased as `TIME UNDER OBSERVATION`, `CAMERAS TAMPERED WITH` and `PEAK DETECTION`;
+- the ghost, then the medals, last.
+
+RS-016 still holds: the game's name first, every row's label and value present, no identifier. The on-screen card is unchanged. RS-041, RS-042. Presentation only.
+
+Intent: [`2026-10-30-incident-report-share`](../../intent/2026-10-30-incident-report-share.md).
+
