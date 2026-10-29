@@ -172,7 +172,9 @@ T1035 automated coverage must include no-target/no-shot, opposite movement and a
 
 ## D-104 — visual reference and production gate
 
-See [visual-reference.md](visual-reference.md). D-022–D-024 and E-021 require actual game-scale review plates and runtime evidence; the phase-4 concept images alone do not pass those gates. Preserve B-001/B-007/B-008/B-012 placement/replay results when mapping logical Camera families to one visual family. Produce the complete character and Camera playback review before the next physical device installation.
+See [visual-reference.md](visual-reference.md). D-022–D-024 and E-021 require actual game-scale review plates and runtime evidence; the phase-4 concept images alone do not pass those gates. Preserve B-001/B-007/B-008/B-012 placement/replay results when mapping logical Camera families to one visual family. Produce the complete character and Camera playback review before admitting those families to production.
+
+Physical-device checks of the current build do not wait for that review (intent `2026-10-29-device-feedback-loop`). Frame time (C-003), suspend/resume (B-004, PC-008), input (PC-009), damage attribution (combat-causality.md) and the 2026-10-13 device-QA findings may be re-run on any build. Each device session records the runtime commit and whether it used production or candidate art. A device session on unadmitted art is evidence about feel, performance and correctness only; it does not pass D-022–D-024 or E-021.
 
 [BP-001–BP-006](benchmark-production.md) define the evidence recipe for those gates. D-022 requires the actual 704×326 renderer with HUD and quiet/dense encounter samples, not a flattened concept background. D-023 requires the exact clip-scope/cadence matrix, source pose review and normal/slow/frame-step playback. D-024 requires 3→2→1→0 settled states, interruption and Reduced Motion, with no duplicate field-off housing. E-021 requires authoritative overlay plus front/rear/corner traversal and projectile contact. Record exact build, asset hashes, viewport/display scale and settings. Keep each gate open until both automated invariants and visual evidence pass.
 
