@@ -2,10 +2,10 @@
 
 **Author:** Claude (audit follow-up)
 **Date:** 2026-10-29
-**Status:** draft
+**Status:** accepted
 **Next stage:** `exposure.md`, `bosses.md`, `encounter-objectives.md`
 
-`draft` until the owner accepts. Merging this PR does **not** accept it unless the owner sets `Status: accepted` first.
+Accepted by the user on 2026-10-29 in chat: "accept, and merge". The next stage is specify; open questions stay open until the specification answers them.
 
 ## Problem
 
