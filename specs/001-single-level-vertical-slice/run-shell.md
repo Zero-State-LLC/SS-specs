@@ -56,6 +56,7 @@ While the outcome is terminal:
 - A single centred panel is presented over a scrim.
 - The panel states the outcome, using the copy in section 5.
 - The panel carries two controls: Restart, the primary control, and Share (§ 11).
+  After a death in the Captain Court it also carries Rehearse Court (§ 14).
 - Under the outcome it shows the run card (§ 11).
 - No tutorial card is presented. A finished run has nothing left to teach.
 - The panel is centred on the safe rectangle and is unaffected by handedness,
@@ -78,6 +79,9 @@ state digest is unaffected, and no authoritative field is introduced.
 | title, settings control | `SETTINGS` **(OPEN — see 7.1)** |
 | title, daily label | `DAILY RUN · <YYYY-MM-DD>` (UTC date of the seed) |
 | share control | `SHARE` |
+| rehearse control | `REHEARSE COURT` |
+| rehearsal, `success` | `REHEARSAL COMPLETE` |
+| rehearsal, `failure` | `REHEARSAL DOWN` |
 
 `RUN COMPLETE` and `PLAYER DOWN` are the words `audio-haptics-001` already uses
 for these events in its accessibility captions ("Run complete", "Player down"),
@@ -333,6 +337,59 @@ Reduce Motion accessibility setting, read at launch. Once the player sets it in
 Settings, the stored choice is kept and the system setting is no longer
 consulted. Every other setting keeps its current default.
 
+## 14. Court rehearsal (D-107)
+
+Almost every failed run ends in the Captain Court. A retry costs about four
+minutes of near-identical play before the fight resumes (intent
+`2026-10-29-court-rehearsal`). A rehearsal lets the player practise the fight
+without replaying the level, and without touching the Daily Run's record.
+
+### 14.1 When it is offered
+
+The terminal surface shows **Rehearse Court** as a secondary control beside
+Restart when, and only when:
+- the outcome is `failure`, and
+- the Captain activated in this run (`bossActivated` was emitted).
+
+That includes a failed rehearsal, so the player can rehearse again. It is never
+offered after `success`, `invalid`, or a death before the Court.
+
+### 14.2 What it starts from
+
+At the tick on which `bossActivated` is emitted in a run, the runtime keeps a
+copy of the complete authoritative state after that tick, including the D-096
+court-threshold Integrity restore.
+
+Rehearse Court resumes the simulation from that copy:
+- **No intro.** The D-098 intro is not shown.
+- **Input cleared**, as on Restart (PC-009).
+- **No tutorial lines.**
+- **No ghost** is drawn.
+
+The copy is held in memory for the current Daily Run seed only:
+- It is replaced when a later run on that seed reaches the Court.
+- It is discarded when a run on a different seed starts, and when the app is
+  terminated.
+- It is never written to disk.
+
+### 14.3 A rehearsal is not a run
+
+- It earns no medals (§ 12).
+- It never becomes the stored best or the ghost (§ 10.2).
+- It is not written to the local receipt archive (D-059).
+- Share is not offered.
+- Its terminal panel uses the rehearsal copy in § 5 and a run card with a
+  single `REHEARSAL` row: the Court time as `m:ss`.
+- Restart from a rehearsal begins the Daily Run from its first tick, exactly as
+  § 6. A rehearsal never changes the seed.
+
+### 14.4 Determinism
+
+A rehearsal is deterministic: the snapshot plus the rehearsal's commands always
+reproduce it. It is presentation-level reuse of authoritative state, not a new
+rule. Nothing here changes a ruleset, content, arena, digest or receipt
+definition. Pause, interruptions (§ 13) and input behave exactly as in a run.
+
 ## 9. Acceptance vectors
 
 Proposed, pending acceptance of this document.
@@ -371,3 +428,11 @@ Proposed, pending acceptance of this document.
 | RS-030 | audio interruption begins and ends during a run | all game audio stops at the start; the music state for the current authoritative state is restored at the end |
 | RS-031 | first launch with iOS Reduce Motion on / off and no stored setting | Reduced Motion on / off |
 | RS-032 | the player has set Reduced Motion in Settings, then iOS Reduce Motion changes | the stored choice is kept |
+| RS-033 | run fails after `bossActivated` | terminal panel offers Restart (primary) and Rehearse Court |
+| RS-034 | run fails before the Court, or succeeds | no Rehearse Court control |
+| RS-035 | Rehearse Court | play resumes from the state after the `bossActivated` tick, including the court restore; no intro, no tutorial lines, no ghost; input cleared |
+| RS-036 | rehearsal ends | rehearsal copy and a `REHEARSAL` card; no medals, no Share, best and ghost unchanged, nothing archived |
+| RS-037 | rehearsal fails | Rehearse Court is offered again from the same snapshot |
+| RS-038 | Restart from a rehearsal | the Daily Run starts at its first tick on the same seed |
+| RS-039 | the same snapshot and rehearsal commands twice | identical digests |
+| RS-040 | a later run on the same seed reaches the Court | its snapshot replaces the earlier one |
