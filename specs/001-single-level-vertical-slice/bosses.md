@@ -169,7 +169,7 @@ Boss defeat retires all boss projectiles and Captain Camera fields immediately. 
 | BO-007 | Independent Review lane tie | lower numbered lane omitted |
 | BO-008 | boss defeat with active field/projectiles | all retire immediately |
 | BO-009 | boss and Player die same tick | terminal failure; boss death recorded |
-| BO-010 | Lockdown entered in the Court with a 90-tick cooldown remaining | the next attack telegraph starts 45 ticks later |
+| BO-010 | Lockdown holds in the Court and the Captain has 90 cooldown ticks left | the cooldown elapses in 45 ticks and the next telegraph starts on the tick after (46th), not the 91st |
 | BO-011 | Lockdown entered in the Court during a telegraph | telegraph length unchanged; only later cooldowns count down by 2 |
-| BO-012 | Court released and Exposure never reaches 1000 | cooldowns count down by 1, as before |
+| BO-012 | Court released and Exposure never reaches 1000 | cooldowns count down by 1, as before (120 cooldown ticks, telegraph on the 121st) |
 | BO-010 | zero Cameras destroyed | boss remains defeatable and Extraction can arm |
