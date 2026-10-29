@@ -2,10 +2,10 @@
 
 **Author:** Claude (audit follow-up)
 **Date:** 2026-10-29
-**Status:** draft
+**Status:** accepted
 **Next stage:** `visual-reference.md`, `benchmark-production.md` (BP-001), `civic-seam-visual-direction.md` § 10
 
-`draft` until the owner accepts. Merging this PR does **not** accept it unless the owner sets `Status: accepted` first.
+Accepted by the user on 2026-10-29 in chat: "accept, and merge". The next stage is specify; open questions stay open until the specification answers them.
 
 This intent does not change the art direction. It asks for the two decisions the direction already requires to be recorded, so that production follows them.
 
