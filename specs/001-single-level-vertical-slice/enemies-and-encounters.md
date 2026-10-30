@@ -253,6 +253,9 @@ the authored members, at the wave's own interval and under the same spawn
 validation. The wave completes only when they are dead too. M-C is unaffected: it
 is the forced Lockdown set piece and is already at full escalation.
 
+With Signal Jammer selected, each count is 1 lower, minimum 0
+(upgrades.md § Signal Jammer, D-113). The caption shows the reduced count.
+
 The Player is told. The wave's HUD caption names the count and its cause
 (hud-tutorial.md), so the pressure is never invisible (constitution Article IV).
 
