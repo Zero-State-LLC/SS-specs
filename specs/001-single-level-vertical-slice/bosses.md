@@ -54,6 +54,10 @@ These ratios adapt verified legacy San Francisco policy values. A damage batch m
 
 Orbit modifies normalized pursuit by adding the perpendicular direction × orbit ratio before normalization. Even entity parity chooses the initial perpendicular orientation; negative ratio reverses it.
 
+**Corner pursuit (D-116).** The Captain pursues its approach point (enemies-and-encounters.md § Corner pursuit, with its own radius), not the Player directly. While the approach point is a corner, it steers straight for it with no orbit. Telegraphs, attacks, phases, speed and damage are unchanged. There is no leash: the Captain may follow the Player out of the Court.
+
+Recorded limit: the approach point tests a line, not a body. A gap narrower than the Captain with a clear line through it still holds it (BO-026), as does a Player pressed into the block's far corner below that gap.
+
 ### Attack vocabulary
 
 The boss has exactly four attacks.
@@ -173,3 +177,5 @@ Boss defeat retires all boss projectiles and Captain Camera fields immediately. 
 | BO-011 | Lockdown entered in the Court during a telegraph | telegraph length unchanged; only later cooldowns count down by 2 |
 | BO-012 | Court released and Exposure never reaches 1000 | cooldowns count down by 1, as before (120 cooldown ticks, telegraph on the 121st) |
 | BO-010 | zero Cameras destroyed | boss remains defeatable and Extraction can arm |
+| BO-025 | the Captain at (1278, 1284) east of a lone 192 × 320 block centred (1152, 1248), the Player held at (980, 1300) west of it | comes within 90 units within 900 ticks (before D-116 it stopped at the face) |
+| BO-026 | the same start in the arena, the Player held at (1036, 1435) | stays beyond 90 units: the recorded narrow-gap limit |

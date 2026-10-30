@@ -301,3 +301,22 @@ Evidence (scratch variant on the D-114 code, 540 legal runs each, all replay dig
 The remaining loud gap and Ghost Step's competent cell (46.7%) are recorded for T903/T904. These are bot pilots (D-093).
 
 Intent: [`2026-10-29-upgrade-parity`](../../intent/2026-10-29-upgrade-parity.md). Task: T1055. Fixture review: [`docs/review/D115.md`](../../docs/review/D115.md).
+
+## D-116 — the Captain goes round solids (2026-10-30)
+
+**ACCEPTED (SS-specs pull request merged 2026-10-30 at the owner's direction):** this specifies the accepted intent `2026-10-30-captain-goes-round-solids` (#84). The owner chose no leash.
+
+- **Change:** the Captain pursues the § Corner pursuit approach point with its own radius, not the Player directly. While the point is a corner it steers straight for it, without orbit ([bosses.md § Corner pursuit](bosses.md)).
+- **Unchanged:** telegraphs, attacks, phases, speed and damage. The Improper Search Daemon is unchanged too.
+- **Recorded limit:** the approach point tests a line, not a body. A gap narrower than the Captain with a clear line through it still holds it (BO-026). That covers the 52-unit gap under `solid-06` beside `mount-cam-z04-b`, with the Player pressed into the block's far corner. A body-width test was prototyped and dropped: without path memory it oscillated between corners.
+- **Versions:** ruleset `ss-rules-013`. Content, arena and the replay schema are unchanged. `ss-rules-012` replays fail closed. BO-025, BO-026.
+
+Evidence (scratch variant on the D-115 code, 540 legal runs each, all replay digests valid). D-115 against D-116:
+- **Probe stalls:** 1 against **0**. Before, the Captain stood against `solid-06` for 2.5 minutes in the one remaining stall (seed 21).
+- **Court win rate:** 59.5% against 57.2%. The median Court fight is 101 s against 96 s.
+- **Overall win rate:** 56.7% against 54.4%, inside the D-101 band.
+- **Ricochet / Ghost Step / Signal Jammer:** 60.6 / 53.3 / 56.1% against 55.6 / 58.9 / 48.9%.
+
+The upgrade split moved several points from a change confined to the Court. Bot-measured parity is noisy at about ±5 points per upgrade (60 seeds), so no further bot-driven tuning follows. T903/T904 decide parity.
+
+Intent: [`2026-10-30-captain-goes-round-solids`](../../intent/2026-10-30-captain-goes-round-solids.md). Task: T1056. Fixture review: [`docs/review/D116.md`](../../docs/review/D116.md).
