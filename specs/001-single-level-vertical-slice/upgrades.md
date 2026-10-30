@@ -1,7 +1,7 @@
 # Upgrade Contract
 
 Status: CANONICAL  
-Contract version: `upgrades-002`
+Contract version: `upgrades-003`
 
 ## Selection
 
@@ -21,11 +21,11 @@ Role: surveillance control.
 
 - Reduce positive continuous Camera contact delta by 1 point/tick, minimum 1.
 - Reduce Fog Analytics Cloud Exposure pulses and Algorithmic Moderate Observation pulses by 25%, rounded half away from zero.
-- Reduce each M-A and M-B heat reinforcement (enemies-and-encounters.md § Heat reinforcements) by 1 Informant, minimum 0 (D-113). The value is `heatReinforcementReduction` (1) in `combat-content-007`.
+- Reduce each M-A and M-B heat reinforcement (enemies-and-encounters.md § Heat reinforcements) by 2 Informants, minimum 0 (D-113, D-115). The value is `heatReinforcementReduction` (2) in `combat-content-008`. The heat table never adds more than 2, so with Signal Jammer no wave gains heat reinforcements.
 - Do not affect Tamper Spikes, M-C forced Lockdown, thresholds, recovery, Camera Integrity, field presentation, enemy speed, or damage.
 - Required presentation: cyan interference contour around Player while an affected contact/pulse is being modified.
 
-Examples: contact +2 becomes +1; +5 becomes +4; Fog pulse +20 becomes +15; a `hunted` wave start adds 1 Informant instead of 2.
+Examples: contact +2 becomes +1; +5 becomes +4; Fog pulse +20 becomes +15; a `hunted` wave start adds no Informants instead of 2.
 
 ## Ricochet Pulse
 
@@ -80,7 +80,7 @@ On accepted dodge start, set `cameraInvisibleUntilTick = startTick + 29`, inclus
 | UP-010 | restart | no selected upgrade before M-A completion |
 | UP-011 | Ricochet; first Civic Pulse hit leaves the enemy alive (Integrity 100) | no continuation; a nearby second enemy is undamaged |
 | UP-012 | Ricochet; first Civic Pulse hit defeats the enemy (Integrity 10 or less) | one continuation to the nearest valid candidate |
-| UP-013 | Jammer; M-A or M-B wave starts at `tracked` / `hunted` / `lockdown` | 0 / 1 / 1 heat Informants added; the wave caption names the reduced count |
+| UP-013 | Jammer; M-A or M-B wave starts at `tracked` / `hunted` / `lockdown` | 0 / 0 / 0 heat Informants added; no reinforcement caption (D-115) |
 | UP-014 | Jammer; M-C wave | no heat reinforcement (unchanged) |
 
 ## D-103 — combat causality
