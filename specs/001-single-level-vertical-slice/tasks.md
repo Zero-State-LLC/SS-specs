@@ -263,6 +263,7 @@ A harness is a collector of evidence, not evidence. SS-runtime #34–#41 ship th
 | T1050 | PARTIAL | Runtime implementation shipped (SS-runtime #142, RS-025–RS-032 automated coverage); the iOS interruption sequence still needs a physical device | Device operator | One device session: call or Control Center mid-run, background/foreground, audio interruption |
 | T1055 | NOT_RUN | Runtime content and ruleset migration follows acceptance of D-115 | Runtime implementer | UP-013 at 0 / 0 / 0, contract-to-simulation parity for `heatReinforcementReduction` 2, fixture review under `ss-rules-012`, and a per-upgrade probe report |
 | T1056 | NOT_RUN | Runtime ruleset migration follows acceptance of D-116 | Runtime implementer | BO-025, BO-026, fixture review under `ss-rules-013`, and a probe report with the boss-fight stall count |
+| T1057 | NOT_RUN | Runtime ruleset and content migration follows acceptance of D-118 | Runtime implementer | BO-025–BO-028, the boss scenario, fixture review under `ss-rules-014`, and a probe report with the stall count and Court win rate |
 
 ## Traceability rule
 
@@ -304,6 +305,7 @@ See [combat-causality.md](combat-causality.md) for collision, damage evidence, w
 - [x] T1054 Corner pursuit (D-114, ruleset `ss-rules-011`): an aware standard enemy whose line to the Player is blocked steers for the specified corner of the blocking solid; the Correlator charge and the Witch cast begin only with a clear line. Cover EN-036–EN-041; regenerate and review the golden fixtures under the new ruleset.
 - [ ] T1055 Jammer cancels heat (D-115, ruleset `ss-rules-012`, `combat-content-008`): Signal Jammer's heat reinforcement reduction is 2, so no M-A/M-B wave gains heat reinforcements under it and no caption shows. Cover UP-013; regenerate and review the golden fixtures.
 - [ ] T1056 Captain corner pursuit (D-116, ruleset `ss-rules-013`): the Captain pursues the § Corner pursuit approach point with its own radius, without orbit while routing. Cover BO-025 and BO-026; regenerate and review the golden fixtures.
+- [ ] T1057 Captain path search (D-118, ruleset `ss-rules-014`, `combat-content-009`, `bosses-002`): the Captain follows the shortest body-clear path round the live solids, with no orbit while routing, and its base speed is 96. Supersedes T1056's corner rule. Cover BO-025–BO-028; regenerate and review the golden fixtures.
 
 Production detail: [BP-001–BP-006](benchmark-production.md). T1042 owns exact viewport/HUD/encounter captures and projection comparison. T1043 owns complete-device state settling, interruptions and Reduced Motion. T1044 begins with exact spec-pin adoption and records deferred art admission honestly, then migrates complete accepted families. T1045 owns the named locomotion matrix, rational cadence/hold representation and Informant pursuit decision. T1046 records all 46 per-ID dispositions and geometry evidence. Do not close any task on the strength of pin alignment alone.
 

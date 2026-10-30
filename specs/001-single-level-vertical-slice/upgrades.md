@@ -21,7 +21,7 @@ Role: surveillance control.
 
 - Reduce positive continuous Camera contact delta by 1 point/tick, minimum 1.
 - Reduce Fog Analytics Cloud Exposure pulses and Algorithmic Moderate Observation pulses by 25%, rounded half away from zero.
-- Reduce each M-A and M-B heat reinforcement (enemies-and-encounters.md § Heat reinforcements) by 2 Informants, minimum 0 (D-113, D-115). The value is `heatReinforcementReduction` (2) in `combat-content-008`. The heat table never adds more than 2, so with Signal Jammer no wave gains heat reinforcements.
+- Reduce each M-A and M-B heat reinforcement (enemies-and-encounters.md § Heat reinforcements) by 2 Informants, minimum 0 (D-113, D-115). The value is `heatReinforcementReduction` (2) in `combat-content-009`. The heat table never adds more than 2, so with Signal Jammer no wave gains heat reinforcements.
 - Do not affect Tamper Spikes, M-C forced Lockdown, thresholds, recovery, Camera Integrity, field presentation, enemy speed, or damage.
 - Required presentation: cyan interference contour around Player while an affected contact/pulse is being modified.
 
