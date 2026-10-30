@@ -54,9 +54,26 @@ These ratios adapt verified legacy San Francisco policy values. A damage batch m
 
 Orbit modifies normalized pursuit by adding the perpendicular direction × orbit ratio before normalization. Even entity parity chooses the initial perpendicular orientation; negative ratio reverses it.
 
-**Corner pursuit (D-116).** The Captain pursues its approach point (enemies-and-encounters.md § Corner pursuit, with its own radius), not the Player directly. While the approach point is a corner, it steers straight for it with no orbit. Telegraphs, attacks, phases, speed and damage are unchanged. There is no leash: the Captain may follow the Player out of the Court.
+**Captain path search (D-118, superseding D-116).** The Captain finds its way round solids with a shortest-path search. Geometry is in whole units (positions truncated), with exact integer arithmetic. "Solids" means the live solids it collides with, taken in ascending ID order (UTF-8).
 
-Recorded limit: the approach point tests a line, not a body. A gap narrower than the Captain with a clear line through it still holds it (BO-026), as does a Player pressed into the block's far corner below that gap.
+1. **Clear leg.** A leg from a to b is clear when, for every solid, its distance to the box is at least the smallest of these:
+   - the Captain's radius;
+   - a's distance to that box;
+   - b's distance to that box.
+
+   So a body touching a wall may leave along it, and a Player pressed into a wall may be reached, but a leg through a box (distance 0) never is.
+2. **Direct.** If the leg Captain → Player is clear, the Captain pursues the Player directly, orbit included, as before D-116.
+3. **Nodes.** Each solid has four corner nodes: its box corners moved out by the radius + 4 on both axes, in the order (min X, min Y), (max X, min Y), (min X, max Y), (max X, max Y). A node is dropped if it is:
+   - within the radius of any box;
+   - or outside the arena bounds shrunk by the radius.
+4. **Path.** Otherwise it takes the shortest path Captain → nodes → Player over clear legs.
+   - Leg costs are `isqrt` lengths.
+   - The search is Dijkstra, with ties going to the lower node index (solid order, then corner order).
+   - A node within 2 units of the Captain counts as reached and is not used as the first step.
+   - The Captain steers for the first node on the path, with no orbit.
+5. **No path.** If no path exists, it pursues the Player directly.
+
+The search runs every tick from the current position. The corner graph depends only on the radius, the arena bounds and the live solids, so a runtime may memoise it. Telegraphs, attacks, phases, speed and damage are unchanged. There is no leash: the Captain may follow the Player out of the Court. Standard enemies keep § Corner pursuit (D-114), and the Daemon is unchanged.
 
 ### Attack vocabulary
 
@@ -178,4 +195,6 @@ Boss defeat retires all boss projectiles and Captain Camera fields immediately. 
 | BO-012 | Court released and Exposure never reaches 1000 | cooldowns count down by 1, as before (120 cooldown ticks, telegraph on the 121st) |
 | BO-010 | zero Cameras destroyed | boss remains defeatable and Extraction can arm |
 | BO-025 | the Captain at (1278, 1284) east of a lone 192 × 320 block centred (1152, 1248), the Player held at (980, 1300) west of it | comes within 90 units within 900 ticks (before D-116 it stopped at the face) |
-| BO-026 | the same start in the arena, the Player held at (1036, 1435) | stays beyond 90 units: the recorded narrow-gap limit |
+| BO-026 | in the arena, the Captain at (1278, 1284) / (1336, 828) / (2156, 427), the Player held at (1036, 1435) / (1290, 1415) / (2214, 32) | comes within 90 units within 1 800 ticks: the narrow gap under `solid-06`, and the two freezes found under D-117 (`solid-08`, the top edge) |
+| BO-027 | the debug `boss` scenario, the Player standing still at the far spawn | the run ends in failure within 6 000 ticks (under D-116 the Captain froze under `solid-11-court-column-a`) |
+| BO-028 | a 64 × 144 column centred (1920, 704); radius 30 | the leg (1966, 802)→(1502, 802) is not clear (26 units below the column); (1966, 810)→(1502, 810) is; (1982, 704)→(1982, 900), starting in contact, is |

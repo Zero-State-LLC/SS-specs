@@ -197,7 +197,7 @@ An aware standard enemy that steers toward the Player steers toward its **approa
    - then the earlier corner in the order above.
 4. **The Player's position again**, when no corner remains. This is the behaviour before D-114.
 
-The point is recomputed every tick from the current position, so an enemy works round a box corner by corner. There is no path search. Unaware enemies, patrol movement and the Improper Search Daemon are unchanged. The Captain uses the same approach point from D-116 (bosses.md § Corner pursuit). So are the Vendor's mine, which needs no line, and the Fog Cloud's pulse, which already needs one.
+The point is recomputed every tick from the current position, so an enemy works round a box corner by corner. There is no path search. Unaware enemies, patrol movement and the Improper Search Daemon are unchanged. The Captain uses its own path search (D-118, bosses.md § Captain path search). So are the Vendor's mine, which needs no line, and the Fog Cloud's pulse, which already needs one.
 
 **Clear line for attacks:**
 - A Correlator begins a charge telegraph only with a clear line.
