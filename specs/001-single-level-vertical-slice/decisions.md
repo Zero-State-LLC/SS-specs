@@ -320,3 +320,28 @@ Evidence (scratch variant on the D-115 code, 540 legal runs each, all replay dig
 The upgrade split moved several points from a change confined to the Court. Bot-measured parity is noisy at about ±5 points per upgrade (60 seeds), so no further bot-driven tuning follows. T903/T904 decide parity.
 
 Intent: [`2026-10-30-captain-goes-round-solids`](../../intent/2026-10-30-captain-goes-round-solids.md). Task: T1056. Fixture review: [`docs/review/D116.md`](../../docs/review/D116.md).
+
+## D-118 — the Captain's path search (2026-10-30)
+
+**ACCEPTED (SS-specs pull request merged 2026-10-30 at the owner's direction):** this specifies the accepted intent `2026-10-30-captain-path-search`, the user's option (a). It supersedes D-116's corner rule for the Captain.
+
+- **Path search:** without a body-clear line to the Player, the Captain follows the shortest path of body-clear legs round the live solids ([bosses.md § Captain path search](bosses.md)). It drops its orbit while it follows the path. The search is recomputed every tick, with integer geometry and Dijkstra over corner nodes.
+- **Speed:** the Captain's base speed is 96, down from 120 (`combat-content-009`, `bosses-002`).
+- **Unchanged:** telegraphs, attacks, phases, HP and damage. Standard enemies keep D-114, and the Daemon is unchanged. No leash.
+- **Versions:** ruleset `ss-rules-014`, content `civic-seam-content-009`. `ss-rules-013` replays fail closed. BO-025–BO-028.
+
+**Record.** SS-runtime#163 adopted `ss-rules-013` with D-116 plus a body-clearance amendment for corner reachability (drafted as D-117, never merged here). That runtime differs from D-116's text. D-118 replaces both.
+
+**Why both changes.** D-116 froze the Captain under `solid-11-court-column-a` (BO-027), and D-117 froze it in two new places. The path search removes the freezes, but on its own it collapsed the bot win rate to 25.6%: a Captain that can no longer be pinned behind a block takes away the bots' only refuge. The damage mix and the Integrity entering the Court were unchanged. Two counter-levers were measured:
+- 50% speed while routing: 46.1%;
+- a flat 96 base speed: 57.6%, chosen.
+
+Evidence (shipped D-118 code, 540 legal runs, all replay digests valid). D-115 against D-118:
+- **Probe stalls:** 1 against **0**.
+- **Overall win rate:** 56.7% against 57.6%. **Court win rate:** 59.5% against 60.5%.
+- **Ricochet / Ghost Step / Signal Jammer:** 60.6 / 53.3 / 56.1% against 57.8 / 59.4 / 55.6%. The spread is 3.8 points.
+- **Loud play with Jammer:** 50.0% against 51.7%.
+
+**Follow-ups.** `SWIFT` now comes on 88% of bot wins, and `SURGICAL` on 0%. Both get a human check (T903/T904) before any medal retuning. These are bot pilots (D-093).
+
+Intent: [`2026-10-30-captain-path-search`](../../intent/2026-10-30-captain-path-search.md). Task: T1057. Fixture review: [`docs/review/D118.md`](../../docs/review/D118.md).
