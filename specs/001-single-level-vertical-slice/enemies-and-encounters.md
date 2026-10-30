@@ -35,7 +35,7 @@ All target the Player, use circle collision, obey stable-ID ties, and stop actin
 
 `PURSUE → CHARGE_TELEGRAPH → CHARGE → RECOVER`
 
-- Pursue until within 240 units.
+- Pursue until within 240 units **with a clear line** (§ Corner pursuit). Without one, keep pursuing.
 - Cooldown: 180 ticks; first eligible 90 ticks after spawn.
 - Telegraph: 30 ticks; lock the Player position on the final telegraph tick.
 - Charge: 24 ticks at 300 units/second along the locked direction.
@@ -48,6 +48,7 @@ All target the Player, use circle collision, obey stable-ID ties, and stop actin
 `KEEP_RANGE → CAST_TELEGRAPH → FIRE → COOLDOWN`
 
 - Maintain 220–300 units: approach outside 300, retreat inside 220, otherwise orbit.
+- Without a clear line (§ Corner pursuit), approach whatever the range, and do not begin a telegraph.
 - Fire cooldown: 120 ticks; first eligible 60 ticks after spawn.
 - Telegraph: 30 ticks.
 - Fire one `sutroBolt`: speed 360 units/second, radius 6, lifetime 90 ticks, 10 damage.
@@ -58,7 +59,7 @@ All target the Player, use circle collision, obey stable-ID ties, and stop actin
 
 `PURSUE`
 
-- Always takes the shortest direct steering vector toward the Player.
+- Steers toward the Player, or toward the corner § Corner pursuit names when a solid blocks the line.
 - No special attack, leap, split, death spawn, or Exposure effect.
 - Its purpose is to force movement while other roles telegraph.
 
@@ -181,6 +182,27 @@ The cone half-angle must be one with an exact integer cone test (30°, 45°, 60�
 ## Shared steering and separation
 
 Enemies compute desired velocity in ascending entity-ID order. A deterministic separation vector is added for living enemies within combined radii + 8 units, with the lower ID retaining priority. Final speed cannot exceed the archetype maximum. Enemies use the same X-then-Y solid collision order as the Player. Enemies do not block one another or the Player.
+
+## Corner pursuit (D-114)
+
+An aware standard enemy that steers toward the Player steers toward its **approach point** instead. This covers the Informant's pursuit, the Fog Cloud's and the Correlator's pursuit, and the Witch's and the Vendor's approach. The approach point is:
+
+1. **The Player's position**, when the line from the enemy's centre to the Player's centre is clear. A clear line is the weapon line-of-fire test against the solids the enemy collides with.
+2. **Otherwise, a corner.** Candidates are the four corners of every solid that blocks that line on its own. Each corner sits outside its box by the enemy's radius + 4 units, taken in the order (min X, min Y), (max X, min Y), (min X, max Y), (max X, max Y). Solids are taken in ascending ID order (UTF-8). A corner is discarded if:
+   - it is within 8 units of the enemy (reached);
+   - or the line from the enemy to it is not clear.
+3. **Rank the remaining corners:**
+   - a corner with a clear line to the Player before one without;
+   - then the shorter `isqrt(|enemy − corner|²) + isqrt(|corner − Player|²)`, on Q8 coordinates;
+   - then the earlier corner in the order above.
+4. **The Player's position again**, when no corner remains. This is the behaviour before D-114.
+
+The point is recomputed every tick from the current position, so an enemy works round a box corner by corner. There is no path search. Unaware enemies, patrol movement, the Improper Search Daemon and the bosses are unchanged. So are the Vendor's mine, which needs no line, and the Fog Cloud's pulse, which already needs one.
+
+**Clear line for attacks:**
+- A Correlator begins a charge telegraph only with a clear line.
+- A Witch begins a cast telegraph only with a clear line.
+- Telegraphs already running resolve as before.
 
 ## Spawn validation
 
@@ -306,3 +328,9 @@ The Player is told. The wave's HUD caption names the count and its cause
 | EN-033 | the same member at 230 units, Player moving toward it | targeted; the ambush applies |
 | EN-035 | the same member at 230 units, Player moving perpendicular to it | not targeted; no projectile |
 | EN-034 | an ambush hit on an unaware patrol Fog Cloud (60 Integrity) | 30 damage, survives at 30; alerted (`damage`) next enemy phase; unaware patrol members within 128 alerted (`ally`) |
+| EN-036 | an aware enemy with a clear line to the Player | approach point is the Player |
+| EN-037 | solid half-size 100 at the origin, enemy radius 20 at (200, 60), Player (−200, 80) | approach point (124, 124) |
+| EN-038 | the same, enemy at (124, 124) | approach point (−124, 124): the reached corner is skipped, and this one sees the Player |
+| EN-039 | the same box, enemy (200, 0), Player (−200, 0) | approach point (124, −124), the first corner in order on a tie |
+| EN-040 | an Informant or a Correlator at (1268, 1282) behind `solid-06-service-yard-a`, the Player held at (1024, 1380) | comes within 60 units within 600 ticks |
+| EN-041 | a Correlator within 240 units with `solid-06` between it and the Player | no charge telegraph while the line is blocked |

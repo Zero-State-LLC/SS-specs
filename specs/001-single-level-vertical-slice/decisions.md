@@ -252,3 +252,29 @@ Evidence (scratch probes, 540 legal runs each, posted on #70). Win rates for ss-
 The overall spread between upgrades is 3.9 points, inside the intent's 8-point candidate target. The best pick by style is now Jammer for stealth play and Ricochet for competent and loud play. The remaining per-style leads are inside the ±6-point standard error of 60-run cells. These are bot pilots (D-093); T903/T904 decide.
 
 Intent: [`2026-10-29-upgrade-parity`](../../intent/2026-10-29-upgrade-parity.md). Task: T1053. Fixture review: [`docs/review/D113.md`](../../docs/review/D113.md).
+
+## D-114 — corner pursuit (2026-10-30)
+
+**ACCEPTED (SS-specs pull request merged 2026-10-30 at the owner's direction):** this specifies the accepted intent `2026-10-30-enemies-round-corners` (SS-specs #81).
+
+- **Corner pursuit:** an aware standard enemy whose line to the Player is blocked steers for the best corner of the blocking solid instead of pressing into its face ([enemies-and-encounters.md § Corner pursuit](enemies-and-encounters.md)).
+  - Corners sit outside the box by the enemy's radius + 4.
+  - A corner that sees the Player beats one that does not; then the shorter path; then a fixed order.
+  - It is recomputed every tick, with no path search.
+- **Clear line for attacks:** a Correlator begins a charge telegraph, and a Witch a cast telegraph, only with a clear line. A Witch without one keeps approaching.
+- **Unchanged:** unaware and patrol movement, the Daemon, the bosses, the Vendor's mine, the Fog Cloud's pulse, and every speed, damage and HP value.
+- **Versions:** ruleset `ss-rules-011`. Content, arena and the replay schema are unchanged. `ss-rules-010` replays fail closed. EN-036–EN-041.
+
+Evidence (scratch prototype, 540 legal runs each, all replay digests valid). Stalls and win rates, ss-rules-010 against D-114:
+- **Probe stalls**, where the pilot spends 180 s on one objective: 29 against **2**, both in the Algorithmic Moderate fight. Every ss-rules-010 stall dump showed survivors pressed against the far face of `solid-06` or `solid-10`.
+- **Overall win rate:** 55.9% against 55.2%, inside the D-101 band.
+- **Median winning time:** 5:35 against 5:12.
+- **Ricochet / Ghost Step / Signal Jammer:** 57.8 / 56.1 / 53.9% against 60.0 / 53.3 / 52.2%. The spread is 7.8 points, inside #70's 8-point candidate, and per-style cells stay within their ±6-point noise.
+
+**Follow-ups.** Because enemies now arrive, runs are shorter:
+- `SWIFT` (under 5:30) comes on 77% of bot wins, against 40% before.
+- Loud play with Signal Jammer is 38%, against 45% before.
+
+Both get a check on the shipped code before any retuning. These are bot pilots (D-093); T903/T904 decide.
+
+Intent: [`2026-10-30-enemies-round-corners`](../../intent/2026-10-30-enemies-round-corners.md). Task: T1054. Fixture review: [`docs/review/D114.md`](../../docs/review/D114.md).
