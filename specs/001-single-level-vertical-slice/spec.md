@@ -2,7 +2,7 @@
 
 Status: BASELINE
 Feature ID: SS-001
-Ruleset version: `ss-rules-010`
+Ruleset version: `ss-rules-011`
 Arena version: `civic-seam-arena-004`
 
 ## 1. Product intent
