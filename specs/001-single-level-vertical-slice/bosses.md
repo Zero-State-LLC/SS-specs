@@ -1,7 +1,7 @@
 # Elite and Boss Contract
 
 Status: CANONICAL  
-Contract version: `bosses-001`
+Contract version: `bosses-002`
 
 ## Improper Search Daemon
 
@@ -34,7 +34,7 @@ The single boss activates when the living Player enters Z-06 after the elite is 
 |---|---:|
 | HP | 1600 (D-090) |
 | Radius | 30 |
-| Base speed | 120 units/second |
+| Base speed | 96 units/second (D-118; 120 before) |
 | Base contact damage | 10 DPS (D-096) |
 | Initial attack delay | 90 ticks |
 | Phase transition recovery | 45 ticks, movement only; not damage-immune |

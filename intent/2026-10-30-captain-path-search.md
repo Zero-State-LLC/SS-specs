@@ -28,7 +28,7 @@ The overall win rate fell to 51.3%, under the D-101 band. A single waypoint with
 - **Players:** the climax.
 - **Specs:** `bosses.md` § Corner pursuit (replaced) and BO vectors.
 - **Runtime:** `BossSystem` steering and a memoised corner graph.
-- **Versions:** ruleset `ss-rules-013` (D-116's identity, never adopted).
+- **Versions:** ruleset `ss-rules-014`, content `civic-seam-content-009` and `bosses-002`. SS-runtime#163 adopted `ss-rules-013` with D-116 plus an unspecified body-clearance amendment, so this is a new ruleset.
 
 ## Constraints/non-goals
 
