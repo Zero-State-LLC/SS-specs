@@ -54,7 +54,13 @@ These ratios adapt verified legacy San Francisco policy values. A damage batch m
 
 Orbit modifies normalized pursuit by adding the perpendicular direction × orbit ratio before normalization. Even entity parity chooses the initial perpendicular orientation; negative ratio reverses it.
 
-**Corner pursuit (D-116).** The Captain pursues its approach point (enemies-and-encounters.md § Corner pursuit, with its own radius), not the Player directly. While the approach point is a corner, it steers straight for it with no orbit. Telegraphs, attacks, phases, speed and damage are unchanged. There is no leash: the Captain may follow the Player out of the Court.
+**Corner pursuit (D-116, D-117).** The Captain pursues its approach point (enemies-and-encounters.md § Corner pursuit, with its own radius), not the Player directly. While the approach point is a corner, it steers straight for it with no orbit. Telegraphs, attacks, phases, speed and damage are unchanged. There is no leash: the Captain may follow the Player out of the Court.
+
+**Body clearance (D-117).** For the Captain, the corner step (§ Corner pursuit, step 2) has two changes:
+- A corner is also discarded if its path does not keep the Captain's body clear. The segment from the Captain's centre to the corner must stay at least the Captain's radius from every solid it collides with. Distance is measured in whole units (positions truncated), with exact integer arithmetic.
+- A corner counts as reached only within 2 units, instead of 8, so the body stands clear of the box before the next leg is tested.
+
+The clear-line test to the Player and the ranking are unchanged.
 
 Recorded limit: the approach point tests a line, not a body. A gap narrower than the Captain with a clear line through it still holds it (BO-026), as does a Player pressed into the block's far corner below that gap.
 
@@ -179,3 +185,5 @@ Boss defeat retires all boss projectiles and Captain Camera fields immediately. 
 | BO-010 | zero Cameras destroyed | boss remains defeatable and Extraction can arm |
 | BO-025 | the Captain at (1278, 1284) east of a lone 192 × 320 block centred (1152, 1248), the Player held at (980, 1300) west of it | comes within 90 units within 900 ticks (before D-116 it stopped at the face) |
 | BO-026 | the same start in the arena, the Player held at (1036, 1435) | stays beyond 90 units: the recorded narrow-gap limit |
+| BO-027 | the debug `boss` scenario, the Player standing still at the far spawn | the run ends in failure within 6 000 ticks (under D-116 as first written the Captain froze under `solid-11-court-column-a`) |
+| BO-028 | a 64 × 144 column centred (1920, 704); body radius 30 | the path (1966, 802)→(1502, 802) is not body-clear (26 units below the column); (1966, 810)→(1502, 810) is |
