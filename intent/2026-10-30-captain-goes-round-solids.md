@@ -2,10 +2,10 @@
 
 **Author:** Claude (probe follow-up to D-114)
 **Date:** 2026-10-30
-**Status:** draft
+**Status:** accepted
 **Next stage:** `bosses.md`, `enemies-and-encounters.md` § Corner pursuit
 
-`draft` until the owner accepts.
+Accepted by the user on 2026-10-30 in chat: "accept captain intent, no leash, keep going". The next stage is specify.
 
 ## Problem
 
@@ -39,8 +39,11 @@ This is one of the two stalls left after D-114, and it is the D-114 cheese in th
 
 ## Open questions
 
-- Should the Improper Search Daemon get the same rule? No stall was observed for it.
-- Is it intended that the boss fight can be kited out of the Court and across the map? A leash would be a different intent.
+- Should the Improper Search Daemon get the same rule? No stall was observed for it, so it stays out of scope here.
+
+## Decided
+
+- **No leash** (user, 2026-10-30). The Captain may follow the Player out of the Court; kiting it across the map stays legal.
 
 ## Verified claims
 
