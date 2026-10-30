@@ -1,7 +1,7 @@
 # Upgrade Contract
 
 Status: CANONICAL  
-Contract version: `upgrades-001`
+Contract version: `upgrades-002`
 
 ## Selection
 
@@ -21,16 +21,17 @@ Role: surveillance control.
 
 - Reduce positive continuous Camera contact delta by 1 point/tick, minimum 1.
 - Reduce Fog Analytics Cloud Exposure pulses and Algorithmic Moderate Observation pulses by 25%, rounded half away from zero.
+- Reduce each M-A and M-B heat reinforcement (enemies-and-encounters.md § Heat reinforcements) by 1 Informant, minimum 0 (D-113). The value is `heatReinforcementReduction` (1) in `combat-content-007`.
 - Do not affect Tamper Spikes, M-C forced Lockdown, thresholds, recovery, Camera Integrity, field presentation, enemy speed, or damage.
 - Required presentation: cyan interference contour around Player while an affected contact/pulse is being modified.
 
-Examples: contact +2 becomes +1; +5 becomes +4; Fog pulse +20 becomes +15.
+Examples: contact +2 becomes +1; +5 becomes +4; Fog pulse +20 becomes +15; a `hunted` wave start adds 1 Informant instead of 2.
 
 ## Ricochet Pulse
 
 Role: crowd control.
 
-- Each Civic Pulse hit may create one continuation.
+- Each Civic Pulse hit may create one continuation. A hit on an enemy creates it only if that hit defeats the enemy (Integrity reaches 0); a hit that leaves the enemy alive creates none (D-113, `continuationRequiresEnemyKill` in `combat-content-007`). A hit on a damageable Camera always may.
 - Continuation range: 160 world units from the first target anchor.
 - Valid continuation classes are living enemies and damageable Cameras, excluding the original target.
 - Sort by squared distance from first target, then stable entity ID.
@@ -61,7 +62,7 @@ On accepted dodge start, set `cameraInvisibleUntilTick = startTick + 29`, inclus
 - Signal Jammer cannot prevent forced Lockdown.
 - Ricochet cannot hit one target twice from one projectile.
 - Ghost Step cannot cross solids or provide damage immunity.
-- No upgrade changes base Player HP, base enemy HP, spawn count, boss HP, or objective predicates.
+- No upgrade changes base Player HP, base enemy HP, authored spawn count, boss HP, or objective predicates. Heat reinforcements are a surveillance consequence, so Signal Jammer's reduction of them (D-113) is surveillance control, not a spawn change.
 
 ## Golden vectors
 
@@ -77,6 +78,10 @@ On accepted dodge start, set `cameraInvisibleUntilTick = startTick + 29`, inclus
 | UP-008 | Ghost Step starts tick 100 | Camera immune through tick 129 |
 | UP-009 | Ghost Step during hostile projectile hit | projectile still damages |
 | UP-010 | restart | no selected upgrade before M-A completion |
+| UP-011 | Ricochet; first Civic Pulse hit leaves the enemy alive (Integrity 100) | no continuation; a nearby second enemy is undamaged |
+| UP-012 | Ricochet; first Civic Pulse hit defeats the enemy (Integrity 10 or less) | one continuation to the nearest valid candidate |
+| UP-013 | Jammer; M-A or M-B wave starts at `tracked` / `hunted` / `lockdown` | 0 / 1 / 1 heat Informants added; the wave caption names the reduced count |
+| UP-014 | Jammer; M-C wave | no heat reinforcement (unchanged) |
 
 ## D-103 — combat causality
 

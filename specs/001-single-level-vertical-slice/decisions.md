@@ -232,3 +232,23 @@ RS-016 still holds: the game's name first, every row's label and value present, 
 
 Intent: [`2026-10-30-incident-report-share`](../../intent/2026-10-30-incident-report-share.md).
 
+
+## D-113 — upgrade parity (2026-10-30)
+
+**ACCEPTED (SS-specs pull request merged 2026-10-30 at the owner's direction):** this specifies the accepted intent `2026-10-29-upgrade-parity` (SS-specs #70) with two changes to existing parameters.
+
+- **Ricochet Pulse:** a Civic Pulse hit on an enemy creates its continuation only if that hit defeats the enemy. A hit on a damageable Camera still may. Range, damage, ordering and the one-continuation limit are unchanged ([upgrades.md § Ricochet Pulse](upgrades.md)).
+- **Signal Jammer:** each M-A and M-B heat reinforcement is 1 Informant lower, minimum 0 ([upgrades.md § Signal Jammer](upgrades.md), [enemies-and-encounters.md § Heat reinforcements](enemies-and-encounters.md)). The wave caption shows the reduced count.
+- **Ghost Step:** unchanged. Extending its immunity from 18 to 30 ticks had no measurable effect.
+- **Versions:** ruleset `ss-rules-010`, content `civic-seam-content-007`, `combat-content-007` (`upgrades-002`: Jammer `heatReinforcementReduction` 1, Ricochet `continuationRequiresEnemyKill` true). The runtime validates both against its simulation constants (#148). Arena and the replay schema are unchanged. `ss-rules-009` replays fail closed. UP-011–UP-014.
+
+Evidence (scratch probes, 540 legal runs each, posted on #70). Win rates for ss-rules-009 against D-113:
+- **Ricochet:** 62.8% against 57.8%.
+- **Ghost Step:** 56.1% against 56.1%.
+- **Signal Jammer:** 51.7% against 53.9%.
+- **Loud play with Signal Jammer:** 38.3% against 45.0%.
+- **Overall:** 56.9% against 55.9%, inside the D-101 band.
+
+The overall spread between upgrades is 3.9 points, inside the intent's 8-point candidate target. The best pick by style is now Jammer for stealth play and Ricochet for competent and loud play. The remaining per-style leads are inside the ±6-point standard error of 60-run cells. These are bot pilots (D-093); T903/T904 decide.
+
+Intent: [`2026-10-29-upgrade-parity`](../../intent/2026-10-29-upgrade-parity.md). Task: T1053. Fixture review: [`docs/review/D113.md`](../../docs/review/D113.md).

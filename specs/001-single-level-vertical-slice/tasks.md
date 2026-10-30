@@ -259,6 +259,7 @@ A harness is a collector of evidence, not evidence. SS-runtime #34–#41 ship th
 | T1050 | NOT_RUN | Runtime implementation follows acceptance of D-106; the iOS interruption sequence needs a physical device | Runtime implementer, then device operator | RS-025–RS-032 automated coverage plus one device session: call or Control Center mid-run, background/foreground, audio interruption |
 | T1051 | NOT_RUN | Runtime implementation follows acceptance of D-107 | Runtime implementer | RS-033–RS-040 automated coverage, including snapshot digest equality and the non-legal record rules |
 | T1052 | NOT_RUN | Runtime ruleset migration follows acceptance of D-109 | Runtime implementer | EX-021–EX-024, BO-010–BO-012, fixture review under `ss-rules-009`, and a probe report |
+| T1053 | NOT_RUN | Runtime ruleset migration follows acceptance of D-113 | Runtime implementer | UP-011–UP-014, contract-to-simulation parity for both new fields, fixture review under `ss-rules-010`, and a per-upgrade probe report |
 
 ## Traceability rule
 
@@ -296,6 +297,7 @@ See [combat-causality.md](combat-causality.md) for collision, damage evidence, w
 - [ ] T1050 Interruptions (D-106, [run-shell.md § 13](run-shell.md)): pause a run that leaves the foreground, stop and restore audio around audio-session interruptions, and seed Reduced Motion from iOS on first launch. Cover RS-025–RS-032; presentation only, no ruleset or replay change. Device confirmation of the iOS interruption sequence remains a physical-device check.
 - [ ] T1051 Court rehearsal (D-107, [run-shell.md § 14](run-shell.md)): snapshot authoritative state at `bossActivated`, offer Rehearse Court after a Court death, run the rehearsal outside the Daily Run's record. Cover RS-033–RS-040; no ruleset or replay change.
 - [ ] T1052 Live Court Exposure (D-109, ruleset `ss-rules-009`): release the Lockdown latch on `EliteDefeated`, set Exposure to 700, allow Lockdown again in the Court, and halve the Captain's cooldown while it holds. Cover EX-021–EX-024 and BO-010–BO-012; regenerate and review the golden fixtures under the new ruleset.
+- [ ] T1053 Upgrade parity (D-113, ruleset `ss-rules-010`, `combat-content-007`): Ricochet continues only from a hit that defeats its enemy target (Camera hits unchanged), and Signal Jammer lowers each M-A/M-B heat reinforcement by 1, minimum 0, with the caption showing the reduced count. Validate both contract fields against the simulation; cover UP-011–UP-014; regenerate and review the golden fixtures under the new ruleset.
 
 Production detail: [BP-001–BP-006](benchmark-production.md). T1042 owns exact viewport/HUD/encounter captures and projection comparison. T1043 owns complete-device state settling, interruptions and Reduced Motion. T1044 begins with exact spec-pin adoption and records deferred art admission honestly, then migrates complete accepted families. T1045 owns the named locomotion matrix, rational cadence/hold representation and Informant pursuit decision. T1046 records all 46 per-ID dispositions and geometry evidence. Do not close any task on the strength of pin alignment alone.
 
