@@ -278,3 +278,26 @@ Evidence (scratch prototype, 540 legal runs each, all replay digests valid). Sta
 Both get a check on the shipped code before any retuning. These are bot pilots (D-093); T903/T904 decide.
 
 Intent: [`2026-10-30-enemies-round-corners`](../../intent/2026-10-30-enemies-round-corners.md). Task: T1054. Fixture review: [`docs/review/D114.md`](../../docs/review/D114.md).
+
+## D-115 — Signal Jammer cancels heat reinforcements (2026-10-30)
+
+**ACCEPTED (SS-specs pull request merged 2026-10-30 at the owner's direction):** a tuning step under the accepted intent `2026-10-29-upgrade-parity` (#70), after D-114 changed how fights converge.
+
+- **Change:** Signal Jammer's heat reinforcement reduction rises from 1 to 2 ([upgrades.md § Signal Jammer](upgrades.md)). The heat table never adds more than 2 Informants, so with the Jammer no M-A or M-B wave gains heat reinforcements, and no reinforcement caption appears.
+- **Unchanged:** the heat table itself, and every other Jammer effect.
+- **Versions:**
+  - `combat-content-008` (`upgrades-003`: `heatReinforcementReduction` 2);
+  - ruleset `ss-rules-012`, content `civic-seam-content-008`.
+
+  Arena and the replay schema are unchanged. `ss-rules-011` replays fail closed. UP-013 now reads 0 / 0 / 0.
+
+**Why:** D-114 made enemies reach the Player, so fights now converge, which rewards Ricochet's crowd control. On the shipped D-114 code, loud play split Ricochet 66.7% against Jammer 40.0%, and the overall spread was 8.4 points, over #70's 8-point candidate.
+
+Evidence (scratch variant on the D-114 code, 540 legal runs each, all replay digests valid). Win rates, D-114 against D-115:
+- **Ricochet / Ghost Step / Signal Jammer:** 60.6 / 53.3 / 52.2% against 60.6 / 53.3 / **56.1%**. The spread is 7.3 points.
+- **Loud play with Jammer:** 40.0% against **50.0%**. The loud gap to Ricochet halves, from 26.7 to 16.7 points.
+- **Overall:** 55.4% against 56.7%, inside the D-101 band. Stalls: 2 against 1.
+
+The remaining loud gap and Ghost Step's competent cell (46.7%) are recorded for T903/T904. These are bot pilots (D-093).
+
+Intent: [`2026-10-29-upgrade-parity`](../../intent/2026-10-29-upgrade-parity.md). Task: T1055. Fixture review: [`docs/review/D115.md`](../../docs/review/D115.md).
