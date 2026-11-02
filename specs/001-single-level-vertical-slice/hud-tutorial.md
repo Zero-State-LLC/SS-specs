@@ -78,7 +78,7 @@ Contains means the Player is inside the volume that resolve already tests, inclu
 - The Improper Search Daemon's query, while its telegraph is active. Each circle that contains the Player adds its 14.
 - The Sutro Signal Witch's cast telegraph. The bolt is sampled at the Player's current position, because that is when its fire samples. It contains the Player when that bolt would hit them, and a solid that would consume the bolt first means it does not.
 
-These do not trip it. Temporary Order and the Fog Analytics Cloud pulse add Exposure. The Correlator charge telegraph and the Daemon dash telegraph deal contact, which the horizon counts once the contact is happening. The Vendor's throw telegraph places a mine and removes no Integrity. An armed mine is not this warning.
+These do not trip it. Temporary Order and the Fog Analytics Cloud pulse add Exposure. The Correlator charge telegraph and the Daemon dash telegraph deal contact, which the horizon counts once the contact is happening. The Vendor's throw telegraph places a mine and removes no Integrity. An armed mine is not this warning; its ring is `visual-assets.md` § Vendor mine (D-121).
 
 **Contact horizon.** Use the aware enemies who are contacting the Player this tick, the three-highest cap, and the rate-then-id ordering from `player-controller.md`. Replay 60 ticks of that constant rate through the contact accumulator and the damage-taken rule, on copies. If that copy's Integrity reaches 0, the warning is on. An enemy that is not contacting this tick is left out. Sixty ticks is one second at the 60 Hz simulation.
 
