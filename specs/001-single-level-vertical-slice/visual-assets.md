@@ -58,15 +58,36 @@ The palette is role-based, not merely aesthetic.
 
 Color MUST NOT be the only state carrier. Critical adjacent UI contrast MUST target at least 3:1; normal text MUST target at least 4.5:1.
 
-### Vendor mine (D-121)
+### Vendor mine (D-121, D-122)
 
-The Victorian Vendor's `receiptMine` is a procedural circle at the radius in `enemies-and-encounters.md`. It is not a catalog sprite and it adds no asset id.
+The Victorian Vendor's `receiptMine` is a procedural circle at the radius in `enemies-and-encounters.md`. It is not a catalog sprite and it adds no asset id. D-122 replaces D-121's light neutral stroke with the rules below. The radius, the 30-tick arm, the 240-tick life, the 12 damage, the cap of two, and which mine retires are unchanged.
 
-The circle is a continuous ring. The fill is clear. Both states use one light neutral stroke, white 0.92 at alpha 0.95, so the ring reads on the asphalt family at native scale, at half scale, and in grayscale. Colour is not the carrier.
+**Colour family.** The ring is in the Enemy attack family of the table above (magenta/red). Its hostile stroke is the same colour the runtime draws for telegraph outlines. A dark neutral keyline runs round the outside of that stroke. The ring MUST NOT use neutral white or near-white. White belongs to the Player kit (the warm ivory grounding ring and the Player placeholder fill) and to the unaware `?` marker, and a mine must not read as either.
 
-Line weight carries the state, at the telegraph outline's weights: 2 while the mine is arming, 4 once it is armed. The patrol cone owns the dash, so this ring is not dashed. The path is the authoritative radius. The stroke is centered on that path. It does not change the radius, the 30-tick arm, the 240-tick life, the 12 damage, the cap of two, or which mine retires.
+**Geometry, in world units.** All widths are world units, not points or pixels, so they scale with the scene. Every stroke is aligned inside the authoritative radius, so nothing the mine draws reaches past it. For the 42 radius:
 
-No caption is added. An armed mine is not the lethal-warning card.
+| Band | Arming | Armed |
+|---|---|---|
+| Keyline (dark neutral) | 41–42, width 1 | 41–42, width 1 |
+| Hostile stroke | 39–41, width 2, a sweeping arc | 37–41, width 4, a closed circle |
+| Fill | clear | hostile family at low alpha (target 0.12, at most 0.15), inside 37 |
+
+The fill keeps the ground's material readable. It is not the lethal-warning card, and it does not replace the stroke.
+
+**Arming cue.** State is not carried by line weight alone. While the mine is arming, the hostile stroke is an arc that starts at the top of the circle and sweeps clockwise to close over the 30 arming ticks. Its sweep is 360° × (30 − `armRemaining`) / 30, from the arming count the presentation snapshot already carries. The keyline is a full circle from the first tick, so the extent is visible before the arc closes. The arc closes on the tick the mine arms, and the armed ring, its wider stroke and its fill appear on that tick. Under Reduced Motion the arming stroke is static: a full closed circle at width 2 with no sweep. Arming and armed then still differ by width and by fill.
+
+**Damage reads after the body crosses.** Damage is tested against the Player's centre (circle centre within the mine radius), not the Player's body. The Player's collision radius is 18 (`player-controller.md`), so the body reaches the ring's outer edge when the centre is 60 from the mine and covers the whole ring band before damage applies at 42. The ring shows the edge the Player's centre must not cross. It is not a body-contact edge.
+
+The patrol cone owns the dash, so this ring is not dashed. No caption is added. An armed mine is not the lethal-warning card.
+
+**Contrast requirement.** The ring MUST reach at least 3:1 non-text contrast (WCAG 2.2 Success Criterion 1.4.11) in both states, on the asphalt family (`#343D43`) and on the stucco family (`#A79C8B`, with civic limestone `#BDB39F` as its light end):
+
+- the hostile stroke against the keyline;
+- the ring's outer edge against the ground beside it, measured on whichever of the keyline or the hostile stroke gives the higher ratio on that ground.
+
+This is a requirement, not a recorded result. It is verified only by the review plates in task T1060: each ground, arming and armed, native scale and half scale, colour and grayscale, Reduced Motion off and on, plus one plate of the Player body crossing the ring before damage. Until those plates are recorded, the ring's contrast is NOT_COMPUTABLE.
+
+**Unity note (informative).** The world unit is the simulation unit. If a Unity build draws this ring, map one world unit to one Unity unit and set widths in those units, not in screen pixels. Unity's `LineRenderer` centres its width on the path, so draw each band on a path inset by half its width (the keyline at radius 41.5, the armed stroke at 39, the arming stroke at 40), or use a mesh or shader ring with explicit inner and outer radii. Do not use an outline or glow effect that grows outward past the radius.
 
 ## 3a. Environment asset reachability
 

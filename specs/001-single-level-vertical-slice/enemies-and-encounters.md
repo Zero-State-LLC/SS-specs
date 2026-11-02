@@ -71,7 +71,7 @@ All target the Player, use circle collision, obey stable-ID ties, and stop actin
 - Throw cooldown: 180 ticks; first eligible 90 ticks after spawn.
 - Telegraph: 36 ticks and mark the sampled Player position.
 - Place one `receiptMine` at that position, clamped to the nearest valid point within 48 units.
-- Mine arms after 30 ticks, persists 240 ticks, radius 42, and deals 12 damage once on Player entry. Its presentation is the ring in `visual-assets.md` § Vendor mine (D-121). The numbers in this list are unchanged.
+- Mine arms after 30 ticks, persists 240 ticks, radius 42, and deals 12 damage once on Player entry. Entry means the Player's centre is within the radius. Its presentation is the ring in `visual-assets.md` § Vendor mine (D-121, D-122). The numbers in this list are unchanged.
 - Maximum two live mines per Vendor; creating a third retires its oldest.
 - Mines are hazards, not targetable entities, and never affect Cameras or enemies.
 
