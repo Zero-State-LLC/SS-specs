@@ -58,6 +58,16 @@ The palette is role-based, not merely aesthetic.
 
 Color MUST NOT be the only state carrier. Critical adjacent UI contrast MUST target at least 3:1; normal text MUST target at least 4.5:1.
 
+### Vendor mine (D-121)
+
+The Victorian Vendor's `receiptMine` is a procedural circle at the radius in `enemies-and-encounters.md`. It is not a catalog sprite and it adds no asset id.
+
+The circle is a continuous ring. The fill is clear. Both states use one light neutral stroke, white 0.92 at alpha 0.95, so the ring reads on the asphalt family at native scale, at half scale, and in grayscale. Colour is not the carrier.
+
+Line weight carries the state, at the telegraph outline's weights: 2 while the mine is arming, 4 once it is armed. The patrol cone owns the dash, so this ring is not dashed. The path is the authoritative radius. The stroke is centered on that path. It does not change the radius, the 30-tick arm, the 240-tick life, the 12 damage, the cap of two, or which mine retires.
+
+No caption is added. An armed mine is not the lethal-warning card.
+
 ## 3a. Environment asset reachability
 
 `presentation-assets-003` carries `environmentAssetIds` alongside

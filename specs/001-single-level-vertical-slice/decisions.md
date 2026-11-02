@@ -365,3 +365,12 @@ Task: T1058. The runtime adopts this only after this commit is on main.
 - **Unchanged:** no new control, no rename, no settings entry, no route back to the title. § 8.1 stays open. No simulation tick, no digest field, no ruleset or content identity.
 
 Task: T1059. The runtime adopts this only after this commit is on main, and only as a lock of the literals it already draws.
+
+## D-121 — Vendor mine ring (2026-11-02)
+
+**ACCEPTED with the next-slice plan (2026-11-02):** device notes say the mine is often unseen. The authoritative circle is already the hazard. The tell makes that circle readable without a new caption or a new number.
+
+- **Tell:** [visual-assets.md § Vendor mine](visual-assets.md). A stroke-only ring at the authored radius. One light neutral stroke. Weight 2 while arming and 4 while armed, the telegraph outline's weights. Continuous, not dashed.
+- **Unchanged:** arm 30, life 240, radius 42, damage 12, maximum two, and the oldest mine retires. No caption. Not the lethal-warning card. No asset id, no catalog row, no ruleset, and no content identity.
+
+Task: T1060. The runtime adopts this only after this commit is on main.
