@@ -356,3 +356,12 @@ Intent: [`2026-10-30-captain-path-search`](../../intent/2026-10-30-captain-path-
 - **Unchanged:** damage, timing, events, the gameplay digest, the receipt, the ruleset, and every content identity. No `lethalWarning` event.
 
 Task: T1058. The runtime adopts this only after this commit is on main.
+
+## D-120 — shell control copy (2026-11-02)
+
+**ACCEPTED with the next-slice plan (2026-11-02):** [run-shell.md](run-shell.md) § 7.1 was the last open item on that surface. The three labels already shown are the contract.
+
+- **Copy:** `START` and `SETTINGS` on the title, `RESTART` on the terminal panel. Exact, uppercase, as § 5 now records them.
+- **Unchanged:** no new control, no rename, no settings entry, no route back to the title. § 8.1 stays open. No simulation tick, no digest field, no ruleset or content identity.
+
+Task: T1059. The runtime adopts this only after this commit is on main, and only as a lock of the literals it already draws.
