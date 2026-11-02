@@ -140,14 +140,11 @@ that, and section 7.4 is resolved with it.
 Decided 2026-09-06. See section 8. Pause remains the in-run entry point; the
 title surface is the second, and the only one available before a first run.
 
-### 7.5 The lethal-warning copy row
+### 7.5 RESOLVED (D-119) — the lethal-warning copy row
 
-Unrelated to this surface but adjacent, and still outstanding:
-`hud-tutorial-001` names a lethal warning as one of three higher safety messages
-that preempt the tutorial card, and `audio-haptics-001` and
-`camera-destruction.md` both give it audio priority 1 — but no contract gives it
-HUD copy and the `## Exact copy` table has no row for it. The Lockdown and
-Extraction preemptors are implemented; this one cannot be until it has a string.
+`hud-tutorial-001` § Lethal warning gives the row: `LETHAL THREAT`. The trigger
+is the accepted option 2 (a lethal threat), derived in presentation. The
+Lockdown and Extraction preemptors stay, and this one outranks both.
 
 ## 8. Title surface
 
