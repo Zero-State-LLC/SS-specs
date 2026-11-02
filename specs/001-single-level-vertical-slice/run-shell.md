@@ -74,9 +74,9 @@ state digest is unaffected, and no authoritative field is introduced.
 | `success` | `RUN COMPLETE` |
 | `failure` | `PLAYER DOWN` |
 | `invalid` | `RUN INVALID` |
-| restart control | `RESTART` **(OPEN — see 7.1)** |
-| title, start control | `START` **(OPEN — see 7.1)** |
-| title, settings control | `SETTINGS` **(OPEN — see 7.1)** |
+| restart control | `RESTART` (D-120) |
+| title, start control | `START` (D-120) |
+| title, settings control | `SETTINGS` (D-120) |
 | title, daily label | `DAILY RUN · <YYYY-MM-DD>` (UTC date of the seed) |
 | share control | `SHARE` |
 | rehearse control | `REHEARSE COURT` |
@@ -87,6 +87,10 @@ state digest is unaffected, and no authoritative field is introduced.
 for these events in its accessibility captions ("Run complete", "Player down"),
 uppercased per the `hud-tutorial-001` presentation rule. They are reused rather
 than authored, so caption and panel cannot drift apart.
+
+`RESTART`, `START`, and `SETTINGS` are the exact labels of the controls that
+already exist (D-120). This contract records them. It does not rename them, and
+it does not add a control. Returning to the title (§ 8.1) stays open.
 
 ## 6. Restart
 
@@ -102,16 +106,17 @@ supported safe rectangle.
 Restart behaviour itself is unchanged and continues to satisfy `FR-004` and
 gate `B003`.
 
-## 7. OPEN — decisions still owed
+## 7. Decisions this surface owed
 
-Nothing in this section may be implemented from this document.
+Each item below is resolved in the section it names. Returning to the title
+(§ 8.1) is not one of them and stays open.
 
-### 7.1 Shell control copy
+### 7.1 RESOLVED (D-120) — shell control copy
 
-`RESTART`, `START`, and `SETTINGS` are the only strings on either shell surface
-that no contract authorises. `RESTART` borrows `FR-004`'s own noun; the other two
-are the plainest available words for what they do. All three need rows in an
-owning contract, or replacements.
+§ 5 owns `RESTART`, `START`, and `SETTINGS`. They are the strings the surfaces
+already show. `RESTART` is `FR-004`'s own noun; `START` and `SETTINGS` name the
+two title actions in § 8. The contract records them. It does not rename them
+and it does not add a control.
 
 ### 7.2 RESOLVED (D-081) — What else, if anything, the surface reports
 
