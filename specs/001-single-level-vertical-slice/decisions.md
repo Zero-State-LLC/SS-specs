@@ -345,3 +345,14 @@ Evidence (shipped D-118 code, 540 legal runs, all replay digests valid). D-115 a
 **Follow-ups.** `SWIFT` now comes on 88% of bot wins, and `SURGICAL` on 0%. Both get a human check (T903/T904) before any medal retuning. These are bot pilots (D-093).
 
 Intent: [`2026-10-30-captain-path-search`](../../intent/2026-10-30-captain-path-search.md). Task: T1057. Fixture review: [`docs/review/D118.md`](../../docs/review/D118.md).
+
+## D-119 — lethal warning, option 2 (2026-11-02)
+
+**ACCEPTED with the next-slice plan (2026-11-02):** this specifies the accepted intent `2026-09-27-lethal-warning` (SS-specs #37). The owner had already chosen option 2. The plan accepts the remaining names: the card `LETHAL THREAT`, the haptic `warning`, and a 60-tick contact horizon.
+
+- **Trigger:** [hud-tutorial.md § Lethal warning](hud-tutorial.md). A discrete Integrity telegraph that contains the Player and whose scaled resolve would remove at least the current Integrity, or 60 ticks of the contact damage already being applied. Exposure pulses, charge and dash telegraphs, the Vendor's throw, and armed mines are outside it.
+- **Card:** `LETHAL THREAT` outranks Lockdown and Extraction. Tutorial progress is unchanged. Hiding tutorials does not hide it.
+- **Audio:** the cue id is `player_lethal_warning` at the existing priority 1. It is reserved, not registered in `audioEventIds`, until a playable master exists. The haptic and the caption ship without it. No second chevron.
+- **Unchanged:** damage, timing, events, the gameplay digest, the receipt, the ruleset, and every content identity. No `lethalWarning` event.
+
+Task: T1058. The runtime adopts this only after this commit is on main.

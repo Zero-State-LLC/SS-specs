@@ -42,7 +42,7 @@ The trigger. Three candidates, for the owner to choose:
 
 **Owner decision (2026-09-27):** accepted, option 2. A lethal threat triggers the lethal warning.
 
-Also open: the HUD copy (one exact string, like the other safety messages), the audio ID and haptic for the priority-1 slot, and whether the warning outranks the Lockdown and Extraction safety messages when they coincide (the audio priority says yes).
+**Specified (D-119, 2026-11-02):** the card is `LETHAL THREAT`. The haptic is `warning`, on the rising edge. The contact horizon is 60 ticks. The warning outranks Lockdown and Extraction. The cue id `player_lethal_warning` is reserved until a playable master is admitted. The trigger text lives in `hud-tutorial.md` § Lethal warning.
 
 ## Verified claims
 

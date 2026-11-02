@@ -60,8 +60,31 @@ Left-handed mode reflects movement stick and Dodge across x=422. Pause and infor
 | Network Blackout | `NETWORK BLACKOUT 8/8` |
 | Quiet approach lost (D-101) | `QUIET APPROACH LOST` |
 | Boss activation with quiet approach (D-101) | `QUIET APPROACH • INTEGRITY <n>`, e.g. `QUIET APPROACH • INTEGRITY 90` |
+| Lethal warning (D-119) | `LETHAL THREAT` |
 
-Copy is uppercase in visual presentation but exposed to VoiceOver in sentence case. Captions use the same semantic message without requiring uppercase pronunciation.
+Copy is uppercase in visual presentation but exposed to VoiceOver in sentence case. Captions use the same semantic message without requiring uppercase pronunciation. VoiceOver for the lethal warning is "Lethal threat."
+
+## Lethal warning (D-119)
+
+Presentation only. It reports state. It does not change damage, timing, events, the gameplay digest, or the receipt, and it does not bump the ruleset or any content identity.
+
+The warning is on when either predicate below is true. Both run on copies of the Player's damage remainder. The contact predicate also copies the contact accumulator. Nothing is written back.
+
+**Discrete telegraph.** One attack telegraph whose resolve removes Integrity, evaluated as if that telegraph resolved on this tick. Sum the authored damage of the parts that contain the Player, then scale that sum with the damage-taken rule (`player-controller.md` § Damage response) on a fresh copy of the remainder, in the resolve's hit order. If the Integrity that would be removed is greater than or equal to current Integrity, the warning is on.
+
+Contains means the Player is inside the volume that resolve already tests, including solid occlusion where that resolve uses it:
+
+- Safety Rationale, Narrow Tailoring, and Independent Review (`bosses.md`). Narrow Tailoring's three bolts and Independent Review's five fired bolts are one telegraph; a bolt whose corridor does not contain the Player adds nothing.
+- The Improper Search Daemon's query, while its telegraph is active. Each circle that contains the Player adds its 14.
+- The Sutro Signal Witch's cast telegraph. The bolt is sampled at the Player's current position, because that is when its fire samples. It contains the Player when that bolt would hit them, and a solid that would consume the bolt first means it does not.
+
+These do not trip it. Temporary Order and the Fog Analytics Cloud pulse add Exposure. The Correlator charge telegraph and the Daemon dash telegraph deal contact, which the horizon counts once the contact is happening. The Vendor's throw telegraph places a mine and removes no Integrity. An armed mine is not this warning.
+
+**Contact horizon.** Use the aware enemies who are contacting the Player this tick, the three-highest cap, and the rate-then-id ordering from `player-controller.md`. Replay 60 ticks of that constant rate through the contact accumulator and the damage-taken rule, on copies. If that copy's Integrity reaches 0, the warning is on. An enemy that is not contacting this tick is left out. Sixty ticks is one second at the 60 Hz simulation.
+
+**Card.** While the warning is on, the safety card is `LETHAL THREAT`. It outranks Lockdown and both Extraction lines. It replaces the tutorial card and does not change tutorial progress. Hiding tutorials does not hide it. The 300-tick card cap does not retire it.
+
+**Carriers.** The haptic is `warning`, on the rising edge, and it may fire again only after the warning has been off for 60 ticks. The cue id `player_lethal_warning` is priority 1 in `audio-haptics.md`. It stays out of `audioEventIds` until a playable master is admitted, and until then the runtime does not emit the cue. The caption and the haptic are the carriers. Reduced Motion keeps the caption. The hunted-state chevrons in `visual-assets.md` stay that state's carrier; this warning adds no second chevron.
 
 ## Tutorial state machine
 
@@ -72,7 +95,7 @@ Copy is uppercase in visual presentation but exposed to VoiceOver in sentence ca
 - T2 activates on first Camera contact; completes when contact becomes zero for 30 consecutive ticks.
 - T3 activates when a damageable Camera first becomes a valid target; completes on its first valid impact or after 300 eligible ticks.
 - T4 activates on M-A completion and completes on accepted upgrade choice.
-- Only one tutorial card is visible. Higher safety messages (lethal warning, Lockdown, Extraction) temporarily replace it without changing tutorial progress.
+- Only one tutorial card is visible. Higher safety messages replace it without changing tutorial progress, in this order: the lethal warning (D-119), then Lockdown, then Extraction.
 - Each card has a maximum visual duration of 300 ticks, but its completion condition remains authoritative where specified.
 - Tutorial completion is a local setting. A replay receipt records whether tutorials were enabled, but tutorial state is excluded from gameplay digest.
 

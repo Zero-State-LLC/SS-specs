@@ -53,6 +53,7 @@ At most eight effects voices play simultaneously. A higher-priority event steals
 | Extraction reset | `extraction_reset` | warning |
 | Run success | `run_success` | success |
 | Player death | `player_death` | heavy |
+| Lethal warning (D-119) | `player_lethal_warning` | warning |
 | Network Blackout | `network_blackout` | success |
 
 ## Coalescence
@@ -60,6 +61,7 @@ At most eight effects voices play simultaneously. A higher-priority event steals
 - Weapon fire: maximum one voice per 6 ticks.
 - Enemy impacts: maximum two voices per tick; use highest actual damage then lowest target ID.
 - Player damage: maximum one voice/haptic per 15 ticks.
+- Lethal warning (D-119): the haptic fires on the rising edge, and again only after the warning has been off for 60 ticks. `player_lethal_warning` is the priority-1 cue id. It is not listed in `presentation-assets-003` `audioEventIds` until a playable master is admitted, because every id in that list is delivered audio. Until then the runtime emits no cue for it; the haptic and the `LETHAL THREAT` caption are the carriers.
 - Camera hits: one per Camera per tick.
 - Multiple Camera destructions: play one destruction per Camera, but one Tamper cue whose pitch variant encodes count 1, 2, or 3+.
 - Detection transitions: one old-to-final cue per tick.
