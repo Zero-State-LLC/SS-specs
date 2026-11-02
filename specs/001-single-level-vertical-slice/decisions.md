@@ -380,11 +380,11 @@ Task: T1060. The runtime adopts this only after this commit is on main.
 **ACCEPTED when this SS-specs pull request is merged at the owner's direction:** a follow-up to D-121 ("Fix it", 2026-11-01). It replaces D-121's tell. D-121 stays as the record of the first version.
 
 - **Why:** D-121's light neutral stroke (white 0.92 at alpha 0.95) is the runtime's unaware `?` marker colour, and close to the Player placeholder fill and the Player's warm ivory grounding ring. A hazard must not read as Player kit. D-121 also carried the state by line weight alone, gave no units, and centred the stroke on the radius, so half the armed stroke drew past the hazard edge.
-- **Colour:** [visual-assets.md § Vendor mine](visual-assets.md). The Enemy attack family, drawn in the runtime's telegraph-outline colour, with a dark outer keyline. Never neutral white.
+- **Colour:** [visual-assets.md § Vendor mine](visual-assets.md). The runtime's orange-red telegraph-outline colour (HSV hue 20°), not the magenta/red Enemy attack row, with a dark outer keyline. Never neutral white. Told apart from the HUD Hunted state by shape, keyline, and location, never by hue alone: under simulated deuteranopia the two are CIEDE2000 2.0 apart.
 - **State:** a low-alpha hostile fill only when armed. While arming, a 30-tick arc sweeps closed. Under Reduced Motion the arming ring is static and closed.
 - **Units:** world units, every stroke inside the radius. Keyline 1 at 41–42. Hostile stroke 2 at 39–41 while arming and 4 at 37–41 once armed. Nothing draws past 42.
 - **Damage edge:** damage applies on the Player's centre within 42, so the Player's body (radius 18) visibly crosses the ring first. Recorded in `enemies-and-encounters.md`.
-- **Contrast:** at least 3:1 non-text contrast (WCAG 2.2 1.4.11) on asphalt and stucco, at native and half scale and in grayscale. A requirement, verified only by the T1060 review plates. No plate exists yet.
+- **Contrast:** at least 3:1 non-text contrast (WCAG 2.2 1.4.11) on asphalt and stucco, at native and half scale and in grayscale, plus a colour-blind plate beside Hunted and Tracked. A requirement, verified only by the T1060 review plates. No plate exists yet.
 - **Unchanged:** arm 30, life 240, radius 42, damage 12, maximum two, and the oldest mine retires. No caption. Not the lethal-warning card. No asset id, no catalog row, no ruleset, no content identity, and no digest change.
 
-Intent: [`2026-11-02-vendor-mine-ring-follow-up`](../../intent/2026-11-02-vendor-mine-ring-follow-up.md). Task: T1060. The runtime adopts this only after this commit is on main.
+Intent: [`2026-11-02-vendor-mine-ring-follow-up`](../../intent/2026-11-02-vendor-mine-ring-follow-up.md). Task: T1060. The runtime adopts this only after this commit is on main. SS-runtime #167 implements the superseded D-121 white ring; after this lands it must be rebased onto SS-runtime main and updated to D-122 before it can close T1060.

@@ -19,7 +19,7 @@ D-121 made the Vendor mine a ring, but four parts of it work against the read.
 
 ## Proposed outcome
 
-1. The ring is in the hostile family, in the runtime's telegraph-outline colour (`Palette.telegraphStroke`, line 1582), with a dark outer keyline. It never uses neutral white.
+1. The ring uses the runtime's orange-red telegraph-outline colour (`Palette.telegraphStroke`, line 1582), with a dark outer keyline. It never uses neutral white, and it is told apart from the HUD Hunted state by shape, keyline, and location, not hue.
 2. Arming and armed differ by more than weight: a low-alpha hostile fill when armed, and a 30-tick arc that sweeps closed while arming. Under Reduced Motion the arming ring is static.
 3. Widths are in world units and every stroke is inside the radius, so nothing draws past 42.
 4. The specification says that damage triggers on the Player's centre, so the body visibly crosses the ring first.
@@ -28,7 +28,7 @@ D-121 made the Vendor mine a ring, but four parts of it work against the read.
 
 ## Affected users/systems
 
-The player (reading the hazard), `visual-assets.md`, `decisions.md` (D-122), `enemies-and-encounters.md`, `hud-tutorial.md`, `tasks.md` (T1060), and the SS-runtime mine renderer. No simulation, collision, ruleset, content, arena, or replay identity changes.
+The player (reading the hazard), `visual-assets.md`, `decisions.md` (D-122), `enemies-and-encounters.md`, `hud-tutorial.md`, `tasks.md` (T1060), and the SS-runtime mine renderer. SS-runtime #167 implements the superseded D-121 white ring; after this lands it must be rebased onto SS-runtime main and updated to D-122. No simulation, collision, ruleset, content, arena, or replay identity changes.
 
 ## Constraints/non-goals
 
@@ -39,7 +39,7 @@ The player (reading the hazard), `visual-assets.md`, `decisions.md` (D-122), `en
 
 ## Open questions
 
-- **INFERRED:** the runtime's telegraph-outline colour is orange-red (0.95, 0.55, 0.35). It is the colour the runtime already uses for hostile telegraphs, but it sits near the amber Tracked family in § 3. The owner may prefer a redder value inside the Enemy attack family. The plates should show it beside the Tracked boundary.
+- **OBSERVED (arithmetic, recomputed 2026-11-02):** the runtime's telegraph-outline colour (0.95, 0.55, 0.35) is orange-red, HSV hue 20°, not the magenta/red Enemy attack row of § 3. The tracked concern that it sits too near the amber Tracked family is unfounded: CIEDE2000 27.45 with typical colour vision, 8.2 under simulated deuteranopia, 13.9 under protanopia (Machado 2009, severity 1.0). The real near-match is the HUD Hunted colour (0.93, 0.58, 0.30): 6.4 typical, 2.0 deuteranopia, 3.5 protanopia. `visual-assets.md` therefore requires the ring to be told apart from Hunted by shape, keyline, and location, not hue, and T1060 adds a colour-blind plate beside Hunted and Tracked. That read is NOT_COMPUTABLE until the plates exist. The owner may still prefer a value inside the magenta/red row.
 - The dark keyline value. The runtime's darkest neutral now is `Palette.barrierRail` (white 0.10 at alpha 0.95). The specification asks for a dark neutral, and T1060 picks the value against the contrast requirement.
 
 ## Verified claims
@@ -49,5 +49,5 @@ The player (reading the hazard), `visual-assets.md`, `decisions.md` (D-122), `en
 
 ## Assumed claims
 
-- **INFERRED (arithmetic only, not a plate):** with the telegraph-outline colour at alpha 0.9 and a white 0.10 keyline at alpha 0.95, the WCAG relative-luminance formula gives about 4.0:1 for the stroke on asphalt `#343D43`, about 1.1:1 for the stroke on stucco `#A79C8B`, about 6.0:1 for the keyline on stucco, and about 6.2–6.6:1 for the stroke against the keyline. On that arithmetic the stroke carries the edge on asphalt and the keyline carries it on stucco. Only the T1060 plates count as evidence.
+- **INFERRED (arithmetic only, not a plate):** with the telegraph-outline colour at alpha 0.9 and a white 0.10 keyline at alpha 0.95, the WCAG relative-luminance formula gives about 4.0:1 for the stroke on asphalt `#343D43`, about 1.1:1 for the stroke on stucco `#A79C8B`, about 6.0:1 for the keyline on stucco, and about 5.65–6.0:1 for the stroke against the keyline across asphalt, stucco and limestone (recomputed 2026-11-02 with the stroke composited over the keyline, the conservative case; with each band composited on bare ground it is 6.2–6.7:1). On that arithmetic the stroke carries the edge on asphalt and the keyline carries it on stucco. Only the T1060 plates count as evidence.
 - The keyline and the arming arc are enough to stop a first-time player missing the mine. That needs the device feedback loop, not this file.
