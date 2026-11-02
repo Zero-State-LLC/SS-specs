@@ -84,7 +84,7 @@ These do not trip it. Temporary Order and the Fog Analytics Cloud pulse add Expo
 
 **Card.** While the warning is on, the safety card is `LETHAL THREAT`. It outranks Lockdown and both Extraction lines. It replaces the tutorial card and does not change tutorial progress. Hiding tutorials does not hide it. The 300-tick card cap does not retire it.
 
-**Carriers.** The haptic is `warning`, on the rising edge, and it may fire again only after the warning has been off for 60 ticks. The cue id `player_lethal_warning` is priority 1 in `audio-haptics.md`. It stays out of `audioEventIds` until a playable master is admitted, and until then the runtime does not emit the cue. The caption and the haptic are the carriers. Reduced Motion keeps the caption. The hunted-state chevrons in `visual-assets.md` stay that state's carrier; this warning adds no second chevron.
+**Carriers.** The haptic is `warning`, on the rising edge, and it may fire again only after the warning has been off for 60 ticks. The cue id `player_lethal_warning` is priority 1 in `audio-haptics.md`. It stays out of `audioEventIds` until a playable master is admitted, and until then the runtime does not emit the cue. No admitted file is that master (`audio-haptics.md`, `legacy-admission.md`). The caption and the haptic are the carriers. Reduced Motion keeps the caption. The hunted-state chevrons in `visual-assets.md` stay that state's carrier; this warning adds no second chevron.
 
 ## Tutorial state machine
 

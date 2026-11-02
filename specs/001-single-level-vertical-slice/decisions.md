@@ -352,7 +352,7 @@ Intent: [`2026-10-30-captain-path-search`](../../intent/2026-10-30-captain-path-
 
 - **Trigger:** [hud-tutorial.md § Lethal warning](hud-tutorial.md). A discrete Integrity telegraph that contains the Player and whose scaled resolve would remove at least the current Integrity, or 60 ticks of the contact damage already being applied. Exposure pulses, charge and dash telegraphs, the Vendor's throw, and armed mines are outside it.
 - **Card:** `LETHAL THREAT` outranks Lockdown and Extraction. Tutorial progress is unchanged. Hiding tutorials does not hide it.
-- **Audio:** the cue id is `player_lethal_warning` at the existing priority 1. It is reserved, not registered in `audioEventIds`, until a playable master exists. The haptic and the caption ship without it. No second chevron.
+- **Audio:** the cue id is `player_lethal_warning` at the existing priority 1. It is reserved, not registered in `audioEventIds`, until a playable master exists. Searched 2026-11-02: the frozen library and the Hexwire sibling set have no unused file whose meaning is "about to die." Approximate substitution stays closed (`legacy-admission.md`). Exact reuse of `trace_warning`, `player_death`, `player_damage`, or `sfx_boss_activated` would take a cue that already means something else. The haptic and the caption ship without the cue. No second chevron.
 - **Unchanged:** damage, timing, events, the gameplay digest, the receipt, the ruleset, and every content identity. No `lethalWarning` event.
 
 Task: T1058. The runtime adopts this only after this commit is on main.
