@@ -2,7 +2,7 @@
 
 ## Current handoff — 2026-11-02
 
-Runtime main is `7f228ea246b8085ffc2d58d1ad86d60562fab757`. Specs main is `f2527eab1e7872973f7df34beff534b4c22a62cf`. The runtime pin is `393b06f7c195e6040be74d4d170e4f930d2a8845`. No parent production task is Done. BP-001 remains for the owner to record in `decisions.md`. The production order in [benchmark-production.md](../specs/001-single-level-vertical-slice/benchmark-production.md) is unchanged. The six cards on [project 27](https://github.com/orgs/Zero-State-LLC/projects/27) stay in their current columns.
+Runtime main is `c700b8242d35bd81d7635f6c938410832af61899`. Specs main is `b3675863c99c87e1ee35b534b051fb26821f9fa3`. The runtime pin is `393b06f7c195e6040be74d4d170e4f930d2a8845`. No parent production task is Done. BP-001 remains for the owner to record in `decisions.md`. The production order in [benchmark-production.md](../specs/001-single-level-vertical-slice/benchmark-production.md) is unchanged. The six cards on [project 27](https://github.com/orgs/Zero-State-LLC/projects/27) stay in their current columns.
 
 Evidence on runtime main is indexed in [the 2026-11-02 ledger](review/benchmark-evidence-2026-11-02.md).
 
@@ -18,8 +18,9 @@ Evidence on runtime main is indexed in [the 2026-11-02 ledger](review/benchmark-
 Still open:
 
 - [x] Runtime `#177` `7f228ea`: shipping walk plates for `solid-01-residential-west` and `solid-13-phoenix-west`, plus contact, the Witch shot, and the Vendor mine. Device issue `#117` was closed by the owner on 2026-11-02. The phone retest and the comprehension note remain human.
+- [x] Runtime `#178` `c700b82`: placed decoration canvases and the ground and fog tiles. No pixels and no collision change. This does not close T1046.
 - [ ] T1060. Main paints a filled Vendor mine disc. Runtime `#167` is unmerged. Specs `#92` stays held until the keyline meets the half-scale stucco requirement.
-- [ ] Phone retest and one comprehension note are human. Install runtime `7f228ea`. `ingestBenchmarkEvents()` is debug-only, so the Release compile of the game still follows `31345cd`.
+- [ ] Phone retest and one comprehension note are human. Install runtime `c700b82`. `ingestBenchmarkEvents()` on `7f228ea` is debug-only, so the Release compile of the game still follows `31345cd`.
 - [ ] T1042–T1046, T903, T904, and T905. Medal numbers stay. Enemy sheets wait on the recorded BP-001 choice and an explicit go-ahead.
 - [ ] Specs `#63` and run-shell § 8.1.
 
