@@ -48,6 +48,8 @@ Every sample has an editable source master and an export record containing sourc
 
 Player delivery starts with four neutral facings in one rotation preview. North/back, south/front, east and west must show distinct body orientation from above; asymmetric straps and device placement remain physically consistent. Then produce one south 16-frame movement cycle and compare it against actual world travel. After that passes, complete north/east/west using the same anatomy, contact phases and equipment. Distinct hashes alone do not prove distinct motion. A changed highlight or one-pixel translation of an otherwise duplicated pose does not count as a new locomotion frame.
 
+On runtime `8c37807`, `player_hurt`, `player_defeat`, and `player_extraction` are the same PNG bytes in all four directions. The other player clips do not share a south hash. Same bytes are not a facing. Different bytes are not a production admission. This does not start four-facing delivery. No parent production task is Done.
+
 Review normal-speed playback, quarter-speed playback, frame-step, onion-skin and the last-to-first seam. Identify each frame's contact/passing/extension phase in the source record. Check foot slide against world displacement, limb count/length, hood volume, device continuity and ground contact. Cloth and equipment motion follows the body; it must not conceal foot/hand errors. A contact anchor may stay fixed while a lifted foot moves; this is not an instruction to pin every boot pixel.
 
 ## BP-003 — exact locomotion scope and timing
