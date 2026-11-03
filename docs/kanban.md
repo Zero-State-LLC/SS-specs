@@ -2,7 +2,7 @@
 
 ## Current handoff — 2026-11-02
 
-Runtime main is `8c37807deb574e5a12cf2385dbec37cf35cc0b6e`. Specs main is `ddbbf61ad0f2717a4b694fa0fdb4714cc5b42342`. The runtime pin is `393b06f7c195e6040be74d4d170e4f930d2a8845`. No parent production task is Done. BP-001 remains for the owner to record in `decisions.md`. The production order in [benchmark-production.md](../specs/001-single-level-vertical-slice/benchmark-production.md) is unchanged. The six cards on [project 27](https://github.com/orgs/Zero-State-LLC/projects/27) stay in their current columns.
+Runtime main is `c603aebec524de631b4b96030cfeef2fb167ca63`. Specs main is `60fd94484e97d6ebc4a6ae3c69969f73d2c7ad90`. The runtime pin is `393b06f7c195e6040be74d4d170e4f930d2a8845`. No parent production task is Done. BP-001 remains for the owner to record in `decisions.md`. The production order in [benchmark-production.md](../specs/001-single-level-vertical-slice/benchmark-production.md) is unchanged. The six cards on [project 27](https://github.com/orgs/Zero-State-LLC/projects/27) stay in their current columns.
 
 Evidence on runtime main is indexed in [the 2026-11-02 ledger](review/benchmark-evidence-2026-11-02.md).
 
@@ -24,8 +24,11 @@ Still open:
 - [x] Runtime `#181` `bf173ec`: the other shapes already drawn, and the player south action frames. No pixels and no collision change.
 - [x] Runtime `#182` `1d9754c`: idle and move frame 01 in each direction are not copies of the south files. South frame 01 of the non-idle enemy states and of the elite is tabulated. No new frame and no spawn. This does not close #65, #131, or #132.
 - [x] Runtime `#183` `8c37807`: `player_hurt`, `player_defeat`, and `player_extraction` reuse the south bytes in every direction. The other player clips, and the other roles, do not. No new frame. This does not close #65, #131, or #132.
+- [x] Runtime `#184` `8366209`: outside those three clips, no two directions of a shipped actor clip share a PNG hash. Frame 01 bounds for dodge, recover, complete, the five enemy idles, the boss, and the elite. No new frame. This does not close #65, #131, or #132.
+- [x] Runtime `#185` `aa20931`: the copy-lock test reads the shipped PNG bytes. Hurt, defeat, and extraction in north, east, and west match the south file of the same frame. Hurt frame 01 stays `a83d382295db881c942d6d2b43185cd67a5aeefa2e397e6ca9599956d06c02d5` in every direction. No frame was replaced. This does not close #65.
+- [x] Runtime `#186` `c603aeb`: north, east, and west frame 01 of the 25 non-idle standard-enemy states, and dodge 02–04, recover 02, and complete 02–04 in those directions. No new frame. This does not close #65, #131, or #132.
 - [ ] T1060. Main paints a filled Vendor mine disc. Runtime `#167` is unmerged. Specs `#92` stays held until the keyline meets the half-scale stucco requirement.
-- [ ] Phone retest and one comprehension note are human. Install runtime `8c37807`. `ingestBenchmarkEvents()` on `7f228ea` is debug-only, so the Release compile of the game still follows `31345cd`.
+- [ ] Phone retest and one comprehension note are human. Install runtime `c603aeb`. `ingestBenchmarkEvents()` on `7f228ea` is debug-only, so the Release compile of the game still follows `31345cd`.
 - [ ] T1042–T1046, T903, T904, and T905. Medal numbers stay. Enemy sheets wait on the recorded BP-001 choice and an explicit go-ahead.
 - [ ] Specs `#63` and run-shell § 8.1.
 
