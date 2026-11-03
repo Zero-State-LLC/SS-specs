@@ -23,7 +23,7 @@ Index of what is on runtime main `7f228ea246b8085ffc2d58d1ad86d60562fab757`. Spe
 
 Shipping mapping remains `(x, -y)`. On the midpoint plate, world-south still reads down-right. The recommendation is to keep the shipping mapping. That recommendation is not a record in `decisions.md`.
 
-Camera frames are 64×96. The renderer anchors both the head and the housing at catalog `(32, 88)`, which is SpriteKit `(0.5, 8/96)`. The housing is not centered. Separated pieces remain in operational frames 02 and 03 and in several destroy frames. That leaves device issue `#117` row 1 open.
+Camera frames are 64×96. The renderer anchors both the head and the housing at catalog `(32, 88)`, which is SpriteKit `(0.5, 8/96)`. The housing is not centered. Separated pieces remain in operational frames 02 and 03 and in several destroy frames. Device issue `#117` was closed by the owner on 2026-11-02.
 
 The five standard enemies are canvas 64×64 with clip anchor `(32, 56)`. Body radii from `combat-content-009` stay fog 18, cable car 20, witch 18, informant 16, vendor 22.
 
@@ -35,7 +35,7 @@ Issue `#128` keeps the 190×217 control at anchor `(0.5, 0)` and asserts the reg
 
 - The shipping walk and damage plates are on main as `#177` `7f228ea`. Device issue `#117` was closed by the owner on 2026-11-02. The phone retest and the comprehension note remain human.
 - T1060 stays open. Main paints a filled Vendor mine disc. Runtime `#167` is unmerged. Specs `#92` stays held: the hostile colour remains the proposal, and the 1-unit keyline has to get thicker before it meets the half-scale stucco requirement.
-- Specs `#93` records the T1058 and T1059 checkboxes and leaves T1060 open. It needs the owner's review.
+- Specs `#93` records the T1058 and T1059 checkboxes and leaves T1060 open.
 - The phone retest and one comprehension note are human. Install `7f228ea`. T903, T904, and T905 stay unrun. Medal numbers stay.
 - T1042–T1046 stay open. Enemy sheets wait on the recorded BP-001 choice and an explicit go-ahead.
 - Specs `#63` and run-shell § 8.1 stay open.

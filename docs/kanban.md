@@ -8,11 +8,11 @@ Evidence on runtime main is indexed in [the 2026-11-02 ledger](review/benchmark-
 
 - [x] Same-art pair `#170` `1a4fd88` and geometry overlay `#171` `31345cd`. Shipping mapping remains `(x, -y)`.
 - [x] Solid footprints: two solids `#169` `813cf1c56017`, the other twelve `#172` `a3a709b`. Collision is unchanged.
-- [x] Camera frame bounds `#173` `d7ba4aa`. Head and housing both use catalog anchor `(32, 88)`. Separated pieces remain in the frames. Device issue `#117` row 1 stays open.
+- [x] Camera frame bounds `#173` `d7ba4aa`. Head and housing both use catalog anchor `(32, 88)`. Separated pieces remain in the frames.
 - [x] Enemy sprite bounds `#174` `d4a8eb9`. Five standard enemies, canvas 64×64, anchor `(32, 56)`. Radii are unchanged. No new sheet.
-- [x] Device-sitting bot column `#175` `70fb1dd`. It is not a PASS/FAIL row. `#117`, T903, and T904 stay open.
+- [x] Device-sitting bot column `#175` `70fb1dd`. It is not a PASS/FAIL row. T903 and T904 stay open.
 - [x] Issue `#128` closed by `#176` `a3e5711`. The shared-camera test keeps the 190×217 control and asserts the registered square anchor `(653, 1152)`. The assert leaves projection acceptance open.
-- [x] T1058 is runtime `#165` `15b1c94cb117`. T1059 is runtime `#166` `aed7bff793f1`. The tasks.md checkboxes are specs `#93`, waiting on the owner's review.
+- [x] T1058 is runtime `#165` `15b1c94cb117`. T1059 is runtime `#166` `aed7bff793f1`. The tasks.md checkboxes are specs `#93`. T1060 stays open.
 - [x] Device-sitting probe `#168` `b1411546cb66`.
 
 Still open:
