@@ -1,6 +1,6 @@
 # Benchmark evidence — 2026-11-02
 
-Index of what is on runtime main `bf173ec319752588dba144160643859073337100`. Specs main is `555decbd28eda4e330ad4639bda3819762663f8f`. The runtime pin is `393b06f7c195e6040be74d4d170e4f930d2a8845`. No parent production task is Done. BP-001 remains for the owner to record in `decisions.md`, with the comparison images. The production order in [benchmark-production.md](../../specs/001-single-level-vertical-slice/benchmark-production.md) is unchanged.
+Index of what is on runtime main `1d9754c4faf46573ffbfd5382a0e9046d614c163`. Specs main is `e2f7baf631cd6e7b212b29661046718f504eaa2b`. The runtime pin is `393b06f7c195e6040be74d4d170e4f930d2a8845`. No parent production task is Done. BP-001 remains for the owner to record in `decisions.md`, with the comparison images. The production order in [benchmark-production.md](../../specs/001-single-level-vertical-slice/benchmark-production.md) is unchanged.
 
 `ingestBenchmarkEvents()` on this main is inside `#if DEBUG`. The Release compile of the game still follows `31345cd81ffa9a0b0a665ab4cee6b3556861c5b3`.
 
@@ -23,6 +23,7 @@ Index of what is on runtime main `bf173ec319752588dba144160643859073337100`. Spe
 | Actor bounds and the shapes already drawn | `#179` `c5730525c041dfbd1f0477c8c03ab76dc5ba67f5` | `docs/review/device-qa/` notes dated 2026-11-03 |
 | One-logical-pixel outline bar | `#180` `a4e25e62490a6234b427e0755db67a50722e51ab` | `AppTests/OutlineResolutionTests.swift` |
 | Other shapes and player south action frames | `#181` `bf173ec319752588dba144160643859073337100` | `docs/review/device-qa/world-shapes-2026-11-03.md`, `docs/review/device-qa/player-action-frames-2026-11-03.md` |
+| Facing frame 01 and the other south state frames | `#182` `1d9754c4faf46573ffbfd5382a0e9046d614c163` | `docs/review/device-qa/player-facing-frame-01-2026-11-03.md`, `docs/review/device-qa/south-state-frame-01-2026-11-03.md` |
 | Lethal warning, T1058 | `#165` `15b1c94cb117` | presentation only; gameplay digest unchanged |
 | Shell copy, T1059 | `#166` `aed7bff793f1` | `START`, `SETTINGS`, `RESTART` |
 
@@ -41,7 +42,7 @@ Issue `#128` keeps the 190×217 control at anchor `(0.5, 0)` and asserts the reg
 - The shipping walk and damage plates are on main as `#177` `7f228ea`. Device issue `#117` was closed by the owner on 2026-11-02. The phone retest and the comprehension note remain human.
 - T1060 stays open. Main paints a filled Vendor mine disc. Runtime `#167` is unmerged. Specs `#92` stays held: the hostile colour remains the proposal, and the 1-unit keyline has to get thicker before it meets the half-scale stucco requirement.
 - Specs `#93` records the T1058 and T1059 checkboxes and leaves T1060 open.
-- The phone retest and one comprehension note are human. Install `bf173ec`. T903, T904, and T905 stay unrun. Medal numbers stay.
+- The phone retest and one comprehension note are human. Install `1d9754c`. T903, T904, and T905 stay unrun. Medal numbers stay.
 - T1042–T1046 stay open. Enemy sheets wait on the recorded BP-001 choice and an explicit go-ahead.
 - Specs `#63` and run-shell § 8.1 stay open.
 
