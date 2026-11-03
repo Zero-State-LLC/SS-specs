@@ -1,6 +1,6 @@
 # Benchmark evidence — 2026-11-02
 
-Index of what is on runtime main `df637da86c782f9a83b8105374b3516fd06aba5c`. Specs main is `5243242d9eea0dd50bdb48b0e515e858a3848e51`. The runtime pin is `393b06f7c195e6040be74d4d170e4f930d2a8845`. No parent production task is Done. BP-001 remains for the owner to record in `decisions.md`, with the comparison images. The production order in [benchmark-production.md](../../specs/001-single-level-vertical-slice/benchmark-production.md) is unchanged.
+Index of what is on runtime main `3e32d76475c5979d0b8d23e2f5da0a70e54a5c2c`. Specs main is `b551375da78238d688f0aea6882a2b91c0b139fd`. The runtime pin is `393b06f7c195e6040be74d4d170e4f930d2a8845`. No parent production task is Done. BP-001 remains for the owner to record in `decisions.md`, with the comparison images. The production order in [benchmark-production.md](../../specs/001-single-level-vertical-slice/benchmark-production.md) is unchanged.
 
 `ingestBenchmarkEvents()` on this main is inside `#if DEBUG`. The Release compile of the game still follows `31345cd81ffa9a0b0a665ab4cee6b3556861c5b3`.
 
@@ -31,6 +31,13 @@ Index of what is on runtime main `df637da86c782f9a83b8105374b3516fd06aba5c`. Spe
 | Clip lengths and the remaining idle and move frames | `#187` `ff1ba272f931658ab75688484b9d311294844272` | `docs/review/device-qa/clip-lengths-2026-11-03.md`, `docs/review/device-qa/player-idle-rest-frames-2026-11-03.md`, `docs/review/device-qa/player-move-rest-frames-2026-11-03.md`, `docs/review/device-qa/enemy-idle-rest-frames-2026-11-03.md`, `docs/review/device-qa/enemy-south-move-rest-2026-11-03.md`, `docs/review/device-qa/enemy-move-rest-frames-2026-11-03.md` |
 | Boss, elite, and hurt-defeat frames after 01 | `#188` `78101b2464c47d4269e0311c1b606b4d691e6b55` | `docs/review/device-qa/boss-south-rest-frames-2026-11-03.md`, `docs/review/device-qa/boss-six-rest-frames-2026-11-03.md`, `docs/review/device-qa/boss-long-rest-frames-2026-11-03.md`, `docs/review/device-qa/elite-south-rest-frames-2026-11-03.md`, `docs/review/device-qa/elite-six-rest-frames-2026-11-03.md`, `docs/review/device-qa/elite-short-rest-frames-2026-11-03.md`, `docs/review/device-qa/enemy-south-hurt-defeat-rest-2026-11-03.md`, `docs/review/device-qa/enemy-hurt-defeat-rest-frames-2026-11-03.md` |
 | Index rows for the eight later-frame notes | `#189` `df637da86c782f9a83b8105374b3516fd06aba5c` | `docs/review/device-qa/README.md` |
+| Anticipate and commit frames after 01 | `#190` `9d4656c5b72851c10e449f4e6cbd27c1c6d4b2a6` | `docs/review/device-qa/` notes dated 2026-11-03 for the rest frames |
+| Captain housing frames | `#191` `279dc63ebd0cf92e1eea8dda22987ac6285135df` | `docs/review/device-qa/captain-housing-bounds-2026-11-03.md` |
+| Copied player filename rows and the six shell images | `#192` `92c500fea6be258e6e2668d1e4b028d073df9c98` | `docs/review/device-qa/player-copied-direction-rows-2026-11-03.md`, `docs/review/device-qa/shell-image-bounds-2026-11-03.md` |
+| Shipped audio file bytes | `#193` `241c167982b571e942bf17234c90d1a163f8b749` | `docs/review/device-qa/audio-file-bytes-2026-11-03.md` |
+| Catalog digests against shipped PNG bytes | `#194` `dc1fdc48c0128acabb8e984eb4f78911e26c2622` | `docs/review/device-qa/catalog-png-digests-2026-11-03.md` |
+| Draw order and the cue projection | `#195` `914a5c0146c15bcb18d0b550660a452e7c93c33c` | `docs/review/device-qa/world-layer-order-2026-11-03.md` and the cue notes dated 2026-11-03 |
+| README row for the catalog digest note | `#196` `3e32d76475c5979d0b8d23e2f5da0a70e54a5c2c` | `docs/review/device-qa/README.md` |
 | Lethal warning, T1058 | `#165` `15b1c94cb117` | presentation only; gameplay digest unchanged |
 | Shell copy, T1059 | `#166` `aed7bff793f1` | `START`, `SETTINGS`, `RESTART` |
 
@@ -49,7 +56,7 @@ Issue `#128` keeps the 190×217 control at anchor `(0.5, 0)` and asserts the reg
 - The shipping walk and damage plates are on main as `#177` `7f228ea`. Device issue `#117` was closed by the owner on 2026-11-02. The phone retest and the comprehension note remain human.
 - T1060 stays open. Main paints a filled Vendor mine disc. Runtime `#167` is unmerged. Specs `#92` stays held: the hostile colour remains the proposal, and the 1-unit keyline has to get thicker before it meets the half-scale stucco requirement.
 - Specs `#93` records the T1058 and T1059 checkboxes and leaves T1060 open.
-- The phone retest and one comprehension note are human. Install `df637da`. T903, T904, and T905 stay unrun. Medal numbers stay.
+- The phone retest and one comprehension note are human. Install `3e32d76`. T903, T904, and T905 stay unrun. Medal numbers stay.
 - T1042–T1046 stay open. Enemy sheets wait on the recorded BP-001 choice and an explicit go-ahead.
 - Specs `#63` and run-shell § 8.1 stay open.
 
