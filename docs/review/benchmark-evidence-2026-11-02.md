@@ -1,6 +1,6 @@
 # Benchmark evidence — 2026-11-02
 
-Index of what is on runtime main `c603aebec524de631b4b96030cfeef2fb167ca63`. Specs main is `60fd94484e97d6ebc4a6ae3c69969f73d2c7ad90`. The runtime pin is `393b06f7c195e6040be74d4d170e4f930d2a8845`. No parent production task is Done. BP-001 remains for the owner to record in `decisions.md`, with the comparison images. The production order in [benchmark-production.md](../../specs/001-single-level-vertical-slice/benchmark-production.md) is unchanged.
+Index of what is on runtime main `df637da86c782f9a83b8105374b3516fd06aba5c`. Specs main is `5243242d9eea0dd50bdb48b0e515e858a3848e51`. The runtime pin is `393b06f7c195e6040be74d4d170e4f930d2a8845`. No parent production task is Done. BP-001 remains for the owner to record in `decisions.md`, with the comparison images. The production order in [benchmark-production.md](../../specs/001-single-level-vertical-slice/benchmark-production.md) is unchanged.
 
 `ingestBenchmarkEvents()` on this main is inside `#if DEBUG`. The Release compile of the game still follows `31345cd81ffa9a0b0a665ab4cee6b3556861c5b3`.
 
@@ -28,6 +28,9 @@ Index of what is on runtime main `c603aebec524de631b4b96030cfeef2fb167ca63`. Spe
 | Directions that do not share a hash, and frame 01 bounds | `#184` `836620922f95c88440ec666bcb8f1b3f2ab2a9b7` | `docs/review/device-qa/direction-distinct-2026-11-03.md`, `docs/review/device-qa/player-action-facing-frame-01-2026-11-03.md`, `docs/review/device-qa/enemy-idle-frame-01-2026-11-03.md`, `docs/review/device-qa/boss-facing-frame-01-2026-11-03.md`, `docs/review/device-qa/elite-facing-frame-01-2026-11-03.md` |
 | Copy-lock of the three copied clips | `#185` `aa20931a163ea26e7c37488c162d68e238d4944c` | `AppTests/CopiedDirectionBytesTests.swift` |
 | Enemy action frame 01 and the remaining player action frames | `#186` `c603aebec524de631b4b96030cfeef2fb167ca63` | `docs/review/device-qa/enemy-action-facing-frame-01-2026-11-03.md`, `docs/review/device-qa/player-action-rest-frames-2026-11-03.md` |
+| Clip lengths and the remaining idle and move frames | `#187` `ff1ba272f931658ab75688484b9d311294844272` | `docs/review/device-qa/clip-lengths-2026-11-03.md`, `docs/review/device-qa/player-idle-rest-frames-2026-11-03.md`, `docs/review/device-qa/player-move-rest-frames-2026-11-03.md`, `docs/review/device-qa/enemy-idle-rest-frames-2026-11-03.md`, `docs/review/device-qa/enemy-south-move-rest-2026-11-03.md`, `docs/review/device-qa/enemy-move-rest-frames-2026-11-03.md` |
+| Boss, elite, and hurt-defeat frames after 01 | `#188` `78101b2464c47d4269e0311c1b606b4d691e6b55` | `docs/review/device-qa/boss-south-rest-frames-2026-11-03.md`, `docs/review/device-qa/boss-six-rest-frames-2026-11-03.md`, `docs/review/device-qa/boss-long-rest-frames-2026-11-03.md`, `docs/review/device-qa/elite-south-rest-frames-2026-11-03.md`, `docs/review/device-qa/elite-six-rest-frames-2026-11-03.md`, `docs/review/device-qa/elite-short-rest-frames-2026-11-03.md`, `docs/review/device-qa/enemy-south-hurt-defeat-rest-2026-11-03.md`, `docs/review/device-qa/enemy-hurt-defeat-rest-frames-2026-11-03.md` |
+| Index rows for the eight later-frame notes | `#189` `df637da86c782f9a83b8105374b3516fd06aba5c` | `docs/review/device-qa/README.md` |
 | Lethal warning, T1058 | `#165` `15b1c94cb117` | presentation only; gameplay digest unchanged |
 | Shell copy, T1059 | `#166` `aed7bff793f1` | `START`, `SETTINGS`, `RESTART` |
 
@@ -46,7 +49,7 @@ Issue `#128` keeps the 190×217 control at anchor `(0.5, 0)` and asserts the reg
 - The shipping walk and damage plates are on main as `#177` `7f228ea`. Device issue `#117` was closed by the owner on 2026-11-02. The phone retest and the comprehension note remain human.
 - T1060 stays open. Main paints a filled Vendor mine disc. Runtime `#167` is unmerged. Specs `#92` stays held: the hostile colour remains the proposal, and the 1-unit keyline has to get thicker before it meets the half-scale stucco requirement.
 - Specs `#93` records the T1058 and T1059 checkboxes and leaves T1060 open.
-- The phone retest and one comprehension note are human. Install `c603aeb`. T903, T904, and T905 stay unrun. Medal numbers stay.
+- The phone retest and one comprehension note are human. Install `df637da`. T903, T904, and T905 stay unrun. Medal numbers stay.
 - T1042–T1046 stay open. Enemy sheets wait on the recorded BP-001 choice and an explicit go-ahead.
 - Specs `#63` and run-shell § 8.1 stay open.
 
