@@ -2,7 +2,7 @@
 
 ## Current handoff — 2026-11-02
 
-Evidence landed since the 2026-10-25 art sequence is indexed in [the 2026-11-02 ledger](../../docs/review/benchmark-evidence-2026-11-02.md). Runtime main is `c603aeb`. That main has the direction note, the frame-01 notes, and the copy-lock test. The pin is `393b06f`. BP-001 remains unrecorded. The production order below is unchanged. No parent production task is Done.
+Evidence landed since the 2026-10-25 art sequence is indexed in [the 2026-11-02 ledger](../../docs/review/benchmark-evidence-2026-11-02.md). Runtime main is `df637da`. That main has the direction note, the frame-01 notes, the copy-lock test, the clip-length census, the remaining idle and move frames, and the boss, elite, and hurt-defeat frames after 01. The pin is `393b06f`. BP-001 remains unrecorded. The production order below is unchanged. No parent production task is Done.
 
 ## Art sequence — 2026-10-25
 
