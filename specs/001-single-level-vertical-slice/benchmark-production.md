@@ -1,6 +1,10 @@
 # Benchmark production and runtime reconciliation
 
-## Current handoff — 2026-10-25
+## Current handoff — 2026-11-02
+
+Evidence landed since the 2026-10-25 art sequence is indexed in [the 2026-11-02 ledger](../../docs/review/benchmark-evidence-2026-11-02.md). Runtime main is `7f228ea`. The pin is `393b06f`. BP-001 remains unrecorded. The production order below is unchanged. No parent production task is Done.
+
+## Art sequence — 2026-10-25
 
 Aaron continues from the [continuation brief](../../docs/review/aaron-continuation-2026-10-25.md). Stop recorder/OBS troubleshooting; retain the0.375-second Player candidate and bounded visual approval. Prioritize remaining Player releases/facings/actions, then shared-scene integration and direct iPhone validation. Live cadence/performance remain unverified and required before production admission; they do not block further source work. Historical recorder-dependent next-step notes below are superseded for sequencing only. No parent production task is Done.
 

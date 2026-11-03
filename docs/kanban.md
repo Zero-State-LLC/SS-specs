@@ -1,11 +1,34 @@
 # SS benchmark kanban
 
-## Current handoff — 2026-10-25
+## Current handoff — 2026-11-02
+
+Runtime main is `7f228ea246b8085ffc2d58d1ad86d60562fab757`. Specs main is `f2527eab1e7872973f7df34beff534b4c22a62cf`. The runtime pin is `393b06f7c195e6040be74d4d170e4f930d2a8845`. No parent production task is Done. BP-001 remains for the owner to record in `decisions.md`. The production order in [benchmark-production.md](../specs/001-single-level-vertical-slice/benchmark-production.md) is unchanged. The six cards on [project 27](https://github.com/orgs/Zero-State-LLC/projects/27) stay in their current columns.
+
+Evidence on runtime main is indexed in [the 2026-11-02 ledger](review/benchmark-evidence-2026-11-02.md).
+
+- [x] Same-art pair `#170` `1a4fd88` and geometry overlay `#171` `31345cd`. Shipping mapping remains `(x, -y)`.
+- [x] Solid footprints: two solids `#169` `813cf1c56017`, the other twelve `#172` `a3a709b`. Collision is unchanged.
+- [x] Camera frame bounds `#173` `d7ba4aa`. Head and housing both use catalog anchor `(32, 88)`. Separated pieces remain in the frames.
+- [x] Enemy sprite bounds `#174` `d4a8eb9`. Five standard enemies, canvas 64×64, anchor `(32, 56)`. Radii are unchanged. No new sheet.
+- [x] Device-sitting bot column `#175` `70fb1dd`. It is not a PASS/FAIL row. T903 and T904 stay open.
+- [x] Issue `#128` closed by `#176` `a3e5711`. The shared-camera test keeps the 190×217 control and asserts the registered square anchor `(653, 1152)`. The assert leaves projection acceptance open.
+- [x] T1058 is runtime `#165` `15b1c94cb117`. T1059 is runtime `#166` `aed7bff793f1`. The tasks.md checkboxes are specs `#93`. T1060 stays open.
+- [x] Device-sitting probe `#168` `b1411546cb66`.
+
+Still open:
+
+- [x] Runtime `#177` `7f228ea`: shipping walk plates for `solid-01-residential-west` and `solid-13-phoenix-west`, plus contact, the Witch shot, and the Vendor mine. Device issue `#117` was closed by the owner on 2026-11-02. The phone retest and the comprehension note remain human.
+- [ ] T1060. Main paints a filled Vendor mine disc. Runtime `#167` is unmerged. Specs `#92` stays held until the keyline meets the half-scale stucco requirement.
+- [ ] Phone retest and one comprehension note are human. Install runtime `7f228ea`. `ingestBenchmarkEvents()` is debug-only, so the Release compile of the game still follows `31345cd`.
+- [ ] T1042–T1046, T903, T904, and T905. Medal numbers stay. Enemy sheets wait on the recorded BP-001 choice and an explicit go-ahead.
+- [ ] Specs `#63` and run-shell § 8.1.
+
+## Art sequence — 2026-10-25
 
 Aaron continues from the [continuation brief](review/aaron-continuation-2026-10-25.md). Stop recorder/OBS troubleshooting; retain the0.375-second Player candidate and bounded visual approval. Prioritize remaining Player releases/facings/actions, then shared-scene integration and direct iPhone validation. Live cadence/performance remain unverified and required before production admission; they do not block further source work. Historical recorder-dependent next-step notes below are superseded for sequencing only. No parent production task is Done.
 
 
-Updated 2026-10-19. Repository planning mirror of [SS-specs + SS-runtime — Benchmark](https://github.com/orgs/Zero-State-LLC/projects/27). Canonical parent tasks: [tasks.md](../specs/001-single-level-vertical-slice/tasks.md). Evidence, dependencies and exit gates: [next-step plan](review/benchmark-status-2026-10-15.md). No parent production task is Done.
+Updated 2026-11-02. Repository planning mirror of [SS-specs + SS-runtime — Benchmark](https://github.com/orgs/Zero-State-LLC/projects/27). Canonical parent tasks: [tasks.md](../specs/001-single-level-vertical-slice/tasks.md). Current evidence: [2026-11-02 ledger](review/benchmark-evidence-2026-11-02.md). Earlier evidence and exit gates: [next-step plan](review/benchmark-status-2026-10-15.md). No parent production task is Done. The six project cards stay in their current columns.
 
 ## Current priority — player first (2026-10-19)
 
