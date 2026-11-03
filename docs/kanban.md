@@ -2,7 +2,7 @@
 
 ## Current handoff — 2026-11-02
 
-Runtime main is `df637da86c782f9a83b8105374b3516fd06aba5c`. Specs main is `5243242d9eea0dd50bdb48b0e515e858a3848e51`. The runtime pin is `393b06f7c195e6040be74d4d170e4f930d2a8845`. No parent production task is Done. BP-001 remains for the owner to record in `decisions.md`. The production order in [benchmark-production.md](../specs/001-single-level-vertical-slice/benchmark-production.md) is unchanged. The six cards on [project 27](https://github.com/orgs/Zero-State-LLC/projects/27) stay in their current columns.
+Runtime main is `3e32d76475c5979d0b8d23e2f5da0a70e54a5c2c`. Specs main is `b551375da78238d688f0aea6882a2b91c0b139fd`. The runtime pin is `393b06f7c195e6040be74d4d170e4f930d2a8845`. No parent production task is Done. BP-001 remains for the owner to record in `decisions.md`. The production order in [benchmark-production.md](../specs/001-single-level-vertical-slice/benchmark-production.md) is unchanged. The six cards on [project 27](https://github.com/orgs/Zero-State-LLC/projects/27) stay in their current columns.
 
 Evidence on runtime main is indexed in [the 2026-11-02 ledger](review/benchmark-evidence-2026-11-02.md).
 
@@ -30,8 +30,15 @@ Still open:
 - [x] Runtime `#187` `ff1ba27`: the clip-length census, player idle 02–04 and move 02–06 in north, east, and west, enemy idle 02–04 in those directions, and move 02–06 for the four enemies that have a move clip. No new frame. Six frames are not the 16-frame cycle. This does not close T1042 or T1045.
 - [x] Runtime `#188` `78101b2`: boss, elite, and standard-enemy hurt and defeat frames after 01. 408 shipped PNGs. No new frame. This does not close #131 or #132.
 - [x] Runtime `#189` `df637da`: one device-qa README row for each of those eight notes. The `#187` rows stay. No new frame.
+- [x] Runtime `#190` `9d4656c`: anticipate and commit frames after 01, and their README rows. 68 shipped PNGs. No new frame. This does not close #131 or #132.
+- [x] Runtime `#191` `279dc63`: the two Captain housing PNGs. Canvas 64×96. The sprite keeps the center anchor. This does not close T1046.
+- [x] Runtime `#192` `92c500f`: the 48 copied player filenames and the six shell images. This does not close #65. Run-shell § 8.1 stays open.
+- [x] Runtime `#193` `241c167`: the 34 shipped m4a files. The catalog digest is the PCM source, not the file. Specs #63 stays open.
+- [x] Runtime `#194` `dc1fdc4`: 1030 runtime PNGs. 918 catalog digests match the file. 112 adapted records keep the frozen-commit digest. No file was replaced.
+- [x] Runtime `#195` `914a5c0`: world layers 0 through 14, the in-layer offsets, the six haptic patterns, and the cues already projected. No z position or cue was changed. This does not close T1046.
+- [x] Runtime `#196` `3e32d76`: the README row for the catalog digest note. No file was replaced.
 - [ ] T1060. Main paints a filled Vendor mine disc. Runtime `#167` is unmerged. Specs `#92` stays held until the keyline meets the half-scale stucco requirement.
-- [ ] Phone retest and one comprehension note are human. Install runtime `df637da`. `ingestBenchmarkEvents()` on `7f228ea` is debug-only, so the Release compile of the game still follows `31345cd`.
+- [ ] Phone retest and one comprehension note are human. Install runtime `3e32d76`. `ingestBenchmarkEvents()` on `7f228ea` is debug-only, so the Release compile of the game still follows `31345cd`.
 - [ ] T1042–T1046, T903, T904, and T905. Medal numbers stay. Enemy sheets wait on the recorded BP-001 choice and an explicit go-ahead.
 - [ ] Specs `#63` and run-shell § 8.1.
 
