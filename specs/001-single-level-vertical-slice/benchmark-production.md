@@ -2,7 +2,7 @@
 
 ## Current handoff — 2026-11-02
 
-Evidence landed since the 2026-10-25 art sequence is indexed in [the 2026-11-02 ledger](../../docs/review/benchmark-evidence-2026-11-02.md). Runtime main is `a3e5711`. The pin is `393b06f`. BP-001 remains unrecorded. The production order below is unchanged. No parent production task is Done.
+Evidence landed since the 2026-10-25 art sequence is indexed in [the 2026-11-02 ledger](../../docs/review/benchmark-evidence-2026-11-02.md). Runtime main is `7f228ea`. The pin is `393b06f`. BP-001 remains unrecorded. The production order below is unchanged. No parent production task is Done.
 
 ## Art sequence — 2026-10-25
 

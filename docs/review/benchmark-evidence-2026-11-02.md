@@ -1,8 +1,8 @@
 # Benchmark evidence — 2026-11-02
 
-Index of what is on runtime main `a3e571117166de5a873ed2d7b58563b909d5ab84`. Specs main is `b1ed874e1e8eb0e61b2174b9093201e9a61e1a4b`. The runtime pin is `393b06f7c195e6040be74d4d170e4f930d2a8845`. No parent production task is Done. BP-001 remains for the owner to record in `decisions.md`, with the comparison images. The production order in [benchmark-production.md](../../specs/001-single-level-vertical-slice/benchmark-production.md) is unchanged.
+Index of what is on runtime main `7f228ea246b8085ffc2d58d1ad86d60562fab757`. Specs main is `b1ed874e1e8eb0e61b2174b9093201e9a61e1a4b`. The runtime pin is `393b06f7c195e6040be74d4d170e4f930d2a8845`. No parent production task is Done. BP-001 remains for the owner to record in `decisions.md`, with the comparison images. The production order in [benchmark-production.md](../../specs/001-single-level-vertical-slice/benchmark-production.md) is unchanged.
 
-Release game bytes are `31345cd81ffa9a0b0a665ab4cee6b3556861c5b3`. Later commits on main are notes and one test assert.
+`ingestBenchmarkEvents()` on this main is inside `#if DEBUG`. The Release compile of the game still follows `31345cd81ffa9a0b0a665ab4cee6b3556861c5b3`.
 
 ## On runtime main
 
@@ -17,6 +17,7 @@ Release game bytes are `31345cd81ffa9a0b0a665ab4cee6b3556861c5b3`. Later commits
 | Device-sitting bot column | `#175` `70fb1dd9941a4b76fe71fb071a119f65a84c74b2` | `docs/review/device-qa/retest-checklist.md` |
 | Device-sitting probe | `#168` `b1411546cb66` | `Tests/SurveillanceCoreTests/PacingProbe/DeviceSittingQA.swift` |
 | Registered square assert; issue `#128` closed | `#176` `a3e571117166de5a873ed2d7b58563b909d5ab84` | `AppTests/BenchmarkCaptureTests.swift` |
+| Shipping walk and damage plates | `#177` `7f228ea246b8085ffc2d58d1ad86d60562fab757` | `BP117-walk-solid-01-residential-west`, `BP117-walk-solid-13-phoenix-west`, `BP117-damage-contact`, `BP117-damage-witch-shot`, `BP117-damage-vendor-mine` |
 | Lethal warning, T1058 | `#165` `15b1c94cb117` | presentation only; gameplay digest unchanged |
 | Shell copy, T1059 | `#166` `aed7bff793f1` | `START`, `SETTINGS`, `RESTART` |
 
@@ -32,11 +33,11 @@ Issue `#128` keeps the 190×217 control at anchor `(0.5, 0)` and asserts the reg
 
 ## Open
 
-- Runtime `#177` head `b7fea1ff56336eec443a9891351838ef301a847f` carries the shipping walk plates and one plate each for contact, the Witch shot, and the Vendor mine. The local Debug run printed TEST SUCCEEDED. The plates are not on main. `#117` rows 2 and 4 stay open.
+- The shipping walk and damage plates are on main as `#177` `7f228ea`. Device issue `#117` was closed by the owner on 2026-11-02. The phone retest and the comprehension note remain human.
 - T1060 stays open. Main paints a filled Vendor mine disc. Runtime `#167` is unmerged. Specs `#92` stays held: the hostile colour remains the proposal, and the 1-unit keyline has to get thicker before it meets the half-scale stucco requirement.
 - Specs `#93` records the T1058 and T1059 checkboxes and leaves T1060 open. It needs the owner's review.
-- The phone retest of `#117` and one comprehension note are human. Install `a3e5711`. T903, T904, and T905 stay unrun. Medal numbers stay.
+- The phone retest and one comprehension note are human. Install `7f228ea`. T903, T904, and T905 stay unrun. Medal numbers stay.
 - T1042–T1046 stay open. Enemy sheets wait on the recorded BP-001 choice and an explicit go-ahead.
 - Specs `#63` and run-shell § 8.1 stay open.
 
-The phone sitting names whatever runtime main is installed. If only notes land after `a3e5711`, the Release game bytes remain `31345cd`.
+The phone sitting names whatever runtime main is installed. `7f228ea` adds a debug-only ingest. The Release compile of the game still follows `31345cd`.
