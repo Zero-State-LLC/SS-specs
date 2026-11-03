@@ -2,7 +2,7 @@
 
 ## Current handoff — 2026-11-02
 
-Runtime main is `c5730525c041dfbd1f0477c8c03ab76dc5ba67f5`. Specs main is `05c5fd8c90e08b0c5955cee289cdcb9dddcc1d16`. The runtime pin is `393b06f7c195e6040be74d4d170e4f930d2a8845`. No parent production task is Done. BP-001 remains for the owner to record in `decisions.md`. The production order in [benchmark-production.md](../specs/001-single-level-vertical-slice/benchmark-production.md) is unchanged. The six cards on [project 27](https://github.com/orgs/Zero-State-LLC/projects/27) stay in their current columns.
+Runtime main is `bf173ec319752588dba144160643859073337100`. Specs main is `555decbd28eda4e330ad4639bda3819762663f8f`. The runtime pin is `393b06f7c195e6040be74d4d170e4f930d2a8845`. No parent production task is Done. BP-001 remains for the owner to record in `decisions.md`. The production order in [benchmark-production.md](../specs/001-single-level-vertical-slice/benchmark-production.md) is unchanged. The six cards on [project 27](https://github.com/orgs/Zero-State-LLC/projects/27) stay in their current columns.
 
 Evidence on runtime main is indexed in [the 2026-11-02 ledger](review/benchmark-evidence-2026-11-02.md).
 
@@ -20,8 +20,10 @@ Still open:
 - [x] Runtime `#177` `7f228ea`: shipping walk plates for `solid-01-residential-west` and `solid-13-phoenix-west`, plus contact, the Witch shot, and the Vendor mine. Device issue `#117` was closed by the owner on 2026-11-02. The phone retest and the comprehension note remain human.
 - [x] Runtime `#178` `c700b82`: placed decoration canvases and the ground and fog tiles. No pixels and no collision change. This does not close T1046.
 - [x] Runtime `#179` `c573052`: player and boss frame bounds, the projectile mine and telegraph shapes, the images the draw path does not place, the HUD shapes, and the decoration-versus-solid comparison. No pixels and no collision change.
+- [x] Runtime `#180` `a4e25e6`: a one-logical-pixel outline bar keeps one mask at sampling scale 1 across densities 1, 4, and 6. A one-source-pixel bar at densities 4 and 6 does not match. Scale 3 is a size probe only. This does not close #124. Ordinary play stays at sampling scale 1.
+- [x] Runtime `#181` `bf173ec`: the other shapes already drawn, and the player south action frames. No pixels and no collision change.
 - [ ] T1060. Main paints a filled Vendor mine disc. Runtime `#167` is unmerged. Specs `#92` stays held until the keyline meets the half-scale stucco requirement.
-- [ ] Phone retest and one comprehension note are human. Install runtime `c573052`. `ingestBenchmarkEvents()` on `7f228ea` is debug-only, so the Release compile of the game still follows `31345cd`.
+- [ ] Phone retest and one comprehension note are human. Install runtime `bf173ec`. `ingestBenchmarkEvents()` on `7f228ea` is debug-only, so the Release compile of the game still follows `31345cd`.
 - [ ] T1042–T1046, T903, T904, and T905. Medal numbers stay. Enemy sheets wait on the recorded BP-001 choice and an explicit go-ahead.
 - [ ] Specs `#63` and run-shell § 8.1.
 
