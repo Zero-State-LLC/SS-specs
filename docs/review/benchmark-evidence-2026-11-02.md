@@ -1,6 +1,6 @@
 # Benchmark evidence — 2026-11-02
 
-Index of what is on runtime main `49759ab3da23eaa11159085c5b2d4c249acb2cd2`. Specs main is `2e5186a313f2ce1265075bb2697fb79d200793f5`. The runtime pin is `393b06f7c195e6040be74d4d170e4f930d2a8845`. No parent production task is Done. BP-001 remains for the owner to record in `decisions.md`, with the comparison images. The production order in [benchmark-production.md](../../specs/001-single-level-vertical-slice/benchmark-production.md) is unchanged.
+Index of what is on runtime main `93f6d672640b99de50a22a4ae63854c04db76a42`. Specs main is `828fb39b8ac472fc19828780d93061d5b32d9220`. The runtime pin is `393b06f7c195e6040be74d4d170e4f930d2a8845`. No parent production task is Done. BP-001 remains for the owner to record in `decisions.md`, with the comparison images. The production order in [benchmark-production.md](../../specs/001-single-level-vertical-slice/benchmark-production.md) is unchanged.
 
 `ingestBenchmarkEvents()` on this main is inside `#if DEBUG`. The Release compile of the game still follows `31345cd81ffa9a0b0a665ab4cee6b3556861c5b3`.
 
@@ -39,6 +39,7 @@ Index of what is on runtime main `49759ab3da23eaa11159085c5b2d4c249acb2cd2`. Spe
 | Draw order and the cue projection | `#195` `914a5c0146c15bcb18d0b550660a452e7c93c33c` | `docs/review/device-qa/world-layer-order-2026-11-03.md` and the cue notes dated 2026-11-03 |
 | README row for the catalog digest note | `#196` `3e32d76475c5979d0b8d23e2f5da0a70e54a5c2c` | `docs/review/device-qa/README.md` |
 | Camera follow, exposure bands, medals, and upgrades | `#197` `49759ab3da23eaa11159085c5b2d4c249acb2cd2` | `docs/review/device-qa/camera-follow-2026-11-03.md`, `docs/review/device-qa/exposure-bands-2026-11-03.md`, `docs/review/device-qa/medal-predicates-2026-11-03.md`, `docs/review/device-qa/upgrade-effects-2026-11-03.md` |
+| Combat rules and HUD bindings | `#198` `93f6d672640b99de50a22a4ae63854c04db76a42` | `docs/review/device-qa/player-movement-2026-11-04.md`, `docs/review/device-qa/player-integrity-2026-11-04.md`, `docs/review/device-qa/civic-pulse-2026-11-04.md`, `docs/review/device-qa/standard-enemy-stats-2026-11-04.md`, `docs/review/device-qa/elite-boss-attacks-2026-11-04.md`, `docs/review/device-qa/encounter-waves-2026-11-04.md`, `docs/review/device-qa/heat-awareness-patrol-2026-11-04.md`, `docs/review/device-qa/extraction-and-tick-2026-11-04.md`, `docs/review/device-qa/placed-cameras-2026-11-04.md`, `docs/review/device-qa/hud-bindings-2026-11-04.md` |
 | Lethal warning, T1058 | `#165` `15b1c94cb117` | presentation only; gameplay digest unchanged |
 | Shell copy, T1059 | `#166` `aed7bff793f1` | `START`, `SETTINGS`, `RESTART` |
 
@@ -57,7 +58,7 @@ Issue `#128` keeps the 190×217 control at anchor `(0.5, 0)` and asserts the reg
 - The shipping walk and damage plates are on main as `#177` `7f228ea`. Device issue `#117` was closed by the owner on 2026-11-02. The phone retest and the comprehension note remain human.
 - T1060 stays open. Main paints a filled Vendor mine disc. Runtime `#167` is unmerged. Specs `#92` stays held: the hostile colour remains the proposal, and the 1-unit keyline has to get thicker before it meets the half-scale stucco requirement.
 - Specs `#93` records the T1058 and T1059 checkboxes and leaves T1060 open.
-- The phone retest and one comprehension note are human. Install `49759ab`. T903, T904, and T905 stay unrun. Medal numbers stay.
+- The phone retest and one comprehension note are human. Install `93f6d67`. T903, T904, and T905 stay unrun. Medal numbers stay.
 - T1042–T1046 stay open. Enemy sheets wait on the recorded BP-001 choice and an explicit go-ahead.
 - Specs `#63` and run-shell § 8.1 stay open.
 
