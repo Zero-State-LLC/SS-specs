@@ -2,7 +2,7 @@
 
 ## Current handoff — 2026-11-02
 
-Runtime main is `49759ab3da23eaa11159085c5b2d4c249acb2cd2`. Specs main is `2e5186a313f2ce1265075bb2697fb79d200793f5`. The runtime pin is `393b06f7c195e6040be74d4d170e4f930d2a8845`. No parent production task is Done. BP-001 remains for the owner to record in `decisions.md`. The production order in [benchmark-production.md](../specs/001-single-level-vertical-slice/benchmark-production.md) is unchanged. The six cards on [project 27](https://github.com/orgs/Zero-State-LLC/projects/27) stay in their current columns.
+Runtime main is `93f6d672640b99de50a22a4ae63854c04db76a42`. Specs main is `828fb39b8ac472fc19828780d93061d5b32d9220`. The runtime pin is `393b06f7c195e6040be74d4d170e4f930d2a8845`. No parent production task is Done. BP-001 remains for the owner to record in `decisions.md`. The production order in [benchmark-production.md](../specs/001-single-level-vertical-slice/benchmark-production.md) is unchanged. The six cards on [project 27](https://github.com/orgs/Zero-State-LLC/projects/27) stay in their current columns.
 
 Evidence on runtime main is indexed in [the 2026-11-02 ledger](review/benchmark-evidence-2026-11-02.md).
 
@@ -38,8 +38,9 @@ Still open:
 - [x] Runtime `#195` `914a5c0`: world layers 0 through 14, the in-layer offsets, the six haptic patterns, and the cues already projected. No z position or cue was changed. This does not close T1046.
 - [x] Runtime `#196` `3e32d76`: the README row for the catalog digest note. No file was replaced.
 - [x] Runtime `#197` `49759ab`: the scene camera follow, the snapshot framing, the exposure bands, the five medal predicates, and the three shipped upgrades. No number was changed.
+- [x] Runtime `#198` `93f6d67`: player movement, the 50 percent integrity scale and the court floors, Civic Pulse, the five enemy records, the elite cycle and the four boss attacks, the three encounters, heat and awareness and the Transit Patrol, extraction and the order of one tick, eight placed cameras, and the HUD labels. No number was changed.
 - [ ] T1060. Main paints a filled Vendor mine disc. Runtime `#167` is unmerged. Specs `#92` stays held until the keyline meets the half-scale stucco requirement.
-- [ ] Phone retest and one comprehension note are human. Install runtime `49759ab`. `ingestBenchmarkEvents()` on `7f228ea` is debug-only, so the Release compile of the game still follows `31345cd`.
+- [ ] Phone retest and one comprehension note are human. Install runtime `93f6d67`. `ingestBenchmarkEvents()` on `7f228ea` is debug-only, so the Release compile of the game still follows `31345cd`.
 - [ ] T1042–T1046, T903, T904, and T905. Medal numbers stay. Enemy sheets wait on the recorded BP-001 choice and an explicit go-ahead.
 - [ ] Specs `#63` and run-shell § 8.1.
 
