@@ -2,7 +2,7 @@
 
 ## Current handoff — 2026-11-02
 
-Evidence landed since the 2026-10-25 art sequence is indexed in [the 2026-11-02 ledger](../../docs/review/benchmark-evidence-2026-11-02.md). Runtime main is `3e32d76`. That main has the direction note, the frame-01 notes, the copy-lock test, the clip-length census, the remaining idle and move frames, the boss, elite, and hurt-defeat frames after 01, the anticipate and commit frames, the Captain housings, the copied player filename rows, the shell images, the shipped audio files, the catalog digests, and the draw order and cue projection. The device-qa README indexes those notes, including the catalog digest note. The pin is `393b06f`. BP-001 remains unrecorded. The production order below is unchanged. No parent production task is Done.
+Evidence landed since the 2026-10-25 art sequence is indexed in [the 2026-11-02 ledger](../../docs/review/benchmark-evidence-2026-11-02.md). Runtime main is `49759ab`. That main has the direction note, the frame-01 notes, the copy-lock test, the clip-length census, the remaining idle and move frames, the boss, elite, and hurt-defeat frames after 01, the anticipate and commit frames, the Captain housings, the copied player filename rows, the shell images, the shipped audio files, the catalog digests, the draw order and cue projection, the camera follow, the exposure bands, the medal predicates, and the three shipped upgrades. The device-qa README indexes those notes, including the catalog digest note. The pin is `393b06f`. BP-001 remains unrecorded. The production order below is unchanged. No parent production task is Done.
 
 ## Art sequence — 2026-10-25
 
