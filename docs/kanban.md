@@ -2,7 +2,7 @@
 
 ## Current handoff — 2026-11-02
 
-Runtime main is `93f6d672640b99de50a22a4ae63854c04db76a42`. Specs main is `828fb39b8ac472fc19828780d93061d5b32d9220`. The runtime pin is `393b06f7c195e6040be74d4d170e4f930d2a8845`. No parent production task is Done. BP-001 remains for the owner to record in `decisions.md`. The production order in [benchmark-production.md](../specs/001-single-level-vertical-slice/benchmark-production.md) is unchanged. The six cards on [project 27](https://github.com/orgs/Zero-State-LLC/projects/27) stay in their current columns.
+Runtime main is `5a71391eef867b1fdcbfdbfccbaa3ab4c303352e`. Specs main is `82ddb0d01e94095efade73af1bb9b8bdb454bcf0`. The runtime pin is `393b06f7c195e6040be74d4d170e4f930d2a8845`. No parent production task is Done. BP-001 remains for the owner to record in `decisions.md`. The production order in [benchmark-production.md](../specs/001-single-level-vertical-slice/benchmark-production.md) is unchanged. The six cards on [project 27](https://github.com/orgs/Zero-State-LLC/projects/27) stay in their current columns.
 
 Evidence on runtime main is indexed in [the 2026-11-02 ledger](review/benchmark-evidence-2026-11-02.md).
 
@@ -39,8 +39,24 @@ Still open:
 - [x] Runtime `#196` `3e32d76`: the README row for the catalog digest note. No file was replaced.
 - [x] Runtime `#197` `49759ab`: the scene camera follow, the snapshot framing, the exposure bands, the five medal predicates, and the three shipped upgrades. No number was changed.
 - [x] Runtime `#198` `93f6d67`: player movement, the 50 percent integrity scale and the court floors, Civic Pulse, the five enemy records, the elite cycle and the four boss attacks, the three encounters, heat and awareness and the Transit Patrol, extraction and the order of one tick, eight placed cameras, and the HUD labels. No number was changed.
+- [x] Runtime `#199` `88398b9`: the hit order, the target order, the projectile step, the spawn socket, the forward gates, the intro sequence, the tutorial timing, the control rectangles, the presentation settings, and the camera destruction record. No number was changed.
+- [x] Runtime `#200` `30a2cc6`: pause, hit-stop, the lockdown tint, fog thinning, the player spawn, restart and rehearsal, the touch command, the upgrade cards, the caption board, and the terminal surface. No number was changed.
+- [x] Runtime `#201` `fcab4e5`: the daily seed, the daily flavour, the ghost replay, the replay identity, the run card, the terminal seal, the terminal speech, the clip frame clock, ambient motion, and the court light. No number was changed.
+- [x] Runtime `#202` `aaa7919`: enemy separation, the state digest, the Captain path, the arena bounds, camera contact, the circle slide, corner pursuit, the q8 scale, the rng streams, and the share text. No number was changed.
+- [x] Runtime `#203` `006304e`: the ricochet continuation, the run receipt, the mine step, canonical JSON, the daemon query, the enemy bands, extraction presence, the millidegree turn, the replay commands, and the spawn lethal volumes. No number was changed.
+- [x] Runtime `#204` `86c05bb`: the boss attack clock, the four resolves, the awareness alerts, the legal camera set, the combat authority node, the lethal warning, the line of fire, the observation pulse, patrol sight, and unaware movement. No number was changed.
+- [x] Runtime `#205` `5d954be`: the actor clip choice, the player clip, the reaction clips, the camera clip states, the facing direction, the telegraph preview, the exposure events, the medal record, the boss bar, and encounter completion. No number was changed.
+- [x] Runtime `#207` `d873e91`: the telegraph ring, the faction outline, the actor silhouettes, the combat feedback marks, the gate barrier, the HUD anchors, the receipt archive, settings persistence, the upgrade choice layout, and the VFX pool. No number was changed.
+- [x] Runtime `#206` `e4ff026`: the heat caption, the quiet approach tag, the drawn camera field, the patrol cone outline, the patrol near miss, the exposure pattern, the camera notch window, the spoken HUD, the takedown streak, and the tutorial line offer. No number was changed.
+- [x] Runtime `#208` `c6da67e`: the shell host, the fog drift, the ghost file, the ghost silhouette, the intro card, the settings surface, the share sheet, audio interruption, terminal access, and the title chrome. No number was changed.
+- [x] Runtime `#209` `344ed78`: the ground tint, the HUD fit, clip playback, the control chrome, the exposure fills, the heading draw, the omitted mount solids, the scene frame, the terminal chrome, and the tutorial plate. No number was changed.
+- [x] Runtime `#210` `01b4311`: the camera reticle, the enemy spark, the enemy burst, the damage impact, the exposure brackets, the lockdown frame, the ricochet trace, the step echo, the camera shatter, and the blackout card. No number was changed.
+- [x] Runtime `#212` `87ab159`: the takedown ring, the unbacked body, the camera fallback, the integrity ink, the objective ink, the decoration turn, the outline seat, the title type, the grade margin, and the notch seat. No number was changed.
+- [x] Runtime `#211` `154461a`: the captain mark, the extraction brackets, the phase slam, the spawn chevrons, the alert mark, the caption column, the outline cache, the extraction sweep, the detection ink, and the upgrade badge. No number was changed. Ordinary play stays at sampling scale 1.
+- [x] Runtime `#214` `b999175`: the mix readout, the title access labels, the lip seat, the camera badge seat, the fog grid, the ground walk, the environment filter, the phase seat, the question-mark alignment, and the stick zone. No number was changed.
+- [x] Runtime `#213` `5a71391`: the settings footers, the settings hints, the heat type, the quiet type, the streak type, the extraction numeral, the medal type, the upgrade plate, the terminal type, and the pattern ink. No number was changed.
 - [ ] T1060. Main paints a filled Vendor mine disc. Runtime `#167` is unmerged. Specs `#92` stays held until the keyline meets the half-scale stucco requirement.
-- [ ] Phone retest and one comprehension note are human. Install runtime `93f6d67`. `ingestBenchmarkEvents()` on `7f228ea` is debug-only, so the Release compile of the game still follows `31345cd`.
+- [ ] Phone retest and one comprehension note are human. Install runtime `5a71391`. `ingestBenchmarkEvents()` on `7f228ea` is debug-only, so the Release compile of the game still follows `31345cd`.
 - [ ] T1042–T1046, T903, T904, and T905. Medal numbers stay. Enemy sheets wait on the recorded BP-001 choice and an explicit go-ahead.
 - [ ] Specs `#63` and run-shell § 8.1.
 
