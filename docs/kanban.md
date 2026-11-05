@@ -2,7 +2,7 @@
 
 ## Current handoff — 2026-11-02
 
-Runtime main is `5a71391eef867b1fdcbfdbfccbaa3ab4c303352e`. Specs main is `82ddb0d01e94095efade73af1bb9b8bdb454bcf0`. The runtime pin is `393b06f7c195e6040be74d4d170e4f930d2a8845`. No parent production task is Done. BP-001 remains for the owner to record in `decisions.md`. The production order in [benchmark-production.md](../specs/001-single-level-vertical-slice/benchmark-production.md) is unchanged. The six cards on [project 27](https://github.com/orgs/Zero-State-LLC/projects/27) stay in their current columns.
+Runtime main is `ef6856517a2044db4f4375e0e44167e0938ff22b`. Specs main is `61c32d47234ed9ba3b90516d0e159a62ade5f671`. The runtime pin is `393b06f7c195e6040be74d4d170e4f930d2a8845`. No parent production task is Done. BP-001 remains for the owner to record in `decisions.md`. The production order in [benchmark-production.md](../specs/001-single-level-vertical-slice/benchmark-production.md) is unchanged. The six cards on [project 27](https://github.com/orgs/Zero-State-LLC/projects/27) stay in their current columns.
 
 Evidence on runtime main is indexed in [the 2026-11-02 ledger](review/benchmark-evidence-2026-11-02.md).
 
@@ -55,8 +55,9 @@ Still open:
 - [x] Runtime `#211` `154461a`: the captain mark, the extraction brackets, the phase slam, the spawn chevrons, the alert mark, the caption column, the outline cache, the extraction sweep, the detection ink, and the upgrade badge. No number was changed. Ordinary play stays at sampling scale 1.
 - [x] Runtime `#214` `b999175`: the mix readout, the title access labels, the lip seat, the camera badge seat, the fog grid, the ground walk, the environment filter, the phase seat, the question-mark alignment, and the stick zone. No number was changed.
 - [x] Runtime `#213` `5a71391`: the settings footers, the settings hints, the heat type, the quiet type, the streak type, the extraction numeral, the medal type, the upgrade plate, the terminal type, and the pattern ink. No number was changed.
+- [x] Runtime `#215` `ef68565`: the clip interrupt, the pitched voice, the ambient roll, the visual gate, the clip gate, the redraw order, the present pass, the court capture, the damage log, and the field cache. No number was changed.
 - [ ] T1060. Main paints a filled Vendor mine disc. Runtime `#167` is unmerged. Specs `#92` stays held until the keyline meets the half-scale stucco requirement.
-- [ ] Phone retest and one comprehension note are human. Install runtime `5a71391`. `ingestBenchmarkEvents()` on `7f228ea` is debug-only, so the Release compile of the game still follows `31345cd`.
+- [ ] Phone retest and one comprehension note are human. Install runtime `ef68565`. `ingestBenchmarkEvents()` on `7f228ea` is debug-only, so the Release compile of the game still follows `31345cd`.
 - [ ] T1042–T1046, T903, T904, and T905. Medal numbers stay. Enemy sheets wait on the recorded BP-001 choice and an explicit go-ahead.
 - [ ] Specs `#63` and run-shell § 8.1.
 

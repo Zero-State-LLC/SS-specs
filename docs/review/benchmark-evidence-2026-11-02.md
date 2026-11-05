@@ -1,6 +1,6 @@
 # Benchmark evidence — 2026-11-02
 
-Index of what is on runtime main `5a71391eef867b1fdcbfdbfccbaa3ab4c303352e`. Specs main is `82ddb0d01e94095efade73af1bb9b8bdb454bcf0`. The runtime pin is `393b06f7c195e6040be74d4d170e4f930d2a8845`. No parent production task is Done. BP-001 remains for the owner to record in `decisions.md`, with the comparison images. The production order in [benchmark-production.md](../../specs/001-single-level-vertical-slice/benchmark-production.md) is unchanged.
+Index of what is on runtime main `ef6856517a2044db4f4375e0e44167e0938ff22b`. Specs main is `61c32d47234ed9ba3b90516d0e159a62ade5f671`. The runtime pin is `393b06f7c195e6040be74d4d170e4f930d2a8845`. No parent production task is Done. BP-001 remains for the owner to record in `decisions.md`, with the comparison images. The production order in [benchmark-production.md](../../specs/001-single-level-vertical-slice/benchmark-production.md) is unchanged.
 
 `ingestBenchmarkEvents()` on this main is inside `#if DEBUG`. The Release compile of the game still follows `31345cd81ffa9a0b0a665ab4cee6b3556861c5b3`.
 
@@ -56,6 +56,7 @@ Index of what is on runtime main `5a71391eef867b1fdcbfdbfccbaa3ab4c303352e`. Spe
 | Captain mark, the phase slam, and the outline cache | `#211` `154461ab3867c45c7032191396a21510e1a7b37a` | `docs/review/device-qa/captain-mark-2026-11-05.md`, `docs/review/device-qa/extraction-brackets-2026-11-05.md`, `docs/review/device-qa/phase-slam-2026-11-05.md`, `docs/review/device-qa/spawn-chevrons-2026-11-05.md`, `docs/review/device-qa/alert-mark-2026-11-05.md`, `docs/review/device-qa/caption-column-2026-11-05.md`, `docs/review/device-qa/outline-cache-2026-11-05.md`, `docs/review/device-qa/extraction-sweep-2026-11-05.md`, `docs/review/device-qa/detection-ink-2026-11-05.md`, `docs/review/device-qa/upgrade-badge-2026-11-05.md` |
 | Mix readout, the lip seat, and the stick zone | `#214` `b9991750262a440aaee8ab2541b447b0b5ec4b26` | `docs/review/device-qa/mix-readout-2026-11-05.md`, `docs/review/device-qa/title-access-2026-11-05.md`, `docs/review/device-qa/lip-seat-2026-11-05.md`, `docs/review/device-qa/camera-badge-seat-2026-11-05.md`, `docs/review/device-qa/fog-grid-2026-11-05.md`, `docs/review/device-qa/ground-walk-2026-11-05.md`, `docs/review/device-qa/env-filter-2026-11-05.md`, `docs/review/device-qa/phase-seat-2026-11-05.md`, `docs/review/device-qa/marker-align-2026-11-05.md`, `docs/review/device-qa/stick-zone-2026-11-05.md` |
 | Settings footers, the slot type, and the pattern ink | `#213` `5a71391eef867b1fdcbfdbfccbaa3ab4c303352e` | `docs/review/device-qa/settings-footnotes-2026-11-05.md`, `docs/review/device-qa/settings-hints-2026-11-05.md`, `docs/review/device-qa/heat-type-2026-11-05.md`, `docs/review/device-qa/quiet-type-2026-11-05.md`, `docs/review/device-qa/streak-type-2026-11-05.md`, `docs/review/device-qa/extraction-numeral-2026-11-05.md`, `docs/review/device-qa/medal-type-2026-11-05.md`, `docs/review/device-qa/upgrade-plate-2026-11-05.md`, `docs/review/device-qa/terminal-type-2026-11-05.md`, `docs/review/device-qa/pattern-ink-2026-11-05.md` |
+| Clip interrupt, the contract gates, and the cached field | `#215` `ef6856517a2044db4f4375e0e44167e0938ff22b` | `docs/review/device-qa/clip-interrupt-2026-11-05.md`, `docs/review/device-qa/pitched-voice-2026-11-05.md`, `docs/review/device-qa/ambient-roll-2026-11-05.md`, `docs/review/device-qa/visual-gate-2026-11-05.md`, `docs/review/device-qa/clip-gate-2026-11-05.md`, `docs/review/device-qa/redraw-order-2026-11-05.md`, `docs/review/device-qa/present-pass-2026-11-05.md`, `docs/review/device-qa/court-capture-2026-11-05.md`, `docs/review/device-qa/damage-log-2026-11-05.md`, `docs/review/device-qa/field-cache-2026-11-05.md` |
 | Lethal warning, T1058 | `#165` `15b1c94cb117` | presentation only; gameplay digest unchanged |
 | Shell copy, T1059 | `#166` `aed7bff793f1` | `START`, `SETTINGS`, `RESTART` |
 
@@ -74,7 +75,7 @@ Issue `#128` keeps the 190×217 control at anchor `(0.5, 0)` and asserts the reg
 - The shipping walk and damage plates are on main as `#177` `7f228ea`. Device issue `#117` was closed by the owner on 2026-11-02. The phone retest and the comprehension note remain human.
 - T1060 stays open. Main paints a filled Vendor mine disc. Runtime `#167` is unmerged. Specs `#92` stays held: the hostile colour remains the proposal, and the 1-unit keyline has to get thicker before it meets the half-scale stucco requirement.
 - Specs `#93` records the T1058 and T1059 checkboxes and leaves T1060 open.
-- The phone retest and one comprehension note are human. Install `5a71391`. T903, T904, and T905 stay unrun. Medal numbers stay.
+- The phone retest and one comprehension note are human. Install `ef68565`. T903, T904, and T905 stay unrun. Medal numbers stay.
 - T1042–T1046 stay open. Enemy sheets wait on the recorded BP-001 choice and an explicit go-ahead.
 - Specs `#63` and run-shell § 8.1 stay open.
 
