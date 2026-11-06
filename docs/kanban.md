@@ -2,7 +2,7 @@
 
 ## Current handoff — 2026-11-02
 
-Runtime main is `ef6856517a2044db4f4375e0e44167e0938ff22b`. Specs main is `61c32d47234ed9ba3b90516d0e159a62ade5f671`. The runtime pin is `393b06f7c195e6040be74d4d170e4f930d2a8845`. No parent production task is Done. BP-001 remains for the owner to record in `decisions.md`. The production order in [benchmark-production.md](../specs/001-single-level-vertical-slice/benchmark-production.md) is unchanged. The six cards on [project 27](https://github.com/orgs/Zero-State-LLC/projects/27) stay in their current columns.
+Runtime main is `1e4d3fc11c94edf03aaa9515ee9eadddb1bd11ed`. Specs main is `290cea0b5c058501f04d6332aec0c1edbe48c0cc`. The runtime pin is `393b06f7c195e6040be74d4d170e4f930d2a8845`. No parent production task is Done. BP-001 remains for the owner to record in `decisions.md`. The production order in [benchmark-production.md](../specs/001-single-level-vertical-slice/benchmark-production.md) is unchanged. The six cards on [project 27](https://github.com/orgs/Zero-State-LLC/projects/27) stay in their current columns.
 
 Evidence on runtime main is indexed in [the 2026-11-02 ledger](review/benchmark-evidence-2026-11-02.md).
 
@@ -56,17 +56,23 @@ Still open:
 - [x] Runtime `#214` `b999175`: the mix readout, the title access labels, the lip seat, the camera badge seat, the fog grid, the ground walk, the environment filter, the phase seat, the question-mark alignment, and the stick zone. No number was changed.
 - [x] Runtime `#213` `5a71391`: the settings footers, the settings hints, the heat type, the quiet type, the streak type, the extraction numeral, the medal type, the upgrade plate, the terminal type, and the pattern ink. No number was changed.
 - [x] Runtime `#215` `ef68565`: the clip interrupt, the pitched voice, the ambient roll, the visual gate, the clip gate, the redraw order, the present pass, the court capture, the damage log, and the field cache. No number was changed.
+- [x] Runtime `#216` `4f9c1b5`: the evidence names, the gates, and the phone sample. No number was changed. This does not close T905 or T908.
+- [x] Runtime `#219` `e080c65`: the playtest gates, the density peak, and the seam checks. No number was changed. This does not close T903, T904, T802, or T807.
+- [x] Runtime `#220` `d629e08`: the event order, the reachability checks, and the fairness reports. No number was changed.
+- [x] Runtime `#221` `5e523ec`: the integer roots, the pilots, and the tutorial flags. The same tree has the hash padding, the effect catalog, the probe grid, the probe paths, the camera offset, the byte order, the hint latch, the offscreen sector, and the touch route. No number was changed.
+- [x] Runtime `#226` `1e4d3fc`: the camera overlay, the daemon expiry, and the pool rejects. The same tree has the court luma, the spawn mounts, and the socket lists. No number was changed.
 - [ ] T1060. Main paints a filled Vendor mine disc. Runtime `#167` is unmerged. Specs `#92` stays held until the keyline meets the half-scale stucco requirement.
-- [ ] Phone retest and one comprehension note are human. Install runtime `ef68565`. `ingestBenchmarkEvents()` on `7f228ea` is debug-only, so the Release compile of the game still follows `31345cd`.
-- [ ] T1042–T1046, T903, T904, and T905. Medal numbers stay. Enemy sheets wait on the recorded BP-001 choice and an explicit go-ahead.
-- [ ] Specs `#63` and run-shell § 8.1.
+- [ ] Phone retest and one comprehension note are human. Install runtime `1e4d3fc`. `ingestBenchmarkEvents()` on `7f228ea` is debug-only, so the Release compile of the game still follows `31345cd`.
+- [ ] T1042–T1046, T802, T903, T904, T905, and T908. Medal numbers stay. Enemy sheets wait on the recorded BP-001 choice and an explicit go-ahead.
+- [ ] No further specification is required to finish the pinned slice. `acceptance.md` already names Gates A–G. The runtime registry links 42 of those 115 ids and leaves 73 unmapped. With no playtest file and no device capture, 85 ids stay pending and both settle flags stay false, so the expansion decision stays not computable. Linking an id is not a new spec.
+- [ ] Specs `#63` and run-shell § 8.1. Specs `#92` stays held. Neither draft is the missing authority for the current audio or the filled mine disc.
 
 ## Art sequence — 2026-10-25
 
 Aaron continues from the [continuation brief](review/aaron-continuation-2026-10-25.md). Stop recorder/OBS troubleshooting; retain the0.375-second Player candidate and bounded visual approval. Prioritize remaining Player releases/facings/actions, then shared-scene integration and direct iPhone validation. Live cadence/performance remain unverified and required before production admission; they do not block further source work. Historical recorder-dependent next-step notes below are superseded for sequencing only. No parent production task is Done.
 
 
-Updated 2026-11-02. Repository planning mirror of [SS-specs + SS-runtime — Benchmark](https://github.com/orgs/Zero-State-LLC/projects/27). Canonical parent tasks: [tasks.md](../specs/001-single-level-vertical-slice/tasks.md). Current evidence: [2026-11-02 ledger](review/benchmark-evidence-2026-11-02.md). Earlier evidence and exit gates: [next-step plan](review/benchmark-status-2026-10-15.md). No parent production task is Done. The six project cards stay in their current columns.
+Updated 2026-11-06. Repository planning mirror of [SS-specs + SS-runtime — Benchmark](https://github.com/orgs/Zero-State-LLC/projects/27). Canonical parent tasks: [tasks.md](../specs/001-single-level-vertical-slice/tasks.md). Current evidence: [2026-11-02 ledger](review/benchmark-evidence-2026-11-02.md). Earlier evidence and exit gates: [next-step plan](review/benchmark-status-2026-10-15.md). No parent production task is Done. The six project cards stay in their current columns.
 
 ## Current priority — player first (2026-10-19)
 
