@@ -2,7 +2,7 @@
 
 ## Current handoff — 2026-11-02
 
-Runtime main is `1e4d3fc11c94edf03aaa9515ee9eadddb1bd11ed`. Specs main is `290cea0b5c058501f04d6332aec0c1edbe48c0cc`. The runtime pin is `393b06f7c195e6040be74d4d170e4f930d2a8845`. No parent production task is Done. BP-001 remains for the owner to record in `decisions.md`. The production order in [benchmark-production.md](../specs/001-single-level-vertical-slice/benchmark-production.md) is unchanged. The six cards on [project 27](https://github.com/orgs/Zero-State-LLC/projects/27) stay in their current columns.
+Runtime main is `1e9ac9d0de1c0ab284a75e99fa1a577558a293f3`. Specs main is `8520aa99edb3865a873ac620235eaead6823e21c`. The runtime pin is `b1ed874e1e8eb0e61b2174b9093201e9a61e1a4b`. No parent production task is Done. BP-001 remains for the owner to record in `decisions.md`. The production order in [benchmark-production.md](../specs/001-single-level-vertical-slice/benchmark-production.md) is unchanged. The six cards on [project 27](https://github.com/orgs/Zero-State-LLC/projects/27) stay in their current columns.
 
 Evidence on runtime main is indexed in [the 2026-11-02 ledger](review/benchmark-evidence-2026-11-02.md).
 
@@ -12,7 +12,7 @@ Evidence on runtime main is indexed in [the 2026-11-02 ledger](review/benchmark-
 - [x] Enemy sprite bounds `#174` `d4a8eb9`. Five standard enemies, canvas 64×64, anchor `(32, 56)`. Radii are unchanged. No new sheet.
 - [x] Device-sitting bot column `#175` `70fb1dd`. It is not a PASS/FAIL row. T903 and T904 stay open.
 - [x] Issue `#128` closed by `#176` `a3e5711`. The shared-camera test keeps the 190×217 control and asserts the registered square anchor `(653, 1152)`. The assert leaves projection acceptance open.
-- [x] T1058 is runtime `#165` `15b1c94cb117`. T1059 is runtime `#166` `aed7bff793f1`. The tasks.md checkboxes are specs `#93`. T1060 stays open.
+- [x] T1058 is runtime `#165` `15b1c94cb117`. T1059 is runtime `#166` `aed7bff793f1`. The tasks.md checkboxes for those two are specs `#93`. T1060 is runtime `#228` `1e9ac9d`.
 - [x] Device-sitting probe `#168` `b1411546cb66`.
 
 Still open:
@@ -61,11 +61,11 @@ Still open:
 - [x] Runtime `#220` `d629e08`: the event order, the reachability checks, and the fairness reports. No number was changed.
 - [x] Runtime `#221` `5e523ec`: the integer roots, the pilots, and the tutorial flags. The same tree has the hash padding, the effect catalog, the probe grid, the probe paths, the camera offset, the byte order, the hint latch, the offscreen sector, and the touch route. No number was changed.
 - [x] Runtime `#226` `1e4d3fc`: the camera overlay, the daemon expiry, and the pool rejects. The same tree has the court luma, the spawn mounts, and the socket lists. No number was changed.
-- [ ] T1060. Main paints a filled Vendor mine disc. Runtime `#167` is unmerged. Specs `#92` stays held until the keyline meets the half-scale stucco requirement.
-- [ ] Phone retest and one comprehension note are human. Install runtime `1e4d3fc`. `ingestBenchmarkEvents()` on `7f228ea` is debug-only, so the Release compile of the game still follows `31345cd`.
+- [x] T1060 is runtime `#228` `1e9ac9d`. Main draws the Vendor mine as a clear ring. One light neutral stroke, white 0.92 at alpha 0.95, width 2 while arming and 4 while armed. Arm 30, life 240, radius 42, damage 12, and the cap of two are unchanged. The renderer test is `AppTests/MineRingPresentationTests.swift`. Runtime `#167` stays on `feat/d120-shell-copy`. Specs `#92` stays held until the keyline meets the half-scale stucco requirement.
+- [ ] Phone retest and one comprehension note are human. Install runtime `1e9ac9d`. `ingestBenchmarkEvents()` on `7f228ea` is debug-only, so the Release compile of the game still follows `31345cd`.
 - [ ] T1042–T1046, T802, T903, T904, T905, and T908. Medal numbers stay. Enemy sheets wait on the recorded BP-001 choice and an explicit go-ahead.
 - [ ] No further specification is required to finish the pinned slice. `acceptance.md` already names Gates A–G. The runtime registry links 42 of those 115 ids and leaves 73 unmapped. With no playtest file and no device capture, 85 ids stay pending and both settle flags stay false, so the expansion decision stays not computable. Linking an id is not a new spec.
-- [ ] Specs `#63` and run-shell § 8.1. Specs `#92` stays held. Neither draft is the missing authority for the current audio or the filled mine disc.
+- [ ] Specs `#63` and run-shell § 8.1. Specs `#92` stays held. Neither draft is the missing authority for the current audio. The Vendor mine ring is runtime `#228`.
 
 ## Art sequence — 2026-10-25
 

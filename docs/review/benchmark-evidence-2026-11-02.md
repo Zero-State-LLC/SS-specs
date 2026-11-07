@@ -1,6 +1,6 @@
 # Benchmark evidence — 2026-11-02
 
-Index of what is on runtime main `1e4d3fc11c94edf03aaa9515ee9eadddb1bd11ed`, brought current on 2026-11-06. Specs main is `290cea0b5c058501f04d6332aec0c1edbe48c0cc`. The runtime pin is `393b06f7c195e6040be74d4d170e4f930d2a8845`. No parent production task is Done. BP-001 remains for the owner to record in `decisions.md`, with the comparison images. The production order in [benchmark-production.md](../../specs/001-single-level-vertical-slice/benchmark-production.md) is unchanged.
+Index of what is on runtime main `1e9ac9d0de1c0ab284a75e99fa1a577558a293f3`, brought current on 2026-11-06. Specs main is `8520aa99edb3865a873ac620235eaead6823e21c`. The runtime pin is `b1ed874e1e8eb0e61b2174b9093201e9a61e1a4b`. No parent production task is Done. BP-001 remains for the owner to record in `decisions.md`, with the comparison images. The production order in [benchmark-production.md](../../specs/001-single-level-vertical-slice/benchmark-production.md) is unchanged.
 
 `ingestBenchmarkEvents()` on this main is inside `#if DEBUG`. The Release compile of the game still follows `31345cd81ffa9a0b0a665ab4cee6b3556861c5b3`.
 
@@ -64,6 +64,7 @@ Index of what is on runtime main `1e4d3fc11c94edf03aaa9515ee9eadddb1bd11ed`, bro
 | Camera overlay, the daemon expiry, and the pool rejects | `#226` `1e4d3fc11c94edf03aaa9515ee9eadddb1bd11ed` | `docs/review/device-qa/camera-assert-2026-11-06.md`, `docs/review/device-qa/camera-overlay-2026-11-05.md`, `docs/review/device-qa/captain-field-2026-11-05.md`, `docs/review/device-qa/closest-point-2026-11-05.md`, `docs/review/device-qa/court-luma-2026-11-06.md`, `docs/review/device-qa/daemon-expiry-2026-11-05.md`, `docs/review/device-qa/defeat-count-2026-11-05.md`, `docs/review/device-qa/diagnostic-seal-2026-11-05.md`, `docs/review/device-qa/display-delta-2026-11-05.md`, `docs/review/device-qa/fog-clock-2026-11-06.md`, `docs/review/device-qa/fog-unbacked-2026-11-06.md`, `docs/review/device-qa/medal-directory-2026-11-06.md`, `docs/review/device-qa/outline-weight-2026-11-05.md`, `docs/review/device-qa/patrol-spawn-2026-11-06.md`, `docs/review/device-qa/pool-rejects-2026-11-05.md`, `docs/review/device-qa/socket-lists-2026-11-06.md`, `docs/review/device-qa/spawn-mounts-2026-11-06.md`, `docs/review/device-qa/view-clamp-2026-11-05.md` |
 | Lethal warning, T1058 | `#165` `15b1c94cb117` | presentation only; gameplay digest unchanged |
 | Shell copy, T1059 | `#166` `aed7bff793f1` | `START`, `SETTINGS`, `RESTART` |
+| Vendor mine ring, T1060 | `#228` `1e9ac9d0de1c0ab284a75e99fa1a577558a293f3` | `AppTests/MineRingPresentationTests.swift`; clear fill, white 0.92 at alpha 0.95, width 2 while arming and 4 while armed |
 
 Shipping mapping remains `(x, -y)`. On the midpoint plate, world-south still reads down-right. The recommendation is to keep the shipping mapping. That recommendation is not a record in `decisions.md`.
 
@@ -78,11 +79,11 @@ Issue `#128` keeps the 190×217 control at anchor `(0.5, 0)` and asserts the reg
 ## Open
 
 - The shipping walk and damage plates are on main as `#177` `7f228ea`. Device issue `#117` was closed by the owner on 2026-11-02. The phone retest and the comprehension note remain human.
-- T1060 stays open. Main paints a filled Vendor mine disc. Runtime `#167` is unmerged. Specs `#92` stays held: the hostile colour remains the proposal, and the 1-unit keyline has to get thicker before it meets the half-scale stucco requirement.
-- Specs `#93` records the T1058 and T1059 checkboxes and leaves T1060 open.
-- The phone retest and one comprehension note are human. Install `1e4d3fc`. T802, T903, T904, T905, and T908 stay unrun. Medal numbers stay.
+- T1060 is runtime `#228` `1e9ac9d`. Main draws the Vendor mine as a clear ring. The renderer test is `AppTests/MineRingPresentationTests.swift`. Runtime `#167` stays on `feat/d120-shell-copy`. Specs `#92` stays held: the hostile colour remains the proposal, and the 1-unit keyline has to get thicker before it meets the half-scale stucco requirement.
+- Specs `#93` records the T1058 and T1059 checkboxes. This handoff checks T1060.
+- The phone retest and one comprehension note are human. Install `1e9ac9d`. T802, T903, T904, T905, and T908 stay unrun. Medal numbers stay.
 - T1042–T1046 stay open. Enemy sheets wait on the recorded BP-001 choice and an explicit go-ahead.
 - No further specification is required to finish the pinned slice. `acceptance.md` already names Gates A–G. The runtime registry links 42 of those 115 ids and leaves 73 unmapped. With no playtest file and no device capture, 85 ids stay pending and both settle flags stay false, so the expansion decision stays not computable. Linking an id is not a new spec.
-- Specs `#63` and run-shell § 8.1 stay open. Specs `#92` stays held. Neither draft is the missing authority for the current audio or the filled mine disc.
+- Specs `#63` and run-shell § 8.1 stay open. Specs `#92` stays held. Neither draft is the missing authority for the current audio. The Vendor mine ring is runtime `#228`.
 
 The phone sitting names whatever runtime main is installed. `7f228ea` adds a debug-only ingest. The Release compile of the game still follows `31345cd`.
