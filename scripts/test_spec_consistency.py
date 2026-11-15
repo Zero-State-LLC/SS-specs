@@ -94,6 +94,8 @@ class SpecConsistencyTests(unittest.TestCase):
         for path, value in [(("schemaVersion",), "run-receipt-001"),
                             (("identity", "rulesetVersion"), "ss-rules-999"),
                             (("seed",), 18446744073709551616),
+                            (("finalDigest",), "a" * 64 + "\n"),
+                            (("cameraDestructions", 0, "cameraId"), "1\n"),
                             (("objectives", "extractionArmed"), "false"),
                             (("exposure", "finalState"), "unknown"),
                             (("upgrade",), "signalJammer"),
