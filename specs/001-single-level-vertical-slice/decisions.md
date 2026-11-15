@@ -375,11 +375,11 @@ Task: T1059. The runtime adopts this only after this commit is on main, and only
 
 Task: T1060. The runtime adopts this only after this commit is on main.
 
-## D-122 — versioned diagnostic receipt reconciliation (2026-11-15)
+## D-123 — versioned diagnostic receipt reconciliation (2026-11-15)
 
 **ACCEPTED direction:** the owner accepted the receipt intent and authorized execution at 23:18 UTC on 2026-11-15. [Receipt contract migration](receipt-contract-migration.md) specifies that direction before runtime implementation. This does not authorize merging or mark runtime acceptance complete.
 
 - Adopt `run-receipt-002` for new writes, with strict nested types, retained Camera summaries and `objectives.extractionArmed`, and null or exact upgrade ID plus `upgrades-003` object.
-- Preserve historical v1 schema bytes and archive bytes. Historical v1 reads are historical-unverified, v2 reads recognize identity without certification, unsupported/unrecognized identities are reported without repair.
+- Preserve historical v1 schema bytes and archive bytes. Historical v1 reads use `formatStatus: .historicalUnverified`, v2 reads use `.currentUnverified` without certification, and unsupported/unrecognized identities use `.unrecognized` without repair.
 - Preserve ruleset-014, content-009, arena-004, replay schema, golden gameplay digests, canonical ordering, atomic writes and newest-50 retention. No gameplay or result-surface expansion.
 - RC-001–RC-008 and F-018 require actual serialization, independent schema validation and retained semantic assertions. Runtime evidence is pending. Task T1061.

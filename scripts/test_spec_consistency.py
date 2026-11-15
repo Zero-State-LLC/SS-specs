@@ -16,6 +16,18 @@ SPEC = ROOT / "specs/001-single-level-vertical-slice"
 
 
 class SpecConsistencyTests(unittest.TestCase):
+    def test_receipt_archive_status_and_decision_references(self):
+        migration = (SPEC / "receipt-contract-migration.md").read_text()
+        decisions = (SPEC / "decisions.md").read_text()
+        tasks = (SPEC / "tasks.md").read_text()
+        self.assertIn("Decision: D-123.", migration)
+        self.assertIn("## D-123 — versioned diagnostic receipt", decisions)
+        self.assertIn("T1061 Adopt the D-123 receipt repair", tasks)
+        for status in (".currentUnverified", ".historicalUnverified", ".unrecognized"):
+            self.assertIn(status, migration)
+            self.assertIn(status, decisions)
+        self.assertIn("Reading alone does not certify schema conformance", migration)
+
     def test_receipt_v2_contract_regressions(self):
         # Synthetic shape coverage, not a claim of runtime serialization evidence.
         schema = json.loads((ROOT / "contracts/run-receipt-002.schema.json").read_text())

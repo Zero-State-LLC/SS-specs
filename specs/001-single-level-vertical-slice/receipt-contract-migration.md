@@ -2,7 +2,7 @@
 
 Status: CANONICAL
 Contract version: `run-receipt-002`
-Decision: D-122. Intent: [accepted receipt reconciliation](../../intent/2026-11-15-receipt-contract-reconciliation.md).
+Decision: D-123. Intent: [accepted receipt reconciliation](../../intent/2026-11-15-receipt-contract-reconciliation.md).
 
 ## Observable contract
 
@@ -45,9 +45,9 @@ Semantic checks supplement structural schema validation: duplicated Camera summa
 
 ## Archive compatibility
 
-The historical `run-receipt-001.schema.json` bytes MUST remain unchanged. Archive reads preserve original bytes and declared identities. A v1 archive is readable as **historical-unverified**, including legacy receipts that do not conform to that historical schema. It is never relabeled, repaired, or certified as v2.
+The historical `run-receipt-001.schema.json` bytes MUST remain unchanged. Archive reads preserve original bytes and declared identities. A v1 archive is readable with `formatStatus: .historicalUnverified` (**historical-unverified**), including legacy receipts that do not conform to that historical schema. It is never relabeled, repaired, or certified as v2.
 
-A v2 archive read recognizes the identity only. Reading alone does not certify schema conformance. Unknown, malformed, non-string or missing schema identities, malformed JSON and non-object roots are reported **unsupported/unrecognized**, with original bytes untouched. Recognition is not validation. No automatic conversion, deletion or rewrite is authorized by this migration. Normal existing retention still applies.
+A v2 archive read returns `formatStatus: .currentUnverified` and recognizes the identity only. Reading alone does not certify schema conformance. Unknown, malformed, non-string or missing schema identities, malformed JSON and non-object roots are reported with `formatStatus: .unrecognized` (**unsupported/unrecognized**), with original bytes untouched. Recognition is not validation. No automatic conversion, deletion or rewrite is authorized by this migration. Normal existing retention still applies.
 
 New archive writes accept only the current v2 identity. A caller-mutated v1, unknown or missing writer identity is rejected, not normalized or silently stamped v2. Keep canonical JSON, existing atomic write behavior, filename convention, and newest-50 retention, including eviction only after a successful new write. No general JSON Schema engine is required in Swift. Independent schema validation of real serialized output supplies conformance evidence, not archive-read classification.
 
@@ -59,7 +59,7 @@ New archive writes accept only the current v2 identity. A caller-mutated v1, unk
 | RC-002 | Each of three selections validates as exact ID plus upgrades-003, and no-selection validates as null. Strings, unknown IDs, missing contractVersion and extra fields fail. |
 | RC-003 | Missing root/nested evidence, extra root/nested keys, malformed types/enums, unknown schema/gameplay identities and UInt64 overflow fail independent validation. |
 | RC-004 | Camera summaries, partial and complete Network Blackout, ordered destructions, extractionArmed and both boss phase projections retain existing semantic assertions. No Extraction gameplay condition changes. |
-| RC-005 | Legacy v1 bytes read as historical-unverified, including the recorded nonconformant legacy shape; v2 reads are recognized but not thereby certified. Unknown/malformed/missing identities report unsupported/unrecognized without rewriting bytes. |
+| RC-005 | Legacy v1 bytes read with `formatStatus: .historicalUnverified`, including the recorded nonconformant legacy shape; v2 reads use `.currentUnverified`, not certification. Unknown/malformed/missing identities report `.unrecognized` without rewriting bytes. |
 | RC-006 | New writes use v2 only; caller-mutated unsupported writer identity fails before archive creation or retention mutation. Atomic writes and the 51st-receipt eviction contract pass unchanged. |
 | RC-007 | Existing replay/golden-state and settings-separation tests pass without changed expected gameplay digests, identities or weakened assertions. |
 | RC-008 | v1 schema bytes remain identical to the historical baseline; registry and bundled v2 schema match. Consumer inventory covers writer, local archive reader, contract loader/parity and diagnostic validators. External consumers remain NOT_COMPUTABLE until inspected. |
