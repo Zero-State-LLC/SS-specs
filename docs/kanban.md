@@ -1,8 +1,10 @@
 # SS benchmark kanban
 
-## Current handoff — 2026-11-02
+## Current handoff — 2026-11-15 UTC
 
-Runtime main is `1e9ac9d0de1c0ab284a75e99fa1a577558a293f3`. Specs main is `8520aa99edb3865a873ac620235eaead6823e21c`. The runtime pin is `b1ed874e1e8eb0e61b2174b9093201e9a61e1a4b`. No parent production task is Done. BP-001 remains for the owner to record in `decisions.md`. The production order in [benchmark-production.md](../specs/001-single-level-vertical-slice/benchmark-production.md) is unchanged. The six cards on [project 27](https://github.com/orgs/Zero-State-LLC/projects/27) stay in their current columns.
+Merged runtime main is `f21903e616806c252b2f1660d96977eed5d7054c` (runtime #230). Merged specs main is `c8b253b18ed2b7276512145d810b729ba20c3aaa` (specs #111). The runtime pin remains `b1ed874e1e8eb0e61b2174b9093201e9a61e1a4b`. The audit changes reconcile feedback lifecycle/audio ownership and specification consistency without changing gameplay identities or granting production acceptance. No parent production task is Done. BP-001 remains for the owner to record in `decisions.md`. The production order in [benchmark-production.md](../specs/001-single-level-vertical-slice/benchmark-production.md) is unchanged. The six cards on [project 27](https://github.com/orgs/Zero-State-LLC/projects/27) stay in their current columns.
+
+Audit CI follow-through: specs #113 and runtime #232 run the existing audit regression scripts in existing CI jobs, tracked by specs #112 and runtime #231. Their CI/review status must be checked on GitHub; no merge or new approval is inferred here. See [the CI coverage receipt](review/audit-regression-ci.md). No remote Projects synchronization is claimed.
 
 Evidence on runtime main is indexed in [the 2026-11-02 ledger](review/benchmark-evidence-2026-11-02.md).
 
