@@ -4,15 +4,98 @@
 Run from any directory: python3 -B scripts/test_spec_consistency.py
 """
 from pathlib import Path
+from copy import deepcopy
+import hashlib
 import json
 import re
 import unittest
+from jsonschema import Draft202012Validator
 
 ROOT = Path(__file__).resolve().parents[1]
 SPEC = ROOT / "specs/001-single-level-vertical-slice"
 
 
 class SpecConsistencyTests(unittest.TestCase):
+    def test_receipt_v2_contract_regressions(self):
+        # Synthetic shape coverage, not a claim of runtime serialization evidence.
+        schema = json.loads((ROOT / "contracts/run-receipt-002.schema.json").read_text())
+        validator = Draft202012Validator(schema)
+        receipt = {
+            "schemaVersion": "run-receipt-002",
+            "identity": {"rulesetVersion": "ss-rules-014", "contentVersion": "civic-seam-content-009",
+                         "arenaVersion": "civic-seam-arena-004", "replaySchemaVersion": "runtime-kernel-001"},
+            "seed": 1, "outcome": "failure", "elapsedTicks": 1, "finalDigest": "a" * 64,
+            "player": {"finalIntegrity": 0, "damageTaken": 100, "integrityRestored": 0},
+            "exposure": {"final": 0, "peak": 0, "finalState": "hidden", "lockdownEntered": False},
+            "combat": {"damageDealt": 0, "defeatsByArchetype": {}},
+            "objectives": {
+                "combatAuthority": {"mobEncountersComplete": 0, "mobEncountersRequired": 3, "currentNode": "M-A",
+                                    "elite": {"id": "improper-search-daemon", "defeated": False},
+                                    "boss": {"id": "algorithmic-moderate", "defeated": False, "phasesReached": []},
+                                    "complete": False},
+                "networkBlackout": {"camerasDestroyed": 0, "camerasTotal": 8, "complete": False},
+                "extractionArmed": False},
+            "cameraPlacement": {"version": "camera-placement-001", "placementSeed": 1, "selectedSockets": [
+                {"socketId": "socket-01", "cameraEntityId": 18446744073709551615, "housingFamily": "municipalDome"}]},
+            "cameraDestructions": [{"cameraId": "18446744073709551615", "tick": 1,
+                                    "housingFamily": "municipalDome", "wasDetectingPlayer": False,
+                                    "source": "civicPulse", "exposureBefore": 0, "exposureAfter": 0,
+                                    "triggeredLockdown": False}],
+            "camerasDamaged": 1, "camerasDestroyed": 1, "tamperExposureApplied": 0,
+            "cameraObjective": {"destroyed": 1, "total": 8, "complete": False},
+            "upgrade": None, "boss": {"phasesReached": [], "defeated": False}, "diagnostics": [],
+            "presentation": {"tutorialsEnabled": True, "hudScale": 1000, "handedness": "right",
+                             "reducedMotion": False, "reducedFlash": False, "reducedSensory": False}}
+        for outcome in ("success", "failure", "invalid"):
+            for upgrade in (None, *({"id": item, "contractVersion": "upgrades-003"}
+                                   for item in ("signalJammer", "ricochetPulse", "ghostStep"))):
+                candidate = deepcopy(receipt)
+                candidate.update(outcome=outcome, upgrade=upgrade)
+                validator.validate(candidate)
+
+        def objects(value, path=()):
+            if isinstance(value, dict):
+                yield path, value
+                for key, child in value.items():
+                    yield from objects(child, path + (key,))
+            elif isinstance(value, list):
+                for index, child in enumerate(value):
+                    yield from objects(child, path + (index,))
+
+        def at(value, path):
+            for key in path:
+                value = value[key]
+            return value
+
+        # Every fixed object's required keys and additional-property boundary.
+        for path, value in objects(receipt):
+            if path == ("combat", "defeatsByArchetype"):
+                continue
+            for key in value:
+                candidate = deepcopy(receipt)
+                del at(candidate, path)[key]
+                self.assertFalse(validator.is_valid(candidate), (path, key))
+            candidate = deepcopy(receipt)
+            at(candidate, path)["unexpected"] = True
+            self.assertFalse(validator.is_valid(candidate), path)
+
+        for path, value in [(("schemaVersion",), "run-receipt-001"),
+                            (("identity", "rulesetVersion"), "ss-rules-999"),
+                            (("seed",), 18446744073709551616),
+                            (("objectives", "extractionArmed"), "false"),
+                            (("exposure", "finalState"), "unknown"),
+                            (("upgrade",), "signalJammer"),
+                            (("upgrade",), {"id": "unknown", "contractVersion": "upgrades-003"}),
+                            (("upgrade",), {"id": "ghostStep"}),
+                            (("upgrade",), {"id": "ghostStep", "contractVersion": "upgrades-003", "extra": 1})]:
+            candidate = deepcopy(receipt)
+            at(candidate, path[:-1])[path[-1]] = value
+            self.assertFalse(validator.is_valid(candidate), path)
+        versions = json.loads((ROOT / "contracts/versions.json").read_text())
+        self.assertEqual(versions["componentContracts"]["runReceipt"], "run-receipt-002")
+        self.assertEqual(hashlib.sha256((ROOT / "contracts/run-receipt-001.schema.json").read_bytes()).hexdigest(),
+                         "b163b06de53e56bdc93610ac463eacc9c3af8eca97c51c38187d430b405bb325")
+
     def test_lockdown_epochs_and_release_timing(self):
         spec = (SPEC / "spec.md").read_text()
         exposure = (SPEC / "exposure.md").read_text()

@@ -91,11 +91,14 @@ After arming, the Player must still enter Phoenix Steps and complete the specifi
 
 ## 6. Receipt
 
+This is the `objectives` object in `run-receipt-002`, per [receipt-contract-migration.md](receipt-contract-migration.md) RC-001, RC-003 and RC-004. `currentNode` identifies the current combat-authority node. `extractionArmed` remains a boolean, not a second Extraction condition.
+
 ```json
 {
   "combatAuthority": {
     "mobEncountersComplete": 0,
     "mobEncountersRequired": 3,
+    "currentNode": "M-A",
     "elite": {
       "id": "improper-search-daemon",
       "defeated": false

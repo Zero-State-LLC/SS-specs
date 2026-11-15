@@ -139,6 +139,7 @@ Run three consecutive complete runs on a physical iPhone 12 or approved no-bette
 - [ ] F-015 UI-001 through UI-008 pass on every device class and handedness mode.
 - [ ] F-016 AH-001 through AH-006 pass with audio/haptics both enabled and disabled.
 - [ ] F-017 ER-001 through ER-008 pass, including canonical JSON and UInt64 ID round-trip.
+- [ ] F-018 RC-001 through RC-008 in [receipt-contract-migration.md](receipt-contract-migration.md) pass using actual runtime serialization and independent strict v2 schema validation. Retain all existing semantic assertions, golden digests, archive atomicity and retention checks. Archive recognition alone is not certification.
 
 ## Gate G — Playtest signal
 

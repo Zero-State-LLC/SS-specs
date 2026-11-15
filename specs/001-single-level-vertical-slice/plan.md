@@ -126,12 +126,15 @@ The following artifacts are normative:
 - `audio-haptics.md`: event projection, priorities, coalescence, music states, and captions
 - `events-receipts-replays.md`: event ordering, receipt persistence, replay validation, and results
 - `contracts/event-001.schema.json` and `event-catalog-001.json`: authoritative event envelope and payload catalog
-- `contracts/run-receipt-001.schema.json`: terminal receipt envelope
+- `contracts/run-receipt-002.schema.json`: strict terminal receipt envelope; historical v1 remains immutable
+- `receipt-contract-migration.md`: RC-001–RC-008, v2-only writer and non-certifying archive identity classification
 - `contracts/asset-record-001.schema.json`: fail-closed provenance and runtime asset intake record
 - `fixtures/kernel-vectors-001.json` and `fixtures/replay-smoke-001.json`: initial implementation fixtures
 - `completeness-audit.md`: runtime creation gate and evidence boundary
 - `contracts/presentation-assets-003.json`: required runtime-facing HUD, telegraph, objective, and audio IDs
 - `visual-production.md`: blockout-first workflow, provenance, intake, review plates, and budgets
+
+Receipt migration implementation order is T1061: bundle and parity, serializer, archive identity classification, independent actual-output validation, then unchanged golden and persistence checks. Swift needs no general schema engine. Reuse existing validation and runtime CI. Apply contributor Workflows from AGENTS.md: FM-AS-01–FM-AS-07 for bounded testable changes, FM-PS-04 and FM-PS-06 for fail-closed authority, and FM-DOC-01 for explicit contracts. Runtime evidence remains pending, not inferred from schema validity.
 
 Final art begins only after grayscale blockout, collision truth, Camera truth, and dense-frame readability pass.
 

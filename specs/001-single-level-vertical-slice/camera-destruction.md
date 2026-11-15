@@ -332,6 +332,8 @@ Camera destruction may make traversal safer, but neither a specific Camera nor N
 
 Run receipt summary:
 
+These fields remain required by `run-receipt-002`; [receipt-contract-migration.md](receipt-contract-migration.md) RC-001, RC-003 and RC-004 bind their types and retained semantic assertions. This migration does not change Camera rules or make Network Blackout required for Extraction.
+
 ```json
 {
   "camerasDamaged": 0,

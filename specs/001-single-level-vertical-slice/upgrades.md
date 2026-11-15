@@ -5,6 +5,8 @@ Contract version: `upgrades-003`
 
 ## Selection
 
+The selected upgrade receipt field in `run-receipt-002` is exactly an object with `id` and `contractVersion: upgrades-003`, or null before selection, per [receipt-contract-migration.md](receipt-contract-migration.md) RC-002. No upgrade effect or selection timing changes.
+
 Immediately after M-A completes, offer exactly these three choices in this order:
 
 0. Signal Jammer
