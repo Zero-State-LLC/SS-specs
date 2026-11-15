@@ -120,11 +120,12 @@ and it does not add a control.
 
 ### 7.2 RESOLVED (D-081) — What else, if anything, the surface reports
 
-The run receipt carries seed, elapsed ticks, damage dealt and taken, exposure
-peak, cameras destroyed, Network Blackout, boss phases, and more. The surface
-currently reports none of it. Whether any is player-facing — as opposed to
-evidence-only — is undecided. Testers need the seed for `T903`/`T904` evidence;
-a player arguably does not.
+The run receipt carries diagnostic identity and statistics, including seed,
+elapsed ticks, damage dealt and taken, numeric Exposure peak, Cameras destroyed,
+Network Blackout and boss phases. These receipt fields are not a requirement
+to display them all. FR-045 separates receipt evidence, the terminal card, and
+Share. Testers use the evidence-only seed for `T903`/`T904`; the card uses the
+highest Detection State, not numeric Exposure.
 
 Resolved by D-081: the terminal surface shows the run card in § 11. The seed
 itself stays evidence-only; the player sees the date it came from.

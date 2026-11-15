@@ -225,13 +225,16 @@ T301 and T700 were implemented but uncited until SS-runtime #83 (merged 2026-09-
 
 **Art reconciliation (2026-09-23).** T509, T601, and T603 were recorded `NOT_PRODUCED` on 2026-09-09 (#27) without a cross-check against `asset-catalog-001`, which already held their delivered, admitted, hashed assets. Closed above on that catalog evidence. Its three open observations are resolved: the Captain vocabulary by D-068 (the generic names had already been retired from `animation.md` in #6 on 2026-09-04 — that observation was mistaken), self-referencing reduced-motion clips by D-069, and the retired Guard and Interceptor roles by D-070.
 
-The 25 unchecked tasks above are **not agent-closable**. Each is a *run*, *record*, *measure*, *decide*, or *produce* item whose closure needs an input this specification does not own, and none of them may be closed on the strength of a harness. They group into six kinds, each with its required owner or input:
+The checkbox rows in this file are the canonical task-status source; docs/kanban.md is a planning mirror, not an independent closure ledger. T807 remains checked on the recorded SS-runtime #32 evidence for bundle exclusions. That historical check does not approve the current D-104 production revision or close its open tasks. No new acceptance is inferred from the mirror.
 
-- **Device (iPhone 12 performance floor / supported matrix)** — T406, T606, T901, T905.
-- **Human judgment / decision** — T306, T506, T802, T804, T806, T907, T908 (the expansion gate and any D-register decision require the owner specialist, Danny).
-- **Artist / production** — T503, T504, T505, T507, T508, T602, T800.
+The 28 unchecked tasks across this file are **not agent-closable**. Each needs external evidence or an owner decision; none may close on the strength of a harness. They group into six kinds, each with its required owner or input (each task appears once; the table below gives detailed blockers):
+
+- **Device (iPhone 12 performance floor / supported matrix)** — T406, T606, T901, T905, T1050.
+- **Human judgment / decision** — T306, T506, T802, T804, T806, T902, T907, T908 (the expansion gate and any D-register decision require the owner specialist, Danny).
+- **Artist / production** — T503, T504, T505, T508, T1042, T1043, T1044, T1045, T1046.
 - **Legacy archaeology** — T101, T105.
 - **Developer (defect closure)** — T906.
+- **Human pacing / playtests** — T305, T903, T904.
 
 A harness is a collector of evidence, not evidence. SS-runtime #34–#41 ship the peak-density profiler, replay matrix, playtest loader, gate registry, defect registry, release-evidence store, and expansion-gate report; each stays a collector until it has captured a real device run, a named participant, or a recorded decision. The pending decisions **D-020** (which physical devices are approved equivalents for the four device classes) and **D-021** (the exact measured ceilings) remain `DECISION_PENDING` and MUST NOT be replaced with invented answers; they block the device-class tasks until the owner records them.
 
