@@ -4,7 +4,9 @@
 
 **Date:** 2026-11-15
 
-**Status:** draft
+**Status:** accepted
+
+**Acceptance:** Owner explicitly accepted the versioned-receipt direction and authorized execution on 2026-11-15 at 23:18 UTC.
 **Next stage:** `spec.md`
 
 ## Problem
@@ -38,7 +40,7 @@ An archive that cannot be validated undermines the existing diagnostic evidence 
 
 ## Constraints/non-goals
 
-- This file is a draft intent only. It does not adopt a schema, specify an exact wire shape, authorize a runtime change, or mark the defect fixed.
+- This accepted intent authorizes specification and implementation of the versioned diagnostic contract. It does not itself adopt a schema, mark the defect fixed, authorize merging PRs or close acceptance gates.
 - Preserve Constitution Articles III, IV and VII and the one-level scope. No gameplay, simulation ordering, upgrade effects, Camera rules, Extraction predicate, ruleset/content/arena or replay digest change is intended.
 - Preserve canonical ordering, atomic archive writes and the existing 50-receipt retention contract. Do not rewrite or delete historical receipts as a migration shortcut.
 - No networking, analytics upload, new dependencies or generalized schema framework is proposed by this intent.
