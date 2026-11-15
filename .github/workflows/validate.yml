@@ -14,4 +14,6 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install --quiet jsonschema
+      - name: Test specification audit consistency
+        run: python3 -B scripts/test_spec_consistency.py
       - run: python3 scripts/validate_specs.py
