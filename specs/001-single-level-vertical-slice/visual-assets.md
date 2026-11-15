@@ -80,15 +80,16 @@ only bundles assets an ID names, so admitted environment work would be excluded
 however correctly it was produced. This is the same gap `musicAssetIds` closed
 for music, found the same way — art existed and nothing could load it.
 
-The array names 41 IDs:
+The array names 46 IDs:
 
 | Group | Count | Derivation |
 |---|---:|---|
 | Ground tiles | 6 | one per authored surface |
 | Solids | 14 | **one per `permanentSolids` entry in `civic-seam-arena-004`**, named for it |
-| Camera housings | 5 | one per family in the `camera-placement-001` enum |
-| Street props | 12 | the P0 infrastructure kit in `civic-seam-001` §5 |
+| Camera housings | 7 | five logical families in the `camera-placement-001` enum plus Captain idle/active |
+| Street props | 13 | the P0 infrastructure kit in `civic-seam-001` §5 plus rail strip |
 | Motif sheets | 4 | phoenix, repair, counter-signal, broadcast glyph |
+| Fog layers | 2 | low and high |
 
 The solid IDs are derived from the arena manifest rather than authored
 separately, so a solid cannot exist without art or art without a solid. If the

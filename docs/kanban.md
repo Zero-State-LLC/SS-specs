@@ -57,7 +57,7 @@ Still open:
 - [x] Runtime `#213` `5a71391`: the settings footers, the settings hints, the heat type, the quiet type, the streak type, the extraction numeral, the medal type, the upgrade plate, the terminal type, and the pattern ink. No number was changed.
 - [x] Runtime `#215` `ef68565`: the clip interrupt, the pitched voice, the ambient roll, the visual gate, the clip gate, the redraw order, the present pass, the court capture, the damage log, and the field cache. No number was changed.
 - [x] Runtime `#216` `4f9c1b5`: the evidence names, the gates, and the phone sample. No number was changed. This does not close T905 or T908.
-- [x] Runtime `#219` `e080c65`: the playtest gates, the density peak, and the seam checks. No number was changed. This does not close T903, T904, T802, or T807.
+- [x] Runtime `#219` `e080c65`: the playtest gates, the density peak, and the seam checks. No number was changed. This does not close T903, T904, or T802. T807 remains checked in the canonical tasks.md ledger on SS-runtime #32 evidence; this later instrumentation PR neither reopens it nor accepts the current D-104 production revision.
 - [x] Runtime `#220` `d629e08`: the event order, the reachability checks, and the fairness reports. No number was changed.
 - [x] Runtime `#221` `5e523ec`: the integer roots, the pilots, and the tutorial flags. The same tree has the hash padding, the effect catalog, the probe grid, the probe paths, the camera offset, the byte order, the hint latch, the offscreen sector, and the touch route. No number was changed.
 - [x] Runtime `#226` `1e4d3fc`: the camera overlay, the daemon expiry, and the pool rejects. The same tree has the court luma, the spawn mounts, and the socket lists. No number was changed.

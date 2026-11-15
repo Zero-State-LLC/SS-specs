@@ -95,6 +95,15 @@ Purpose: readable boss arena with reusable cover and clear telegraphs.
 
 Purpose: final survival test and closure.
 
+**Unresolved design intent — pressure versus relief.** The pressure language in
+this section and the pacing table describes an intended experience, not evidence
+that a post-Captain threat exists. The current encounter chain ends with the
+Captain; no new Extraction wave is authorized here. T903/T904 must establish
+whether the existing five-second hold is a pressured survival finish or a relief
+beat. The owner must reconcile that evidence and record an approved decision
+before adding threats, changing the countdown, or replacing the pressure intent.
+This audit leaves gameplay, manifest values and production acceptance unchanged.
+
 - Visible before it unlocks, but not safely campable during the Captain fight.
 - One clear entrance plus one secondary escape route.
 - Active boundary is distinguishable from Camera and damage geometry.

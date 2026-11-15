@@ -20,7 +20,7 @@ Each criterion requires a linked test, replay fixture, measurement, review plate
 - [ ] A-009 Captain defeat reliably unlocks Extraction.
 - [ ] A-010 Extraction countdown visibly resets when the Player leaves.
 - [ ] A-011 Terminal events occur once and obey documented precedence.
-- [ ] A-012 Result records contain all fields required by FR-045.
+- [ ] A-012 Verify FR-045 separately at each boundary: (1) success, failure and invalid diagnostic receipt records contain the required fields and conform to the receipt schema, with failed/invalid receipt production required when state can be serialized; (2) each terminal card shows only the approved run-shell.md § 11–12 rows under its outcome, using highest Detection State rather than numeric Exposure, the success-only ghost rule (RS-017), and earned medals with the specified NEW marking and omission rules (RS-018–RS-024); (3) Share follows RS-016 and RS-041–RS-042, with no seed, receipt or identifier; (4) rehearsal uses only its Court-time card, offers no Share and archives no receipt (RS-036).
 - [ ] A-013 Exactly eight standard Cameras are deterministically selected from authored sockets; the same seed/version reproduces them and their transforms/fields remain fixed for the run.
 - [ ] A-013A Every standard Camera transitions 3→2→1→0 from exactly three valid impacts.
 - [ ] A-014 Camera damage does not impair detection before destruction.

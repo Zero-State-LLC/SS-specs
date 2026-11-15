@@ -66,7 +66,7 @@ This feature does not include:
 - **FR-013:** Exposure MUST decrease under specified recovery conditions after the player breaks surveillance contact.
 - **FR-014:** Detection State transitions MUST be deterministic and communicated to the player.
 - **FR-015:** Re-entering detection MUST follow documented grace-period and accumulation rules; these values belong to the versioned tuning contract.
-- **FR-016:** Maximum escalation MUST enter Lockdown exactly once per run.
+- **FR-016:** Maximum escalation MUST enter Lockdown once per latch epoch. The Daemon defeat releases the first latch once (D-109), sets Exposure to 700, and opens the Court epoch; reaching maximum escalation again emits a new Lockdown entry that latches for the rest of the run. Detection State changes on the following resolution, not on the release tick (exposure.md).
 - **FR-017:** Level 1 MUST deterministically select exactly eight standard Cameras per run from versioned authored sockets using `camera-placement.md`; after initialization their positions, headings, ranges, and field angles are immutable, and they never pan, relocate, spawn, activate, or respawn during the run.
 - **FR-017A:** A standard Camera MUST require exactly three valid Player projectile impacts to destroy.
 - **FR-018:** Destroying a Camera MUST permanently remove only that Camera field for the current run and apply exactly +150 Tamper Exposure (D-086).
@@ -112,7 +112,7 @@ This feature does not include:
 - **FR-042:** Unlocked Extraction MUST require a visible survival countdown.
 - **FR-043:** Leaving the zone MUST follow one documented countdown rule: pause, reset, or continue. The baseline decision is **reset**.
 - **FR-044:** Completion MUST occur once and freeze further authoritative combat outcomes.
-- **FR-045:** The result screen MUST report outcome, duration, final Exposure or peak Exposure, damage taken, enemies defeated, upgrade identity, seed, ruleset version, and level version.
+- **FR-045:** The diagnostic run receipt MUST report outcome, duration, final Exposure or peak Exposure, damage taken, enemies defeated, upgrade identity, seed, ruleset version, and level version, per events-receipts-replays.md and its schema; failed or invalid runs produce a receipt when state can be serialized. The player-facing terminal card MUST instead show the approved run-shell.md § 11–12 subset: date, time, Camera count/Network Blackout, highest Detection State, eligible success-only ghost comparison, and earned medals (marked NEW as specified in § 12), under the outcome. Numeric Exposure is receipt evidence; highest Detection State is the card value. Share MUST use only the § 11 incident-report fields (including earned medals), never seed, receipt, or identifiers. Success, failure, and invalid outcomes follow run-shell.md; a Court rehearsal uses only the REHEARSAL Court-time card, offers no Share, and is not archived (§ 14.3).
 
 ## 6. Detection state contract
 

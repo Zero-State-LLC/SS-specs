@@ -75,19 +75,16 @@ Execution fails before tick 1 for unknown versions, invalid JSON/schema, unsuppo
 
 ## Result screen
 
-Required visible fields:
-
-- Success/Failure/Invalid;
-- duration from ticks;
-- selected upgrade;
-- peak and final Exposure;
-- enemies defeated by archetype;
-- damage dealt/taken;
-- combat-authority completion;
-- Cameras destroyed out of 8 and Network Blackout;
-- boss phases reached;
-- seed and shortened version identity;
-- replay/digest copy action.
+FR-045 separates diagnostic receipt evidence from player-facing presentation.
+The receipt fields above remain required by the schema; they are not a list of
+required visible fields. D-081's terminal card (run-shell.md § 11) shows the
+date, time, Camera count/Network Blackout, highest Detection State and eligible
+success-only ghost comparison under the outcome. D-095 adds the earned-medal
+row and NEW marking (§ 12). Numeric Exposure, seed and replay/version identity
+remain evidence-only, not additional card rows or a required replay/digest copy
+control. Share is limited to the D-112 incident-report fields (§ 11), with no
+seed, receipt or identifier. Court rehearsal follows D-107 (§ 14.3): Court-time
+card only, no medals, no Share and no receipt archive.
 
 ## Acceptance vectors
 

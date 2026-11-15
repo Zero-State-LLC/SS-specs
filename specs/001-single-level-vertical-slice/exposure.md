@@ -26,11 +26,13 @@ Exposure is the one authoritative surveillance-pressure value. It is determinist
 recovery only: it never raises Exposure, never adds to a Tamper Spike, and
 never triggers a Detection State event by itself.
 
-Because each Tamper Spike adds exactly the floor increment (+150, D-086), and
-nothing but recovery ever lowers Exposure, Exposure after `k` destructions is
-always at least `min(1000, 150 × k)`. After three destructions the Player is at
-or above 450 (`tracked`) for the rest of the run. A destroyed Camera is a lasting
-mark, not a spike that fades in two seconds.
+Before the Court release (D-109), each Tamper Spike adds exactly the floor
+increment (+150, D-086) and only recovery lowers Exposure, so Exposure after
+`k` destructions is at least `min(1000, 150 × k)`. The release is the one
+exception: it assigns 700 even when the floor is higher. After release the floor
+still limits recovery only; it never raises Exposure back to the old floor.
+After three destructions Exposure remains at or above 450 (`tracked`), including
+after release. A destroyed Camera is a lasting mark, not a transient spike.
 
 At 60 ticks/second, one Camera adds 120 points/second. Recovery begins only after 60 complete no-contact ticks and removes 120 points/second. Tamper is instantaneous and is not modified by contact count.
 
@@ -44,7 +46,7 @@ At 60 ticks/second, one Camera adds 120 points/second. Recovery begins only afte
 | `hunted` | 700–999 |
 | `lockdown` | 1000 |
 
-There is no threshold hysteresis. State is a pure projection of Exposure after all deltas for the tick. `lockdown` latches and fixes Exposure at 1000 while it holds. Recovery never exits Lockdown. The latch is released once, when the Improper Search Daemon is defeated (§ Court release, D-109). Lockdown entered again after that latches for the rest of the run.
+There is no threshold hysteresis. State is a pure projection of Exposure at phase 14. The D-109 phase-16 release intentionally leaves that state unchanged until the next phase-14 resolution. `lockdown` latches and fixes Exposure at 1000 while it holds. Recovery never exits Lockdown. The latch is released once, when the Improper Search Daemon is defeated (§ Court release, D-109). Lockdown entered again after that latches for the rest of the run.
 
 ## Contact aggregation
 
@@ -73,7 +75,7 @@ Overlapping fields add pressure; multiple samples from one Camera never do. Occl
 5. Ordered Tamper Spikes are added by Camera stable ID.
 6. Apply eligible Fog Analytics Cloud pulses in source entity-ID order, then Algorithmic Moderate Observation pulses. Apply their existing Signal Jammer modifiers exactly once (upgrades.md). Clamp each stage to 0–1000. Once 1000 is reached, later positive pulses do not change the value. A previously latched or forced Lockdown stays at 1000.
 7. Project Detection State once from the final value; emit one `DetectionStateChanged` from the tick's starting state to its final state if different, including downward changes. Then resolve the quiet-approach latch from that final state.
-8. If 1000 is first reached, emit `LockdownEntered` once in phase 14 with the reason that reached the cap. Forced Lockdown takes precedence as the reason.
+8. If 1000 is reached with the latch clear, emit `LockdownEntered` once per latch epoch in phase 14 with the reason that reached the cap. The only new epoch begins at the one-time D-109 release; remaining at 1000 never repeats entry. Forced Lockdown takes precedence as the reason.
 
 D-102: named pulses are eligible only if the Player survived phase 12. On a lethal tick, surviving Camera contact/recovery and Tamper still resolve, but fog and Observation pulses do not apply; failure remains terminal. M-C activation exempts that tick and later ticks from quiet-approach loss as in D-101. Exposure changes retain phase-13 before/after/reason records for each changed stage, but intermediate thresholds never publish extra Detection State transitions.
 
@@ -145,7 +147,7 @@ Court threshold (bosses.md).
 | EX-018 | multiple contact/Tamper/named deltas cross several thresholds | one starting→final DetectionStateChanged; at most one phase-14 LockdownEntered |
 | EX-019 | lethal Player damage plus a due Fog pulse | no named pulse applied; contact/recovery and Tamper still resolve; failure wins |
 | EX-020 | M-C activation with due named pulses | final 1000/lockdown; one forced Lockdown event; quiet approach preserved if previously true |
-| EX-021 | `EliteDefeated(improperSearchDaemon)` while Lockdown is latched | that tick ends at 1000/`lockdown`; the next tick resolves from 700 with one `lockdown`→`hunted` event and no `LockdownEntered` |
+| EX-021 | `EliteDefeated(improperSearchDaemon)` while Lockdown is latched | phase 14 is 1000/`lockdown`; after the phase-16 assignment that tick ends at 700/`lockdown`; the next tick resolves from 700 with one `lockdown`→`hunted` event and no `LockdownEntered` |
 | EX-022 | after the Court release, contact raises Exposure to 1000 | one `LockdownEntered`; Exposure stays 1000/`lockdown` for the rest of the run |
 | EX-023 | after the Court release, 61 no-contact ticks from 700 with no Cameras destroyed | 698, `tracked` |
 | EX-024 | Court release with 6 Cameras destroyed (floor 900) | Exposure is set to 700; the floor does not raise it, and recovery does not apply while Exposure is below the floor (as EX-012) |
