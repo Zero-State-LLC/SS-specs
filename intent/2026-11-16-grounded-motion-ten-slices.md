@@ -15,11 +15,15 @@ Owner approved the ten-slice plan and answered all three open questions on Novem
 3. Authored north neutral from the editable costume master.
 4. Distinct authored east/west neutrals with correct equipment asymmetry and hidden surfaces.
 5. Four-facing native midpoint review, direction selection and registration, native/half/grayscale fidelity checks.
-6. Municipal Camera complete pole/base/head source family: existing six clips, 17 frames, persistent Integrity 3/2/1/0.
+6. Municipal Camera complete pole/base/head source family: existing six clips, 16 frame slots, persistent Integrity 3/2/1/0.
 7. Camera latest-state precedence, destruction, field-off and Reduced Motion integration review.
 8. Seven existing enemy-role silhouette/key-pose first samples with attack origin/direction readability. No new mechanics or complete animation-library promise.
 9. Representative building, upright prop and ground/curb source repair against the fixed concept, without changing collision.
 10. Integrated quiet/dense shared benchmark and direct-device review handoff. Admission preparation only for explicitly approved coverage.
+
+## Camera census correction, November 16 04:18 UTC
+
+The earlier slice6 count of17 was a planning typo, not a requested contract expansion. Independent inspection of pinned `b1ed874e1e8eb0e61b2174b9093201e9a61e1a4b` `contracts/clip-metadata-001.json` and its byte-matching runtime bundle confirms six clips with4+2+3+4+1+2=16 frame slots: operational idle, hit, critical enter, destroy, field off and destroyed idle. BP-004 agrees. Preserve that existing contract, without adding a seventeenth frame or changing timing. This corrects the plan only, not owner gates or gameplay.
 
 ## Execution and gates
 
