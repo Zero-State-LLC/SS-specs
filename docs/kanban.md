@@ -1,5 +1,14 @@
 # SS benchmark kanban
 
+## Current ten-slice checkpoint, 2026-11-16 03:45UTC
+
+- [x] Owner approved the next ten implementation slices and all three open decisions at03:10:28UTC. Scope: `intent/2026-11-16-grounded-motion-ten-slices.md`.
+- [x] Slice1 technical native comparison published in runtime #236 at `9a4b7a74a504bee2bfc9a990c7d4185b89fe2e34`:3 actual focused tests,476 paired static captures,28 exact endpoint pairs,182 changed native intermediates,29 independent evidence regressions and56 actual browser selections. No live cadence or visual acceptance implied. New-head CI43799888314 is running.
+- [x] Previous source-variation head `e664c93057514891ca102f45938c17b7bed28782` CI43795379225 passed all five jobs, fetched03:41:04UTC. Baseline15be131 CI43792417606 also passed. Issue237 stays open.
+- [ ] Slice2 actual movement/contact comparison in progress. Preserve pre-baggy-source evidence identities.
+- [ ] Owner correction03:41:04UTC: inconsistent north/south legs, baggy look preferred. Restore the baggy north proposal and author a separate consistent south source, rather than slimming north to the old south. Original south and5/13 remain unchanged. Generated bag/coat/material/camera and family acceptance remain open.
+- [ ] Slices3–10 remain open under the existing fidelity and owner gates. No parent production task is Done.
+
 ## Receipt repair and approved continuation — 2026-11-16 UTC
 
 Observed main heads are runtime `df8473713a3d37aeca05d4e1110f979f197b9ceb` and specs `983a4ca3427bd8a9d30056bccf356fe0f715312e`. Receipt PRs specs #115/runtime #235 are not merged. Final candidate contract pin is `194ded987740a330bce50bd23cd0dcdcadebc853`; the merged product still uses its existing pin. T1061 remains open until adoption is verified. Historical entries below retain their dated scope.

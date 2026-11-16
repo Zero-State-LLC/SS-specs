@@ -1,5 +1,13 @@
 # Receipt repair and production continuation
 
+## Current checkpoint, November16 03:45UTC
+
+Owner03:41:04UTC identified inconsistent north/south legs and preferred the baggy look. Use the baggy north silhouette as the proposed common trouser-volume target; do not slim it to historical south. A separate baggy south source proposal is in progress. Original south and5/13 stay unchanged. Generated bag/coat/material/camera and complete-family acceptance remain unresolved. The per-part slimming attempt is superseded, not a new direction. FACTS.md and the new Trail learning preserve the correction.
+
+Slice1 technical native comparison published at runtime `9a4b7a74a504bee2bfc9a990c7d4185b89fe2e34`: actual3/3 native tests,476 paired static captures,442 source/configuration hashes,28 exact endpoints,182 changed native intermediates,29 independent evidence regressions,56 actual browser paired selections. Open `docs/review/player-release-variation-native-20261116/capture/index.html`; coordinator review states limitations. New-head CI43799888314 is running. No new art acceptance, continuous contact or live cadence inferred.
+
+Previous exact source-variation `e664c93057514891ca102f45938c17b7bed28782` CI43795379225 completed successfully with all five jobs passed, fetched03:41:04UTC. Baseline15be131 CI43792417606 also passed. Specs decision-documentation `b70b07fed2d7374ee52b522ce26172beefa75f34` CI43797004126 passed, fetched03:23UTC. These supersede older pending checkpoints below without certifying newer heads. Issue237 remains open and the capped local full-core path stays prohibited.
+
 ## Active ten-slice implementation, approved 03:10:28 UTC November 16
 
 Owner answered yes to all open design questions: grounded weight transfer rather than bounce/jog, conservative same-costume hidden surfaces without new accessories, and later-family first samples while prior visual reviews remain pending. Detailed expansion stays behind existing fidelity gates. The approved sequence and boundaries are in `intent/2026-11-16-grounded-motion-ten-slices.md`; resolved terminology is in `GLOSSARY.md`. Slice1 isolated native variation integration is in progress. No new art acceptance, production admission, receipt adoption or merge permission follows.
