@@ -1,5 +1,11 @@
 # Receipt repair and production continuation
 
+## Camera correction published and CI follow-up, November16 04:30UTC
+
+Runtime `7463b73e14ba2c9b7ebfe863abc690233c3f4f75` publishes Camera rejected history and attempt03 direct comparison against the original approved reference. All17 portable guards pass and actual Brave verifies9 images,64x96/32x48 samples and grayscale restoration. Attempt03 is only an extraction with visible contamination, baked light and missing underpaint/layers. It is not accepted or ready for state/clip expansion. The PR236 comment and runtime handoff record these limits.
+
+Fetched04:30:22UTC: runtime9769d922 run43803119616 now has Swift/parity/device-sitting passed and Debug/Release running. Camera7463b73 run43804435636 has started. Specs30bf845c1fd7be298e2795afc75b09acebe4c4e9 run43804251351 completed success. Old9a4 and7a30967 terminal successes below stand. Bounded follow-up sched_097c8bf8 due04:40UTC checks the two pending runtime heads only. Native-control238 correction remains independent and uncommitted, while237 stays open. No long watcher, unfiltered local Swift, production change, admission or merge.
+
 ## Verified CI checkpoint, November16 04:27UTC
 
 Exact runtime `9a4b7a74a504bee2bfc9a990c7d4185b89fe2e34` run43799888314 completed successfully with all five jobs passed, fetched04:26:30UTC. New runtime `9769d922cc8f3e908c0d611dd2f48df6418089cd` run43803119616 still has Swift/Debug/Release running, parity and device-sitting success. Specs `7a30967aa5f2c90a26ce59e39ba60cea21e7a397` run43803448237 passed, fetched04:26:45UTC. Issue237 independently fetched OPEN. Existing scheduled follow-up checks only still-pending exact heads, without long watchers or prohibited local retries. Historical pending status below is superseded only for the verified heads.
