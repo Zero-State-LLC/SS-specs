@@ -1,5 +1,19 @@
 # Benchmark production: status and next steps
 
+## Current status, 2026-11-16 05:39 UTC
+
+The dated October evidence below is historical, not the current work order. See [current kanban](../kanban.md) and [handoff](../handoff/NEXT.md) for the verified checkpoint.
+
+Owner's 04:51:26 UTC clarification concerns the **overall scene** against the unchanged approved concept. All three Camera proposals remain rejected. Midpoint ground mapping and original 5/13 with 0.375s settle remain selected within their recorded scope, not whole-family or whole-scene acceptance. New Player facings, materials and equipment continuity remain unaccepted.
+
+Runtime `f6ebddb7aeb7f19cc6fa370902bd3c93b91d1b86` publishes `docs/review/visual-acceptance-20261116/CONTRACT.md` and the unregistered stone-source proposal. Ordinary HUD/field-on whole-scene diagnostics and a separate muted-paving trial are active uncommitted work. The runtime handoff reports local focused capture checks, but publication and independent acceptance of those fixtures are still pending. Do not use the old building anchor or requested coordinates as measured registration for the new source.
+
+Runtime #237 remains open for the 15/16-pose failure, independently of the corrected looped-control harness #238. CI `6817fcd` passed all five jobs. At 05:39 UTC `3ad31ad` still has Debug running and four successful jobs, while newest `f6ebddb` is queued. None establishes visual fidelity or closes either defect.
+
+Next order: finish bounded whole-scene diagnostics and material comparison, explicitly review remaining deficits, then obtain visual acceptance before detailed expansion or admission. Preserve existing rejected evidence, historical issue closures, production/device/human gates and the no-merge boundary. Project 27 mirrors the current kanban, including separate defect cards. The October source-first ordering below is retained only as history.
+
+## Historical October checkpoint
+
 Updated 2026-10-15. Planning/evidence reconciliation, not a new product contract or art admission. Governing requirements remain D-104 / BP-001–BP-010. Historical committed evidence through 241a1ef is supplemented by the local 2026-10-15 reports below; runtime production spec pin remains d602775. Local reports are not assumed published. The [kanban](../kanban.md) mirrors this sequence and the [canonical tasks](../../specs/001-single-level-vertical-slice/tasks.md).
 
 ## Direction retained

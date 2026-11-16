@@ -1,5 +1,26 @@
 # SS benchmark kanban
 
+## Current board reconciliation, 2026-11-16 05:39 UTC
+
+This checkpoint supersedes historical sequencing and pending-status notes below, not their evidence. Owner clarified at 04:51:26 UTC that the rejection concerns the **overall scene**. Scope clarification is complete. Camera attempts 01/02/03 remain rejected. The unchanged approved concept is the benchmark, and the selected midpoint ground transform is not whole-scene acceptance.
+
+| Work | Current status and next gate |
+|---|---|
+| Runtime #131, south-source historical card | Preserve CLOSED / Done as observed on GitHub. This historical card does not establish acceptance of new baggy, release or facing proposals. |
+| Runtime #132, live cycle | In Progress. Technical source/native/contact packets are published, but displayed contact, live cadence and device acceptance remain unproven. Preserve independent defects #237 and #238. |
+| Runtime #133, whole scene | In Progress, diagnostic work only. Runtime `f6ebddb7aeb7f19cc6fa370902bd3c93b91d1b86` publishes the visual checklist and unregistered stone source. The native whole-scene and paving fixtures remain uncommitted work, not published or accepted evidence. |
+| Specs #65, facing/role/action coverage | Preserve the existing In Progress board status and CLOSED issue lifecycle. Current complete-family coverage remains partial/unaccepted. Do not extrapolate historical closure to new proposals or reopen it silently. |
+| Runtime #134, family admission | Todo, blocked on complete reviewed families and acceptance. No production admission. |
+| Runtime #135, physical/human QA | Todo, gated by integrated visual review and actual device/human evidence. Simulator success does not satisfy these gates. |
+| Runtime #237, playback defect | Open, Todo on board. Failed head `9769d922` observed 15/16 grounded-shadow poses. Root cause remains unproven despite later green heads. |
+| Runtime #238, fixed-time harness | Open, Todo on board. Corrected looped-control packet is published at `3ad31ad`, but integration/closure remains separate from #237. |
+
+**Observed CI at 05:39 UTC:** `6817fcdee5440085c8fed73304c69603a23d1d59` / run43805118823 passed all five jobs at the 05:29 fetch. `3ad31adfb956be6389bfc263c0515b89c51b7f9c` / run43805471684 still has four successful jobs and Debug running. New `f6ebddb7aeb7f19cc6fa370902bd3c93b91d1b86` / run43810054098 was queued. These are distinct heads, not transferable validation.
+
+Next: finish the isolated ordinary HUD/field-on whole-scene diagnostic and the separate muted-paving comparison, preserving controls and explicit deficits. The stone source is UNREGISTERED, not a replacement ready for integration. Native/half/grayscale review must separate technical verification, coordinator visual review, owner acceptance and production admission. No animation/state expansion, production changes or merges are authorized by this update. Preserve 0.375s settle and original 5/13. No recorder detour.
+
+The remote project 27 overview and issue summaries are synchronized with this checkpoint. Its historical six cards remain, with #133 advanced to In Progress and #237/#238 added separately. No issue is closed or reopened by this reconciliation. CLI project access now works, superseding the older access limitation below.
+
 ## Owner correction, 2026-11-16 04:44:17UTC
 
 - [ ] Latest result remains below benchmark. Camera attempt03 withdrawn as rejected history alongside01/02. No active recommendation or fidelity acceptance. Clarify whether the next correction targets Camera, Player or complete rendered-scene fidelity before another art proposal. Do not infer a specific visual cause from technical tests. All expansion gates remain closed.

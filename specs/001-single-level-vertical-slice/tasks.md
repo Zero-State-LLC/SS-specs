@@ -1,6 +1,10 @@
 # Implementation Tasks
 
-## Current handoff — 2026-10-25
+## Current handoff, 2026-11-16
+
+Follow the [current kanban](../../docs/kanban.md) and [handoff](../../docs/handoff/NEXT.md). Owner clarified that the benchmark rejection concerns the overall scene. Complete only the isolated existing-asset diagnostic and separate muted-paving trial before further visual review. The unregistered stone source is not ready for scene substitution. Camera attempts 01/02/03 remain rejected, and Player family consistency remains unresolved. Preserve original 5/13 and 0.375s settle. Technical publication, exact-head CI, visual acceptance, production admission and physical/human QA are separate gates. Runtime #237 and #238 remain independently open. No T1042–T1046 or production parent is completed by the new source/fixture evidence. Historical closed issue cards are not new production acceptance. No merge permission or recorder work follows.
+
+## Historical handoff, 2026-10-25
 
 Aaron continues from the [continuation brief](../../docs/review/aaron-continuation-2026-10-25.md). Stop recorder/OBS troubleshooting; retain the0.375-second Player candidate and bounded visual approval. Prioritize remaining Player releases/facings/actions, then shared-scene integration and direct iPhone validation. Live cadence/performance remain unverified and required before production admission; they do not block further source work. Historical recorder-dependent next-step notes below are superseded for sequencing only. No parent production task is Done.
 

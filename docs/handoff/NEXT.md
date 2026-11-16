@@ -1,5 +1,13 @@
 # Receipt repair and production continuation
 
+## Docs and board reconciliation, November 16 05:39 UTC
+
+Owner requested documentation and board updates. Canonical kanban, benchmark status and tasks now lead with the overall-scene scope clarified at 04:51:26 UTC, not the superseded Camera-only scope question. Runtime `f6ebddb7aeb7f19cc6fa370902bd3c93b91d1b86` publishes the whole-game visual checklist and unregistered stone-source proposal. Native whole-scene/paving fixtures remain uncommitted in the runtime workspace. Do not claim their publication or acceptance from earlier local checks.
+
+Project 27 reconciliation preserves historical CLOSED runtime #131 / Done and CLOSED specs #65 / existing In Progress. It advances active whole-scene #133 to In Progress, retains #132 In Progress and #134/#135 Todo, and adds separate open #237/#238 defect cards as Todo. Issue lifecycle is preserved, with current summaries distinguishing historical completion from new acceptance. No production parent is newly Done.
+
+Scheduled check fetched run43805471684 at exact `3ad31adfb956be6389bfc263c0515b89c51b7f9c`: four successful jobs, Debug still running at 05:39 UTC. Earlier `6817fcdee5440085c8fed73304c69603a23d1d59` / run43805118823 is terminal success. New runtime head `f6ebddb7aeb7f19cc6fa370902bd3c93b91d1b86` / run43810054098 was queued, separately observed and not certified by earlier heads. Preserve unresolved grounded-shadow 15/16 evidence under #237 and the separate #238 integration gate. Remote project 27 and all six original issue summaries were updated and fetched back at 05:41 UTC. The eight-card readback confirms the statuses above. Bounded follow-up `sched_69fd46e9` checks the still-running 3ad31ad run only at approximately 05:51 UTC. No rerun, assertion change, unfiltered Swift, production change, merge or visual acceptance.
+
 ## Scheduled CI checkpoint, November16 05:29UTC
 
 Fetched05:29UTC: run43805118823 at6817fcdee5440085c8fed73304c69603a23d1d59 completed SUCCESS with all five jobs successful. Run43805471684 at3ad31adfb956be6389bfc263c0515b89c51b7f9c has Swift/spec-parity/device-sitting/Release successful and Debug still running. One bounded follow-up sched_6b20854c checks only that unfinished run about05:39UTC. Earlier9769d922 grounded-shadow15/16 failure remains unresolved under237, independently of238. No CI rerun, assertion change, unfiltered Swift, production change, merge or visual acceptance. Overall-scene benchmark rejection remains controlling.
