@@ -1,5 +1,9 @@
 # Benchmark production: status and next steps
 
+## Canonical clarification, 2026-11-16 05:53 UTC
+
+The owner-approved [D-104 clarification](../../specs/001-single-level-vertical-slice/decisions.md#d-104-clarification-whole-scene-benchmark-2026-11-16) now makes [BP-001 whole-scene review](../../specs/001-single-level-vertical-slice/benchmark-production.md#whole-scene-review-contract) the canonical contract, not merely a status note or runtime checklist. Original benchmark authority, six review dimensions, ordinary HUD/field-on evidence and separate technical/visual/owner/admission outcomes are explicit. Passing documentation checks is not visual acceptance. Runtime3ad31ad/run43805471684 completed all five jobs successfully at the05:51:32UTC fetch; independent#237/#238 remain open and newer heads are not certified. The earlier running status below is historical.
+
 ## Current status, 2026-11-16 05:39 UTC
 
 The dated October evidence below is historical, not the current work order. See [current kanban](../kanban.md) and [handoff](../handoff/NEXT.md) for the verified checkpoint.

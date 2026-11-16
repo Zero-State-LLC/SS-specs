@@ -173,6 +173,20 @@ T1035 automated coverage must include no-target/no-shot, opposite movement and a
 
 ## D-104 — visual reference and production gate
 
+### Whole-scene acceptance clarification, 2026-11-16
+
+D-022–D-024 and E-021 remain open until their required evidence passes, including the [whole-scene review contract](benchmark-production.md#whole-scene-review-contract). The original approved `street-corner-approved-concept.png` is the whole-scene visual benchmark. Midpoint selects ground projection only. The approved canonical clarification does not accept current artwork or adopt new numerical visual tolerances.
+
+- Require recorded verdicts for **composition**, **viewpoint and scale**, **materials and palette**, **lighting**, **grounding**, and **HUD/field readability** against the unchanged reference. Unknown or failed dimensions remain open.
+- Require ordinary HUD/field-on quiet, legal-encounter and dense legal-encounter evidence at native size, 50% scale and grayscale. Staged art-only views and geometry overlays are secondary. A quiet static fixture is partial evidence, not completion of encounter, moving-contact or animation gates.
+- Require exact reference/candidate identities, matched control framing/state/settings, explicit intentional differences and retained rejected evidence. UNREGISTERED sources do not satisfy grounding by borrowing previous anchors or treating guessed hidden corners as measurements.
+- Record **technical verification**, **coordinator visual review**, **owner acceptance**, and **production admission** separately. Passing CI or a coordinator recommendation cannot replace owner acceptance or override rejection. Existing source/playback, migration and physical/human gates still control production admission.
+- Do not expand rejected or unreviewed first samples into detailed states/clips. Authorized bounded diagnostics may proceed with deficits explicit. Preserve original release5/13 and 0.375s settle as bounded approvals only. Runtime #237 and #238 remain independent defects, not waived by the visual clarification.
+
+These requirements clarify existing BP-001/BP-012 fidelity gates, not new gameplay or blanket art approval. Diagnostic physical-device checks remain permitted under D-105 before art acceptance, with the evidence limits below.
+
+### Existing visual and runtime evidence requirements
+
 See [visual-reference.md](visual-reference.md). D-022–D-024 and E-021 require actual game-scale review plates and runtime evidence; the phase-4 concept images alone do not pass those gates. Preserve B-001/B-007/B-008/B-012 placement/replay results when mapping logical Camera families to one visual family. Produce the complete character and Camera playback review before admitting those families to production.
 
 Physical-device checks of the current build do not wait for that review (intent `2026-10-29-device-feedback-loop`). Frame time (C-003), suspend/resume (B-004, PC-008), input (PC-009), damage attribution (combat-causality.md) and the 2026-10-13 device-QA findings may be re-run on any build. Each device session records the runtime commit and whether it used production or candidate art. A device session on unadmitted art is evidence about feel, performance and correctness only; it does not pass D-022–D-024 or E-021.

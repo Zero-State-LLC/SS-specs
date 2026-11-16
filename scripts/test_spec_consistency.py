@@ -175,6 +175,77 @@ class SpecConsistencyTests(unittest.TestCase):
         self.assertEqual(set(covered), set(ids))
         self.assertEqual(len(covered), len(set(covered)))
 
+    def test_whole_scene_benchmark_authority_and_traceability(self):
+        # Documentation consistency only, never a visual acceptance test.
+        intent = ROOT / "intent/2026-11-16-whole-scene-benchmark-clarification.md"
+        self.assertIn("**Status:** accepted", intent.read_text())
+        self.assertIn("05:49:09 UTC", intent.read_text())
+        benchmark = (SPEC / "benchmark-production.md").read_text()
+        self.assertEqual(benchmark.count("### Whole-scene review contract"), 1)
+        for name in ("spec.md", "visual-reference.md", "acceptance.md",
+                     "decisions.md", "plan.md", "tasks.md", "visual-production.md",
+                     "civic-seam-visual-direction.md"):
+            with self.subTest(document=name):
+                text = (SPEC / name).read_text()
+                self.assertIn("benchmark-production.md#whole-scene-review-contract", text)
+        for name in ("spec.md", "visual-reference.md", "acceptance.md", "decisions.md"):
+            with self.subTest(authority=name):
+                text = (SPEC / name).read_text()
+                self.assertIn("street-corner-approved-concept.png", text)
+                self.assertIn("whole-scene visual benchmark", text)
+        reference = (SPEC / "visual-reference.md").read_text()
+        self.assertIn("projection-study history, not a substitute visual benchmark", reference)
+        self.assertNotIn("must agree on the midpoint reference", reference)
+        self.assertNotIn("before choosing the production projection", benchmark)
+        self.assertNotIn("midpoint study guides final elevation",
+                         (SPEC / "civic-seam-visual-direction.md").read_text())
+        self.assertNotIn("midpoint study informs the production angle",
+                         (SPEC / "visual-production.md").read_text())
+        decision = (SPEC / "decisions.md").read_text().split(
+            "## D-104 clarification: whole-scene benchmark (2026-11-16)", 1)[1].split("\n## ", 1)[0]
+        self.assertIn(intent.name, decision)
+        self.assertIn("05:49:09 UTC", decision)
+
+    def test_whole_scene_review_matrix_and_acceptance_boundaries(self):
+        benchmark = (SPEC / "benchmark-production.md").read_text()
+        contract = benchmark.split("### Whole-scene review contract", 1)[1].split("\n## ", 1)[0]
+        acceptance = (SPEC / "acceptance.md").read_text().split(
+            "### Whole-scene acceptance clarification, 2026-11-16", 1)[1].split("\n### ", 1)[0]
+        dimensions = ("Composition", "Viewpoint and scale", "Materials and palette",
+                      "Lighting", "Grounding", "HUD/field readability")
+        rows = re.findall(r"^\| ([^|]+) \|", contract, re.M)
+        self.assertEqual(rows, ["Review dimension", *dimensions])
+        for dimension in dimensions:
+            self.assertIn(f"**{dimension.lower()}**", acceptance.lower())
+        for text in (contract, acceptance):
+            for boundary in ("HUD/field-on", "native size", "50% scale", "grayscale",
+                             "technical verification", "coordinator visual review",
+                             "owner acceptance", "production admission", "UNREGISTERED",
+                             "release5/13", "0.375s", "D-105"):
+                with self.subTest(boundary=boundary):
+                    self.assertIn(boundary, text)
+        self.assertIn("dense legal encounter", contract)
+        self.assertIn("dense legal-encounter", acceptance)
+        self.assertIn("A coordinator pass does not imply owner acceptance", contract)
+        self.assertIn("No new numerical visual tolerance is adopted", contract)
+        self.assertIn("secondary diagnostics", contract)
+        self.assertIn("preserve the control", contract)
+        self.assertIn("cannot pass the whole-scene gate", contract)
+
+    def test_whole_scene_sequence_preserves_production_gates(self):
+        benchmark = (SPEC / "benchmark-production.md").read_text()
+        fidelity = benchmark.split("## BP-012", 1)[1].split("\n## ", 1)[0]
+        self.assertIn("necessary but not sufficient for production admission", fidelity)
+        self.assertIn("precede detailed expansion of rejected samples", fidelity)
+        plan = (SPEC / "plan.md").read_text().split(
+            "## Current execution order: 2026-11-16", 1)[1].split("\n### ", 1)[0]
+        self.assertIn("Shared integration is reviewed throughout", plan)
+        self.assertIn("D-105", plan)
+        self.assertNotIn("then environment, followed by shared integration", plan)
+        tasks = (SPEC / "tasks.md").read_text()
+        for task in range(1042, 1047):
+            self.assertRegex(tasks, rf"(?m)^- \[ \] T{task}\b")
+
     def test_task_summary_matches_canonical_checkboxes(self):
         tasks = (SPEC / "tasks.md").read_text()
         rows = re.findall(r"^- \[([ x])\] (T\d+[A-Z]?)\b", tasks, re.M)

@@ -387,6 +387,20 @@ Task: T1059. The runtime adopts this only after this commit is on main, and only
 
 Task: T1060. The runtime adopts this only after this commit is on main.
 
+## D-104 clarification: whole-scene benchmark (2026-11-16)
+
+**ACCEPTED specification clarification:** the owner clarified overall-scene rejection at 04:51:26 UTC and approved the recommended canonical updates at 05:49:09 UTC. Intent: [whole-scene benchmark clarification](../../intent/2026-11-16-whole-scene-benchmark-clarification.md). This is not acceptance of current artwork or permission to merge.
+
+The original approved `street-corner-approved-concept.png` remains the whole-scene visual benchmark. D-108's midpoint selection denotes +45-degree ground rotation followed by half-height scaling with upright sprites at projected roots. It does not replace the original concept with the midpoint study, select numerical source elevation/final zoom or waive visual fidelity.
+
+Apply the [whole-scene review contract](benchmark-production.md#whole-scene-review-contract) across composition, viewpoint and scale, materials and palette, lighting, grounding, and HUD/field readability. Ordinary HUD/field-on quiet/legal/dense views are primary, with native/50%/grayscale evidence. Art-only views are secondary. Keep technical verification, coordinator visual review, owner acceptance and production admission separate. No new numerical visual tolerance is adopted.
+
+Current bounded whole-scene diagnostics and material comparisons precede detailed expansion of rejected samples. BP-012 breadth-first ordering remains behind the fidelity gate, with shared-scene review repeated as families change. This supersedes any older instruction to defer integrated review until source families are complete, not the historical evidence or original release5/13 and 0.375s settle approvals. Camera attempts 01/02/03 remain rejected. Runtime #237/#238 remain separate open defects.
+
+**Unchanged:** one-level scope, roster, movement/timing authority, collision, Camera fields, damage, accessibility requirements, active asset/clip identities, receipt/replay identities and shipping runtime pin. No production art or visual-treatment migration is part of this specification slice. D-105 continues to permit diagnostic physical-device checks on candidate builds without accepting art. Production/device/human admission gates and the no-merge boundary remain intact.
+
+**Affected:** spec, visual-reference, benchmark-production, acceptance, plan and existing T1042–T1046 task traceability. The runtime visual checklist is an implementation aid subordinate to these canonical requirements, not a second authority.
+
 ## D-123 — versioned diagnostic receipt reconciliation (2026-11-15)
 
 **ACCEPTED direction:** the owner accepted the receipt intent and authorized execution at 23:18 UTC on 2026-11-15. [Receipt contract migration](receipt-contract-migration.md) specifies that direction before runtime implementation. This does not authorize merging or mark runtime acceptance complete.

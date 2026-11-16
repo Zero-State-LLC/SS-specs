@@ -1,5 +1,13 @@
 # Receipt repair and production continuation
 
+## Canonical whole-scene clarification, November 16 05:53 UTC
+
+Owner approved specification work at 05:49:09 UTC. Accepted intent `intent/2026-11-16-whole-scene-benchmark-clarification.md` precedes the canonical D-104 clarification. Spec, visual-reference, benchmark-production, acceptance, plan, tasks, visual-production and Civic Seam direction now agree: original approved concept is the whole-scene benchmark, midpoint is the selected ground transform only. BP-001's `whole-scene-review-contract` is the common review authority for six dimensions and separate technical verification, coordinator visual review, owner acceptance and production admission. Quiet diagnostics and staged art-only views cannot pass the whole gate. No invented numerical tolerance or detailed expansion of rejected samples. Original5/13,0.375s and D-105 diagnostic device permission remain intact.
+
+Validation:10 specification-consistency tests pass, including3 new documentation guards;5 in-memory mutations were rejected (reference substitution, missing lighting review, owner-acceptance conflation, admission bypass and deferred integration). These are documentation checks, not visual proof. All44 JSON artifacts/8 schemas/33 registered contracts/57 indexed files validate; clip migration59 clips/218 facings/14 malformed cases/5 vectors passes with active v1 unchanged. Contract, fixture and original reference-image paths have no diff. This is specification clarification only, not actual visual acceptance. Runtime's review checklist must follow the canonical contract, not become a separate authority. Next runtime work remains bounded whole-scene/material diagnostics and explicit deficit review, with no production change or merge permission.
+
+Scheduled check fetched05:51:32UTC: exact runtime `3ad31adfb956be6389bfc263c0515b89c51b7f9c`, run43805471684, completed SUCCESS with all five jobs successful. No follow-up is needed for that terminal run. Issues237 and238 independently fetched OPEN at05:52UTC and remain separate. Preserve9769d922's failed grounded-shadow15/16 evidence. This does not certify newerf6ebddb or close visual, device, production or merge gates.
+
 ## Docs and board reconciliation, November 16 05:39 UTC
 
 Owner requested documentation and board updates. Canonical kanban, benchmark status and tasks now lead with the overall-scene scope clarified at 04:51:26 UTC, not the superseded Camera-only scope question. Runtime `f6ebddb7aeb7f19cc6fa370902bd3c93b91d1b86` publishes the whole-game visual checklist and unregistered stone-source proposal. Native whole-scene/paving fixtures remain uncommitted in the runtime workspace. Do not claim their publication or acceptance from earlier local checks.

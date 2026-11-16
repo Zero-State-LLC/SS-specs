@@ -1,5 +1,7 @@
 # Owner decision facts
 
+- **OBSERVED, 2026-11-16 05:49:09 UTC:** owner approved execution of the recommended canonical visual-benchmark clarification. Update visual-reference, benchmark-production, acceptance, plan and decisions consistently, with spec/task traceability. This is specification-work approval, not acceptance of any current art, a new benchmark, numerical visual tolerances, production changes or merge permission.
+
 - **OBSERVED, 2026-11-16 04:51:26 UTC:** owner clarified that the benchmark rejection concerns the **overall scene**, not only the Camera. The later question asks how to bring the entire game to benchmark without repeated fixes. Evaluate full rendered composition and gameplay presentation against the unchanged approved reference. Isolated source checks cannot establish whole-scene fidelity. Earlier rejected Camera samples remain rejected, and no production, admission or merge approval follows.
 
 - **OBSERVED, 2026-11-16 04:44:17 UTC:** owner says “still not at benchmark” after the attempt03 review. Attempt03 is withdrawn and retained as rejected history. This is not acceptance of any current source proposal. The feedback does not specify a visual defect or explicitly restrict the mismatch to the Camera alone. Clarify Camera-only versus Player versus whole-rendered-scene scope before another proposal instead of inventing a cause. Original benchmark unchanged, all state/clip/animation/admission gates remain closed.

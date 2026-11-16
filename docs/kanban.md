@@ -1,5 +1,11 @@
 # SS benchmark kanban
 
+## Canonical specification clarification, 2026-11-16 05:53 UTC
+
+- [x] Owner-approved D-104 whole-scene specification clarification implemented under [accepted intent](../intent/2026-11-16-whole-scene-benchmark-clarification.md). [BP-001 whole-scene review contract](../specs/001-single-level-vertical-slice/benchmark-production.md#whole-scene-review-contract) now governs the canonical spec/reference/acceptance/plan/task documents and related art direction. Original benchmark retained; midpoint ground transform is not art approval. Six review dimensions and four separate verification/acceptance/admission outcomes are explicit. Ten consistency tests, specification validation and clip migration checks pass. This checkbox closes specification work only.
+- [x] Exact runtime3ad31ad/run43805471684 finished with all five jobs successful, fetched05:51:32UTC. Terminal run needs no further scheduled check. This does not certify newer heads.
+- [ ] Runtime#237/#238 independently remain OPEN. Whole-scene fidelity, detailed source expansion, complete-family admission and physical/human acceptance remain gated. No issue lifecycle or board-column change follows from green CI or spec clarification. D-105 diagnostic device checks remain allowed before art acceptance.
+
 ## Current board reconciliation, 2026-11-16 05:39 UTC
 
 This checkpoint supersedes historical sequencing and pending-status notes below, not their evidence. Owner clarified at 04:51:26 UTC that the rejection concerns the **overall scene**. Scope clarification is complete. Camera attempts 01/02/03 remain rejected. The unchanged approved concept is the benchmark, and the selected midpoint ground transform is not whole-scene acceptance.

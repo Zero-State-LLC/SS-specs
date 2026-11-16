@@ -1,8 +1,8 @@
 # Shared top-down visual reference — release one
 
-Status: BP-001 midpoint visual basis selected 2026-11-16; production art admission pending
+Status: original whole-scene benchmark retained; BP-001 midpoint ground transform selected; visual acceptance and production art admission pending
 Feature: SS-001
-Authority: user-selected street-corner direction and intermediate-angle refinement, 2026-10-13; owner midpoint decision received 2026-11-16 01:39:04 UTC (D-108 clarification)
+Authority: original user-selected street corner, 2026-10-13; bounded midpoint decision, 2026-11-16 01:39:04 UTC; overall-scene clarification, 04:51:26 UTC; canonical clarification approved, 05:49:09 UTC
 
 This document specifies what the first-release art must communicate. The linked images are concept references. They are not production sprites, source masters, registered animation, collision data or evidence that the game already renders this way.
 
@@ -10,10 +10,12 @@ This document specifies what the first-release art must communicate. The linked 
 
 ## Reference scene and projection
 
+The original approved `street-corner-approved-concept.png` is the whole-scene visual benchmark. Review the rendered composition and gameplay presentation together, not a collection of independently passing sprites. Its composition, materials and palette, lighting, apparent scale and grounded construction remain the fidelity target. The midpoint study is projection history, not replacement art authority. See the [whole-scene review contract](benchmark-production.md#whole-scene-review-contract) and the [D-104 clarification](decisions.md#d-104-clarification-whole-scene-benchmark-2026-11-16).
+
 **OBSERVED:** owner said “midpoint is good. continue” after the 72-plate reference-ground-fit trial. Selected midpoint is +45-degree ground rotation then half-height scaling with upright sprites at projected roots, not a chosen numerical source elevation or final zoom. Exact comparison evidence: runtime `c1f9fb5106759ec19da9d8d82fc542de9846b394`, `docs/review/bp001-reference-trial-20261116/index.html` and `docs/review/bp001-decision-20261116/index.html`, including native/half/grayscale quiet and legal-encounter captures. The approved original concept stays unchanged. This releases only the projection-choice source-detail gate for D-108 breadth-first continuation, not production art acceptance, merge or receipt adoption. See [the decision](decisions.md#d-108-clarification-bp-001-midpoint-selected-2026-11-16).
 
 - [User-selected street corner](../../docs/review/phase4/street-corner-approved-concept.png) sets mood, palette, character scale and architectural detail.
-- [Midpoint projection study](../../docs/review/phase4/street-corner-midpoint-concept.png) is the working angle between the selected scene and the later overhead trial. The final production reference must be judged in the actual game scene, not by a numerical camera-angle claim.
+- [Midpoint projection study](../../docs/review/phase4/street-corner-midpoint-concept.png) is retained as projection-study history, not a substitute visual benchmark. The selected ground transform is +45-degree rotation followed by half-height scaling with upright sprites at projected roots. It does not select a numerical source elevation or final zoom.
 - A single elevated three-quarter viewpoint governs actor, camera, building, prop and ground together. The top of the hood and shoulders, building roof, municipal dome and newsbox must all be visible. Vertical façades retain enough height to establish city character without turning east/west actors into eye-level side profiles.
 - Ground is one navigable plane. Player boots, building base, pole base and upright-prop base contact that plane. Roofs and upright surfaces may overhang their authoritative footprints; they must not suggest a false open route or an invisible wall.
 - The street grid, diagonal transit edge, sidewalk, civic materials and single municipal sensor communicate the Civic Seam. Keep texture secondary to player, field and attack readability. No arbitrary extra lens, duplicated hardware, fantasy staff, tourist collage or loose fragments.
@@ -68,8 +70,8 @@ Solids need a visible base that covers the blocked footprint. The source canvas,
 
 The 46-image environment inventory is reviewed by ID: retain, repair, replace or exclude. The current scene is a reference for projection and material consistency, not a blanket approval of every existing environment image. Production follows approved turnaround → controlled poses/layers → deterministic export → frame registration → review plates → provenance and manifest intake. Generated grids whose frames must align are concept studies only.
 
-## Phase-4 acceptance before the camera renderer fix
+## Visual acceptance and production admission
 
-The specifications, decision, plan, tasks and acceptance below must agree on the midpoint reference, 16-frame movement goal and one visible municipal standard-camera family while preserving logical placement identity. Deliver the reference scene and visual comparisons to the user. This visual review can settle projection direction; it does not certify animation, runtime art, collision or device performance. Camera production and renderer changes follow as the next phase.
+The specifications, decision, plan, tasks and acceptance must agree on the original approved whole-scene benchmark, selected midpoint ground transform, 16-frame movement goal and one visible municipal standard-camera family while preserving logical placement identity. The projection choice is recorded, but integrated visual acceptance remains open. Deliver the ordinary gameplay scene and comparisons under the whole-scene review contract before expanding rejected samples into detailed states/clips. Technical verification, coordinator visual review, owner acceptance and production admission are separate outcomes. The current Camera attempts 01/02/03 remain rejected history. Original release5/13 and 0.375s settle retain only their bounded approval. No new numerical visual tolerance or production treatment is selected by this clarification.
 
 The [phase-4 research ledger](../../docs/review/phase4/researched-open-questions.md) names the technical questions that the concept cannot answer. The [design-choice research](../../docs/review/phase4/design-choice-research.md) records why the viewpoint, world language, character and Camera choices are proposed and what must be observed before they become production decisions. In particular, clip timing, 64×64 fidelity, depth behavior and D-020/D-021 device/budget decisions remain open.
