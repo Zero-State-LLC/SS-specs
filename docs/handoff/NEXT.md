@@ -1,5 +1,17 @@
 # Receipt repair and production continuation
 
+## Verified CI checkpoint, November16 04:27UTC
+
+Exact runtime `9a4b7a74a504bee2bfc9a990c7d4185b89fe2e34` run43799888314 completed successfully with all five jobs passed, fetched04:26:30UTC. New runtime `9769d922cc8f3e908c0d611dd2f48df6418089cd` run43803119616 still has Swift/Debug/Release running, parity and device-sitting success. Specs `7a30967aa5f2c90a26ce59e39ba60cea21e7a397` run43803448237 passed, fetched04:26:45UTC. Issue237 independently fetched OPEN. Existing scheduled follow-up checks only still-pending exact heads, without long watchers or prohibited local retries. Historical pending status below is superseded only for the verified heads.
+
+## Owner correction, November16 04:22:37UTC
+
+Owner rejected the latest Camera review: “this does not match benchmark.” Withdraw the attempt02 recommendation. The unchanged approved concept remains the fidelity target, not the alternate midpoint concept. Midpoint ground projection is not permission to change the benchmark, source viewpoint, proportions or materials. Preserve attempts01/02 as rejected history and rework only the first sample against `street-corner-approved-concept.png`. Camera state/clip expansion remains blocked. Later enemy sampling is paused while this correction is addressed. Passing source guards do not override this rejection. FACTS.md and the new Trail learning carry the correction.
+
+## CI checkpoint, November16 04:20UTC
+
+Exact runtime9a4b7a7 run43799888314 still has Debug running and the other4jobs successful, fetched04:19:55UTC. New neutral-source9769d922 run43803119616 has parity success and other4jobs running. Specs c3bf82394014033bcc31a9489ed8197863fbe4d7 run43803189647 passed. New specs7a30967aa5f2c90a26ce59e39ba60cea21e7a397 corrects only the Camera plan census from17 to the pinned16frame slots, not contract behavior. Scheduled check sched_3504d855 is due about04:30UTC for these exact heads. No failures were reported at this checkpoint; no later-head success is inferred.
+
 ## Verified continuation, November16 04:16UTC
 
 Runtime `9769d922cc8f3e908c0d611dd2f48df6418089cd` publishes the separate baggy-south and authored north neutral source proposals, each with9 independently passing portable source guards. Actual Brave north review loaded17 images and verified all13 layer toggles. Original south and5/13 remain unchanged. South shin width/knee-pad placement and north satchel/coat/material/elevation fidelity remain unresolved. This is source review, not accepted family continuity or animation permission. East/west first samples continue independently.

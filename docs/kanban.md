@@ -1,5 +1,12 @@
 # SS benchmark kanban
 
+## Owner correction and CI checkpoint, 2026-11-16 04:27UTC
+
+- [ ] Owner rejected the latest Camera comparison at04:22:37UTC: “this does not match benchmark.” Attempts01/02 remain rejected history. Attempt02 recommendation is withdrawn. The original approved concept, not the alternate midpoint concept, remains the fidelity authority. Attempt03 extracts the approved reference for direct review only, with base contamination, baked lighting and missing underpaint/layers still open. No state/clip expansion or acceptance. Enemy sampling is paused while this correction is addressed.
+- [x] Exact runtime `9a4b7a74a504bee2bfc9a990c7d4185b89fe2e34`, CI43799888314, completed with all five jobs successful, fetched04:26:30UTC. This supersedes that head's pending status below.
+- [ ] New runtime `9769d922cc8f3e908c0d611dd2f48df6418089cd`, CI43803119616, still running: parity and device-sitting passed, Swift/Debug/Release running at04:26:30UTC. Do not infer later-head success.
+- [x] Specs `7a30967aa5f2c90a26ce59e39ba60cea21e7a397`, CI43803448237, passed, fetched04:26:45UTC. Runtime#237 remains OPEN. No admission, production changes or merges.
+
 ## Current ten-slice checkpoint, 2026-11-16 04:16UTC
 
 - [x] Owner approved the next ten implementation slices and all three open decisions at03:10:28UTC. Scope: `intent/2026-11-16-grounded-motion-ten-slices.md`.
