@@ -1,5 +1,9 @@
 # Receipt repair and production continuation
 
+## Scheduled CI checkpoint, November16 04:50UTC
+
+Fetched04:50:48UTC with exact full head checks:9769d922cc8f3e908c0d611dd2f48df6418089cd/run43803119616 and7463b73e14ba2c9b7ebfe863abc690233c3f4f75/run43804435636 each have Swift/parity/device-sitting/Release success and Debug running.6817fcdee5440085c8fed73304c69603a23d1d59/run43805118823 has parity/device-sitting success and Swift/Debug/Release running.3ad31adfb956be6389bfc263c0515b89c51b7f9c/run43805471684 remains queued with all five jobs queued. No failure reported. Issues237 and238 independently fetched OPEN and remain distinct. Bounded follow-up sched_0ee1abcd is due about05:01UTC. This does not certify later196b884 or grant source fidelity, merge or production acceptance. Owner04:44:17 rejection below remains controlling: Camera03 is rejected too and art scope clarification is pending.
+
 ## Repeated benchmark rejection, November16 04:44:17UTC
 
 Owner: “still not at benchmark.” Withdraw Camera attempt03 as well; no active source candidate is recommended. Preserve all three attempts and their evidence without claiming fidelity. The owner has not specified whether this correction concerns Camera-only, Player or the whole rendered scene. Stop further art proposals pending that scope clarification, not a request to approve the same rejected sample. Source/state/clip/animation expansion remains blocked. Independent bounded CI follow-ups may continue under their existing no-merge/no-production/no-unfiltered-retry limits.
