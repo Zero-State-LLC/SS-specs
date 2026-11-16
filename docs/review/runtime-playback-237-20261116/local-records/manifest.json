@@ -1,0 +1,62 @@
+[
+  {
+    "attachments" : [
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "CACB3927-A76E-43A5-9ACA-C389EB38C0C3",
+        "deviceName" : "iPhone 17 Pro",
+        "exportedFileName" : "12DF46AD-7805-44AB-BE6C-E996251825FA.json",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "BP008-shared-traversal-release-timed-axis-32767-distance-false-grounded-false-zoom-1_0_A4DC565F-325B-4BAC-A7C7-C1D0F65D83C8.25-tracking-true-reduced-true-records",
+        "timestamp" : 1794790822.405
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "CACB3927-A76E-43A5-9ACA-C389EB38C0C3",
+        "deviceName" : "iPhone 17 Pro",
+        "exportedFileName" : "3B7164AF-7C96-49B4-B528-B9D6EA05FC5C.json",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "BP008-shared-traversal-release-timed-axis-32767-distance-false-grounded-false-zoom-1_0_92402A1D-D37C-45B7-A4F7-9551D52D0D93.25-tracking-true-reduced-false-records",
+        "timestamp" : 1794790819.339
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "CACB3927-A76E-43A5-9ACA-C389EB38C0C3",
+        "deviceName" : "iPhone 17 Pro",
+        "exportedFileName" : "33ADE774-A985-4B78-87C3-E011574896EF.json",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "BP008-shared-traversal-release-timed-axis-32767-distance-false-grounded-false-zoom-1_0_78FE7D43-460E-4804-AA1E-FF4470B84E89.25-tracking-false-reduced-true-records",
+        "timestamp" : 1794790816.343
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "CACB3927-A76E-43A5-9ACA-C389EB38C0C3",
+        "deviceName" : "iPhone 17 Pro",
+        "exportedFileName" : "AF4E4367-9EEF-4F35-88EB-3FEB3DA134CF.json",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "BP008-shared-traversal-release-timed-axis-32767-distance-false-grounded-false-zoom-1_0_4571DF15-E478-4835-8951-F3579C506696.25-tracking-false-reduced-false-records",
+        "timestamp" : 1794790813.278
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "CACB3927-A76E-43A5-9ACA-C389EB38C0C3",
+        "deviceName" : "iPhone 17 Pro",
+        "exportedFileName" : "52DFC48A-7579-46A6-9507-F6D39B4CC195.json",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "BP008-shared-traversal-release-timed-axis-32767-distance-false-grounded-false-zoom-1_0_0DE887FA-E1B4-4DD9-97AD-55F27CD6D241.0-tracking-false-reduced-true-records",
+        "timestamp" : 1794790810.25
+      },
+      {
+        "configurationName" : "Test Scheme Action",
+        "deviceId" : "CACB3927-A76E-43A5-9ACA-C389EB38C0C3",
+        "deviceName" : "iPhone 17 Pro",
+        "exportedFileName" : "199CD86C-7911-4B85-9976-FC319B1260F1.json",
+        "isAssociatedWithFailure" : false,
+        "suggestedHumanReadableName" : "BP008-shared-traversal-release-timed-axis-32767-distance-false-grounded-false-zoom-1_0_5ED14B64-79D9-4353-8914-9BEE77CE15B3.0-tracking-false-reduced-false-records",
+        "timestamp" : 1794790807.217
+      }
+    ],
+    "testIdentifier" : "DisplayedPlaybackTests/testSharedProjectedPlayerTraversal()",
+    "testIdentifierURL" : "test://com.apple.xcode/SSRuntime/SSRuntimeTests/DisplayedPlaybackTests/testSharedProjectedPlayerTraversal"
+  }
+]
