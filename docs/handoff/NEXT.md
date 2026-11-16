@@ -1,5 +1,17 @@
 # Receipt repair and production continuation
 
+## Diagnostic publication checkpoint, November 16 06:36 UTC
+
+Runtime PR236 head `39680fd41d24dc4085c01e4df9d2855174754f70` was pushed and independently fetched. It retains the exact failed #237 attachments and seven regressions that preserve detection of missing frame15 in the zoom1.25/tracking/normal-motion case. Stall origin remains unproven and #237 stays open. #238's corrected looping control remains separately evidenced, not a playback fix or automatic closure.
+
+Stone registration remains missing source-to-world correspondence. The four independent Player views remain BLOCKED_UNRECONCILED_FAMILY, not a common editable master; coordinator reran five registration consistency tests and107 Player integrity assertions with two explicitly absent south roles. Camera source attempts remain rejected. Paving revision02's mathematical repair removes the broad dark frame in coordinator image review but retains recognizable four-slab repetition; no source is admitted. Slice7 remains blocked. Existing-art traversal, encounter and viewport diagnostics continue in isolated tests with serialized native execution. Current-head CI is not yet claimed passing. No gameplay/specification/contract/pin/merge change.
+
+## Source repair execution checkpoint, November 16 06:07 UTC
+
+Runtime `e4223bf1eaf6e9c16f992039ce78e3f291e7e206` publishes two new Camera source attempts and honest equal-height comparisons at `docs/review/camera-first-sample-20261116/`. Both are coordinator-rejected, not offered as accepted art: reference proportion drift, opaque RGB backgrounds and absent editable hidden underpaint remain. Five technical checks and actual three-image Brave size/readiness checks pass only for diagnostic integrity. No third retry of the same source approach or native/state/clip integration. Earlier owner-rejected Camera attempts remain unchanged. Slice6 and dependent coherent-source assembly remain blocked while independent assigned slices continue.
+
+Runtime approval intent was published separately at8bc2218. Original reference, production controls and pin stay unchanged. Exact older runtimef6ebddb/run43810054098 fetched06:06UTC has Swift/spec-parity/device-sitting success and Debug/Release still running. This does not certify newere4223bf. No CI rerun, issue closure, merge or art acceptance.
+
 ## Approved execution, November 16 05:56:35 UTC
 
 Owner approved the next ten slices in `intent/2026-11-16-benchmark-faithful-ten-slices.md`: baseline provenance, independent playback defects, building registration, paving repair, coherent Player neutrals, Camera first sample, integrated quiet scene, existing-motion traversal, legal encounter states, viewport/accessibility/device diagnostics. Review-only source and contact-lighting/contour experiments are authorized, not production treatments, shipping pin changes or merges. Runtime ownership and native-slot coordination live in its handoff. No state/clip expansion on rejected first samples; owner review after the coherent-scene presentation remains required.

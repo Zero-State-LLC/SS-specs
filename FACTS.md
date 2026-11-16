@@ -1,5 +1,7 @@
 # Owner decision facts
 
+- **OBSERVED, 2026-11-16 05:56:35 UTC:** owner approved execution of the next ten slices in `intent/2026-11-16-benchmark-faithful-ten-slices.md`. This permits the bounded review-only source repairs, registration, paving, neutral-family and Camera first-source work, isolated contact-lighting/contour experiments, and existing-art motion/encounter/viewport diagnostics. It does not accept any source, final zoom, numerical aesthetic tolerance, production treatment, shipping-pin change or merge. Whole-scene owner review still gates detailed state/clip expansion.
+
 - **OBSERVED, 2026-11-16 05:49:09 UTC:** owner approved execution of the recommended canonical visual-benchmark clarification. Update visual-reference, benchmark-production, acceptance, plan and decisions consistently, with spec/task traceability. This is specification-work approval, not acceptance of any current art, a new benchmark, numerical visual tolerances, production changes or merge permission.
 
 - **OBSERVED, 2026-11-16 04:51:26 UTC:** owner clarified that the benchmark rejection concerns the **overall scene**, not only the Camera. The later question asks how to bring the entire game to benchmark without repeated fixes. Evaluate full rendered composition and gameplay presentation against the unchanged approved reference. Isolated source checks cannot establish whole-scene fidelity. Earlier rejected Camera samples remain rejected, and no production, admission or merge approval follows.
