@@ -1,5 +1,9 @@
 # Receipt repair and production continuation
 
+## Scheduled CI checkpoint, November 16 03:59 UTC
+
+Fetched exact runtime run `43799888314`, head `9a4b7a74a504bee2bfc9a990c7d4185b89fe2e34`: still in progress. Swift, spec-parity and device-sitting completed successfully; app Debug and Release remain running. No failed job was reported. Specs run `43800160629`, exact head `16db63b6b5cc0e026098fc837760e22e5f65e0fe`, completed successfully. These observations do not certify later heads. Runtime issue #237 was independently fetched and remains OPEN. A bounded ten-minute recheck is scheduled, with no long watcher, unfiltered local Swift retry, merge, production change or admission.
+
 ## Current checkpoint, November16 03:45UTC
 
 Owner03:41:04UTC identified inconsistent north/south legs and preferred the baggy look. Use the baggy north silhouette as the proposed common trouser-volume target; do not slim it to historical south. A separate baggy south source proposal is in progress. Original south and5/13 stay unchanged. Generated bag/coat/material/camera and complete-family acceptance remain unresolved. The per-part slimming attempt is superseded, not a new direction. FACTS.md and the new Trail learning preserve the correction.
