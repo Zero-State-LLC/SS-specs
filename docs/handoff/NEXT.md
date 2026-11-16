@@ -1,5 +1,13 @@
 # Receipt repair and production continuation
 
+## Verified continuation, November16 04:16UTC
+
+Runtime `9769d922cc8f3e908c0d611dd2f48df6418089cd` publishes the separate baggy-south and authored north neutral source proposals, each with9 independently passing portable source guards. Actual Brave north review loaded17 images and verified all13 layer toggles. Original south and5/13 remain unchanged. South shin width/knee-pad placement and north satchel/coat/material/elevation fidelity remain unresolved. This is source review, not accepted family continuity or animation permission. East/west first samples continue independently.
+
+Slice2 core replay independently passed1test/0failures in14.973s and reproduced all12 traces byte-for-byte. Source13checks include1,012 unchanged originals; normal/quarter browser pages each passed120 selections. A passing native test concealed a fixed-time control that clamped rather than looped. Runtime defect#238 now tracks that harness error. Its old fixed-time span/policy conclusions are invalid and preserved as history; a corrected focused native rerun is underway before publication. No assertion was weakened. Runtime#237 remains separately open.
+
+Scheduled CI fetch04:09UTC: exact runtime9a4b7a7 run43799888314 had Swift,parity,sitting,Release success, Debug still running. Release completed04:04:37UTC. Recheck sched_9520de7c is due about04:19UTC. This does not certify newer9769d92. Specs16db63b run43800160629 passed. No long watcher, unfiltered Swift retry, production change, merge or admission.
+
 ## Scheduled CI checkpoint, November 16 03:59 UTC
 
 Fetched exact runtime run `43799888314`, head `9a4b7a74a504bee2bfc9a990c7d4185b89fe2e34`: still in progress. Swift, spec-parity and device-sitting completed successfully; app Debug and Release remain running. No failed job was reported. Specs run `43800160629`, exact head `16db63b6b5cc0e026098fc837760e22e5f65e0fe`, completed successfully. These observations do not certify later heads. Runtime issue #237 was independently fetched and remains OPEN. A bounded ten-minute recheck is scheduled, with no long watcher, unfiltered local Swift retry, merge, production change or admission.

@@ -1,12 +1,13 @@
 # SS benchmark kanban
 
-## Current ten-slice checkpoint, 2026-11-16 03:45UTC
+## Current ten-slice checkpoint, 2026-11-16 04:16UTC
 
 - [x] Owner approved the next ten implementation slices and all three open decisions at03:10:28UTC. Scope: `intent/2026-11-16-grounded-motion-ten-slices.md`.
 - [x] Slice1 technical native comparison published in runtime #236 at `9a4b7a74a504bee2bfc9a990c7d4185b89fe2e34`:3 actual focused tests,476 paired static captures,28 exact endpoint pairs,182 changed native intermediates,29 independent evidence regressions and56 actual browser selections. No live cadence or visual acceptance implied. New-head CI43799888314 is running.
 - [x] Previous source-variation head `e664c93057514891ca102f45938c17b7bed28782` CI43795379225 passed all five jobs, fetched03:41:04UTC. Baseline15be131 CI43792417606 also passed. Issue237 stays open.
-- [ ] Slice2 actual movement/contact comparison in progress. Preserve pre-baggy-source evidence identities.
-- [ ] Owner correction03:41:04UTC: inconsistent north/south legs, baggy look preferred. Restore the baggy north proposal and author a separate consistent south source, rather than slimming north to the old south. Original south and5/13 remain unchanged. Generated bag/coat/material/camera and family acceptance remain open.
+- [ ] Slice2 actual movement/contact comparison: independent focused core1/1 reproduces12traces, source13checks and browser240selections pass. Native fixed-time control discovered clamping rather than looping; defect runtime#238 opened, invalid first attempt preserved, corrected focused rerun required before policy comparison. Preserve pre-baggy-source evidence identities.
+- [x] Separate baggy-south and restored authored-north neutral proposals published at runtime `9769d922cc8f3e908c0d611dd2f48df6418089cd`. Nine portable checks each and actual north13layer controls pass. Source proposals only, unresolved shin/pad/coat/bag/material/elevation differences are not accepted.
+- [ ] Owner correction03:41:04UTC: baggy look preferred. Family consistency and generated bag/coat/material/camera acceptance remain open. Original south and5/13 unchanged. Distinct east/west and municipal Camera first samples continue without detailed animation expansion.
 - [ ] Slices3–10 remain open under the existing fidelity and owner gates. No parent production task is Done.
 
 ## Receipt repair and approved continuation — 2026-11-16 UTC
