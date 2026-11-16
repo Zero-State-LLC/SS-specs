@@ -1,6 +1,8 @@
 # Receipt repair and production continuation
 
-Updated: 2026-11-16 01:17 UTC. Owner accepted receipt execution November15 23:18 UTC and the ten-slice plan November16 00:01 UTC. No merge permission, BP-001 projection selection or art/device admission was granted.
+Updated: 2026-11-16 01:37 UTC. Owner accepted receipt execution November15 23:18 UTC and the ten-slice plan November16 00:01 UTC. No merge permission, BP-001 projection selection or art/device admission was granted.
+
+Final CI update: `gh run view 43784016529 --repo Zero-State-LLC/SS-runtime` fetched at01:36:50UTC November16 confirms status `completed`, conclusion `success`, exact head `c1f9fb5106759ec19da9d8d82fc542de9846b394`. All five jobs passed: Swift, spec-parity, device-sitting, Release and Debug. Debug completed at01:36:46UTC. This supersedes the pending-CI monitoring status below. No further scheduled recheck is needed. Issue#237 remains open, local unfiltered runs remain incomplete, and all owner selection/adoption/merge gates remain unchanged.
 
 SS-specs #115 D-123/T1061 specifies run-receipt-002 at final contract commit `194ded987740a330bce50bd23cd0dcdcadebc853`. Historical v1 bytes and all gameplay identities remain unchanged. Final boundary probing found and repaired trailing-newline acceptance in digest/Camera IDs, with regressions. D-122 is reserved for the separate Vendor mine-ring proposal.
 
