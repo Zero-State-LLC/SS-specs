@@ -1,5 +1,11 @@
 # Receipt repair and production continuation
 
+## Scheduled CI checkpoint, November16 05:13UTC
+
+Fetched05:12:54UTC: run43804435636 at7463b73e14ba2c9b7ebfe863abc690233c3f4f75 completed SUCCESS with all five jobs successful. Run43805118823 at6817fcdee5440085c8fed73304c69603a23d1d59 has four successful jobs, Debug running. Run43805471684 at3ad31adfb956be6389bfc263c0515b89c51b7f9c has spec-parity/device-sitting successful and Swift/Debug/Release running. No new failure in these three runs. Follow-up sched_c6ee24c8 checks the two unfinished runs about05:23UTC.
+
+The failed9769d922 run and its grounded-shadow15/16-pose evidence remain unresolved under237. A later green head is not a diagnosis or closure.238 remains a separate fixed-time review-harness issue. No CI reruns, assertion changes, unfiltered Swift, production changes, merges or visual admission.
+
 ## Exact-head failure checkpoint, November16 05:02UTC
 
 Fetched05:01UTC: run43803119616 at9769d922cc8f3e908c0d611dd2f48df6418089cd completed FAILED. Debug job133087698819 failed at04:58:03UTC; all four other jobs passed. Failed log identifies `DisplayedPlaybackTests.testSharedProjectedPlayerGroundedShadowComparison`, shared helper assertion `AppTests/DisplayedPlaybackTests.swift:1184`, observed15 poses versus required16. This is the grounded-shadow variant, not the previously recorded traversal test. Root cause and affected zoom/Reduced Motion case are unproven. Evidence added to issue237 comment6907805624. Debug artifact14198828420 is retained, unexpired,724246160bytes. No weakened assertion or CI rerun. Issues237 and238 both fetched OPEN, separate defects.
