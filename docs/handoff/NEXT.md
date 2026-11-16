@@ -1,5 +1,9 @@
 # Receipt repair and production continuation
 
+## Approved execution, November 16 05:56:35 UTC
+
+Owner approved the next ten slices in `intent/2026-11-16-benchmark-faithful-ten-slices.md`: baseline provenance, independent playback defects, building registration, paving repair, coherent Player neutrals, Camera first sample, integrated quiet scene, existing-motion traversal, legal encounter states, viewport/accessibility/device diagnostics. Review-only source and contact-lighting/contour experiments are authorized, not production treatments, shipping pin changes or merges. Runtime ownership and native-slot coordination live in its handoff. No state/clip expansion on rejected first samples; owner review after the coherent-scene presentation remains required.
+
 ## Canonical whole-scene clarification, November 16 05:53 UTC
 
 Owner approved specification work at 05:49:09 UTC. Accepted intent `intent/2026-11-16-whole-scene-benchmark-clarification.md` precedes the canonical D-104 clarification. Spec, visual-reference, benchmark-production, acceptance, plan, tasks, visual-production and Civic Seam direction now agree: original approved concept is the whole-scene benchmark, midpoint is the selected ground transform only. BP-001's `whole-scene-review-contract` is the common review authority for six dimensions and separate technical verification, coordinator visual review, owner acceptance and production admission. Quiet diagnostics and staged art-only views cannot pass the whole gate. No invented numerical tolerance or detailed expansion of rejected samples. Original5/13,0.375s and D-105 diagnostic device permission remain intact.
