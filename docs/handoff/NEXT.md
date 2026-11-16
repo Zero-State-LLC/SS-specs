@@ -1,5 +1,13 @@
 # Receipt repair and production continuation
 
+## Exact-head failure checkpoint, November16 05:02UTC
+
+Fetched05:01UTC: run43803119616 at9769d922cc8f3e908c0d611dd2f48df6418089cd completed FAILED. Debug job133087698819 failed at04:58:03UTC; all four other jobs passed. Failed log identifies `DisplayedPlaybackTests.testSharedProjectedPlayerGroundedShadowComparison`, shared helper assertion `AppTests/DisplayedPlaybackTests.swift:1184`, observed15 poses versus required16. This is the grounded-shadow variant, not the previously recorded traversal test. Root cause and affected zoom/Reduced Motion case are unproven. Evidence added to issue237 comment6907805624. Debug artifact14198828420 is retained, unexpired,724246160bytes. No weakened assertion or CI rerun. Issues237 and238 both fetched OPEN, separate defects.
+
+Run43804435636 at7463b73e14ba2c9b7ebfe863abc690233c3f4f75 and run43805118823 at6817fcdee5440085c8fed73304c69603a23d1d59 each have four successful jobs with Debug running. Run43805471684 at3ad31adfb956be6389bfc263c0515b89c51b7f9c has device-sitting/Release/spec-parity running and Swift/Debug queued. Bounded follow-up sched_e5c46b3f is due about05:12UTC for these three unfinished runs only.
+
+Scope clarification is no longer pending: owner confirmed the OVERALL SCENE at04:51:26UTC, recorded in FACTS.md. The runtime04:56 handoff permits the isolated existing-asset diagnostic fixture only, not art acceptance, state/clip expansion, production edits or merges. Earlier rejected Camera proposals remain rejected.
+
 ## Scheduled CI checkpoint, November16 04:50UTC
 
 Fetched04:50:48UTC with exact full head checks:9769d922cc8f3e908c0d611dd2f48df6418089cd/run43803119616 and7463b73e14ba2c9b7ebfe863abc690233c3f4f75/run43804435636 each have Swift/parity/device-sitting/Release success and Debug running.6817fcdee5440085c8fed73304c69603a23d1d59/run43805118823 has parity/device-sitting success and Swift/Debug/Release running.3ad31adfb956be6389bfc263c0515b89c51b7f9c/run43805471684 remains queued with all five jobs queued. No failure reported. Issues237 and238 independently fetched OPEN and remain distinct. Bounded follow-up sched_0ee1abcd is due about05:01UTC. This does not certify later196b884 or grant source fidelity, merge or production acceptance. Owner04:44:17 rejection below remains controlling: Camera03 is rejected too and art scope clarification is pending.
