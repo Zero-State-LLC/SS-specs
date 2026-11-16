@@ -1,14 +1,16 @@
 # Shared top-down visual reference — release one
 
-Status: phase-4 reference candidate; native-size art proof pending
+Status: BP-001 midpoint visual basis selected 2026-11-16; production art admission pending
 Feature: SS-001
-Authority: user-selected street-corner direction and intermediate-angle refinement, 2026-10-13
+Authority: user-selected street-corner direction and intermediate-angle refinement, 2026-10-13; owner midpoint decision received 2026-11-16 01:39:04 UTC (D-108 clarification)
 
 This document specifies what the first-release art must communicate. The linked images are concept references. They are not production sprites, source masters, registered animation, collision data or evidence that the game already renders this way.
 
 [Benchmark production](benchmark-production.md) defines BP-001–BP-006: shared sample, source delivery, exact locomotion scope, Camera settling states, environment mapping and evidence/adoption sequence.
 
 ## Reference scene and projection
+
+**OBSERVED:** owner said “midpoint is good. continue” after the 72-plate reference-ground-fit trial. Selected midpoint is +45-degree ground rotation then half-height scaling with upright sprites at projected roots, not a chosen numerical source elevation or final zoom. Exact comparison evidence: runtime `c1f9fb5106759ec19da9d8d82fc542de9846b394`, `docs/review/bp001-reference-trial-20261116/index.html` and `docs/review/bp001-decision-20261116/index.html`, including native/half/grayscale quiet and legal-encounter captures. The approved original concept stays unchanged. This releases only the projection-choice source-detail gate for D-108 breadth-first continuation, not production art acceptance, merge or receipt adoption. See [the decision](decisions.md#d-108-clarification-bp-001-midpoint-selected-2026-11-16).
 
 - [User-selected street corner](../../docs/review/phase4/street-corner-approved-concept.png) sets mood, palette, character scale and architectural detail.
 - [Midpoint projection study](../../docs/review/phase4/street-corner-midpoint-concept.png) is the working angle between the selected scene and the later overhead trial. The final production reference must be judged in the actual game scene, not by a numerical camera-angle claim.

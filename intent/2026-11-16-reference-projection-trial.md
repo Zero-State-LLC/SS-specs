@@ -27,7 +27,9 @@ Runtime test-only capture tooling, local calibration/verification scripts, revie
 
 ## Constraints and decisions still reserved
 
-No new source-family detail, no modified concepts, no arena/collision changes, no source mirroring/warping to impersonate a facing, no production transform or input change. Preserve 0.375s Player settle timing. Owner projection choice remains UNRECORDED. If existing upright art prevents faithful whole-scene matching, report that result without fabricating a successful reconstruction.
+Historical scope: the constraints below describe the 00:38 UTC trial authorization. At 2026-11-16 01:39:04 UTC the owner said “midpoint is good. continue”, selecting the midpoint visual basis after the 72-plate trial and releasing the projection-choice source-detail gate. See the dated [D-108 clarification](../specs/001-single-level-vertical-slice/decisions.md#d-108-clarification-bp-001-midpoint-selected-2026-11-16). No production admission, final zoom, numerical source elevation, merge or receipt adoption was granted.
+
+At trial authorization: no new source-family detail, no modified concepts, no arena/collision changes, no source mirroring/warping to impersonate a facing, no production transform or input change. Preserve 0.375s Player settle timing. Owner projection choice was then unrecorded. If existing upright art prevents faithful whole-scene matching, report that result without fabricating a successful reconstruction.
 
 ## Verified and assumed claims
 

@@ -185,6 +185,18 @@ Evidence: the latest shared-scene capture measures 135 / 30 (stucco 73%) against
 
 Intent: [`2026-10-29-lock-projection-and-palette`](../../intent/2026-10-29-lock-projection-and-palette.md).
 
+### D-108 clarification: BP-001 midpoint selected (2026-11-16)
+
+**OBSERVED: owner decision received 2026-11-16 01:39:04 UTC:** “midpoint is good. continue”. The owner selected the BP-001 midpoint visual basis following the 72-plate reference-ground-fit trial. This records the previously reserved projection choice, not production art acceptance or merge authorization.
+
+Comparison evidence is pinned to runtime `c1f9fb5106759ec19da9d8d82fc542de9846b394`: `docs/review/bp001-reference-trial-20261116/index.html` and `docs/review/bp001-decision-20261116/index.html`. The packets contain actual-renderer quiet and legal-encounter captures, natural and authoritative-geometry views, with native, half-scale and grayscale evidence. The trial's ground fit is not a faithful whole-reference reconstruction. Building-view mismatch, clipping and quiet-scene palette drift remain recorded limitations.
+
+Selected midpoint means +45-degree ground rotation followed by half-height scaling, with upright sprites attached at projected roots. It does not select a numerical source elevation or final zoom. The original approved street-corner concept remains the visual benchmark, including palette and quality target.
+
+The recorded choice releases D-108/BP-012's no-further-source-detail gate and authorizes continuation in the existing breadth-first order: Player four facings, municipal Camera, existing enemy roles, then environment. Preserve the accepted 0.375s Player settle and do not reopen recorder/OBS work. Runtime implementation belongs to the coordinator in the separate runtime repository.
+
+No production admission, complete-family acceptance, physical/human QA acceptance, merge permission or receipt adoption is granted. Issue runtime #237 remains open with its existing 16-pose assertion. Facing/input integration, registration, live playback, palette review and final zoom remain subject to their existing evidence and owner gates. No gameplay, ruleset, contract pin or replay identity changes result from this decision.
+
 ## D-109 — live Exposure in the Captain Court (2026-10-29)
 
 **ACCEPTED (SS-specs #76, merged 2026-10-29 at the owner's direction):** this specifies the accepted intent `2026-10-29-live-exposure-in-court` (SS-specs #69), with the owner's choice of option (b).
