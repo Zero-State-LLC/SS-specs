@@ -1,5 +1,14 @@
 # SS benchmark kanban
 
+## Receipt repair and approved continuation — 2026-11-16 UTC
+
+Observed main heads are runtime `df8473713a3d37aeca05d4e1110f979f197b9ceb` and specs `983a4ca3427bd8a9d30056bccf356fe0f715312e`. Receipt PRs specs #115/runtime #235 are not merged. Final candidate contract pin is `194ded987740a330bce50bd23cd0dcdcadebc853`; the merged product still uses its existing pin. T1061 remains open until adoption is verified. Historical entries below retain their dated scope.
+
+- [x] Accepted D-123 receipt specification and implementation prepared, including exact historical-byte preservation, 11 repeatable actual-output cases and 132 rejected mutations. Full core855, placement9, fairness1, sitting four profiles, native Debug166/Release124 logical tests pass. Complete SE simulator success retains the original gameplay digest. Evidence: runtime `docs/review/receipt-v2-20261115.md`.
+- [ ] Final correction publication/latest-head CI and owner-authorized specification-first merge. QA-only runtime #234 is separate. Do not close specs #114/runtime #233 on an unmerged repair.
+- [ ] Next approved slice: BP-001 original-reference versus midpoint actual-renderer comparison, then owner projection choice. Follow newer D-108 breadth-first production order after the choice. Preserve0.375s Player timing. No recorder/OBS project is a prerequisite.
+- [ ] Remaining approved sequence: Player release/facing coverage, municipal Camera family, existing enemy-role sources, environment kit, shared benchmark, complete reviewed-family admission, device/human acceptance. Those parent gates remain open. Plan approval is not visual, device or merge approval. No remote Projects synchronization is claimed.
+
 ## Current handoff — 2026-11-15 UTC
 
 Merged runtime main is `f21903e616806c252b2f1660d96977eed5d7054c` (runtime #230). Merged specs main is `c8b253b18ed2b7276512145d810b729ba20c3aaa` (specs #111). The runtime pin remains `b1ed874e1e8eb0e61b2174b9093201e9a61e1a4b`. The audit changes reconcile feedback lifecycle/audio ownership and specification consistency without changing gameplay identities or granting production acceptance. No parent production task is Done. BP-001 remains for the owner to record in `decisions.md`. The production order in [benchmark-production.md](../specs/001-single-level-vertical-slice/benchmark-production.md) is unchanged. The six cards on [project 27](https://github.com/orgs/Zero-State-LLC/projects/27) stay in their current columns.
