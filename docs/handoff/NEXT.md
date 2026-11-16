@@ -1,5 +1,9 @@
 # Receipt repair and production continuation
 
+## Repeated benchmark rejection, November16 04:44:17UTC
+
+Owner: “still not at benchmark.” Withdraw Camera attempt03 as well; no active source candidate is recommended. Preserve all three attempts and their evidence without claiming fidelity. The owner has not specified whether this correction concerns Camera-only, Player or the whole rendered scene. Stop further art proposals pending that scope clarification, not a request to approve the same rejected sample. Source/state/clip/animation expansion remains blocked. Independent bounded CI follow-ups may continue under their existing no-merge/no-production/no-unfiltered-retry limits.
+
 ## Published verification and source-review gates, November16 04:40UTC
 
 Runtime `3ad31adfb956be6389bfc263c0515b89c51b7f9c` publishes corrected contact evidence and portable CI regressions. Exact0428-looped xcresult independently verifies1passed/0failed/0skipped,24 runtime resource hashes,2,400 samples,116 reconstructed planted segments and76 matched captures (33changed/5unchanged pairs). All14 portable mutation tests and13 full-source checks passed, plus228 actual native-gallery selections and the Node loader/race suite. The first invalid fixed-time run and failed heuristic run remain preserved. No production movement policy is adopted. Contact coordinates are projected source landmarks, not measured displayed foot pixels. Runtime#238 remains open for exact-head integration checks, separate from playback#237.

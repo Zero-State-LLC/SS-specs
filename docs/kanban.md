@@ -1,5 +1,9 @@
 # SS benchmark kanban
 
+## Owner correction, 2026-11-16 04:44:17UTC
+
+- [ ] Latest result remains below benchmark. Camera attempt03 withdrawn as rejected history alongside01/02. No active recommendation or fidelity acceptance. Clarify whether the next correction targets Camera, Player or complete rendered-scene fidelity before another art proposal. Do not infer a specific visual cause from technical tests. All expansion gates remain closed.
+
 ## Technical publication checkpoint, 2026-11-16 04:40UTC
 
 - [x] Slice2 technical contact comparison published at runtime `3ad31adfb956be6389bfc263c0515b89c51b7f9c`: corrected looped-control native1/1,2,400 samples,116 independently reconstructed segments,76 matched captures,24 runtime resource hashes,14 portable verifier regressions,13 full-source checks and228 actual browser pair/size/gray checks. Preserve invalid first run and failed heuristic history. No production selection policy or display-contact/cadence acceptance. Runtime#238 remains open pending exact-head integration and#237 remains independently open.
