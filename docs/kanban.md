@@ -1,5 +1,12 @@
 # SS benchmark kanban
 
+## Technical publication checkpoint, 2026-11-16 04:40UTC
+
+- [x] Slice2 technical contact comparison published at runtime `3ad31adfb956be6389bfc263c0515b89c51b7f9c`: corrected looped-control native1/1,2,400 samples,116 independently reconstructed segments,76 matched captures,24 runtime resource hashes,14 portable verifier regressions,13 full-source checks and228 actual browser pair/size/gray checks. Preserve invalid first run and failed heuristic history. No production selection policy or display-contact/cadence acceptance. Runtime#238 remains open pending exact-head integration and#237 remains independently open.
+- [x] Distinct side-source first samples published at runtime `6817fcdee5440085c8fed73304c69603a23d1d59`:10 full/9 portable checks and8 actual browser image checks. Technical publication only.
+- [ ] Camera03 from the original approved reference remains review-only. Attempts01/02 rejected. Player source satchel/coat/material/elevation consistency unresolved. No native-family, animation or Camera state/clip expansion. Enemy partial preparation remains paused.
+- [ ] Exact CI heads still pending as recorded in `docs/handoff/NEXT.md`; follow-up sched_170c64c4 due04:50UTC. No production changes or merges.
+
 ## Owner correction and CI checkpoint, 2026-11-16 04:27UTC
 
 - [ ] Owner rejected the latest Camera comparison at04:22:37UTC: “this does not match benchmark.” Attempts01/02 remain rejected history. Attempt02 recommendation is withdrawn. The original approved concept, not the alternate midpoint concept, remains the fidelity authority. Attempt03 extracts the approved reference for direct review only, with base contamination, baked lighting and missing underpaint/layers still open. No state/clip expansion or acceptance. Enemy sampling is paused while this correction is addressed.

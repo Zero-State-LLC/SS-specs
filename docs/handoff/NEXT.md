@@ -1,5 +1,13 @@
 # Receipt repair and production continuation
 
+## Published verification and source-review gates, November16 04:40UTC
+
+Runtime `3ad31adfb956be6389bfc263c0515b89c51b7f9c` publishes corrected contact evidence and portable CI regressions. Exact0428-looped xcresult independently verifies1passed/0failed/0skipped,24 runtime resource hashes,2,400 samples,116 reconstructed planted segments and76 matched captures (33changed/5unchanged pairs). All14 portable mutation tests and13 full-source checks passed, plus228 actual native-gallery selections and the Node loader/race suite. The first invalid fixed-time run and failed heuristic run remain preserved. No production movement policy is adopted. Contact coordinates are projected source landmarks, not measured displayed foot pixels. Runtime#238 remains open for exact-head integration checks, separate from playback#237.
+
+Runtime `6817fcdee5440085c8fed73304c69603a23d1d59` publishes distinct east/west first samples with10 full checks,9 portable plus1optional audit skip, and8actual browser image/size checks. These are explicitly mixed-status proposals with historical original south, not a coherent accepted family. Satchel placement, coat/material and elevation mismatches block native family expansion. Camera correction7463b73 remains review-only, with attempt03 against the original approved benchmark and attempts01/02 rejected. Enemy partial files remain uncommitted and paused. Next source work needs owner fidelity review, not automatic state/clip/animation expansion.
+
+Fetched04:40:25UTC exact runtime CI:9769d922/run43803119616 has4success and Debug running;7463b73/run43804435636 parity/device success, others running;6817fcd/run43805118823 device running, other jobs queued;3ad31ad/run43805471684 queued. No failure reported. Bounded follow-up sched_170c64c4 at04:50UTC checks all four exact heads. Earlier9a4/run43799888314 all5success stands. No long watcher, unfiltered Swift retry, merge, admission or production changes.
+
 ## Camera correction published and CI follow-up, November16 04:30UTC
 
 Runtime `7463b73e14ba2c9b7ebfe863abc690233c3f4f75` publishes Camera rejected history and attempt03 direct comparison against the original approved reference. All17 portable guards pass and actual Brave verifies9 images,64x96/32x48 samples and grayscale restoration. Attempt03 is only an extraction with visible contamination, baked light and missing underpaint/layers. It is not accepted or ready for state/clip expansion. The PR236 comment and runtime handoff record these limits.
