@@ -1,6 +1,12 @@
 # Implementation Tasks
 
-## Current handoff — 2026-10-25
+## Current handoff, 2026-11-16
+
+T1042–T1046 trace to the approved [D-104 whole-scene clarification](decisions.md#d-104-clarification-whole-scene-benchmark-2026-11-16) and [whole-scene review contract](benchmark-production.md#whole-scene-review-contract). T1042 covers integrated scene comparisons, T1043 Camera fidelity/playback, T1044 admission, T1045 Player source/playback, and T1046 remaining shared-world/QA evidence. Keep all existing task completion states unchanged. Spec clarification completion is not implementation or visual acceptance. D-105 still permits diagnostic device checks before art acceptance.
+
+Follow the [current kanban](../../docs/kanban.md) and [handoff](../../docs/handoff/NEXT.md). Owner clarified that the benchmark rejection concerns the overall scene. Complete only the isolated existing-asset diagnostic and separate muted-paving trial before further visual review. The unregistered stone source is not ready for scene substitution. Camera attempts 01/02/03 remain rejected, and Player family consistency remains unresolved. Preserve original 5/13 and 0.375s settle. Technical publication, exact-head CI, visual acceptance, production admission and physical/human QA are separate gates. Runtime #237 and #238 remain independently open. No T1042–T1046 or production parent is completed by the new source/fixture evidence. Historical closed issue cards are not new production acceptance. No merge permission or recorder work follows.
+
+## Historical handoff, 2026-10-25
 
 Aaron continues from the [continuation brief](../../docs/review/aaron-continuation-2026-10-25.md). Stop recorder/OBS troubleshooting; retain the0.375-second Player candidate and bounded visual approval. Prioritize remaining Player releases/facings/actions, then shared-scene integration and direct iPhone validation. Live cadence/performance remain unverified and required before production admission; they do not block further source work. Historical recorder-dependent next-step notes below are superseded for sequencing only. No parent production task is Done.
 
@@ -227,7 +233,7 @@ T301 and T700 were implemented but uncited until SS-runtime #83 (merged 2026-09-
 
 The checkbox rows in this file are the canonical task-status source; docs/kanban.md is a planning mirror, not an independent closure ledger. T807 remains checked on the recorded SS-runtime #32 evidence for bundle exclusions. That historical check does not approve the current D-104 production revision or close its open tasks. No new acceptance is inferred from the mirror.
 
-The 28 unchecked tasks across this file are **not agent-closable**. Each needs external evidence or an owner decision; none may close on the strength of a harness. They group into six kinds, each with its required owner or input (each task appears once; the table below gives detailed blockers):
+The 29 unchecked tasks across this file include 28 that are **not agent-closable** without external evidence or an owner decision, plus the executable receipt repair T1061. None may close on the strength of a harness alone. They group into seven kinds, each with its required owner or input (each task appears once; the table below gives detailed blockers):
 
 - **Device (iPhone 12 performance floor / supported matrix)** — T406, T606, T901, T905, T1050.
 - **Human judgment / decision** — T306, T506, T802, T804, T806, T902, T907, T908 (the expansion gate and any D-register decision require the owner specialist, Danny).
@@ -235,6 +241,7 @@ The 28 unchecked tasks across this file are **not agent-closable**. Each needs e
 - **Legacy archaeology** — T101, T105.
 - **Developer (defect closure)** — T906.
 - **Human pacing / playtests** — T305, T903, T904.
+- **Runtime diagnostic repair** — T1061.
 
 A harness is a collector of evidence, not evidence. SS-runtime #34–#41 ship the peak-density profiler, replay matrix, playtest loader, gate registry, defect registry, release-evidence store, and expansion-gate report; each stays a collector until it has captured a real device run, a named participant, or a recorded decision. The pending decisions **D-020** (which physical devices are approved equivalents for the four device classes) and **D-021** (the exact measured ceilings) remain `DECISION_PENDING` and MUST NOT be replaced with invented answers; they block the device-class tasks until the owner records them.
 
@@ -242,6 +249,7 @@ A harness is a collector of evidence, not evidence. SS-runtime #34–#41 ship th
 
 | Task | Status | Blocker | Required owner / input | Evidence required |
 |---|---|---|---|---|
+| T1061 | READY | Specification precedes runtime adoption; runtime evidence pending | Runtime implementer | RC-001–RC-008 actual-output validation, archive classification and unchanged golden evidence |
 | T101 | NOT_RUN | Legacy test suite and build environment at the frozen SHA `3b20d88` are NOT_COMPUTABLE; deterministic-kernel tests are unrecovered | Developer with legacy-repo access performs the recovery; owner specialist approves | A recovered, runnable deterministic-kernel test suite with recorded results at the frozen SHA |
 | T105 | STANDING_GATE | Legacy migration is not complete; the gate is active until every copied source is approved | Every copied source carries an approved record before migration closes (owner specialist Danny) | An approved record per copied source (asset-record / admission decision) plus a migration-close note |
 | T305 | PARTIAL | Scripted probes only ([`docs/review/T305`](../../docs/review/T305/README.md), SS-runtime `06561a9`): 240 headless bot runs, seeds 1–20. Completed runs last 3:02–6:40 (median 3:43 for the 7 legal `competent` successes) against the then-current 8–12-minute target (superseded by D-079). No person has played a probe, so first-run learning time and competent human pace are unmeasured; the `T303-T404` range citation is not accepted | Designer / player runs the probes on a device (owner specialist Danny) | Recorded human pacing probes compared against the current `E-011` 5–8-minute target (D-079, later pacing refinements D-090/D-093/D-101) |
@@ -302,7 +310,7 @@ See [combat-causality.md](combat-causality.md) for collision, damage evidence, w
 - [ ] T1042 Validate a four-facing hooded-player model and one representative player/building/camera/prop/ground scene in the actual 704×326 game view with HUD and encounter sample, including collision/base overlay, native/50% scale and no-color views. Compare costume and projection candidates against the selected image using the [design-choice research](../../docs/review/phase4/design-choice-research.md). The generated concept is direction evidence only.
 - [ ] T1043 Produce registered municipal complete-device clips with persistent Integrity states, reduced presentation, exact mount and provenance. Reconcile Captain emitter appearance and asset IDs. Camera renderer integration belongs to the next implementation phase.
 - [ ] T1044 Revise affected clip metadata, frame IDs, presentation manifest and asset catalog when accepted production assets are ready; validate source/delivery hashes and bundle exclusions.
-- [ ] T1045 Complete actor state/facing coverage with controlled 16-frame locomotion where applicable; run timing, identity, anchor and gameplay-scale review before device testing.
+- [ ] T1045 Complete actor state/facing coverage with controlled 16-frame locomotion where applicable; run timing, identity, anchor and gameplay-scale review before production admission. Diagnostic device checks remain permitted under D-105 before art acceptance.
 - [ ] T1046 Audit each of the 46 environment PNGs for retain/repair/replace/exclude and validate visible base against collision geometry in the shared scene.
 - [ ] T1050 Interruptions (D-106, [run-shell.md § 13](run-shell.md)): pause a run that leaves the foreground, stop and restore audio around audio-session interruptions, and seed Reduced Motion from iOS on first launch. Cover RS-025–RS-032; presentation only, no ruleset or replay change. Device confirmation of the iOS interruption sequence remains a physical-device check.
 - [x] T1051 Court rehearsal (D-107, [run-shell.md § 14](run-shell.md)): snapshot authoritative state at `bossActivated`, offer Rehearse Court after a Court death, run the rehearsal outside the Daily Run's record. Cover RS-033–RS-040; no ruleset or replay change.
@@ -316,7 +324,11 @@ See [combat-causality.md](combat-causality.md) for collision, damage evidence, w
 - [x] T1059 Shell control copy (D-120, presentation only): the title shows `START` and `SETTINGS`, and the terminal panel shows `RESTART`, as the exact strings in run-shell.md § 5. Do not rename them and do not add a control. § 8.1 stays open. No ruleset bump and no digest change.
 - [x] T1060 Vendor mine ring (D-121, presentation only): draw the existing `receiptMine` as a continuous stroke-only ring at its authoritative radius, one light neutral stroke, width 2 while arming and 4 while armed. No caption, no asset id, no catalog row. Do not change arm 30, life 240, radius 42, damage 12, the cap of two, or which mine retires. The lethal-warning card still ignores an armed mine.
 
+- [ ] T1061 Adopt the D-123 receipt repair in this order: (1) bundle the specified v2 schema and registry without changing historical v1 bytes or gameplay identities, (2) serialize null or strict upgrade objects and retain Camera/objective fields, (3) implement non-certifying archive identity classification and reject mutated unsupported writer identity, (4) independently validate real success/failure/serializable-invalid outputs and all upgrade paths, (5) run RC-001–RC-008 with existing semantic, atomic-write, retention and golden tests unchanged. Record evidence before closure. No merge authorization is inferred.
+
 Production detail: [BP-001–BP-006](benchmark-production.md). T1042 owns exact viewport/HUD/encounter captures and projection comparison. T1043 owns complete-device state settling, interruptions and Reduced Motion. T1044 begins with exact spec-pin adoption and records deferred art admission honestly, then migrates complete accepted families. T1045 owns the named locomotion matrix, rational cadence/hold representation and Informant pursuit decision. T1046 records all 46 per-ID dispositions and geometry evidence. Do not close any task on the strength of pin alignment alone.
+
+**OBSERVED, 2026-11-16 01:39:04 UTC:** owner selected the BP-001 midpoint visual basis following the 72-plate trial; exact comparison paths and runtime commit are in the dated [D-108 clarification](decisions.md#d-108-clarification-bp-001-midpoint-selected-2026-11-16). The projection-choice subgate is satisfied, not T1042 or any parent production task. Continue Player four facings, municipal Camera, existing enemy roles, then environment. Preserve 0.375s settle, no recorder work, runtime #237 open. Runtime implementation is coordinator-owned. No production admission, merge or T1061 receipt adoption is authorized.
 
 T1046 next evidence: ground-plan source and matching elevated render with wall base, steps, planters and walkable apron separated. Current building registration fails; see [measured review](../../docs/review/building-registration/review.md). Hidden rear vertices and art admission remain open.
 

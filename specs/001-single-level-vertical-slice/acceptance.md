@@ -139,6 +139,7 @@ Run three consecutive complete runs on a physical iPhone 12 or approved no-bette
 - [ ] F-015 UI-001 through UI-008 pass on every device class and handedness mode.
 - [ ] F-016 AH-001 through AH-006 pass with audio/haptics both enabled and disabled.
 - [ ] F-017 ER-001 through ER-008 pass, including canonical JSON and UInt64 ID round-trip.
+- [ ] F-018 RC-001 through RC-008 in [receipt-contract-migration.md](receipt-contract-migration.md) pass using actual runtime serialization and independent strict v2 schema validation. Retain all existing semantic assertions, golden digests, archive atomicity and retention checks. Archive recognition alone is not certification.
 
 ## Gate G — Playtest signal
 
@@ -172,11 +173,27 @@ T1035 automated coverage must include no-target/no-shot, opposite movement and a
 
 ## D-104 — visual reference and production gate
 
+### Whole-scene acceptance clarification, 2026-11-16
+
+D-022–D-024 and E-021 remain open until their required evidence passes, including the [whole-scene review contract](benchmark-production.md#whole-scene-review-contract). The original approved `street-corner-approved-concept.png` is the whole-scene visual benchmark. Midpoint selects ground projection only. The approved canonical clarification does not accept current artwork or adopt new numerical visual tolerances.
+
+- Require recorded verdicts for **composition**, **viewpoint and scale**, **materials and palette**, **lighting**, **grounding**, and **HUD/field readability** against the unchanged reference. Unknown or failed dimensions remain open.
+- Require ordinary HUD/field-on quiet, legal-encounter and dense legal-encounter evidence at native size, 50% scale and grayscale. Staged art-only views and geometry overlays are secondary. A quiet static fixture is partial evidence, not completion of encounter, moving-contact or animation gates.
+- Require exact reference/candidate identities, matched control framing/state/settings, explicit intentional differences and retained rejected evidence. UNREGISTERED sources do not satisfy grounding by borrowing previous anchors or treating guessed hidden corners as measurements.
+- Record **technical verification**, **coordinator visual review**, **owner acceptance**, and **production admission** separately. Passing CI or a coordinator recommendation cannot replace owner acceptance or override rejection. Existing source/playback, migration and physical/human gates still control production admission.
+- Do not expand rejected or unreviewed first samples into detailed states/clips. Authorized bounded diagnostics may proceed with deficits explicit. Preserve original release5/13 and 0.375s settle as bounded approvals only. Runtime #237 and #238 remain independent defects, not waived by the visual clarification.
+
+These requirements clarify existing BP-001/BP-012 fidelity gates, not new gameplay or blanket art approval. Diagnostic physical-device checks remain permitted under D-105 before art acceptance, with the evidence limits below.
+
+### Existing visual and runtime evidence requirements
+
 See [visual-reference.md](visual-reference.md). D-022–D-024 and E-021 require actual game-scale review plates and runtime evidence; the phase-4 concept images alone do not pass those gates. Preserve B-001/B-007/B-008/B-012 placement/replay results when mapping logical Camera families to one visual family. Produce the complete character and Camera playback review before admitting those families to production.
 
 Physical-device checks of the current build do not wait for that review (intent `2026-10-29-device-feedback-loop`). Frame time (C-003), suspend/resume (B-004, PC-008), input (PC-009), damage attribution (combat-causality.md) and the 2026-10-13 device-QA findings may be re-run on any build. Each device session records the runtime commit and whether it used production or candidate art. A device session on unadmitted art is evidence about feel, performance and correctness only; it does not pass D-022–D-024 or E-021.
 
 [BP-001–BP-006](benchmark-production.md) define the evidence recipe for those gates. D-022 requires the actual 704×326 renderer with HUD and quiet/dense encounter samples, not a flattened concept background. D-023 requires the exact clip-scope/cadence matrix, source pose review and normal/slow/frame-step playback. D-024 requires 3→2→1→0 settled states, interruption and Reduced Motion, with no duplicate field-off housing. E-021 requires authoritative overlay plus front/rear/corner traversal and projectile contact. Record exact build, asset hashes, viewport/display scale and settings. Keep each gate open until both automated invariants and visual evidence pass.
+
+**OBSERVED: bounded owner selection, 2026-11-16 01:39:04 UTC.** BP-001 midpoint visual basis is selected following the 72-plate reference-ground-fit trial. The dated [D-108 clarification](decisions.md#d-108-clarification-bp-001-midpoint-selected-2026-11-16) pins runtime `c1f9fb5106759ec19da9d8d82fc542de9846b394` and both comparison indexes with native/half/grayscale quiet and legal-encounter captures. This satisfies the projection-choice source-detail prerequisite only. It does not accept numerical source elevation, final zoom, production art, full D-022/D-023/D-024/E-021 gates, physical/human QA, merge or receipt adoption. Original concept benchmark and 0.375s settle remain unchanged; runtime #237 stays open without weakening its assertion.
 
 BP-005/BP-007 building admission requires separate labeled wall-contact and walkable-apron geometry in the source master, registered to runtime world geometry. An alpha silhouette or roof-derived hidden corner is insufficient. The current [building sample](../../docs/review/building-registration/review.md) remains FAILED_REGISTRATION_NOT_ADMITTED.
 

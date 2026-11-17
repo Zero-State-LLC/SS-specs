@@ -6,7 +6,7 @@ Contract version: `events-receipts-replays-001`
 Machine contracts:
 
 - `contracts/event-001.schema.json`
-- `contracts/run-receipt-001.schema.json`
+- `contracts/run-receipt-002.schema.json`
 - `contracts/runtime-kernel-001.json`
 
 ## Event envelope
@@ -58,6 +58,8 @@ Every authoritative event contains:
 Ordinals are append-only within schema version. Renumbering or changing payload meaning requires a schema-version change.
 
 ## Receipt
+
+New writes use `run-receipt-002`. [Receipt contract migration](receipt-contract-migration.md) defines the complete strict shape, archive recognition without certification, historical v1 policy and RC-001–RC-008. The historical v1 schema is immutable. Selected upgrades are null or an exact ID plus `upgrades-003` object. Camera summaries and `objectives.extractionArmed` remain required diagnostic evidence.
 
 The terminal receipt includes replay identity, outcome, ticks, state digest, Player result, Exposure, combat totals, objective graph, selected Camera layout/destructions, upgrade, boss phases, and diagnostics. Arrays are ordered by their contract-defined key. A failed or invalid run still produces a receipt when state can be serialized.
 

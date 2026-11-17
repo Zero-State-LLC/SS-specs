@@ -1,6 +1,10 @@
 # Technical Plan: San Francisco Vertical Slice
 
-## Current handoff — 2026-10-25
+## Current handoff, 2026-11-16
+
+Apply the [whole-scene review contract](benchmark-production.md#whole-scene-review-contract) and [D-104 clarification](decisions.md#d-104-clarification-whole-scene-benchmark-2026-11-16). The original approved concept is the benchmark, midpoint is ground projection only, and current artwork remains unaccepted. Complete bounded whole-scene diagnostics and explicit deficit review before detailed expansion of rejected samples. Keep technical verification, coordinator visual review, owner acceptance and production admission separate. No new numerical tolerance, production migration or merge authorization. D-105 diagnostic device checks remain allowed before art acceptance.
+
+## Historical handoff, 2026-10-25
 
 Aaron continues from the [continuation brief](../../docs/review/aaron-continuation-2026-10-25.md). Stop recorder/OBS troubleshooting; retain the0.375-second Player candidate and bounded visual approval. Prioritize remaining Player releases/facings/actions, then shared-scene integration and direct iPhone validation. Live cadence/performance remain unverified and required before production admission; they do not block further source work. Historical recorder-dependent next-step notes below are superseded for sequencing only. No parent production task is Done.
 
@@ -126,12 +130,15 @@ The following artifacts are normative:
 - `audio-haptics.md`: event projection, priorities, coalescence, music states, and captions
 - `events-receipts-replays.md`: event ordering, receipt persistence, replay validation, and results
 - `contracts/event-001.schema.json` and `event-catalog-001.json`: authoritative event envelope and payload catalog
-- `contracts/run-receipt-001.schema.json`: terminal receipt envelope
+- `contracts/run-receipt-002.schema.json`: strict terminal receipt envelope; historical v1 remains immutable
+- `receipt-contract-migration.md`: RC-001–RC-008, v2-only writer and non-certifying archive identity classification
 - `contracts/asset-record-001.schema.json`: fail-closed provenance and runtime asset intake record
 - `fixtures/kernel-vectors-001.json` and `fixtures/replay-smoke-001.json`: initial implementation fixtures
 - `completeness-audit.md`: runtime creation gate and evidence boundary
 - `contracts/presentation-assets-003.json`: required runtime-facing HUD, telegraph, objective, and audio IDs
 - `visual-production.md`: blockout-first workflow, provenance, intake, review plates, and budgets
+
+Receipt migration implementation order is T1061: bundle and parity, serializer, archive identity classification, independent actual-output validation, then unchanged golden and persistence checks. Swift needs no general schema engine. Reuse existing validation and runtime CI. Apply contributor Workflows from AGENTS.md: FM-AS-01–FM-AS-07 for bounded testable changes, FM-PS-04 and FM-PS-06 for fail-closed authority, and FM-DOC-01 for explicit contracts. Runtime evidence remains pending, not inferred from schema validity.
 
 Final art begins only after grayscale blockout, collision truth, Camera truth, and dense-frame readability pass.
 
@@ -256,10 +263,10 @@ Project shot origin/direction and actual Jammer reduction as transient presentat
 
 Implement [BP-001–BP-006](benchmark-production.md) in order. Begin by adopting the exact D-104 spec pin and recording existing runtime gaps; this does not admit old art as conforming. The production sample uses real runtime rendering and geometry, with separate source resolution, logical draw size and display-scale records. Preserve each named movement cycle when moving to 16 frames; the elite's 3/7-second cycle cannot be preserved by rounding to integer fps. Resolve presentation timing representation before that asset family migrates. Review Informant pursuit playback explicitly. Camera responses must settle into the newest Integrity state, including interruption and Reduced Motion.
 
-1. Lock the selected street-corner mood and midpoint projection in a shared reference scene. Review actual gameplay scale, four-player-facing identity, building/prop base, Camera mount and authoritative footprint overlays before multiplying art.
+1. Keep the original approved street-corner benchmark and recorded midpoint ground transform distinct. Apply the whole-scene review contract in an isolated real-renderer comparison before multiplying art. Review composition, four-player-facing identity, materials/palette, lighting, apparent scale, building/prop grounding, Camera mount, ordinary HUD/field readability and authoritative footprint overlays.
 2. Reconcile visual contracts: 16 distinct frames for each applicable locomotion facing; one municipal complete-device presentation for all seeded standard Camera families; Captain retains boss-owned mechanical distinction and a non-color visible marker. Preserve placement RNG/receipt and ruleset-008 replay identity.
 3. Revise clip metadata, frame IDs, catalog, manifest and provenance together as each complete production asset family is admitted. Existing six-frame records and five delivered housings remain historical baseline until that migration. Reject partial aligned-sheet claims and unreachable replacement art.
-4. Next implementation slice: finish municipal Camera state clips, remove housing-plus-head composition, verify one device per entity, stable anchor, persistent Integrity states and immediate field-off. Only after this checkpoint expand controlled character loops and environment repairs.
+4. D-108 breadth-first order governs continuation behind the whole-scene fidelity gate: Player four facings, municipal Camera, existing enemy roles, then environment. Recheck shared composition as families change. Rejected first samples do not authorize detailed states/clips. After fidelity review, municipal Camera work must finish state clips, remove housing-plus-head composition and verify one device per entity, stable anchor, persistent Integrity states and immediate field-off. Enemy first samples need not wait for every Player action, but still require their authorized scope and review.
 5. Validate exact candidate through spec validator, byte parity where bundles change, core and Debug/Release app checks. Keep visual/physical acceptance open until review plates, device measures and human evidence exist.
 
 BP-005/BP-007 building repair: use the [registration investigation](../../docs/review/building-registration/review.md) before changing placement. Obtain explicit ground-plan landmarks and separate walkable apron from wall art. Compare consistent projection alternatives through the shared renderer; keep arena geometry unchanged until an explicitly versioned gameplay decision.
@@ -284,9 +291,9 @@ BP-001/BP-010 Camera field contrast follow-through: use the researched compariso
 
 BP-001 street-surface follow-through: use the researched shared-sample surface clarification in benchmark-production.md. Keep review patches/details editable and separate from arena data; preserve texture density through cropped edge tiles and apply the same projection as fields. Compare the existing plain fixture before legal-encounter integration.
 
-## Current execution order — 2026-10-15
+## Current execution order: 2026-11-16
 
-Use the [evidence-backed next-step plan](../../docs/review/benchmark-status-2026-10-15.md) and [kanban](../../docs/kanban.md): preferred south-source detail polish → unobstructed live-cycle measurements → shared scene/visibility → facing/cast/action completion → complete-family migration → integrated QA and physical acceptance. This updates sequencing and evidence, not gameplay or production acceptance.
+The owner selected the BP-001 midpoint basis at 2026-11-16 01:39:04 UTC; see the [D-108 clarification](decisions.md#d-108-clarification-bp-001-midpoint-selected-2026-11-16) for exact runtime comparison paths. The later overall-scene correction and approved [D-104 clarification](decisions.md#d-104-clarification-whole-scene-benchmark-2026-11-16) control current sequencing: bounded whole-scene and material diagnostics, explicit deficit review against the original concept, then breadth-first family continuation behind the fidelity gate. Shared integration is reviewed throughout, not postponed until after environment delivery. Follow [benchmark production](benchmark-production.md) and [kanban](../../docs/kanban.md). Preserve original release5/13 and 0.375s settle; no recorder work. Runtime implementation is coordinator-owned. Numerical source elevation, final zoom, production admission, merge and receipt adoption are not approved. Diagnostic device sessions remain allowed under D-105, but final physical/human acceptance remains separate. The older evidence and continuation notes below remain historical, not the current production order.
 
 ### T1045 evidence continuation — 2026-10-15
 Follow BP-008's costume-volume and startup/playback boundaries. Preserve the previous south candidate, export the fuller-leg study with unchanged pose samples, and compare normal/quarter speed. Reconcile only the test asset family first, with exact hashes and source provenance; rerun registration, contact, normal and Reduced Motion coverage before shared composition. Build/preload initial scene resources before measured playback and reuse the rendered snapshot for diagnostic fields. Report preparation and post-action diagnostic costs separately. Run app timing measurements serially, then repeat with recording enabled; core validation is a separate run. These are fixture techniques, not new production startup or animation policies.

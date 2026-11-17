@@ -185,6 +185,18 @@ Evidence: the latest shared-scene capture measures 135 / 30 (stucco 73%) against
 
 Intent: [`2026-10-29-lock-projection-and-palette`](../../intent/2026-10-29-lock-projection-and-palette.md).
 
+### D-108 clarification: BP-001 midpoint selected (2026-11-16)
+
+**OBSERVED: owner decision received 2026-11-16 01:39:04 UTC:** “midpoint is good. continue”. The owner selected the BP-001 midpoint visual basis following the 72-plate reference-ground-fit trial. This records the previously reserved projection choice, not production art acceptance or merge authorization.
+
+Comparison evidence is pinned to runtime `c1f9fb5106759ec19da9d8d82fc542de9846b394`: `docs/review/bp001-reference-trial-20261116/index.html` and `docs/review/bp001-decision-20261116/index.html`. The packets contain actual-renderer quiet and legal-encounter captures, natural and authoritative-geometry views, with native, half-scale and grayscale evidence. The trial's ground fit is not a faithful whole-reference reconstruction. Building-view mismatch, clipping and quiet-scene palette drift remain recorded limitations.
+
+Selected midpoint means +45-degree ground rotation followed by half-height scaling, with upright sprites attached at projected roots. It does not select a numerical source elevation or final zoom. The original approved street-corner concept remains the visual benchmark, including palette and quality target.
+
+The recorded choice releases D-108/BP-012's no-further-source-detail gate and authorizes continuation in the existing breadth-first order: Player four facings, municipal Camera, existing enemy roles, then environment. Preserve the accepted 0.375s Player settle and do not reopen recorder/OBS work. Runtime implementation belongs to the coordinator in the separate runtime repository.
+
+No production admission, complete-family acceptance, physical/human QA acceptance, merge permission or receipt adoption is granted. Issue runtime #237 remains open with its existing 16-pose assertion. Facing/input integration, registration, live playback, palette review and final zoom remain subject to their existing evidence and owner gates. No gameplay, ruleset, contract pin or replay identity changes result from this decision.
+
 ## D-109 — live Exposure in the Captain Court (2026-10-29)
 
 **ACCEPTED (SS-specs #76, merged 2026-10-29 at the owner's direction):** this specifies the accepted intent `2026-10-29-live-exposure-in-court` (SS-specs #69), with the owner's choice of option (b).
@@ -374,3 +386,26 @@ Task: T1059. The runtime adopts this only after this commit is on main, and only
 - **Unchanged:** arm 30, life 240, radius 42, damage 12, maximum two, and the oldest mine retires. No caption. Not the lethal-warning card. No asset id, no catalog row, no ruleset, and no content identity.
 
 Task: T1060. The runtime adopts this only after this commit is on main.
+
+## D-104 clarification: whole-scene benchmark (2026-11-16)
+
+**ACCEPTED specification clarification:** the owner clarified overall-scene rejection at 04:51:26 UTC and approved the recommended canonical updates at 05:49:09 UTC. Intent: [whole-scene benchmark clarification](../../intent/2026-11-16-whole-scene-benchmark-clarification.md). This is not acceptance of current artwork or permission to merge.
+
+The original approved `street-corner-approved-concept.png` remains the whole-scene visual benchmark. D-108's midpoint selection denotes +45-degree ground rotation followed by half-height scaling with upright sprites at projected roots. It does not replace the original concept with the midpoint study, select numerical source elevation/final zoom or waive visual fidelity.
+
+Apply the [whole-scene review contract](benchmark-production.md#whole-scene-review-contract) across composition, viewpoint and scale, materials and palette, lighting, grounding, and HUD/field readability. Ordinary HUD/field-on quiet/legal/dense views are primary, with native/50%/grayscale evidence. Art-only views are secondary. Keep technical verification, coordinator visual review, owner acceptance and production admission separate. No new numerical visual tolerance is adopted.
+
+Current bounded whole-scene diagnostics and material comparisons precede detailed expansion of rejected samples. BP-012 breadth-first ordering remains behind the fidelity gate, with shared-scene review repeated as families change. This supersedes any older instruction to defer integrated review until source families are complete, not the historical evidence or original release5/13 and 0.375s settle approvals. Camera attempts 01/02/03 remain rejected. Runtime #237/#238 remain separate open defects.
+
+**Unchanged:** one-level scope, roster, movement/timing authority, collision, Camera fields, damage, accessibility requirements, active asset/clip identities, receipt/replay identities and shipping runtime pin. No production art or visual-treatment migration is part of this specification slice. D-105 continues to permit diagnostic physical-device checks on candidate builds without accepting art. Production/device/human admission gates and the no-merge boundary remain intact.
+
+**Affected:** spec, visual-reference, benchmark-production, acceptance, plan and existing T1042–T1046 task traceability. The runtime visual checklist is an implementation aid subordinate to these canonical requirements, not a second authority.
+
+## D-123 — versioned diagnostic receipt reconciliation (2026-11-15)
+
+**ACCEPTED direction:** the owner accepted the receipt intent and authorized execution at 23:18 UTC on 2026-11-15. [Receipt contract migration](receipt-contract-migration.md) specifies that direction before runtime implementation. This does not authorize merging or mark runtime acceptance complete.
+
+- Adopt `run-receipt-002` for new writes, with strict nested types, retained Camera summaries and `objectives.extractionArmed`, and null or exact upgrade ID plus `upgrades-003` object.
+- Preserve historical v1 schema bytes and archive bytes. Historical v1 reads use `formatStatus: .historicalUnverified`, v2 reads use `.currentUnverified` without certification, and unsupported/unrecognized identities use `.unrecognized` without repair.
+- Preserve ruleset-014, content-009, arena-004, replay schema, golden gameplay digests, canonical ordering, atomic writes and newest-50 retention. No gameplay or result-surface expansion.
+- RC-001–RC-008 and F-018 require actual serialization, independent schema validation and retained semantic assertions. Runtime evidence is pending. Task T1061.

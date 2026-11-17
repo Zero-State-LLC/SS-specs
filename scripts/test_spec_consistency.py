@@ -4,15 +4,112 @@
 Run from any directory: python3 -B scripts/test_spec_consistency.py
 """
 from pathlib import Path
+from copy import deepcopy
+import hashlib
 import json
 import re
 import unittest
+from jsonschema import Draft202012Validator
 
 ROOT = Path(__file__).resolve().parents[1]
 SPEC = ROOT / "specs/001-single-level-vertical-slice"
 
 
 class SpecConsistencyTests(unittest.TestCase):
+    def test_receipt_archive_status_and_decision_references(self):
+        migration = (SPEC / "receipt-contract-migration.md").read_text()
+        decisions = (SPEC / "decisions.md").read_text()
+        tasks = (SPEC / "tasks.md").read_text()
+        self.assertIn("Decision: D-123.", migration)
+        self.assertIn("## D-123 — versioned diagnostic receipt", decisions)
+        self.assertIn("T1061 Adopt the D-123 receipt repair", tasks)
+        for status in (".currentUnverified", ".historicalUnverified", ".unrecognized"):
+            self.assertIn(status, migration)
+            self.assertIn(status, decisions)
+        self.assertIn("Reading alone does not certify schema conformance", migration)
+
+    def test_receipt_v2_contract_regressions(self):
+        # Synthetic shape coverage, not a claim of runtime serialization evidence.
+        schema = json.loads((ROOT / "contracts/run-receipt-002.schema.json").read_text())
+        validator = Draft202012Validator(schema)
+        receipt = {
+            "schemaVersion": "run-receipt-002",
+            "identity": {"rulesetVersion": "ss-rules-014", "contentVersion": "civic-seam-content-009",
+                         "arenaVersion": "civic-seam-arena-004", "replaySchemaVersion": "runtime-kernel-001"},
+            "seed": 1, "outcome": "failure", "elapsedTicks": 1, "finalDigest": "a" * 64,
+            "player": {"finalIntegrity": 0, "damageTaken": 100, "integrityRestored": 0},
+            "exposure": {"final": 0, "peak": 0, "finalState": "hidden", "lockdownEntered": False},
+            "combat": {"damageDealt": 0, "defeatsByArchetype": {}},
+            "objectives": {
+                "combatAuthority": {"mobEncountersComplete": 0, "mobEncountersRequired": 3, "currentNode": "M-A",
+                                    "elite": {"id": "improper-search-daemon", "defeated": False},
+                                    "boss": {"id": "algorithmic-moderate", "defeated": False, "phasesReached": []},
+                                    "complete": False},
+                "networkBlackout": {"camerasDestroyed": 0, "camerasTotal": 8, "complete": False},
+                "extractionArmed": False},
+            "cameraPlacement": {"version": "camera-placement-001", "placementSeed": 1, "selectedSockets": [
+                {"socketId": "socket-01", "cameraEntityId": 18446744073709551615, "housingFamily": "municipalDome"}]},
+            "cameraDestructions": [{"cameraId": "18446744073709551615", "tick": 1,
+                                    "housingFamily": "municipalDome", "wasDetectingPlayer": False,
+                                    "source": "civicPulse", "exposureBefore": 0, "exposureAfter": 0,
+                                    "triggeredLockdown": False}],
+            "camerasDamaged": 1, "camerasDestroyed": 1, "tamperExposureApplied": 0,
+            "cameraObjective": {"destroyed": 1, "total": 8, "complete": False},
+            "upgrade": None, "boss": {"phasesReached": [], "defeated": False}, "diagnostics": [],
+            "presentation": {"tutorialsEnabled": True, "hudScale": 1000, "handedness": "right",
+                             "reducedMotion": False, "reducedFlash": False, "reducedSensory": False}}
+        for outcome in ("success", "failure", "invalid"):
+            for upgrade in (None, *({"id": item, "contractVersion": "upgrades-003"}
+                                   for item in ("signalJammer", "ricochetPulse", "ghostStep"))):
+                candidate = deepcopy(receipt)
+                candidate.update(outcome=outcome, upgrade=upgrade)
+                validator.validate(candidate)
+
+        def objects(value, path=()):
+            if isinstance(value, dict):
+                yield path, value
+                for key, child in value.items():
+                    yield from objects(child, path + (key,))
+            elif isinstance(value, list):
+                for index, child in enumerate(value):
+                    yield from objects(child, path + (index,))
+
+        def at(value, path):
+            for key in path:
+                value = value[key]
+            return value
+
+        # Every fixed object's required keys and additional-property boundary.
+        for path, value in objects(receipt):
+            if path == ("combat", "defeatsByArchetype"):
+                continue
+            for key in value:
+                candidate = deepcopy(receipt)
+                del at(candidate, path)[key]
+                self.assertFalse(validator.is_valid(candidate), (path, key))
+            candidate = deepcopy(receipt)
+            at(candidate, path)["unexpected"] = True
+            self.assertFalse(validator.is_valid(candidate), path)
+
+        for path, value in [(("schemaVersion",), "run-receipt-001"),
+                            (("identity", "rulesetVersion"), "ss-rules-999"),
+                            (("seed",), 18446744073709551616),
+                            (("finalDigest",), "a" * 64 + "\n"),
+                            (("cameraDestructions", 0, "cameraId"), "1\n"),
+                            (("objectives", "extractionArmed"), "false"),
+                            (("exposure", "finalState"), "unknown"),
+                            (("upgrade",), "signalJammer"),
+                            (("upgrade",), {"id": "unknown", "contractVersion": "upgrades-003"}),
+                            (("upgrade",), {"id": "ghostStep"}),
+                            (("upgrade",), {"id": "ghostStep", "contractVersion": "upgrades-003", "extra": 1})]:
+            candidate = deepcopy(receipt)
+            at(candidate, path[:-1])[path[-1]] = value
+            self.assertFalse(validator.is_valid(candidate), path)
+        versions = json.loads((ROOT / "contracts/versions.json").read_text())
+        self.assertEqual(versions["componentContracts"]["runReceipt"], "run-receipt-002")
+        self.assertEqual(hashlib.sha256((ROOT / "contracts/run-receipt-001.schema.json").read_bytes()).hexdigest(),
+                         "b163b06de53e56bdc93610ac463eacc9c3af8eca97c51c38187d430b405bb325")
+
     def test_lockdown_epochs_and_release_timing(self):
         spec = (SPEC / "spec.md").read_text()
         exposure = (SPEC / "exposure.md").read_text()
@@ -77,6 +174,77 @@ class SpecConsistencyTests(unittest.TestCase):
             covered.extend(subset)
         self.assertEqual(set(covered), set(ids))
         self.assertEqual(len(covered), len(set(covered)))
+
+    def test_whole_scene_benchmark_authority_and_traceability(self):
+        # Documentation consistency only, never a visual acceptance test.
+        intent = ROOT / "intent/2026-11-16-whole-scene-benchmark-clarification.md"
+        self.assertIn("**Status:** accepted", intent.read_text())
+        self.assertIn("05:49:09 UTC", intent.read_text())
+        benchmark = (SPEC / "benchmark-production.md").read_text()
+        self.assertEqual(benchmark.count("### Whole-scene review contract"), 1)
+        for name in ("spec.md", "visual-reference.md", "acceptance.md",
+                     "decisions.md", "plan.md", "tasks.md", "visual-production.md",
+                     "civic-seam-visual-direction.md"):
+            with self.subTest(document=name):
+                text = (SPEC / name).read_text()
+                self.assertIn("benchmark-production.md#whole-scene-review-contract", text)
+        for name in ("spec.md", "visual-reference.md", "acceptance.md", "decisions.md"):
+            with self.subTest(authority=name):
+                text = (SPEC / name).read_text()
+                self.assertIn("street-corner-approved-concept.png", text)
+                self.assertIn("whole-scene visual benchmark", text)
+        reference = (SPEC / "visual-reference.md").read_text()
+        self.assertIn("projection-study history, not a substitute visual benchmark", reference)
+        self.assertNotIn("must agree on the midpoint reference", reference)
+        self.assertNotIn("before choosing the production projection", benchmark)
+        self.assertNotIn("midpoint study guides final elevation",
+                         (SPEC / "civic-seam-visual-direction.md").read_text())
+        self.assertNotIn("midpoint study informs the production angle",
+                         (SPEC / "visual-production.md").read_text())
+        decision = (SPEC / "decisions.md").read_text().split(
+            "## D-104 clarification: whole-scene benchmark (2026-11-16)", 1)[1].split("\n## ", 1)[0]
+        self.assertIn(intent.name, decision)
+        self.assertIn("05:49:09 UTC", decision)
+
+    def test_whole_scene_review_matrix_and_acceptance_boundaries(self):
+        benchmark = (SPEC / "benchmark-production.md").read_text()
+        contract = benchmark.split("### Whole-scene review contract", 1)[1].split("\n## ", 1)[0]
+        acceptance = (SPEC / "acceptance.md").read_text().split(
+            "### Whole-scene acceptance clarification, 2026-11-16", 1)[1].split("\n### ", 1)[0]
+        dimensions = ("Composition", "Viewpoint and scale", "Materials and palette",
+                      "Lighting", "Grounding", "HUD/field readability")
+        rows = re.findall(r"^\| ([^|]+) \|", contract, re.M)
+        self.assertEqual(rows, ["Review dimension", *dimensions])
+        for dimension in dimensions:
+            self.assertIn(f"**{dimension.lower()}**", acceptance.lower())
+        for text in (contract, acceptance):
+            for boundary in ("HUD/field-on", "native size", "50% scale", "grayscale",
+                             "technical verification", "coordinator visual review",
+                             "owner acceptance", "production admission", "UNREGISTERED",
+                             "release5/13", "0.375s", "D-105"):
+                with self.subTest(boundary=boundary):
+                    self.assertIn(boundary, text)
+        self.assertIn("dense legal encounter", contract)
+        self.assertIn("dense legal-encounter", acceptance)
+        self.assertIn("A coordinator pass does not imply owner acceptance", contract)
+        self.assertIn("No new numerical visual tolerance is adopted", contract)
+        self.assertIn("secondary diagnostics", contract)
+        self.assertIn("preserve the control", contract)
+        self.assertIn("cannot pass the whole-scene gate", contract)
+
+    def test_whole_scene_sequence_preserves_production_gates(self):
+        benchmark = (SPEC / "benchmark-production.md").read_text()
+        fidelity = benchmark.split("## BP-012", 1)[1].split("\n## ", 1)[0]
+        self.assertIn("necessary but not sufficient for production admission", fidelity)
+        self.assertIn("precede detailed expansion of rejected samples", fidelity)
+        plan = (SPEC / "plan.md").read_text().split(
+            "## Current execution order: 2026-11-16", 1)[1].split("\n### ", 1)[0]
+        self.assertIn("Shared integration is reviewed throughout", plan)
+        self.assertIn("D-105", plan)
+        self.assertNotIn("then environment, followed by shared integration", plan)
+        tasks = (SPEC / "tasks.md").read_text()
+        for task in range(1042, 1047):
+            self.assertRegex(tasks, rf"(?m)^- \[ \] T{task}\b")
 
     def test_task_summary_matches_canonical_checkboxes(self):
         tasks = (SPEC / "tasks.md").read_text()
