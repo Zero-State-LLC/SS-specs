@@ -31,7 +31,7 @@ Two admitted audio cues are bright and harsh against the brief for this slice. `
 ## Open questions
 
 - Provenance and status for new generated originals: `originalAccepted` / `projectOriginal`, as in D-077, or a new value?
-- Should the boss telegraph keep the old sound and get a separate asset ID instead?
+- Should the boss telegraph retain its existing source/runtime file while `camera_hit_02` receives a separate runtime file? Both already have distinct asset IDs; no new cue ID is proposed.
 - Where do new PCM masters live (runtime `ArtSources/`, or outside both repos)?
 - AAC encode: runtime pipeline uses macOS `afconvert -d aac -b 128000`; candidates were checked with ffmpeg AAC 128k only.
 - Plan-date licence evidence is still pending for ElevenLabs cues generally.
@@ -45,7 +45,7 @@ Two admitted audio cues are bright and harsh against the brief for this slice. `
   - Encoded to AAC 128k with ffmpeg, both still beat the current m4a on both measures.
 - OBSERVED: source was ElevenLabs Sound Effects v2, returned as MP3 44.1 kHz; processing chain was DC and 35 Hz high-pass, 4 kHz low-pass, -6 dB shelf at 3.5 kHz, +4 dB bell at band centre, trim, fades, peak normalize.
 
-## Assumed claims
+## Unverified claims
 
-- Assumed: the darker cues stay readable in combat. Needs a listening check.
-- Assumed: the -4 to -6 LU loudness drop versus the current cues is acceptable without a mix change.
+- NOT_COMPUTABLE: whether the darker cues stay readable in combat. A listening check is required.
+- NOT_COMPUTABLE: whether the -4 to -6 LU loudness drop versus the current cues is acceptable without a mix change. A listening check is required.
