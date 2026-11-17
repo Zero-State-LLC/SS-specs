@@ -1,5 +1,15 @@
 # Receipt repair and production continuation
 
+## Current work order, November17 2026 04:12UTC
+
+Owner requested docs/board/all-PR maintenance. `../kanban.md` now leads with the verified current checkpoint and Project27's14card readback. Runtime `docs/handoff/PR-RECONCILIATION-20261117.md` records all9open PRs and exact heads. Historical sections below retain evidence but no longer describe the latest state.
+
+Runtime native live projection retry0407 passes18/18 without weakening assertions; source/product hashes independently match. Actual current/candidate legal-pilot app inspection shows MIDPOINT/NOT ACCEPTED and remaining contact/scale/occlusion defects. Default title restored. Final Release2297733e exclusion passes across1032PNGs. Broader projection is authorized, art/admission/device/human acceptance is not. Runtime#261 tracks the original test-owned action-probe defect, with red evidence retained. #237/#259 remain independently unresolved. No new task checkbox is completed here.
+
+Specs#63 review wording fixes are pushed asc226085, both threads resolved, remote Validate44015043483 successful. Runtime#234/#235 existing heads have all5checks successful. Specs#115 must receive owner code-owner approval and merge first before runtime#235 adoption. Candidate receipt contract pin194ded9 and all contract/fixture bytes stay unchanged. Specs#92 remains conflicting and needs owner D-122/plate decision. Runtime#167 is an old stack on already-merged#166, not safe to blindly retarget. Legacy#24/#25 remain owner-gated; #25's historical failures were billing-not-started, not code failures.
+
+Next: publish this docs-only checkpoint to existing specs#115, verify exact remote head/CI, and keep runtime#236 final publication evidence linked. Do not merge, enable auto-merge, close issues, change billing, rewrite unrelated branches or infer acceptance from green checks. Runtime coordinator owns serialized simulator and remaining integration verification. Complete-family, iPhone12/D-020/D-021, external playtest and owner visual decisions remain the blocking product gates.
+
 ## Diagnostic publication checkpoint, November 16 06:36 UTC
 
 Runtime PR236 head `39680fd41d24dc4085c01e4df9d2855174754f70` was pushed and independently fetched. It retains the exact failed #237 attachments and seven regressions that preserve detection of missing frame15 in the zoom1.25/tracking/normal-motion case. Stall origin remains unproven and #237 stays open. #238's corrected looping control remains separately evidenced, not a playback fix or automatic closure.
